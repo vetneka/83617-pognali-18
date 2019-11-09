@@ -5,8 +5,469 @@
     <title>HTML Academy: Погнали</title>
   </head>
   <body>
+    <header class="main-header">
+      <a class="main-logo">
+        <img class="main-logo__img" src="https://via.placeholder.com/100x19" width="100" height="19" alt="Логотип сервиса &laquo;Погнали&raquo;">
+      </a>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
+      <nav class="main-nav">
+        <ul class="site-nav">
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="about.html">О сервисе</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="form.html">Направления</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="catalog.html">Попутчики</a>
+          </li>
+        </ul>
 
+        <ul class="user-nav">
+          <li class="user-nav__item">
+            <a class="button button--rounded" href="login.html">Авторизация</a>
+          </li>
+          <li class="user-nav__item">
+            <a class="link" href="tel:88005558628">
+              <span class="link__icon link__icon--color-primary" aria-hidden="true">
+                <svg class="link__svg" width="10" height="10">
+                  <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
+                </svg>
+              </span>
+              <span class="link__text">8 800 555-86-28</span>
+            </a>
+          </li>
+          <li class="user-nav__item">
+            <a class="link" href="mailto:mail@htmlacademy.ru">
+              <span class="link__icon link__icon--color-primary" aria-hidden="true">
+                <svg class="link__svg" width="10" height="10">
+                  <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
+                </svg>
+              </span>
+              <span class="link__text">mail@htmlacademy.ru</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="social">
+          <li class="social__item">
+            <a class="link" href="https://www.facebook.com/htmlacademy" target="blank" title="Наш Фейсбук">
+              <span class="link__icon link__icon--color-primary" aria-hidden="true">
+                <svg class="link__svg" width="10" height="10">
+                  <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
+                </svg>
+              </span>
+              <span class="visually-hidden">Наша группа в Фейсбуке</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="link" href="https://vk.com/htmlacademy" target="_blank" title="Наш Вконтакте">
+              <span class="link__icon link__icon--color-primary" aria-hidden="true">
+                <svg class="link__svg" width="10" height="10">
+                  <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
+                </svg>
+              </span>
+              <span class="visually-hidden">Наша группа во Вконтакте</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="link" href="https://www.instagram.com/htmlacademy/" target="_blank" title="Наш Инстаграм">
+              <span class="link__icon link__icon--color-primary" aria-hidden="true">
+                <svg class="link__svg" width="10" height="10">
+                  <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
+                </svg>
+              </span>
+              <span class="visually-hidden">Наша группа в Инстаграме</span>
+            </a>
+          </li>
+        </ul>
+        
+        <button class="hamburger" type="button">
+          <span class="visually-hidden">Меню</span>
+        </button>
+      </nav>
+    </header>
+
+    <main class="main">
+      <h1 class="visually-hidden">Сервис поиска попутчиков для путешествий &laquo;Погнали&raquo;</h1>
+
+      <section class="promo">
+        <h2 class="visually-hidden">Как начать?</h2>
+
+        <b class="promo__title">В путешествие с крутыми попутчиками!</b>
+
+        <ul class="user-nav">
+          <li class="user-nav__item">
+            <a class="button button--rounded" href="login.html">Авторизация</a>
+          </li>
+          <li class="user-nav__item">
+            <a class="link" href="tel:88005558628">
+              <span class="link__icon link__icon--color-secondary" aria-hidden="true">
+                <svg class="link__svg" width="10" height="10">
+                  <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
+                </svg>
+              </span>
+              <span class="visually-hidden">8 800 555-86-28</span>
+            </a>
+          </li>
+          <li class="user-nav__item">
+            <a class="link" href="mailto:mail@htmlacademy.ru">
+              <span class="link__icon link__icon--color-tertiary" aria-hidden="true">
+                <svg class="link__svg" width="10" height="10">
+                  <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
+                </svg>
+              </span>
+              <span class="visually-hidden">mail@htmlacademy.ru</span>
+            </a>
+          </li>
+        </ul>
+
+        <blockquote class="blockquote">
+          <p class="blockquote__text">«Лучшее приложение, что я видел в жизни!»</p>
+          <dl class="blockquote__list">
+            <dt class="blockquote__author-name"><cite>Мурат Эльтазин</cite></dt>
+            <dd class="blockquote__author-position">главный редактор газеты «гаджетлайф»</dd>
+          </dl>
+        </blockquote>
+
+        <ol class="steps-list">
+          <li class="steps-list__item">
+            <span class="steps-list__text">Выберите направление</span>
+          </li>
+          <li class="steps-list__item">
+            <span class="steps-list__text">Изучите идеи путешественников</span>
+          </li>
+          <li class="steps-list__item">
+            <span class="steps-list__text">Находите тех, кто похож на вас</span>
+          </li>
+          <li class="steps-list__item">
+            <span class="steps-list__text">Путешествуйте вместе!</span>
+          </li>
+        </ol>
+      </section>
+
+      <section class="about">
+        <h2 class="secondary-title">О сервисе</h2>
+        <p class="text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
+        <p class="text text--bold">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
+      </section>
+
+      <section class="direction">
+        <h2 class="secondary-title">Направления</h2>
+        <p class="text">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
+
+        <ul class="cards-list">
+          <li class="card cards-list__item card--direction">
+            <div class="card__content">
+              <h3 class="tertiary-title">Таиланд</h3>
+              <p class="card__description">Джунгли зовут!</p>
+              <div class="travelers-counter">18321</div>
+              <div class="countries-flags">
+                <div class="countries-flags__list">
+                  <img class="country-flag card__country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Таиланда">
+                </div>
+              </div>
+            </div>
+            <div class="card__picture">
+              <img class="card__img" src="https://via.placeholder.com/270x110" width="270" height="110" alt="Море и острова Таиланда">
+            </div>
+          </li>
+
+          <li class="card cards-list__item card--direction">
+            <div class="card__content">
+              <h3 class="tertiary-title">Франция</h3>
+              <p class="card__description">Трэ бьен, манифик!</p>
+              <div class="travelers-counter">12518</div>
+              <div class="countries-flags">
+                <div class="countries-flags-list">
+                  <img class="country-flag card__country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Франции">
+                </div>
+              </div>
+            </div>
+            <div class="card__picture">
+              <img class="card__img" src="https://via.placeholder.com/270x110" width="270" height="110" alt="Улочка в Париже">
+            </div>
+          </li>
+
+          <li class="card cards-list__item card--direction">
+            <div class="card__content">
+              <h3 class="tertiary-title">Чехия</h3>
+              <p class="card__description">Закоулки старой Европы</p>
+              <div class="travelers-counter">5326</div>
+              <div class="countries-flags">
+                <div class="countries-flags-list">
+                  <img class="country-flag card__country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехии">
+                </div>
+              </div>
+            </div>
+            <div class="card__picture">
+              <img class="card__img" src="https://via.placeholder.com/270x110" width="270" height="110" alt="Вид на Прагу с реки">
+            </div>
+          </li>
+        </ul>
+
+        <a class="button" href="form.html">Показать все</a>
+      </section>
+
+      <section class="users">
+        <h2 class="secondary-title">Попутчики</h2>
+        <p class="text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
+        <p class="text text--bold">Теперь можно легко найти единомышленников!</p>
+
+        <ul class="cards-list">
+          <!-- card 1 -->
+          <li class="card cards-list__item card--users">
+            <div class="card__content">
+              <h3 class="tertiary-title">Таня Фирсова</h3>
+              <p class="card__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+
+              <div class="countries-flags">
+                <ul class="countries-flags__list">
+                  <li class="countries-flags__item">
+                    <img class="country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Шри-Ланки">
+                  </li>
+                  <li class="countries-flags__item">
+                    <img class="country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Таиланда">
+                  </li>
+                  <li class="countries-flags__item">
+                    <img class="country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Сейшельских Островов">
+                  </li>
+                </ul>
+              </div>
+
+              <div class="transports">
+                <ul class="transports__list">
+                  <!-- transport 1 -->
+                  <li class="transports__item transport">
+                    <div class="transport__content">
+                      <span class="visually-hidden">Самолет</span>
+                      <svg class="transport__svg transport__svg--active" width="20" height="20" aria-hidden="true">
+                        <circle r="10" cx="10" cy="10" fill="tomato"></circle>
+                      </svg>
+                    </div>
+                  </li>
+                  <!-- transport 2 -->
+                  <li class="transports__item transport">
+                    <div class="transport__content">
+                      <span class="visually-hidden">Автобус</span>
+                      <svg class="transport__svg" width="20" height="20" aria-hidden="true">
+                        <circle r="10" cx="10" cy="10" fill="tomato"></circle>
+                      </svg>
+                    </div>
+                  </li>
+                  <!-- transport 3 -->
+                  <li class="transports__item transport">
+                    <div class="transport__content">
+                      <span class="visually-hidden">Велосипед</span>
+                      <svg class="transport__svg" width="20" height="20" aria-hidden="true">
+                        <circle r="10" cx="10" cy="10" fill="tomato"></circle>
+                      </svg>
+                    </div>
+                  </li>
+                  <!-- transport 4 -->
+                  <li class="transports__item transport">
+                    <div class="transport__content">
+                      <span class="visually-hidden">Бегом</span>
+                      <svg class="transport__svg" width="20" height="20" aria-hidden="true">
+                        <circle r="10" cx="10" cy="10" fill="tomato"></circle>
+                      </svg>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="card__picture">
+              <img class="card__img" src="https://via.placeholder.com/270x270" width="270" height="270" alt="Таня Фирсова">
+              <div class="user-level">
+                <div class="user-level__content">
+                  <span class="user-level__number">99</span>
+                  <span class="user-level__text">level</span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!-- card 2 -->
+          <li class="card cards-list__item card--users">
+            <div class="card__content">
+              <h3 class="tertiary-title">Петя Демин</h3>
+              <p class="card__tags">#бургер #бар #футбол #концерт #крафт</p>
+
+              <div class="countries-flags">
+                <ul class="countries-flags__list">
+                  <li class="countries-flags__item">
+                    <img class="country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Бельгии">
+                  </li>
+                  <li class="countries-flags__item">
+                    <img class="country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехии">
+                  </li>
+                </ul>
+              </div>
+
+              <div class="transports">
+                <ul class="transports__list">
+                  <!-- transport 1 -->
+                  <li class="transports__item transport">
+                    <div class="transport__content">
+                      <span class="visually-hidden">Самолет</span>
+                      <svg class="transport__svg transport__svg--active" width="20" height="20" aria-hidden="true">
+                        <circle r="10" cx="10" cy="10" fill="tomato"></circle>
+                      </svg>
+                    </div>
+                  </li>
+                  <!-- transport 2 -->
+                  <li class="transports__item transport">
+                    <div class="transport__content">
+                      <span class="visually-hidden">Автобус</span>
+                      <svg class="transport__svg" width="20" height="20" aria-hidden="true">
+                        <circle r="10" cx="10" cy="10" fill="tomato"></circle>
+                      </svg>
+                    </div>
+                  </li>
+                  <!-- transport 3 -->
+                  <li class="transports__item transport">
+                    <div class="transport__content">
+                      <span class="visually-hidden">Велосипед</span>
+                      <svg class="transport__svg" width="20" height="20" aria-hidden="true">
+                        <circle r="10" cx="10" cy="10" fill="tomato"></circle>
+                      </svg>
+                    </div>
+                  </li>
+                  <!-- transport 4 -->
+                  <li class="transports__item transport">
+                    <div class="transport__content">
+                      <span class="visually-hidden">Бегом</span>
+                      <svg class="transport__svg" width="20" height="20" aria-hidden="true">
+                        <circle r="10" cx="10" cy="10" fill="tomato"></circle>
+                      </svg>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="card__picture">
+              <img class="card__img" src="https://via.placeholder.com/270x270" width="270" height="270" alt="Петя Демин">
+              <div class="user-level">
+                <div class="user-level__content">
+                  <span class="user-level__number">99</span>
+                  <span class="user-level__text">level</span>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <a class="button" href="catalog.html">Показать всех</a>
+      </section>
+
+      <section class="add-profile">
+        <h2 class="secondary-title">
+          <a class="add-profile__link" href="registration.html">Добавьте свой профиль</a>
+        </h2>
+
+        <ol class="steps-list">
+          <li class="steps-list__item">
+            <span class="steps-list__text">Базовое размещение</span>
+            <span class="steps-list__price">Бесплатно</span>
+          </li>
+          <li class="steps-list__item">
+            <span class="steps-list__text">Вывод на первых позициях</span>
+            <span class="steps-list__price">99 руб./мес</span>
+          </li>
+          <li class="steps-list__item">
+            <span class="steps-list__text">Кастомный цвет карточки</span>
+            <span class="steps-list__price">59 руб./мес</span>
+          </li>
+        </ol>
+
+        <a class="link" href="tariffs.html">Показать тарифы для бизнеса</a>
+
+        <section class="modal modal--tariffs">
+          <h2 class="secondary-title">Бизнес-тарифы</h2>
+          <ul class="steps-list">
+            <li class="steps-list__item">
+              <span class="steps-list__text">Реклама у блоггера</span>
+              <span class="steps-list__price">300&thinsp;000 руб./пост</span>
+            </li>
+            <li class="steps-list__item">
+              <span class="steps-list__text">Накрутка подписчиков</span>
+              <span class="steps-list__price">от 1 руб./шт.</span>
+            </li>
+            <li class="steps-list__item">
+              <span class="steps-list__text">Лайки от ботов</span>
+              <span class="steps-list__price">от 20 коп./лайк</span>
+            </li>
+            <li class="steps-list__item">
+              <span class="steps-list__text">Ваш продакт-плейсмент</span>
+              <span class="steps-list__price">Индивидуально</span>
+            </li>
+          </ul>
+          <button class="button modal__button">Закрыть окно</button>
+        </section>
+        
+      </section>
+
+      <section class="contacts">
+        <h2 class="visually-hidden">Контакты</h2>
+        <!-- здесь будут контакты -->
+      </section>
+
+      <section class="route">
+        <h2 class="visually-hidden">Проложить маршрут</h2>
+        <!-- здесь будет карта -->
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <a class="main-logo">
+        <img class="main-logo__img" src="https://via.placeholder.com/100x19" width="100" height="19" alt="Логотип сервиса &laquo;Погнали&raquo;">
+      </a>
+
+      <ul class="social">
+        <li class="social__item">
+          <a class="link" href="https://www.facebook.com/htmlacademy" target="blank" title="Наш Фейсбук">
+            <span class="link__icon link__icon--color-secondary" aria-hidden="true">
+              <svg class="link__svg" width="10" height="10">
+                <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
+              </svg>
+            </span>
+            <span class="visually-hidden">Наша группа в Фейсбуке</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="link" href="https://vk.com/htmlacademy" target="_blank" title="Наш Вконтакте">
+            <span class="link__icon link__icon--color-secondary" aria-hidden="true">
+              <svg class="link__svg" width="10" height="10">
+                <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
+              </svg>
+            </span>
+            <span class="visually-hidden">Наша группа во Вконтакте</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="link" href="https://www.instagram.com/htmlacademy/" target="_blank" title="Наш Инстаграм">
+            <span class="link__icon link__icon--color-secondary" aria-hidden="true">
+              <svg class="link__svg" width="10" height="10">
+                <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
+              </svg>
+            </span>
+            <span class="visually-hidden">Наша группа в Инстаграме</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="copyright">
+        Разработано
+        <a class="link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="link__icon link__icon--color-secondary" aria-hidden="true">
+            <svg class="link__svg" width="10" height="10">
+              <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
+            </svg>
+          </span>
+          <span class="visually-hidden">HtmlAcademy</span>
+        </a>
+      </div>
+    </footer>
   </body>
 </html>
