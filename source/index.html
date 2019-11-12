@@ -159,7 +159,7 @@
         <ul class="cards-list">
           <li class="card cards-list__item card--direction">
             <div class="card__content">
-              <h3 class="tertiary-title">Таиланд</h3>
+              <h3 class="card__title tertiary-title">Таиланд</h3>
               <p class="card__description">Джунгли зовут!</p>
               <div class="travelers-counter">18321</div>
               <div class="countries-flags">
@@ -175,7 +175,7 @@
 
           <li class="card cards-list__item card--direction">
             <div class="card__content">
-              <h3 class="tertiary-title">Франция</h3>
+              <h3 class="card__title tertiary-title">Франция</h3>
               <p class="card__description">Трэ бьен, манифик!</p>
               <div class="travelers-counter">12518</div>
               <div class="countries-flags">
@@ -191,7 +191,7 @@
 
           <li class="card cards-list__item card--direction">
             <div class="card__content">
-              <h3 class="tertiary-title">Чехия</h3>
+              <h3 class="card__title tertiary-title">Чехия</h3>
               <p class="card__description">Закоулки старой Европы</p>
               <div class="travelers-counter">5326</div>
               <div class="countries-flags">
@@ -216,9 +216,9 @@
 
         <ul class="cards-list">
           <!-- card 1 -->
-          <li class="card cards-list__item card--users">
+          <li class="cards-list__item card card--users">
             <div class="card__content">
-              <h3 class="tertiary-title">Таня Фирсова</h3>
+              <h3 class="card__title tertiary-title">Таня Фирсова</h3>
               <p class="card__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
 
               <div class="countries-flags">
@@ -288,9 +288,9 @@
             </div>
           </li>
           <!-- card 2 -->
-          <li class="card cards-list__item card--users">
+          <li class="cards-list__item card card--users">
             <div class="card__content">
-              <h3 class="tertiary-title">Петя Демин</h3>
+              <h3 class="card__title tertiary-title">Петя Демин</h3>
               <p class="card__tags">#бургер #бар #футбол #концерт #крафт</p>
 
               <div class="countries-flags">
@@ -382,29 +382,6 @@
         </ol>
 
         <a class="link" href="tariffs.html">Показать тарифы для бизнеса</a>
-
-        <section class="modal modal--tariffs">
-          <h2 class="secondary-title">Бизнес-тарифы</h2>
-          <ul class="steps-list">
-            <li class="steps-list__item">
-              <span class="steps-list__text">Реклама у блоггера</span>
-              <span class="steps-list__price">300&thinsp;000 руб./пост</span>
-            </li>
-            <li class="steps-list__item">
-              <span class="steps-list__text">Накрутка подписчиков</span>
-              <span class="steps-list__price">от 1 руб./шт.</span>
-            </li>
-            <li class="steps-list__item">
-              <span class="steps-list__text">Лайки от ботов</span>
-              <span class="steps-list__price">от 20 коп./лайк</span>
-            </li>
-            <li class="steps-list__item">
-              <span class="steps-list__text">Ваш продакт-плейсмент</span>
-              <span class="steps-list__price">Индивидуально</span>
-            </li>
-          </ul>
-          <button class="button modal__button">Закрыть окно</button>
-        </section>
       </section>
 
       <section class="contacts">
@@ -458,15 +435,38 @@
 
       <div class="copyright">
         Разработано
-        <a class="link" href="https://htmlacademy.ru/intensive/adaptive">
-          <span class="link__icon link__icon--color-secondary" aria-hidden="true">
-            <svg class="link__svg" width="10" height="10">
-              <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="copyright__icon" aria-hidden="true">
+            <svg class="copyright__svg" width="20" height="20">
+              <rect x="5" y="5" width="20" height="20" fill="tomato"></rect>
             </svg>
           </span>
           <span class="visually-hidden">HtmlAcademy</span>
         </a>
       </div>
+
+      <section class="modal modal--tariffs">
+        <h2 class="secondary-title">Бизнес-тарифы</h2>
+        <ul class="steps-list">
+          <li class="steps-list__item">
+            <span class="steps-list__text">Реклама у блоггера</span>
+            <span class="steps-list__price">300&thinsp;000 руб./пост</span>
+          </li>
+          <li class="steps-list__item">
+            <span class="steps-list__text">Накрутка подписчиков</span>
+            <span class="steps-list__price">от 1 руб./шт.</span>
+          </li>
+          <li class="steps-list__item">
+            <span class="steps-list__text">Лайки от ботов</span>
+            <span class="steps-list__price">от 20 коп./лайк</span>
+          </li>
+          <li class="steps-list__item">
+            <span class="steps-list__text">Ваш продакт-плейсмент</span>
+            <span class="steps-list__price">Индивидуально</span>
+          </li>
+        </ul>
+        <button class="button modal__button">Закрыть окно</button>
+      </section>
     </footer>
   </body>
 </html>
