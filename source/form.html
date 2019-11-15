@@ -261,61 +261,73 @@
                       <span class="visually-hidden">Следующий месяц</span>
                     </button>
                   </header>
-                  <div class="datepicker__content calendar">
-                    <ol class="calendar__weekday-list">
-                      <li class="calendar__weekday-item">П</li>
-                      <li class="calendar__weekday-item">В</li>
-                      <li class="calendar__weekday-item">С</li>
-                      <li class="calendar__weekday-item">Ч</li>
-                      <li class="calendar__weekday-item">П</li>
-                      <li class="calendar__weekday-item calendar__weekday-item--weekend">С</li>
-                      <li class="calendar__weekday-item calendar__weekday-item--weekend">В</li>
-                    </ol>
 
-                    <ol class="calendar__mounthday-list">
-                      <li class="calendar__mounthday-item calendar__mounthday-item--disabled">23</li>
-                      <li class="calendar__mounthday-item calendar__mounthday-item--disabled">24</li>
-                      <li class="calendar__mounthday-item calendar__mounthday-item--disabled">26</li>
-                      <li class="calendar__mounthday-item calendar__mounthday-item--disabled">26</li>
-                      <li class="calendar__mounthday-item calendar__mounthday-item--disabled">27</li>
-                      <li class="calendar__mounthday-item calendar__mounthday-item--disabled">28</li>
-                      <li class="calendar__mounthday-item calendar__mounthday-item--disabled">1</li>
-                      <li class="calendar__mounthday-item calendar__mounthday-item--disabled">2</li>
-                      <li class="calendar__mounthday-item calendar__mounthday-item--disabled">3</li>
-                      <li class="calendar__mounthday-item calendar__mounthday-item--disabled">4</li>
-                      <li class="calendar__mounthday-item calendar__mounthday-item--disabled">5</li>
-                      <li class="calendar__mounthday-item calendar__mounthday-item--disabled">6</li>
-                      <li class="calendar__mounthday-item calendar__mounthday-item--disabled">7</li>
-                      <li class="calendar__mounthday-item calendar__mounthday-item--disabled">8</li>
-                      <li class="calendar__mounthday-item calendar__mounthday-item--disabled">9</li>
-                      <li class="calendar__mounthday-item calendar__mounthday-item--disabled">10</li>
-                      <li class="calendar__mounthday-item calendar__mounthday-item--disabled">11</li>
-                      <li class="calendar__mounthday-item calendar__mounthday-item--disabled">12</li>
-                      <li class="calendar__mounthday-item calendar__mounthday-item--disabled">13</li>
-                      <li class="calendar__mounthday-item calendar__mounthday-item--disabled">14</li>
-                      <li class="calendar__mounthday-item calendar__mounthday-item--disabled">15</li>
-                      <li class="calendar__mounthday-item calendar__mounthday-item--disabled">16</li>
-                      <li class="calendar__mounthday-item calendar__mounthday-item--disabled">17</li>
-                      <li class="calendar__mounthday-item calendar__mounthday-item--disabled">18</li>
-                      <li class="calendar__mounthday-item calendar__mounthday-item--disabled">19</li>
-                      <li class="calendar__mounthday-item calendar__mounthday-item--disabled">20</li>
-                      <li class="calendar__mounthday-item calendar__mounthday-item--disabled">21</li>
-                      <li class="calendar__mounthday-item calendar__mounthday-item--disabled">22</li>
-                      <li class="calendar__mounthday-item calendar__mounthday-item--disabled">23</li>
-                      <li class="calendar__mounthday-item calendar__mounthday-item--disabled">24</li>
-                      <li class="calendar__mounthday-item calendar__mounthday-item--disabled">25</li>
-                      <li class="calendar__mounthday-item calendar__mounthday-item--range">26</li>
-                      <li class="calendar__mounthday-item calendar__mounthday-item--range">27</li>
-                      <li class="calendar__mounthday-item calendar__mounthday-item--range">28</li>
-                      <li class="calendar__mounthday-item">29</li>
-                      <li class="calendar__mounthday-item">30</li>
-                      <li class="calendar__mounthday-item">31</li>
-                      <li class="calendar__mounthday-item">1</li>
-                      <li class="calendar__mounthday-item">2</li>
-                      <li class="calendar__mounthday-item">3</li>
-                      <li class="calendar__mounthday-item">4</li>
-                      <li class="calendar__mounthday-item">5</li>
-                    </ol>
+                  <div class="datepicker__main">
+                    <table class="datepicker__dates">
+                      <tr class="datepicker__row">
+                        <th class="datepicker__day-name">П</th>
+                        <th class="datepicker__day-name">В</th>
+                        <th class="datepicker__day-name">С</th>
+                        <th class="datepicker__day-name">Ч</th>
+                        <th class="datepicker__day-name">П</th>
+                        <th class="datepicker__day-name datepicker__day-name--weekend">С</th>
+                        <th class="datepicker__day-name datepicker__day-name--weekend">В</th>
+                      </tr>
+                      <tr class="datepicker__row">
+                        <td class="datepicker__date datepicker__date--disabled">23</td>
+                        <td class="datepicker__date datepicker__date--disabled">24</td>
+                        <td class="datepicker__date datepicker__date--disabled">25</td>
+                        <td class="datepicker__date datepicker__date--disabled">26</td>
+                        <td class="datepicker__date datepicker__date--disabled">27</td>
+                        <td class="datepicker__date datepicker__date--disabled">28</td>
+                        <td class="datepicker__date datepicker__date--disabled">1</td>
+                      </tr>
+                      <tr class="datepicker__row">
+                        <td class="datepicker__date datepicker__date--disabled">2</td>
+                        <td class="datepicker__date datepicker__date--disabled">3</td>
+                        <td class="datepicker__date datepicker__date--disabled">4</td>
+                        <td class="datepicker__date datepicker__date--disabled">5</td>
+                        <td class="datepicker__date datepicker__date--disabled">6</td>
+                        <td class="datepicker__date datepicker__date--disabled">7</td>
+                        <td class="datepicker__date datepicker__date--disabled">8</td>
+                      </tr>
+                      <tr class="datepicker__row">
+                        <td class="datepicker__date datepicker__date--disabled">9</td>
+                        <td class="datepicker__date datepicker__date--disabled">10</td>
+                        <td class="datepicker__date datepicker__date--disabled">11</td>
+                        <td class="datepicker__date datepicker__date--disabled">12</td>
+                        <td class="datepicker__date datepicker__date--disabled">13</td>
+                        <td class="datepicker__date datepicker__date--disabled">14</td>
+                        <td class="datepicker__date datepicker__date--disabled">15</td>
+                      </tr>
+                      <tr class="datepicker__row">
+                        <td class="datepicker__date datepicker__date--disabled">16</td>
+                        <td class="datepicker__date datepicker__date--disabled">17</td>
+                        <td class="datepicker__date datepicker__date--disabled">18</td>
+                        <td class="datepicker__date datepicker__date--disabled">19</td>
+                        <td class="datepicker__date datepicker__date--disabled">20</td>
+                        <td class="datepicker__date datepicker__date--disabled">21</td>
+                        <td class="datepicker__date datepicker__date--disabled">22</td>
+                      </tr>
+                      <tr class="datepicker__row">
+                        <td class="datepicker__date datepicker__date--disabled">22</td>
+                        <td class="datepicker__date datepicker__date--disabled">24</td>
+                        <td class="datepicker__date datepicker__date--disabled">25</td>
+                        <td class="datepicker__date datepicker__date--selected">26</td>
+                        <td class="datepicker__date datepicker__date--selected">27</td>
+                        <td class="datepicker__date datepicker__date--selected">28</td>
+                        <td class="datepicker__date">29</td>
+                      </tr>
+                      <tr class="datepicker__row">
+                        <td class="datepicker__date">30</td>
+                        <td class="datepicker__date">31</td>
+                        <td class="datepicker__date">1</td>
+                        <td class="datepicker__date">2</td>
+                        <td class="datepicker__date">3</td>
+                        <td class="datepicker__date">4</td>
+                        <td class="datepicker__date">5</td>
+                      </tr>
+                    </table>
                   </div>
                 </article>
               </div>
