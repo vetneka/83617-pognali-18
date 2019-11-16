@@ -386,12 +386,60 @@
 
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
-        <!-- здесь будут контакты -->
+        <p class="secondary-title">Заинтересовались?</p>
+        <p class="text">Зарегистрируйтесь,  это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a class="link link--text" href="login.html">авторизуйтесь.</a></p>
+
+        <form class="contacts-form" action="https://echo.htmlacademy.ru" method="GET">
+          <label class="visually-hidden" for="user-email">Введите ваш e-mail</label>
+          <input type="email" name="user-email" id="user-email" placeholder="E-mail" required>
+          <button class="button" type="submit">
+            <span class="visually-hidden">Регистация</span>
+          </button>
+        </form>
+
+        <p class="text">Остались вопросы? Мы с радостью на них ответим!</p>
+        <ul class="user-nav">
+          <li class="user-nav__item">
+            <a class="link" href="tel:88005558628">
+              <span class="link__icon link__icon--color-primary" aria-hidden="true">
+                <svg class="link__svg" width="10" height="10">
+                  <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
+                </svg>
+              </span>
+              <span class="link__text">8 800 555-86-28</span>
+            </a>
+          </li>
+          <li class="user-nav__item">
+            <a class="link" href="mailto:mail@htmlacademy.ru">
+              <span class="link__icon link__icon--color-primary" aria-hidden="true">
+                <svg class="link__svg" width="10" height="10">
+                  <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
+                </svg>
+              </span>
+              <span class="link__text">mail@htmlacademy.ru</span>
+            </a>
+          </li>
+        </ul>
       </section>
 
       <section class="route">
         <h2 class="visually-hidden">Проложить маршрут</h2>
-        <!-- здесь будет карта -->
+
+        <p class="link">
+          <span class="link__icon link__icon--color-primary" aria-hidden="true">
+            <svg class="link__svg" width="10" height="10">
+              <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
+            </svg>
+          </span>
+          <span class="link__text">ул. Большая Конюшенная, 19/8</span>
+        </p>
+
+        <a class="button" href="https://yandex.ru/maps/-/CGTFY2JW">Проложить маршрут</a>
+
+        <article class="map">
+          <h2 class="visually-hidden">Карта</h2>
+          <img src="https://via.placeholder.com/320x300" width="320" height="300" alt="На адрес Санкт-Петербург, ул. Большая Конюшенная, 19/8">
+        </article>
       </section>
     </main>
 
