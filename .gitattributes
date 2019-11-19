@@ -1,7 +1,5 @@
 * text eol=lf
 
-*.svg text
-
 *.png binary
 *.jpg binary
 *.jpeg binary
