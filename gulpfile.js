@@ -8,6 +8,7 @@ var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
 var svgmin = require("gulp-svgmin");
+const gulpBemCss = require("gulp-bem-css");
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -45,4 +46,14 @@ gulp.task("svgmin", function () {
           }
       }))
       .pipe(gulp.dest("source/img/"))
+});
+
+gulp.task("htmlToBem", function () {
+  return gulp.src("source/*.html")
+    .pipe(gulpBemCss({
+      folder: 'source/sass/blocks',
+      extension: 'scss',
+      elementSeparator: '__',
+      modifierSeparator: '--'
+    }))
 });
