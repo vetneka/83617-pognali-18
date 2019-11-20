@@ -1,43 +1,63 @@
 .card {
 
+  &--users {
+
+    .card__content {
+      border-top-right-radius: initial;
+      border-top-left-radius: initial;
+    }
+
+    .card__img {
+      border-top-right-radius: initial;
+      border-top-left-radius: initial;
+    }
+  }
 }
 
-.card.card--catalog {
-
+.card__content {
+  background-color: $white;
+  line-height: $base-line-height / 1.125;
+  color: rgba($main-color-text, 0.3);
+  font-weight: 500;
+  border-radius: $base-border-radius;
 }
 
-.card .card__content {
-
-}
-
-.card .card__info {
-
-}
-
-.card .card__link {
-
-}
-
-.card .card__title {
-
-}
-
-.card .card__img {
-
-}
-
-.card .card__likes-counter {
+/* .card__title {
 
 }
 
-.card .card__tags {
+.card__info {
 
 }
 
-.card .card__subtitle {
+.card__description {
 
 }
 
-.card .card__field {
+.card__link {
 
-}
+} */
+
+.card__img {
+  border-top-right-radius: $base-border-radius;
+  border-top-left-radius: $base-border-radius;
+}
+
+.card__tags {
+  color: rgba($main-color-text, 1);
+  font-weight: 400;
+}
+
+/* .card__likes-counter {
+
+}
+
+
+
+.card__subtitle {
+
+}
+
+.card__field {
+
+} */

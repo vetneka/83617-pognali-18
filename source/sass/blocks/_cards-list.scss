@@ -1,7 +1,7 @@
 .cards-list {
-
+  @include reset-list;
 }
 
 .cards-list .cards-list__item {
 
-}
+}

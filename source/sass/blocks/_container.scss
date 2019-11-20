@@ -1,0 +1,20 @@
+.container {
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 25px;
+
+  &--rounded {
+    border-bottom-left-radius: $large-border-radius;
+    border-bottom-right-radius: $large-border-radius;
+  }
+
+  &--bg-dark {
+    background-color: $main-color-darker-30;
+    color: $white;
+  }
+
+  &--bg-light {
+    background-color: $main-color;
+    color: $main-color-text;
+  }
+}

@@ -1,3 +1,20 @@
 .main-header {
+  padding-top: 30px;
+  padding-bottom: 35px;
+}
 
-}
+.main-header__main-logo {
+  margin-bottom: 65px;
+}
+
+.main-header__site-nav {
+  margin-bottom: 50px;
+}
+
+.main-header__user-nav {
+  margin-bottom: 30px;
+
+  .user-nav__item:first-child {
+    margin-bottom: 50px;
+  }
+}

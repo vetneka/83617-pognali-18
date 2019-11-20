@@ -1,7 +1,8 @@
 .social {
+  @include reset-list;
 
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
 }
-
-.social .social__item {
-
-}

@@ -1,7 +1,17 @@
 .secondary-title {
+  margin: 0;
 
+  font-family: $base-font-family;
+  font-size: $base-font-size * 1.5;
+  line-height: 1;
+  font-weight: 600;
+  font-style: normal;
+  color: $main-color-accent-darker-30;
+
+  /* &--icon {
+
+    &--filter {
+
+    }
+  } */
 }
-
-.secondary-title.secondary-title--icon--filter {
-
-}

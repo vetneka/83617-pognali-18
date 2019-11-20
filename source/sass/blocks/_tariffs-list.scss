@@ -1,0 +1,62 @@
+.tariffs-list {
+  @include reset-list;
+  counter-reset: step;
+}
+
+.tariffs-list__item {
+  position: relative;
+
+  counter-increment: step;
+
+  &::after {
+    content: counter(step);
+    position: absolute;
+    top: 0;
+    right: 20px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    line-height: 34px;
+    vertical-align: middle;
+    text-align: center;
+    color: $white;
+  }
+
+  &:nth-child(3n+1) {
+    &::after {
+      background-color: $main-color-accent-darker-30;
+    }
+  }
+
+  &:nth-child(3n+2) {
+    &::after {
+      background-color: $main-color-accent-darker-20;
+    }
+  }
+
+  &:nth-child(3n+3) {
+    &::after {
+      background-color: $main-color-accent;
+    }
+  }
+
+  &:last-child {
+
+    .tariffs-list__item-content {
+      border-bottom: 1px solid rgba($black, 0.05);
+    }
+  }
+}
+
+.tariffs-list__item-content {
+  max-width: 70%;
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 1px solid rgba($black, 0.05);
+}
+
+.tariffs-list__text,
+.tariffs-list__price {
+  display: block;
+}

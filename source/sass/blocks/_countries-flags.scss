@@ -1,15 +1,21 @@
-.countries-flags {
+/* .countries-flags {
+
+} */
+
+.countries-flags__list {
+  @include reset-list;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+/*
+.countries-flags__item {
 
 }
 
-.countries-flags .countries-flags__list {
+.countries-flags__text {
 
 }
-
-.countries-flags .countries-flags__item {
-
-}
-
-.countries-flags .countries-flags__text {
-
-}
+ */

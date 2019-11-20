@@ -1,19 +1,13 @@
-.blockquote {
-
+.blockquote__list {
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: 600;
 }
 
-.blockquote .blockquote__text {
-
+.blockquote__author-name cite {
+  font-style: normal;
 }
 
-.blockquote .blockquote__list {
-
+.blockquote__author-position {
+  margin-left: 0;
 }
-
-.blockquote .blockquote__author-name {
-
-}
-
-.blockquote .blockquote__author-position {
-
-}

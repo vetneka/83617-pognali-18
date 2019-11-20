@@ -1,15 +1,57 @@
 .steps-list {
-
+  @include reset-list;
+  counter-reset: step;
+  width: calc(100vw - 50px);
+  margin: 0 auto;
 }
 
-.steps-list .steps-list__item {
+.steps-list__item {
+  position: relative;
+  padding: 20px 45px 30px 25px;
+  border-top-left-radius: $base-border-radius;
+  border-top-right-radius: $base-border-radius;
 
+  font-size: $base-font-size * 1.125;
+  font-size: 1;
+  font-weight: 600;
+
+  counter-increment: step;
+
+  &:nth-child(4n+1) {
+    background-color: $main-color-accent-darker-30;
+  }
+  &:nth-child(4n+2) {
+    background-color: $main-color-accent-darker-20;
+  }
+  &:nth-child(4n+3) {
+    background-color: $main-color-accent-darker-10;
+  }
+  &:nth-child(4n+4) {
+    background-color: $main-color-accent;
+  }
+  &:not(:first-child) {
+    margin-top: -10px;
+  }
+  &:last-child {
+    padding-bottom: 20px;
+    border-bottom-left-radius: $base-border-radius;
+    border-bottom-right-radius: $base-border-radius;
+  }
+
+  &::after {
+    content: counter(step);
+    position: absolute;
+    right: 20px;
+  }
 }
 
-.steps-list .steps-list__text {
-
+.steps-list__text {
+  max-width: 55%;
+  display: inline-block;
+  vertical-align: top;
+  color: $main-color-darker-30;
 }
 
-.steps-list .steps-list__price {
+/* .steps-list__price {
 
-}
+}*/
