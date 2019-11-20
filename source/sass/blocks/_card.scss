@@ -12,6 +12,26 @@
       border-top-left-radius: initial;
     }
   }
+
+  &--catalog {
+
+    .card__content {
+      font-size: $base-font-size * 0.9375;
+      line-height: $base-line-height * 0.818;
+      font-weight: 400;
+      color: rgba($main-color-text, 1);
+    }
+
+    .card__img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+    }
+
+    .countries-flags__list {
+      flex-direction: column;
+    }
+  }
 }
 
 .card__content {
@@ -33,10 +53,11 @@
 .card__description {
 
 }
-
+*/
 .card__link {
-
-} */
+  text-decoration: none;
+  color: inherit;
+}
 
 .card__img {
   border-top-right-radius: $base-border-radius;
