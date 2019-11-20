@@ -19,7 +19,6 @@
 }
 
 .pagination__item {
-
   &--arrow {
     position: relative;
     width: 50%;
@@ -40,6 +39,7 @@
     &:first-child {
       border-top-left-radius: $large-border-radius;
       border-bottom-left-radius: $large-border-radius;
+
       &::before {
         transform: translate(-50%, -50%) rotate(180deg);
       }

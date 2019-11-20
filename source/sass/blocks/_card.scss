@@ -1,7 +1,5 @@
 .card {
-
   &--users {
-
     .card__content {
       border-top-right-radius: initial;
       border-top-left-radius: initial;
@@ -14,7 +12,6 @@
   }
 
   &--catalog {
-
     .card__content {
       font-size: $base-font-size * 0.9375;
       line-height: $base-line-height * 0.818;
@@ -68,12 +65,9 @@
   color: rgba($main-color-text, 1);
   font-weight: 400;
 }
-
 /* .card__likes-counter {
 
 }
-
-
 
 .card__subtitle {
 
