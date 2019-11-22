@@ -2,96 +2,102 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Погнали</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Погнали: Попутчики</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
-      <a class="main-logo" href="index.html">
-        <img class="main-logo__img" src="https://via.placeholder.com/100x19" width="100" height="19" alt="Логотип сервиса &laquo;Погнали&raquo;">
-      </a>
+      <div class="container">
+        <a class="main-header__main-logo main-logo" href="index.html">
+          <img class="main-logo__img" src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип сервиса &laquo;Погнали&raquo;">
+        </a>
 
-      <nav class="main-nav">
-        <ul class="site-nav">
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="about.html">О сервисе</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="form.html">Направления</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="catalog.html">Попутчики</a>
-          </li>
-        </ul>
+        <nav class="main-header__main-nav main-nav">
+          <ul class="main-header__site-nav site-nav">
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="about.html">О сервисе</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="form.html">Направления</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link">Попутчики</a>
+            </li>
+          </ul>
 
-        <ul class="user-nav">
-          <li class="user-nav__item">
-            <a class="button button--rounded" href="login.html">Авторизация</a>
-          </li>
-          <li class="user-nav__item">
-            <a class="link" href="tel:88005558628">
-              <span class="link__icon link__icon--color-primary" aria-hidden="true">
-                <svg class="link__svg" width="10" height="10">
-                  <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
-                </svg>
-              </span>
-              <span class="link__text">8 800 555-86-28</span>
-            </a>
-          </li>
-          <li class="user-nav__item">
-            <a class="link" href="mailto:mail@htmlacademy.ru">
-              <span class="link__icon link__icon--color-primary" aria-hidden="true">
-                <svg class="link__svg" width="10" height="10">
-                  <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
-                </svg>
-              </span>
-              <span class="link__text">mail@htmlacademy.ru</span>
-            </a>
-          </li>
-        </ul>
+          <ul class="main-header__user-nav user-nav">
+            <li class="user-nav__item">
+              <a class="button button--rounded" href="login.html">Авторизация</a>
+            </li>
+            <li class="user-nav__item">
+              <a class="link" href="tel:88005558628">
+                <span class="link__icon link__icon--main-color" aria-hidden="true">
+                  <svg class="link__svg" width="10" height="10">
+                    <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
+                  </svg>
+                </span>
+                <span class="link__text">8 800 555-86-28</span>
+              </a>
+            </li>
+            <li class="user-nav__item">
+              <a class="link" href="mailto:mail@htmlacademy.ru">
+                <span class="link__icon link__icon--main-color" aria-hidden="true">
+                  <svg class="link__svg" width="10" height="10">
+                    <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
+                  </svg>
+                </span>
+                <span class="link__text">mail@htmlacademy.ru</span>
+              </a>
+            </li>
+          </ul>
 
-        <ul class="social">
-          <li class="social__item">
-            <a class="link" href="https://www.facebook.com/htmlacademy" target="_blank" title="Наш Фейсбук">
-              <span class="link__icon link__icon--color-primary" aria-hidden="true">
-                <svg class="link__svg" width="10" height="10">
-                  <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
-                </svg>
-              </span>
-              <span class="visually-hidden">Наша группа в Фейсбуке</span>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="link" href="https://vk.com/htmlacademy" target="_blank" title="Наш Вконтакте">
-              <span class="link__icon link__icon--color-primary" aria-hidden="true">
-                <svg class="link__svg" width="10" height="10">
-                  <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
-                </svg>
-              </span>
-              <span class="visually-hidden">Наша группа во Вконтакте</span>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="link" href="https://www.instagram.com/htmlacademy/" target="_blank" title="Наш Инстаграм">
-              <span class="link__icon link__icon--color-primary" aria-hidden="true">
-                <svg class="link__svg" width="10" height="10">
-                  <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
-                </svg>
-              </span>
-              <span class="visually-hidden">Наша группа в Инстаграме</span>
-            </a>
-          </li>
-        </ul>
+          <ul class="social">
+            <li class="social__item">
+              <a class="link" href="https://www.facebook.com/htmlacademy" target="blank" title="Наш Фейсбук">
+                <span class="link__icon link__icon--main-color" aria-hidden="true">
+                  <svg class="link__svg" width="10" height="10">
+                    <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
+                  </svg>
+                </span>
+                <span class="visually-hidden">Наша группа в Фейсбуке</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="link" href="https://vk.com/htmlacademy" target="_blank" title="Наш Вконтакте">
+                <span class="link__icon link__icon--main-color" aria-hidden="true">
+                  <svg class="link__svg" width="10" height="10">
+                    <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
+                  </svg>
+                </span>
+                <span class="visually-hidden">Наша группа во Вконтакте</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="link" href="https://www.instagram.com/htmlacademy/" target="_blank" title="Наш Инстаграм">
+                <span class="link__icon link__icon--main-color" aria-hidden="true">
+                  <svg class="link__svg" width="10" height="10">
+                    <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
+                  </svg>
+                </span>
+                <span class="visually-hidden">Наша группа в Инстаграме</span>
+              </a>
+            </li>
+          </ul>
 
-        <button class="hamburger" type="button">
-          <span class="visually-hidden">Меню</span>
-        </button>
-      </nav>
+          <button class="hamburger" type="button">
+            <span class="visually-hidden">Меню</span>
+          </button>
+        </nav>
+      </div>
     </header>
 
-    <main class="main">
-      <h1 class="primary-title">Попутчики</h1>
+    <main class="main main--inner">
+      <div class="main__head container container--bg-dark container--rounded">
+        <h1 class="main__primary-title primary-title">Попутчики</h1>
+      </div>
 
-      <section class="filter">
+      <section class="filter container">
         <h2 class="visually-hidden">Фильтр</h2>
 
         <section class="countries-filter">
@@ -351,17 +357,17 @@
         </section>
       </section>
 
-      <section class="catalog">
+      <section class="catalog container">
         <h2 class="visually-hidden">Каталог путешественников</h2>
 
-        <ul class="cards-list">
+        <ul class="catalog__cards-list cards-list">
           <!-- card 1 -->
           <li class="cards-list__item card card--catalog">
             <div class="card__content">
               <div class="card__info">
                 <a class="card__link" href="profile/tanya-firsova.html">
                   <h3 class="card__title tertiary-title">Таня Фирсова</h3>
-                  <img class="card__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Таня Фирсова">
+                  <img class="card__img" src="img/firsova-mobile@1x.jpg" width="70" height="70" alt="Таня Фирсова">
                 </a>
                 <div class="card__likes-counter likes-counterlikes-counter">
                   <span class="likes-counter__icon">
@@ -443,17 +449,18 @@
                   <span class="user-level__number">99</span>
                 </div>
               </div>
-            </div>
 
-            <a class="button" href="feedback.html">Позвать!</a>
+              <a class="button button--rounded" href="feedback.html">Позвать!</a>
+            </div>
           </li>
+
           <!-- card 2 -->
           <li class="cards-list__item card card--catalog">
             <div class="card__content">
               <div class="card__info">
                 <a class="card__link" href="profile/petya-demin.html">
                   <h3 class="card__title tertiary-title">Петя Демин</h3>
-                  <img class="card__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Петя Демин">
+                  <img class="card__img" src="img/demin-mobile@1x.jpg" width="70" height="70" alt="Петя Демин">
                 </a>
                 <div class="card__likes-counter likes-counter">
                   <span class="likes-counter__icon">
@@ -531,17 +538,18 @@
                   <span class="user-level__number">80</span>
                 </div>
               </div>
-            </div>
 
-            <a class="button" href="feedback.html">Позвать!</a>
+              <a class="button button--rounded" href="feedback.html">Позвать!</a>
+            </div>
           </li>
+
           <!-- card 3 -->
           <li class="cards-list__item card card--catalog">
             <div class="card__content">
               <div class="card__info">
                 <a class="card__link" href="profile/mark-smolov.html">
                   <h3 class="card__title tertiary-title">Марк Смолов</h3>
-                  <img class="card__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Марк Смолов">
+                  <img class="card__img" src="img/smolov-mobile@1x.jpg" width="70" height="70" alt="Марк Смолов">
                 </a>
                 <div class="card__likes-counter likes-counter">
                   <span class="likes-counter__icon">
@@ -623,17 +631,18 @@
                   <span class="user-level__number">25</span>
                 </div>
               </div>
-            </div>
 
-            <a class="button" href="feedback.html">Позвать!</a>
+              <a class="button button--rounded" href="feedback.html">Позвать!</a>
+            </div>
           </li>
+
           <!-- card 4 -->
           <li class="cards-list__item card card--catalog">
             <div class="card__content">
               <div class="card__info">
                 <a class="card__link" href="profile/larisa-rogovaya.html">
                   <h3 class="card__title tertiary-title">Лариса Роговая</h3>
-                  <img class="card__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Лариса Роговая">
+                  <img class="card__img" src="img/rogovaya-mobile@1x.jpg" width="70" height="70" alt="Лариса Роговая">
                 </a>
                 <div class="card__likes-counter likes-counter">
                   <span class="likes-counter__icon">
@@ -709,16 +718,16 @@
                   <span class="user-level__number">50</span>
                 </div>
               </div>
-            </div>
 
-            <a class="button" href="feedback.html">Позвать!</a>
+              <a class="button button--rounded" href="feedback.html">Позвать!</a>
+            </div>
           </li>
         </ul>
 
-        <a class="button button--icon" href="catalog-all.html">Показать еще</a>
+        <a class="catalog__button link link--plus" href="catalog-all.html">Показать еще</a>
       </section>
 
-      <ul class="pagination">
+      <ul class="pagination container">
         <li class="pagination__item pagination__item--arrow">
           <a class="pagination__link" href="catalog-n-1.html">
             <span class="visually-hidden">Показать предыдущую страницу</span>
@@ -732,14 +741,14 @@
       </ul>
     </main>
 
-    <footer class="main-footer">
-      <a class="main-logo">
-        <img class="main-logo__img" src="https://via.placeholder.com/100x19" width="100" height="19" alt="Логотип сервиса &laquo;Погнали&raquo;">
+    <footer class="main-footer container">
+      <a class="main-footer__main-logo main-logo" href="index.html">
+        <img class="main-logo__img" src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип сервиса &laquo;Погнали&raquo;">
       </a>
 
-      <ul class="social">
+      <ul class="main-footer__social social">
         <li class="social__item">
-          <a class="link" href="https://www.facebook.com/htmlacademy" target="_blank" title="Наш Фейсбук">
+          <a class="link" href="https://www.facebook.com/htmlacademy" target="blank" title="Наш Фейсбук">
             <span class="link__icon link__icon--color-secondary" aria-hidden="true">
               <svg class="link__svg" width="10" height="10">
                 <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
@@ -770,7 +779,7 @@
         </li>
       </ul>
 
-      <div class="copyright">
+      <div class="main-footer__copyright copyright">
         Разработано
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="copyright__icon" aria-hidden="true">

@@ -1,0 +1,39 @@
+/* Viewport */
+$mobile-width: 320px;
+//$tablet-width: ;
+//$desktop-width: ;
+
+/* Typography */
+$base-font-size: 16px;
+$base-line-height: 1.375; /* 22px */
+$base-font-family: "BloggerSans", "Arial", sans-serif;
+$base-font-weight: 300;
+
+
+/* Color */
+$base-hue: 227;
+$base-saturation: 4%;
+$base-lightness: 96%;
+$base-alfa: 1;
+
+$main-color-lighter-10: hsl($base-hue + 1, $base-saturation + 24, $base-lightness); /* #f3f4f8 */
+$main-color: hsl($base-hue, $base-saturation, $base-lightness); /* #edeff6 */
+$main-color-darker-10: hsl($base-hue + 2, $base-saturation + 3, $base-lightness - 2); /* #dfe2f0 */
+$main-color-darker-20: hsl($base-hue - 2, $base-saturation + 6, $base-lightness - 4); /* #d3d9eb */
+$main-color-darker-30: hsl($base-hue + 1, $base-saturation + 54, $base-lightness - 75); /* #161c35 */
+
+$main-color-accent: hsl($base-hue - 181, $base-saturation + 96, $base-lightness - 31); /* #ffd64b */
+$main-color-accent-darker-10: hsl($base-hue - 186, $base-saturation + 96, $base-lightness - 37); /* #ffbd30 */
+$main-color-accent-darker-20: hsl($base-hue - 193, $base-saturation + 96, $base-lightness - 37); /* #ffa530 */
+$main-color-accent-darker-30: hsl($base-hue - 200, $base-saturation + 96, $base-lightness - 37); /* #ff8d30 */
+
+$main-color-text: hsl(0, 0, $base-lightness - 69); /* #444444 */
+
+$white: #ffffff;
+$black: #000000;
+
+
+/* Other */
+$base-border-radius: 10px;
+$medium-border-radius: $base-border-radius * 2.5;
+$large-border-radius: $base-border-radius * 4;

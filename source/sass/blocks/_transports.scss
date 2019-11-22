@@ -1,0 +1,15 @@
+/* .transports {
+
+} */
+
+.transports .transports__list {
+  @include reset-list;
+
+  display: flex;
+  flex-flow: row-reverse wrap;
+  justify-content: center;
+}
+
+/* .transports .transports__item {
+
+} */

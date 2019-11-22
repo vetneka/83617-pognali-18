@@ -1,0 +1,27 @@
+.site-nav {
+  @include reset-list;
+  text-align: center;
+}
+
+/* .site-nav__item {
+
+} */
+
+.site-nav__link {
+  font-family: $base-font-family;
+  font-size: $base-font-size * 1.875;
+  line-height: $base-line-height / 1.1458;
+  font-weight: 500;
+  font-style: normal;
+  color: $main-color-darker-30;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

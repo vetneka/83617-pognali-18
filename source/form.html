@@ -2,96 +2,102 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Погнали</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Погнали: Направления</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
-      <a class="main-logo" href="index.html">
-        <img class="main-logo__img" src="https://via.placeholder.com/100x19" width="100" height="19" alt="Логотип сервиса &laquo;Погнали&raquo;">
-      </a>
+      <div class="container">
+        <a class="main-header__main-logo main-logo" href="index.html">
+          <img class="main-logo__img" src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип сервиса &laquo;Погнали&raquo;">
+        </a>
 
-      <nav class="main-nav">
-        <ul class="site-nav">
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="about.html">О сервисе</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="form.html">Направления</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="catalog.html">Попутчики</a>
-          </li>
-        </ul>
+        <nav class="main-header__main-nav main-nav">
+          <ul class="main-header__site-nav site-nav">
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="about.html">О сервисе</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link">Направления</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="catalog.html">Попутчики</a>
+            </li>
+          </ul>
 
-        <ul class="user-nav">
-          <li class="user-nav__item">
-            <a class="button button--rounded" href="login.html">Авторизация</a>
-          </li>
-          <li class="user-nav__item">
-            <a class="link" href="tel:88005558628">
-              <span class="link__icon link__icon--color-primary" aria-hidden="true">
-                <svg class="link__svg" width="10" height="10">
-                  <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
-                </svg>
-              </span>
-              <span class="link__text">8 800 555-86-28</span>
-            </a>
-          </li>
-          <li class="user-nav__item">
-            <a class="link" href="mailto:mail@htmlacademy.ru">
-              <span class="link__icon link__icon--color-primary" aria-hidden="true">
-                <svg class="link__svg" width="10" height="10">
-                  <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
-                </svg>
-              </span>
-              <span class="link__text">mail@htmlacademy.ru</span>
-            </a>
-          </li>
-        </ul>
+          <ul class="main-header__user-nav user-nav">
+            <li class="user-nav__item">
+              <a class="button button--rounded" href="login.html">Авторизация</a>
+            </li>
+            <li class="user-nav__item">
+              <a class="link" href="tel:88005558628">
+                <span class="link__icon link__icon--main-color" aria-hidden="true">
+                  <svg class="link__svg" width="10" height="10">
+                    <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
+                  </svg>
+                </span>
+                <span class="link__text">8 800 555-86-28</span>
+              </a>
+            </li>
+            <li class="user-nav__item">
+              <a class="link" href="mailto:mail@htmlacademy.ru">
+                <span class="link__icon link__icon--main-color" aria-hidden="true">
+                  <svg class="link__svg" width="10" height="10">
+                    <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
+                  </svg>
+                </span>
+                <span class="link__text">mail@htmlacademy.ru</span>
+              </a>
+            </li>
+          </ul>
 
-        <ul class="social">
-          <li class="social__item">
-            <a class="link" href="https://www.facebook.com/htmlacademy" target="_blank" title="Наш Фейсбук">
-              <span class="link__icon link__icon--color-primary" aria-hidden="true">
-                <svg class="link__svg" width="10" height="10">
-                  <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
-                </svg>
-              </span>
-              <span class="visually-hidden">Наша группа в Фейсбуке</span>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="link" href="https://vk.com/htmlacademy" target="_blank" title="Наш Вконтакте">
-              <span class="link__icon link__icon--color-primary" aria-hidden="true">
-                <svg class="link__svg" width="10" height="10">
-                  <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
-                </svg>
-              </span>
-              <span class="visually-hidden">Наша группа во Вконтакте</span>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="link" href="https://www.instagram.com/htmlacademy/" target="_blank" title="Наш Инстаграм">
-              <span class="link__icon link__icon--color-primary" aria-hidden="true">
-                <svg class="link__svg" width="10" height="10">
-                  <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
-                </svg>
-              </span>
-              <span class="visually-hidden">Наша группа в Инстаграме</span>
-            </a>
-          </li>
-        </ul>
+          <ul class="social">
+            <li class="social__item">
+              <a class="link" href="https://www.facebook.com/htmlacademy" target="blank" title="Наш Фейсбук">
+                <span class="link__icon link__icon--main-color" aria-hidden="true">
+                  <svg class="link__svg" width="10" height="10">
+                    <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
+                  </svg>
+                </span>
+                <span class="visually-hidden">Наша группа в Фейсбуке</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="link" href="https://vk.com/htmlacademy" target="_blank" title="Наш Вконтакте">
+                <span class="link__icon link__icon--main-color" aria-hidden="true">
+                  <svg class="link__svg" width="10" height="10">
+                    <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
+                  </svg>
+                </span>
+                <span class="visually-hidden">Наша группа во Вконтакте</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="link" href="https://www.instagram.com/htmlacademy/" target="_blank" title="Наш Инстаграм">
+                <span class="link__icon link__icon--main-color" aria-hidden="true">
+                  <svg class="link__svg" width="10" height="10">
+                    <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
+                  </svg>
+                </span>
+                <span class="visually-hidden">Наша группа в Инстаграме</span>
+              </a>
+            </li>
+          </ul>
 
-        <button class="hamburger" type="button">
-          <span class="visually-hidden">Меню</span>
-        </button>
-      </nav>
+          <button class="hamburger" type="button">
+            <span class="visually-hidden">Меню</span>
+          </button>
+        </nav>
+      </div>
     </header>
 
     <main class="main">
-      <h1 class="primary-title">Направления</h1>
+      <div class="main__head container container--bg-dark container--rounded">
+        <h1 class="main__primary-title primary-title">Направления</h1>
+      </div>
 
-      <form class="main-form" action="https://echo.htmlacademy.ru" method="POST">
+      <form class="main-form container" action="https://echo.htmlacademy.ru" method="POST">
         <section class="user-profile">
           <h2 class="visually-hidden">Информация о пользователе</h2>
           <!-- main-form__group 1 -->
@@ -381,83 +387,94 @@
                   </button>
                   <section class="custom-select__dropdown countries-filter">
                     <h2 class="secondary-title secondary-title--icon--filter">Фильтрация по странам</h2>
-                    <ul class="countries-filter__list countries-filter__list--symbol">
-                      <li class="countries-filter__item">
-                        <a class="countries-filter__link" href="countries.html#A">А</a>
-                      </li>
-                      <li class="countries-filter__item">
-                        <a class="countries-filter__link" href="countries.html#Б">Б</a>
-                      </li>
-                      <li class="countries-filter__item">
-                        <a class="countries-filter__link" href="countries.html#В">В</a>
-                      </li>
-                      <li class="countries-filter__item">
-                        <a class="countries-filter__link" href="countries.html#Г">Г</a>
-                      </li>
-                      <li class="countries-filter__item">
-                        <a class="countries-filter__link" href="countries.html#Д">Д</a>
-                      </li>
-                      <li class="countries-filter__item">
-                        <a class="countries-filter__link" href="countries.html#Е">Е</a>
-                      </li>
-                      <li class="countries-filter__item">
-                        <a class="countries-filter__link" href="countries.html#З">З</a>
-                      </li>
-                      <li class="countries-filter__item">
-                        <a class="countries-filter__link" href="countries.html#И">И</a>
-                      </li>
-                      <li class="countries-filter__item">
-                        <a class="countries-filter__link" href="countries.html#К">К</a>
-                      </li>
-                      <li class="countries-filter__item">
-                        <a class="countries-filter__link" href="countries.html#Л">Л</a>
-                      </li>
-                      <li class="countries-filter__item">
-                        <a class="countries-filter__link" href="countries.html#М">М</a>
-                      </li>
-                      <li class="countries-filter__item">
-                        <a class="countries-filter__link" href="countries.html#Н">Н</a>
-                      </li>
-                      <li class="countries-filter__item">
-                        <a class="countries-filter__link" href="countries.html#О">О</a>
-                      </li>
-                      <li class="countries-filter__item">
-                        <a class="countries-filter__link" href="countries.html#П">П</a>
-                      </li>
-                      <li class="countries-filter__item">
-                        <a class="countries-filter__link" href="countries.html#Р">Р</a>
-                      </li>
-                      <li class="countries-filter__item">
-                        <a class="countries-filter__link" href="countries.html#С">С</a>
-                      </li>
-                      <li class="countries-filter__item">
-                        <a class="countries-filter__link" href="countries.html#Т">Т</a>
-                      </li>
-                      <li class="countries-filter__item">
-                        <a class="countries-filter__link" href="countries.html#У">У</a>
-                      </li>
-                      <li class="countries-filter__item">
-                        <a class="countries-filter__link" href="countries.html#Ф">Ф</a>
-                      </li>
-                      <li class="countries-filter__item">
-                        <a class="countries-filter__link" href="countries.html#Х">Х</a>
-                      </li>
-                      <li class="countries-filter__item">
-                        <a class="countries-filter__link" href="countries.html#Ч">Ч</a>
-                      </li>
-                      <li class="countries-filter__item">
-                        <a class="countries-filter__link" href="countries.html#Ш">Ш</a>
-                      </li>
-                      <li class="countries-filter__item">
-                        <a class="countries-filter__link" href="countries.html#Э">Э</a>
-                      </li>
-                      <li class="countries-filter__item">
-                        <a class="countries-filter__link" href="countries.html#Ю">Ю</a>
-                      </li>
-                      <li class="countries-filter__item">
-                        <a class="countries-filter__link" href="countries.html#Я">Я</a>
-                      </li>
-                    </ul>
+
+                    <table class="letters-list">
+                      <tr class="letters-list__row">
+                        <td class="letters-list__letter letters-list__letter--selected">
+                          <a class="letters-list__link" href="countries.html#A">А</a>
+                        </td>
+                        <td class="letters-list__letter">
+                          <a class="letters-list__link" href="countries.html#Б">Б</a>
+                        </td>
+                        <td class="letters-list__letter">
+                          <a class="letters-list__link" href="countries.html#В">В</a>
+                        </td>
+                        <td class="letters-list__letter">
+                          <a class="letters-list__link" href="countries.html#Г">Г</a>
+                        </td>
+                        <td class="letters-list__letter">
+                          <a class="letters-list__link" href="countries.html#Д">Д</a>
+                        </td>
+                      </tr>
+                      <tr class="letters-list__row">
+                        <td class="letters-list__letter">
+                          <a class="letters-list__link" href="countries.html#Е">Е</a>
+                        </td>
+                        <td class="letters-list__letter">
+                          <a class="letters-list__link" href="countries.html#З">З</a>
+                        </td>
+                        <td class="letters-list__letter">
+                          <a class="letters-list__link" href="countries.html#И">И</a>
+                        </td>
+                        <td class="letters-list__letter">
+                          <a class="letters-list__link" href="countries.html#К">К</a>
+                        </td>
+                        <td class="letters-list__letter">
+                          <a class="letters-list__link" href="countries.html#Л">Л</a>
+                        </td>
+                      </tr>
+                      <tr class="letters-list__row">
+                        <td class="letters-list__letter">
+                          <a class="letters-list__link" href="countries.html#М">М</a>
+                        </td>
+                        <td class="letters-list__letter">
+                          <a class="letters-list__link" href="countries.html#Н">Н</a>
+                        </td>
+                        <td class="letters-list__letter">
+                          <a class="letters-list__link" href="countries.html#О">О</a>
+                        </td>
+                        <td class="letters-list__letter">
+                          <a class="letters-list__link" href="countries.html#П">П</a>
+                        </td>
+                        <td class="letters-list__letter">
+                          <a class="letters-list__link" href="countries.html#Р">Р</a>
+                        </td>
+                      </tr>
+                      <tr class="letters-list__row">
+                        <td class="letters-list__letter">
+                          <a class="letters-list__link" href="countries.html#С">С</a>
+                        </td>
+                        <td class="letters-list__letter">
+                          <a class="letters-list__link" href="countries.html#Т">Т</a>
+                        </td>
+                        <td class="letters-list__letter">
+                          <a class="letters-list__link" href="countries.html#У">У</a>
+                        </td>
+                        <td class="letters-list__letter">
+                          <a class="letters-list__link" href="countries.html#Ф">Ф</a>
+                        </td>
+                        <td class="letters-list__letter">
+                          <a class="letters-list__link" href="countries.html#Х">Х</a>
+                        </td>
+                      </tr>
+                      <tr class="letters-list__row">
+                        <td class="letters-list__letter">
+                          <a class="letters-list__link" href="countries.html#Ч">Ч</a>
+                        </td>
+                        <td class="letters-list__letter">
+                          <a class="letters-list__link" href="countries.html#Ш">Ш</a>
+                        </td>
+                        <td class="letters-list__letter">
+                          <a class="letters-list__link" href="countries.html#Э">Э</a>
+                        </td>
+                        <td class="letters-list__letter">
+                          <a class="letters-list__link" href="countries.html#Ю">Ю</a>
+                        </td>
+                        <td class="letters-list__letter">
+                          <a class="letters-list__link" href="countries.html#Я">Я</a>
+                        </td>
+                      </tr>
+                    </table>
 
                     <ul class="countries-filter__list countries-filter__list--countries">
                       <li class="countries-filter__item">
@@ -489,6 +506,7 @@
                       </li>
                     </ul>
                   </section>
+
                 </div>
 
                 <div class="custom-select">
@@ -542,14 +560,14 @@
       </form>
     </main>
 
-    <footer class="main-footer">
-      <a class="main-logo">
-        <img class="main-logo__img" src="https://via.placeholder.com/100x19" width="100" height="19" alt="Логотип сервиса &laquo;Погнали&raquo;">
+    <footer class="main-footer container">
+      <a class="main-footer__main-logo main-logo" href="index.html">
+        <img class="main-logo__img" src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип сервиса &laquo;Погнали&raquo;">
       </a>
 
-      <ul class="social">
+      <ul class="main-footer__social social">
         <li class="social__item">
-          <a class="link" href="https://www.facebook.com/htmlacademy" target="_blank" title="Наш Фейсбук">
+          <a class="link" href="https://www.facebook.com/htmlacademy" target="blank" title="Наш Фейсбук">
             <span class="link__icon link__icon--color-secondary" aria-hidden="true">
               <svg class="link__svg" width="10" height="10">
                 <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
@@ -580,7 +598,7 @@
         </li>
       </ul>
 
-      <div class="copyright">
+      <div class="main-footer__copyright copyright">
         Разработано
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="copyright__icon" aria-hidden="true">

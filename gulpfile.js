@@ -7,6 +7,8 @@ var sass = require("gulp-sass");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
+var svgmin = require("gulp-svgmin");
+const gulpBemCss = require("gulp-bem-css");
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -30,8 +32,28 @@ gulp.task("server", function () {
     ui: false
   });
 
-  gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
+  gulp.watch("source/sass/**/*.scss", gulp.series("css"));
   gulp.watch("source/*.html").on("change", server.reload);
 });
 
 gulp.task("start", gulp.series("css", "server"));
+
+gulp.task("svgmin", function () {
+  return gulp.src("source/img/*.svg")
+      .pipe(svgmin({
+          js2svg: {
+              pretty: true
+          }
+      }))
+      .pipe(gulp.dest("source/img/"))
+});
+
+gulp.task("htmlToBem", function () {
+  return gulp.src("source/*.html")
+    .pipe(gulpBemCss({
+      folder: 'source/sass/blocks',
+      extension: 'scss',
+      elementSeparator: '__',
+      modifierSeparator: '--'
+    }))
+});

@@ -1,0 +1,22 @@
+/* .countries-flags {
+
+} */
+
+.countries-flags__list {
+  @include reset-list;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+/*
+.countries-flags__item {
+
+}
+*/
+
+.countries-flags__text {
+  text-transform: uppercase;
+  font-weight: 500;
+}
