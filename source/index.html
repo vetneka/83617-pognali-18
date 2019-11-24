@@ -396,21 +396,21 @@
         <a class="tariffs__link link" href="tariffs.html">Показать тарифы для бизнеса</a>
       </section>
 
-      <section class="contacts">
+      <section class="contacts container container--bg-dark container--rounded">
         <h2 class="visually-hidden">Контакты</h2>
-        <p class="secondary-title">Заинтересовались?</p>
-        <p class="text">Зарегистрируйтесь,  это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a class="link link--text" href="login.html">авторизуйтесь.</a></p>
+        <p class="contacts__secondary-title secondary-title">Заинтересовались?</p>
+        <p class="contacts__text text">Зарегистрируйтесь,  это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a class="contacts__link link" href="login.html">авторизуйтесь.</a></p>
 
-        <form class="contacts-form" action="https://echo.htmlacademy.ru" method="GET">
+        <form class="contacts__contacts-form contacts-form" action="https://echo.htmlacademy.ru" method="GET">
           <label class="visually-hidden" for="user-email">Введите ваш e-mail</label>
-          <input type="email" name="user-email" id="user-email" placeholder="E-mail" required>
-          <button class="button" type="submit">
+          <input class="contacts-form__input" type="email" name="user-email" id="user-email" placeholder="E-mail" required>
+          <button class="contacts-form__button button button--icon" type="submit">
             <span class="visually-hidden">Регистация</span>
           </button>
         </form>
 
-        <p class="text">Остались вопросы? Мы с радостью на них ответим!</p>
-        <ul class="user-nav">
+        <p class="contacts__text text">Остались вопросы? Мы с радостью на них ответим!</p>
+        <ul class="contacts__user-nav user-nav">
           <li class="user-nav__item">
             <a class="link" href="tel:88005558628">
               <span class="link__icon link__icon--main-color" aria-hidden="true">
@@ -435,23 +435,25 @@
       </section>
 
       <section class="route">
-        <h2 class="visually-hidden">Проложить маршрут</h2>
+        <div class="container container--rounded">
+          <h2 class="visually-hidden">Проложить маршрут</h2>
 
-        <p class="link">
-          <span class="link__icon link__icon--main-color" aria-hidden="true">
-            <svg class="link__svg" width="10" height="10">
-              <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
-            </svg>
-          </span>
-          <span class="link__text">ул. Большая Конюшенная, 19/8</span>
-        </p>
+          <p class="route__link link">
+            <span class="link__icon link__icon--main-color" aria-hidden="true">
+              <svg class="link__svg" width="10" height="10">
+                <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
+              </svg>
+            </span>
+            <span class="link__text">ул. Большая Конюшенная, 19/8</span>
+          </p>
 
-        <a class="button button--icon" href="https://yandex.ru/maps/-/CGTFY2JW">Проложить маршрут</a>
+          <a class="route__button button button--icon" href="https://yandex.ru/maps/-/CGTFY2JW">Проложить маршрут</a>
+        </div>
+      </section>
 
-        <article class="map">
-          <h2 class="visually-hidden">Карта</h2>
-          <img src="https://via.placeholder.com/320x300" width="320" height="300" alt="На адрес Санкт-Петербург, ул. Большая Конюшенная, 19/8">
-        </article>
+      <section class="map">
+        <h2 class="visually-hidden">Карта</h2>
+        <img src="https://via.placeholder.com/320x300" width="320" height="300" alt="На адрес Санкт-Петербург, ул. Большая Конюшенная, 19/8">
       </section>
     </main>
 

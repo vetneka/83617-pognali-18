@@ -1,4 +1,23 @@
-/* .contacts-form {
-
+.contacts-form {
+  position: relative;
+  display: flex;
 }
- */
+
+.contacts-form__input {
+  flex-grow: 1;
+  padding: 20px 25px;
+  border-radius: $base-border-radius;
+  border: none;
+  font-size: $base-font-size * 1.125;
+  font-weight: 600;
+  color: rgba($main-color-text, 0.3);
+}
+
+.contacts-form__button {
+  position: absolute;
+  right: 0;
+  width: 59px;
+  height: 100%;
+  padding-right: 0;
+}
+
