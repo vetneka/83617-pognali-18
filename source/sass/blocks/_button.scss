@@ -46,4 +46,44 @@
     background-color: $main-color-accent-darker-10;
     color: rgba($main-color-darker-30, 0.3);
   }
+
+  &--main-color {
+    background-color: $main-color-darker-20;
+
+    &:hover {
+      background-color: $main-color-darker-20;
+    }
+
+    &:active {
+      background-color: $main-color-darker-20;
+      color: rgba($main-color-darker-30, 0.3);
+    }
+  }
+}
+
+.button__text {
+  position: relative;
+  display: inline-block;
+  padding-left: 20px;
+
+  &--icon {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 40%;
+      left: 0;
+      width: 2px;
+      height: 17px;
+      background-color: currentColor;
+    }
+
+    &::before {
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translateY(-50%) rotate(-45deg);
+    }
+  }
 }

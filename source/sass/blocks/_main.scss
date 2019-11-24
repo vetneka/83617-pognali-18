@@ -1,6 +1,6 @@
 .main {
   &--inner {
-    background-color: $main-color;
+    background-color: $main-color-lighter-10;
     padding-bottom: 45px;
   }
 }
@@ -28,4 +28,9 @@
     border-radius: 2.4px;
     background-color: $main-color-accent-darker-30;
   }
+}
+
+.main__companions-filter {
+  margin-left: 25px;
+  margin-right: 25px;
 }

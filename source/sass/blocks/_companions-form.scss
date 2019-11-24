@@ -1,3 +1,46 @@
-/* .companions-form {
+.companions-form {
+  .transports__list {
+    justify-content: flex-start;
+  }
+}
 
-} */
+.companions-form__fieldset {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  border: none;
+
+  &--open {
+    .companions-form__legend {
+      &::after {
+        border-width: 0 4px 4px 4px;
+        border-color: transparent transparent currentColor transparent;
+      }
+    }
+  }
+}
+
+.companions-form__legend {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding-top: 15px;
+  text-transform: uppercase;
+  color: $main-color-darker-30;
+  font-weight: 600;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 0;
+    height: 0;
+    transform: translateY(-50%);
+    border-width: 4px 4px 0 4px;
+    border-color: currentColor transparent transparent transparent;
+    border-style: solid;
+  }
+}

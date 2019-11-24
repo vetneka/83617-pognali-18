@@ -1,11 +1,30 @@
-/* .continents-list {
-
+.continents-list {
+  @include reset-list;
 }
 
 .continents-list__item {
+  margin-bottom: 4px;
 
+  &--current {
+    .continents-list__link {
+      color: $main-color-darker-30;
+      opacity: 1;
+    }
+  }
 }
 
 .continents-list__link {
+  color: $main-color-darker-30;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  opacity: 0.3;
 
-} */
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+}

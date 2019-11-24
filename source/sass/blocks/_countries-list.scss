@@ -1,11 +1,12 @@
-/* .countries-list {
-
+.countries-list {
+  @include reset-list;
 }
 
-.countries-list__item {
-
-}
-
-.countries-list__link {
+/*.countries-list__item {
 
 } */
+
+.countries-list__link {
+  color: $main-color-text;
+  text-decoration: none;
+}
