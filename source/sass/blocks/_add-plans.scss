@@ -1,11 +1,30 @@
-/* .add-plans {
+.add-plans {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: $main-color-darker-20;
+}
 
+.add-plans__secondary-title {
+  position: relative;
+  margin-bottom: 20px;
+  padding-right: 65px;
+
+  .marker-list {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+  }
 }
 
 .add-plans__list {
-
+  @include reset-list;
 }
 
 .add-plans__item {
+  margin-bottom: 10px;
 
-} */
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

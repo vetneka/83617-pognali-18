@@ -1,10 +1,24 @@
-/* .marker-list {
-
+.marker-list {
+  width: 42px;
+  height: 6px;
 }
 
 .marker-list__item {
+  fill: rgba($main-color-darker-30, 0.3);
+
+  &:nth-child(1) {
+    transform: translate(3px, 3px);
+  }
+
+  &:nth-child(2) {
+    transform: translate(21px, 3px);
+  }
+
+  &:nth-child(3) {
+    transform: translate(39px, 3px);
+  }
 
   &--current {
-
+    fill: rgba($main-color-darker-30, 1);
   }
-} */
+}
