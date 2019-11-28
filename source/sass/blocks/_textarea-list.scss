@@ -1,23 +1,94 @@
-/* .textarea-list {
-
+.textarea-list {
+  @include reset-list;
 }
 
 .textarea-list__item {
+  position: relative;
+  margin-bottom: 20px;
 
+  &:not(:last-child) {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 13px;
+      left: -12px;
+      width: 2px;
+      height: calc(100% + 21px);
+      background-color: $main-color-darker-30;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .textarea-list__title {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-bottom: 10px;
 
+  color: $main-color-darker-30;
+  font-size: $base-font-size * 1.25;
+  font-weight: 500;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+
+  &::before {
+    left: -21px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: $main-color-darker-30;
+  }
+
+  &::after {
+    left: -32px;
+    width: 15px;
+    height: 2px;
+    background-color: $main-color-darker-30;
+  }
 }
 
 .textarea-list__title-item {
+  position: relative;
+  width: 76%;
+  overflow: hidden;
+  white-space: nowrap;
 
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 49px;
+    background: linear-gradient(to right, transparent, $white 100%);
+    z-index: 1;
+  }
 }
 
 .textarea-list__img {
-
+  width: 35px;
+  height: 24px;
+  border-radius: 4px;
 }
 
 .textarea-list__textarea {
-
-} */
+  width: 100%;
+  min-height: 220px;
+  padding: 15px;
+  border: 1px solid #cbced9;
+  border-radius: 4px;
+  resize: vertical;
+}

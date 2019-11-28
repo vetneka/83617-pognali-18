@@ -1,15 +1,125 @@
-/* .user-level {
+.user-level {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  z-index: 1;
 
-} */
+  &--large {
+    width: 100px;
+    height: 100px;
+
+    .user-level__content {
+      font-size: $base-font-size * 1.125;
+    }
+
+    .user-level__number {
+      font-size: $base-font-size * 2.375;
+    }
+  }
+}
 
 .user-level__content {
+  position: relative;
+
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+
   font-weight: 400;
   font-size: $base-font-size * 0.875;
   line-height: 1;
+  text-align: center;
+  border-radius: 50%;
+  background-color: $main-color;
+
+  /* &::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: 106px;
+    height: 106px;
+    background-image: linear-gradient(to right, transparent 50%, $main-color-accent-darker-30 50%);
+    border-radius: 100% / 100%;
+    z-index: -2;
+    overflow: hidden;
+  } */
+
+  /* &::after {
+    content: "";
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    width: 53px;
+    height: 106px;
+    background-color: inherit;
+    border-radius: 0 100% 100% 0 / 50%;
+    transform-origin: left;
+    transform: rotate(0deg);
+    z-index: -1;
+    animation:
+      spin 3s linear infinite,
+      bg 6s step-end infinite;
+  } */
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes bg {
+  50% {
+    /* border-radius: 0 100% 100% 0 / 50%; */
+    background-color: $main-color-accent-darker-30;
+  }
 }
 
 .user-level__number {
+  margin-bottom: 10px;
+
   font-weight: 600;
   font-size: $base-font-size * 1.5;
   line-height: 1;
+  color: $main-color-darker-30;
+  border-bottom: 2px solid #cbced9;
+}
+
+.user-level__progress {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: 111px;
+  height: 111px;
+  transform: rotate(-90deg);
+  z-index: -1;
+
+  circle {
+    fill: transparent;
+    stroke-width: 3;
+    stroke: $main-color-accent-darker-30;
+
+    &.progress-25 {
+      $deg: 25;
+      stroke-dasharray: (333 * $deg / 100) 340;
+    }
+
+    &.progress-50 {
+      $deg: 50;
+      stroke-dasharray: (333 * $deg / 100) 340;
+    }
+
+    &.progress-80 {
+      $deg: 80;
+      stroke-dasharray: (333 * $deg / 100) 340;
+    }
+
+    &.progress-99 {
+      $deg: 99;
+      stroke-dasharray: (333 * $deg / 100) 340;
+    }
+  }
 }

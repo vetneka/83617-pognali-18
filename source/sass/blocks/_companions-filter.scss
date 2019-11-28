@@ -1,3 +1,11 @@
-/* .companions-filter {
+.companions-filter {
+  padding: 25px;
+  background-color: $main-color-accent;
+  border-radius: $medium-border-radius;
+}
 
-} */
+.companions-filter__secondary-title {
+  color: $main-color-darker-30;
+  max-width: 50%;
+  margin-bottom: 20px;
+}

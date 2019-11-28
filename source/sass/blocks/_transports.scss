@@ -2,11 +2,11 @@
 
 } */
 
-.transports .transports__list {
+.transports__list {
   @include reset-list;
 
   display: flex;
-  flex-flow: row-reverse wrap;
+  flex-flow: row wrap;
   justify-content: center;
 }
 

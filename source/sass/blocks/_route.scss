@@ -1,4 +1,31 @@
-/* .route {
+.route {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  background-color: $main-color-accent;
+  border-bottom-left-radius: $large-border-radius;
+  border-bottom-right-radius: $large-border-radius;
 
+  .container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
- */
+
+.route__link {
+  display: flex;
+  margin: 0 0 20px 0;
+
+  .link__icon {
+    flex-shrink: 0;
+  }
+
+  .link__text {
+    max-width: 75%;
+  }
+}
+
+.route__button {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 3px solid $main-color-darker-30;
+}

@@ -1,19 +1,24 @@
-/* .user-plan {
-
+.user-plan {
+  padding: 20px;
+  background-color: $white;
+  border-radius: $base-border-radius;
+  color: $main-color-darker-30;
 }
 
 .user-plan__title {
-
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 600;
 }
 
 .user-plan__info {
-
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
-.user-plan__companion-counter {
-
-}
-
+.user-plan__companion-counter,
 .user-plan__date {
-
-} */
+  display: block;
+}

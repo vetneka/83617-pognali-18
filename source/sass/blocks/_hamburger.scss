@@ -1,13 +1,77 @@
-/* .hamburger {
-  &--dotted {
+.hamburger {
+  position: relative;
+  width: 17px;
+  height: 17px;
+  border: 0;
+  background-color: transparent;
 
+  &--dotted {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background-color: $main-color-darker-30;
+    }
+
+    &::before {
+      left: 0;
+      box-shadow: 7px 0 0 0 $main-color-darker-30;
+    }
+
+    &::after {
+      right: 0;
+    }
   }
 
   &--close {
+    &::before,
+    &::after {
+      width: 2px;
+      height: 2px;
+      border-radius: 0;
+    }
 
+    &::before {
+      box-shadow: none;
+      left: 50%;
+      border-radius: 0;
+      animation: hamburger--dotted--before 0.5s ease both;
+    }
+
+    &::after {
+      right: 50%;
+      border-radius: 0;
+      animation: hamburger--dotted--after 0.5s ease forwards;
+    }
   }
 }
 
-.hamburger__text {
+/* .hamburger__text {
 
 } */
+
+
+@keyframes hamburger--dotted--before {
+  0% {
+    transform: translateY(-50%);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(45deg) scaleY(8.5);
+  }
+}
+
+@keyframes hamburger--dotted--after {
+  0% {
+    transform: translateY(-50%);
+  }
+
+  100% {
+    transform: translate(50%, -50%) rotate(-45deg) scaleY(8.5);
+  }
+}

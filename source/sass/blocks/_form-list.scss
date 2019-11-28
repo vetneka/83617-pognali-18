@@ -1,7 +1,7 @@
-/* .form-list {
-
+.form-list {
+  @include reset-list;
 }
 
 .form-list__item {
-
-} */
+  margin-bottom: 5px;
+}

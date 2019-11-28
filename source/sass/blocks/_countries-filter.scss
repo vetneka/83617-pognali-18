@@ -1,4 +1,37 @@
-/* .countries-filter {
-
+.countries-filter {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  background-color: $main-color-darker-10;
 }
- */
+
+.countries-filter__head {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.countries-filter__secondary-title {
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $main-color-darker-30;
+  text-transform: uppercase;
+}
+
+.countries-filter__continents-list {
+  margin-bottom: 10px;
+}
+
+.countries-filter__letters-list {
+  margin-bottom: 40px;
+}
+
+.countries-filter__countries-list {
+  margin-bottom: 10px;
+}
+
+/* .countries-filter__button {
+  position: relative;
+  padding-left: 20px;
+} */

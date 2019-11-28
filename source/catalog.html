@@ -97,17 +97,19 @@
         <h1 class="main__primary-title primary-title">Попутчики</h1>
       </div>
 
-      <section class="filter container">
+      <section class="filter">
         <h2 class="visually-hidden">Фильтр</h2>
 
-        <section class="countries-filter">
-          <h2 class="secondary-title secondary-title--icon--filter">Фильтрация по странам</h2>
-          <button class="hamburger hamburger--dotted hamburger--close" type="button">
-            <span class="visually-hidden">Показать больше</span>
-          </button>
+        <section class="countries-filter container">
+          <div class="countries-filter__head">
+            <h2 class="countries-filter__secondary-title secondary-title secondary-title--icon secondary-title--icon--filter">Фильтрация по странам</h2>
+            <button class="hamburger hamburger--dotted hamburger--close" type="button">
+              <span class="visually-hidden">Показать больше</span>
+            </button>
+          </div>
 
           <ul class="countries-filter__continents-list continents-list">
-            <li class="continents-list__item">
+            <li class="continents-list__item continents-list__item--current">
               <a class="continents-list__link" href="world/europe.html">Европа</a>
             </li>
             <li class="continents-list__item">
@@ -239,82 +241,82 @@
             </li>
           </ul>
 
-          <button class="hamburger hamburger--dotted hamburger--close" type="button">
-            <span class="hamburger__text">Свернуть</span>
+          <button class="countries-filter__button button button--rounded button--main-color" type="button">
+            <span class="button__text button__text--icon">Свернуть</span>
           </button>
         </section>
 
-        <section class="companions-filter">
-          <h2 class="secondary-title">Подберите идеального попутчика</h2>
+        <section class="main__companions-filter companions-filter">
+          <h2 class="companions-filter__secondary-title secondary-title">Подберите идеального попутчика</h2>
 
           <form class="companions-form" action="https://echo.htmlacademy.ru" method="GET">
-            <fieldset class="form-fieldset">
-              <legend class="form-legend">Хобби</legend>
+            <fieldset class="companions-form__fieldset">
+              <legend class="companions-form__legend">Хобби</legend>
             </fieldset>
 
-            <fieldset class="form-fieldset">
-              <legend class="form-legend">Музыка</legend>
+            <fieldset class="companions-form__fieldset companions-form__fieldset--open">
+              <legend class="companions-form__legend">Музыка</legend>
               <ul class="form-list">
                 <li class="form-list__item">
                   <input class="input-customized visually-hidden" id="hard-rock" value="Тяжелый рок" type="checkbox" checked>
-                  <label class="form-label" for="hard-rock">Тяжелый рок</label>
+                  <label class="form-label form-label--checkbox" for="hard-rock">Тяжелый рок</label>
                 </li>
                 <li class="form-list__item">
                   <input class="input-customized visually-hidden" id="russian-rap" value="Русский рэп" type="checkbox">
-                  <label class="form-label" for="russian-rap">Русский рэп</label>
+                  <label class="form-label form-label--checkbox" for="russian-rap">Русский рэп</label>
                 </li>
                 <li class="form-list__item">
                   <input class="input-customized visually-hidden" id="eurodance" value="Евроденс" type="checkbox">
-                  <label class="form-label" for="eurodance">Евроденс</label>
+                  <label class="form-label form-label--checkbox" for="eurodance">Евроденс</label>
                 </li>
               </ul>
             </fieldset>
 
-            <fieldset class="form-fieldset">
-              <legend class="form-legend">Еда</legend>
+            <fieldset class="companions-form__fieldset">
+              <legend class="companions-form__legend">Еда</legend>
             </fieldset>
 
-            <fieldset class="form-fieldset">
-              <legend class="form-legend">Транспорт</legend>
+            <fieldset class="companions-form__fieldset companions-form__fieldset--open">
+              <legend class="companions-form__legend">Транспорт</legend>
               <div class="transports">
                 <ul class="transports__list">
                   <!-- transport 1 -->
                   <li class="transports__item transport">
                     <input class="input-customized visually-hidden" id="plane" type="checkbox" value="Самолет" checked>
-                    <label class="form-label transport__content" for="plane">
+                    <label class="form-label form-label--transport transport__content" for="plane">
                       <span class="visually-hidden">Самолет</span>
                       <svg class="transport__svg transport__svg--active" width="20" height="20" aria-hidden="true">
-                        <circle r="10" cx="10" cy="10" fill="tomato"></circle>
+                        <circle r="10" cx="10" cy="10"></circle>
                       </svg>
                     </label>
                   </li>
                   <!-- transport 2 -->
                   <li class="transports__item transport">
                     <input class="input-customized visually-hidden" id="bus" type="checkbox" value="Автобус" checked>
-                    <label class="form-label transport__content" for="bus">
+                    <label class="form-label form-label--transport transport__content" for="bus">
                       <span class="visually-hidden">Автобус</span>
                       <svg class="transport__svg" width="20" height="20" aria-hidden="true">
-                        <circle r="10" cx="10" cy="10" fill="tomato"></circle>
+                        <circle r="10" cx="10" cy="10"></circle>
                       </svg>
                     </label>
                   </li>
                   <!-- transport 3 -->
                   <li class="transports__item transport">
                     <input class="input-customized visually-hidden" id="bicycle" type="checkbox" value="Велосипед">
-                    <label class="form-label transport__content" for="bicycle">
+                    <label class="form-label form-label--transport transport__content" for="bicycle">
                       <span class="visually-hidden">Велосипед</span>
                       <svg class="transport__svg" width="20" height="20" aria-hidden="true">
-                        <circle r="10" cx="10" cy="10" fill="tomato"></circle>
+                        <circle r="10" cx="10" cy="10"></circle>
                       </svg>
                     </label>
                   </li>
                   <!-- transport 4 -->
                   <li class="transports__item transport">
                     <input class="input-customized visually-hidden" id="running" type="checkbox" value="Бегом" checked>
-                    <label class="form-label transport__content" for="running">
+                    <label class="form-label form-label--transport transport__content" for="running">
                       <span class="visually-hidden">Бегом</span>
                       <svg class="transport__svg" width="20" height="20" aria-hidden="true">
-                        <circle r="10" cx="10" cy="10" fill="tomato"></circle>
+                        <circle r="10" cx="10" cy="10"></circle>
                       </svg>
                     </label>
                   </li>
@@ -322,11 +324,11 @@
               </div>
             </fieldset>
 
-            <fieldset class="form-fieldset">
-              <legend class="form-legend">Левел</legend>
+            <fieldset class="companions-form__fieldset companions-form__fieldset--open">
+              <legend class="companions-form__legend">Левел</legend>
 
               <div class="range">
-                <div class="range-counter">
+                <div class="range__range-counter range-counter">
                   <div class="range-counter__field">
                     <input class="form-input" type="number" name="level-min" id="level-min" placeholder="30" min="0" max="100" step="1">
                     <label for="level-min" class="visually-hidden">Минимальный левел</label>
@@ -337,7 +339,7 @@
                   </div>
                 </div>
 
-                <div class="range-slider">
+                <div class="range__range-slider range-slider">
                   <div class="range-slider__line range-slider__line--back">
                     <div class="range-slider__line range-slider__line--front">
                       <button class="range-slider__button" type="button">
@@ -352,7 +354,7 @@
               </div>
             </fieldset>
 
-            <button class="button" type="submit">Показать</button>
+            <button class="range__button button button--rounded" type="submit">Показать</button>
           </form>
         </section>
       </section>

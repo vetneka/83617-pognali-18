@@ -1,18 +1,39 @@
-/* .letters-list {
-
+.letters-list {
+  border-collapse: collapse;
 }
 
-.letters-list__row {
+/* .letters-list__row {
 
-}
+} */
 
 .letters-list__letter {
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 
+
+  &:hover,
   &--selected {
-
+    .letters-list__link {
+      background-color: $main-color-darker-30;
+      color: $white;
+    }
   }
 }
 
 .letters-list__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 42px;
+  padding: 10px;
+  background-color: $white;
 
-} */
+  font-size: $base-font-size / 0.875;
+  line-height: 1;
+  color: $main-color-darker-30;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  overflow: auto;
+}
