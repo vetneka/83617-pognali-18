@@ -1,9 +1,64 @@
 .hamburger {
   position: relative;
+  width: 25px;
+  height: 11px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 25px;
+    height: 3px;
+    border-radius: 3px;
+    background-color: $white;
+    transition: transform 0.3s ease;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  &--close {
+    height: 19px;
+
+    &::before,
+    &::after {
+      width: 24px;
+      height: 2px;
+      transform-origin: left;
+      background-color: $grey-light;
+      border-radius: 0;
+    }
+
+    &::before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      bottom: 0;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+
+/* .hamburger {
+  position: relative;
   width: 17px;
   height: 17px;
   border: 0;
   background-color: transparent;
+  cursor: pointer;
 
   &--dotted {
     &::before,
@@ -49,14 +104,14 @@
       animation: hamburger--dotted--after 0.5s ease forwards;
     }
   }
-}
+} */
 
 /* .hamburger__text {
 
 } */
 
 
-@keyframes hamburger--dotted--before {
+/* @keyframes hamburger--dotted--before {
   0% {
     transform: translateY(-50%);
   }
@@ -75,3 +130,4 @@
     transform: translate(50%, -50%) rotate(-45deg) scaleY(8.5);
   }
 }
+ */

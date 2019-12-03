@@ -1,13 +1,16 @@
 .steps-list {
   @include reset-list;
   counter-reset: step;
-  width: calc(100vw - 50px);
-  margin: 0 auto;
 }
 
 .steps-list__item {
   position: relative;
-  padding: 20px 45px 30px 25px;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+  padding: 22px 25px 32px;
   border-top-left-radius: $base-border-radius;
   border-top-right-radius: $base-border-radius;
 
@@ -45,17 +48,95 @@
 
   &::after {
     content: counter(step);
-    position: absolute;
-    right: 20px;
   }
 }
 
 .steps-list__text {
-  max-width: 55%;
+  max-width: 60%;
   display: inline-block;
   vertical-align: top;
   color: $main-color-darker-30;
 }
-/* .steps-list__price {
 
-}*/
+@media (min-width: $tablet-width) {
+  .steps-list {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .steps-list__item {
+    flex-direction: column;
+    width: 50%;
+    padding-bottom: 22px;
+
+    &:nth-child(n) {
+      margin-top: 0;
+    }
+
+    &:nth-child(even) {
+      margin-left: -15px;
+    }
+
+    &:nth-child(odd) {
+      width: calc(50% + 15px);
+    }
+
+    &:nth-child(n+3) {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    &:nth-last-child(2) {
+      border-bottom-left-radius: $base-border-radius;
+    }
+
+    &:last-child {
+      flex-grow: 1;
+    }
+  }
+
+  .steps-list__text {
+    max-width: 50%;
+    margin-bottom: 5px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .steps-list__item {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 26%;
+
+    &:not(:nth-child(4n+1)) {
+      margin-left: -15px;
+    }
+
+    &:nth-child(even),
+    &:nth-child(odd) {
+      width: calc(26% + 15px);
+      padding-right: 45px;
+    }
+
+    &:nth-child(n) {
+      border-top-left-radius: $base-border-radius;
+      border-bottom-left-radius: $base-border-radius;
+    }
+
+    &:nth-child(4n) {
+      width: 22%;
+      padding-right: 25px;
+    }
+
+    &:nth-child(4) {
+      border-top-right-radius: $base-border-radius;
+    }
+
+    &:nth-child(n+5) {
+      border-top: 1px solid rgba($black, 0.15);
+    }
+
+    &:last-child {
+      flex-grow: 0;
+    }
+  }
+}

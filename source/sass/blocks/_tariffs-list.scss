@@ -12,7 +12,7 @@
     content: counter(step);
     position: absolute;
     top: 0;
-    right: 20px;
+    right: 0;
     width: 34px;
     height: 34px;
     border-radius: 50%;
@@ -48,7 +48,7 @@
 }
 
 .tariffs-list__item-content {
-  max-width: 70%;
+  max-width: 75%;
   margin: 0;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -58,4 +58,31 @@
 .tariffs-list__text,
 .tariffs-list__price {
   display: block;
+}
+
+@media (min-width: $tablet-width) {
+  .tariffs-list__item {
+    position: relative;
+    padding-left: 80px;
+    margin-bottom: 8px;
+    z-index: 2;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::after {
+      left: 0;
+      width: 67px;
+      height: 67px;
+      line-height: 67px;
+    }
+  }
+
+  .tariffs-list__item-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    max-width: 100%;
+  }
 }

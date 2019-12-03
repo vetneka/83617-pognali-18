@@ -1,11 +1,29 @@
 .tariffs {
-  padding-top: 30px;
-  padding-bottom: 35px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  box-shadow: 0 20px 50px 0 rgba(29, 46, 91, 0.1);
+
+  &.container {
+    padding-left: 50px;
+  }
 
   &--business {
+    max-width: 270px;
+    margin: 0 auto;
+    padding: 28px 0 0;
+    border-radius: $base-border-radius;
     background-color: $main-color;
+    overflow: hidden;
+
+    .tariffs__list {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
 
     .tariffs__title {
+      padding: 0;
+      min-height: auto;
+      text-align: center;
       background: none;
     }
 
@@ -21,8 +39,8 @@
 
 .tariffs__title {
   margin-bottom: 25px;
-  padding: 20px;
-  background: url("../img/rates@1x.png") no-repeat right 25px center / 99px;
+  padding: 20px 0;
+  background: url("../img/rates@1x.png") no-repeat right center / 99px;
 }
 
 .tariffs__title-link {
@@ -37,9 +55,20 @@
 }
 
 .tariffs__link {
-  display: block;
-  margin: 0 auto;
+  display: inline-block;
   text-transform: initial;
+
+  .link__icon {
+    display: none;
+    width: 67px;
+    height: 67px;
+    background-color: darken($main-color, 5);
+    border-radius: 50%;
+  }
+
+  .link__text {
+    margin-left: 0;
+  }
 }
 
 .tariffs__button {
@@ -47,4 +76,158 @@
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   background-color: $main-color-lighter-10;
+}
+
+@media (max-width: $only-mobile-width) {
+  .tariffs__title {
+    min-height: 99px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .tariffs {
+    padding-top: 70px;
+    padding-bottom: 64px;
+    font-size: $base-font-size * 1.75;
+
+    &.container {
+      padding-left: 40px;
+      padding-right: 74px;
+    }
+
+    &--business {
+      max-width: 688px;
+      padding: 45px 0 0;
+      font-size: $base-font-size * 1.375;
+
+      .tariffs__list {
+        padding-left: 90px;
+        padding-right: 90px;
+
+        &::before,
+        &::after {
+          display: none;
+        }
+      }
+
+      .tariffs-list__item {
+        padding-left: 0;
+      }
+
+      .tariffs__button {
+        width: 100%;
+        padding: 41px 41px 40px;
+        text-transform: initial;
+      }
+    }
+  }
+
+  .tariffs__title {
+    margin-bottom: 55px;
+    background-image: none;
+    text-align: center;
+  }
+
+  .tariffs__title-link {
+    display: inline-block;
+    max-width: initial;
+  }
+
+  .tariffs__list {
+    position: relative;
+    margin-bottom: 38px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -122px;
+      right: 10px;
+      width: 99px;
+      height: 99px;
+      background: url("../img/rates@1x.png") no-repeat center/99px;
+      z-index: 2;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -42px;
+      right: -34px;
+      width: 198px;
+      height: calc(100% + 86px);
+      border-radius: 20px;
+      background-color: darken($main-color, 5);
+      z-index: 0;
+    }
+  }
+
+  .tariffs__link {
+    .link__icon {
+      display: inline-block;
+    }
+
+    .link__text {
+      margin-left: 20px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .tariffs {
+    padding-top: 95px;
+    padding-bottom: 160px;
+
+    &.container {
+      padding-left: 130px;
+      padding-right: 60px;
+    }
+
+    &--business {
+      max-width: 750px;
+      padding: 45px 0 0;
+
+      .tariffs__list {
+        padding-left: 59px;
+        padding-right: 59px;
+
+        &::before,
+        &::after {
+          display: none;
+        }
+      }
+
+      .tariffs-list__item {
+        padding-left: 0;
+      }
+
+      .tariffs__button {
+        width: 100%;
+        padding: 41px 41px 40px;
+        text-transform: initial;
+      }
+    }
+  }
+
+  .tariffs__title {
+    margin-bottom: 80px;
+  }
+
+  .tariffs__list {
+    padding-right: 345px;
+
+    &::before {
+      bottom: 0;
+      right: 62px;
+      width: 198px;
+      height: 198px;
+      background-size: contain;
+    }
+
+    &::after {
+      top: -50px;
+      right: 180px;
+      width: 444px;
+      height: calc(100% + 100px);
+    }
+  }
 }

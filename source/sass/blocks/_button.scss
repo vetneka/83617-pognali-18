@@ -14,7 +14,7 @@
   text-decoration: none;
 
   &--rounded {
-    padding: 12px 37px 10px;
+    padding: 12px 37px 11px;
     border-radius: $medium-border-radius;
     font-size: $base-font-size * 1.0625;
 
@@ -24,7 +24,7 @@
 
   &--icon {
     position: relative;
-    padding-right: 50px;
+    padding-right: 100px;
 
     &::after {
       content: "";
@@ -85,5 +85,11 @@
     &::after {
       transform: translateY(-50%) rotate(-45deg);
     }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .button {
+    width: auto;
   }
 }

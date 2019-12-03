@@ -11,7 +11,7 @@
     "gulp-bem-css": "^1.1.3",
     "gulp-plumber": "1.2.x",
     "gulp-postcss": "8.0.x",
-    "gulp-sass": "4.0.x",
+    "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "2.6.x",
     "gulp-svgmin": "^2.2.0",
     "stylelint": "10.1.x",

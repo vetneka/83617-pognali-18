@@ -8,13 +8,13 @@
   </head>
   <body>
     <header class="main-header">
-      <div class="container">
+      <div class="main-header__wrapper container">
         <a class="main-header__main-logo main-logo">
-          <img class="main-logo__img" src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип сервиса &laquo;Погнали&raquo;">
+          <img class="main-logo__img" src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Логотип сервиса &laquo;Погнали&raquo;">
         </a>
 
         <nav class="main-header__main-nav main-nav">
-          <ul class="main-header__site-nav site-nav">
+          <ul class="main-nav__site-nav site-nav">
             <li class="site-nav__item">
               <a class="site-nav__link" href="about.html">О сервисе</a>
             </li>
@@ -26,7 +26,7 @@
             </li>
           </ul>
 
-          <ul class="main-header__user-nav user-nav">
+          <ul class="main-nav__user-nav user-nav">
             <li class="user-nav__item">
               <a class="button button--rounded" href="login.html">Авторизация</a>
             </li>
@@ -52,7 +52,7 @@
             </li>
           </ul>
 
-          <ul class="social">
+          <ul class="main-nav__social social">
             <li class="social__item">
               <a class="link" href="https://www.facebook.com/htmlacademy" target="blank" title="Наш Фейсбук">
                 <span class="link__icon link__icon--main-color" aria-hidden="true">
@@ -84,23 +84,9 @@
               </a>
             </li>
           </ul>
-
-          <button class="hamburger" type="button">
-            <span class="visually-hidden">Меню</span>
-          </button>
         </nav>
-      </div>
-    </header>
 
-    <main class="main">
-      <h1 class="visually-hidden">Сервис поиска попутчиков для путешествий &laquo;Погнали&raquo;</h1>
-
-      <section class="promo">
-        <h2 class="visually-hidden">Как начать?</h2>
-
-        <b class="promo__title">В путешествие с крутыми попутчиками!</b>
-
-        <ul class="promo__user-nav user-nav">
+        <ul class="main-header__user-nav user-nav">
           <li class="user-nav__item">
             <a class="button button--rounded" href="login.html">Авторизация</a>
           </li>
@@ -126,15 +112,33 @@
           </li>
         </ul>
 
-        <blockquote class="blockquote">
-          <p class="blockquote__text">«Лучшее приложение, что я видел в жизни!»</p>
-          <dl class="blockquote__list">
-            <dt class="blockquote__author-name"><cite>Мурат Эльтазин</cite></dt>
-            <dd class="blockquote__author-position">главный редактор газеты «гаджетлайф»</dd>
-          </dl>
-        </blockquote>
+        <button class="main-header__hamburger hamburger" type="button">
+          <span class="visually-hidden">Меню</span>
+        </button>
+      </div>
+    </header>
 
-        <ol class="steps-list">
+    <main class="main">
+      <h1 class="visually-hidden">Сервис поиска попутчиков для путешествий &laquo;Погнали&raquo;</h1>
+
+      <section class="promo container">
+        <h2 class="visually-hidden">Как начать?</h2>
+
+        <div class="promo__wrapper">
+          <b class="promo__title">В путешествие с крутыми попутчиками!</b>
+
+          <blockquote class="promo__blockquote blockquote">
+            <div class="container">
+              <p class="blockquote__text text">«Лучшее приложение, что я видел в жизни!»</p>
+              <dl class="blockquote__list text--bold">
+                <dt class="blockquote__author-name"><cite>Мурат Эльтазин</cite></dt>
+                <dd class="blockquote__author-position">главный редактор газеты «гаджетлайф»</dd>
+              </dl>
+            </div>
+          </blockquote>
+        </div>
+
+        <ol class="promo__steps-list steps-list">
           <li class="steps-list__item">
             <span class="steps-list__text">Выберите направление</span>
           </li>
@@ -150,59 +154,82 @@
         </ol>
       </section>
 
-      <section class="about container container--rounded">
-        <h2 class="secondary-title">О сервисе</h2>
-        <p class="text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
-        <p class="text text--bold">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
-      </section>
+      <section class="about container container--rounded container--rounded--dark">
+        <div class="about__wrapper">
+          <h2 class="secondary-title">О сервисе</h2>
+          <p class="text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
+          <p class="text text--bold">А если найдете кого-то близкого по духу — скорее зовите его в совместный трип!</p>
+          <a class="about__button button button--icon" href="catalog.html">Подробнее</a>
+        </div>
+        </section>
 
-      <section class="direction container container--bg-light container--rounded">
-        <h2 class="secondary-title">Направления</h2>
-        <p class="text">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
+      <section class="direction container container--bg-light container--rounded container--rounded--light">
+        <div class="direction__wrapper">
+          <h2 class="direction__secondary-title secondary-title">Направления</h2>
+          <p class="text">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
+        </div>
 
-        <ul class="cards-list">
-          <li class="card cards-list__item card--direction">
+        <ul class="direction__cards-list cards-list">
+          <!-- Direction 1 -->
+          <li class="cards-list__item card card--direction">
             <div class="card__content">
               <h3 class="card__title tertiary-title">Таиланд</h3>
               <p class="card__description">Джунгли зовут!</p>
-              <div class="travelers-counter">18321</div>
-              <div class="countries-flags">
-                <div class="countries-flags__list">
-                  <img class="country-flag card__country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Таиланда">
-                </div>
+              <div class="card__travelers-counter">
+                <span class="card__travelers-counter-icon">
+                  <svg class="card__travelers-counter-svg" width="11" height="11"></svg>
+                </span>
+                <span class="card__travelers-counter-text">18321</span>
               </div>
+              <ul class="card__countries-flags countries-flags">
+                <li class="countries-flags__item">
+                  <img class="countries-flags__img countries-flags__img--medium" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Таиланда">
+                </li>
+              </ul>
             </div>
             <div class="card__picture">
               <img class="card__img" src="img/thailand-mobile@1x.jpg" width="270" height="110" alt="Море и острова Таиланда">
             </div>
           </li>
 
-          <li class="card cards-list__item card--direction">
+          <!-- Direction 2 -->
+          <li class="cards-list__item card card--direction">
             <div class="card__content">
               <h3 class="card__title tertiary-title">Франция</h3>
               <p class="card__description">Трэ бьен, манифик!</p>
-              <div class="travelers-counter">12518</div>
-              <div class="countries-flags">
-                <div class="countries-flags__list">
-                  <img class="country-flag card__country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Франции">
-                </div>
+              <div class="card__travelers-counter">
+                <span class="card__travelers-counter-icon">
+                  <svg class="card__travelers-counter-svg" width="11" height="11"></svg>
+                </span>
+                <span class="card__travelers-counter-text">12518</span>
               </div>
+              <ul class="card__countries-flags countries-flags">
+                <li class="countries-flags__item">
+                  <img class="countries-flags__img countries-flags__img--medium" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Франции">
+                </li>
+              </ul>
             </div>
             <div class="card__picture">
               <img class="card__img" src="img/france-mobile@1x.jpg" width="270" height="110" alt="Улочка в Париже">
             </div>
           </li>
 
-          <li class="card cards-list__item card--direction">
+          <!-- Direction 3 -->
+          <li class="cards-list__item card card--direction">
             <div class="card__content">
               <h3 class="card__title tertiary-title">Чехия</h3>
               <p class="card__description">Закоулки старой Европы</p>
-              <div class="travelers-counter">5326</div>
-              <div class="countries-flags">
-                <div class="countries-flags__list">
-                  <img class="country-flag card__country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехии">
-                </div>
+              <div class="card__travelers-counter">
+                <span class="card__travelers-counter-icon">
+                  <svg class="card__travelers-counter-svg" width="11" height="11"></svg>
+                </span>
+                <span class="card__travelers-counter-text">5326</span>
               </div>
+              <ul class="card__countries-flags countries-flags">
+                <li class="countries-flags__item">
+                  <img class="countries-flags__img countries-flags__img--medium" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехии">
+                </li>
+              </ul>
             </div>
             <div class="card__picture">
               <img class="card__img" src="img/czech-mobile@1x.jpg" width="270" height="110" alt="Вид на Прагу с реки">
@@ -210,162 +237,163 @@
           </li>
         </ul>
 
-        <a class="button button--icon" href="form.html">Показать все</a>
+        <a class="direction__button button button--icon" href="form.html">Показать все</a>
       </section>
 
-      <section class="users container container--bg-dark container--rounded">
-        <h2 class="secondary-title">Попутчики</h2>
-        <p class="text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-        <p class="text text--bold">Теперь можно легко найти единомышленников!</p>
+      <section class="users container container--bg-dark container--rounded container--rounded--dark">
+        <div class="users__wrapper">
+          <h2 class="secondary-title">Попутчики</h2>
+          <p class="text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
+          <p class="text text--bold">Теперь можно легко найти единомышленников!</p>
+        </div>
 
-        <ul class="cards-list">
+        <ul class="users__cards-list cards-list cards-list--users">
           <!-- card 1 -->
           <li class="cards-list__item card card--users">
             <div class="card__content">
               <h3 class="card__title tertiary-title">Таня Фирсова</h3>
               <p class="card__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
 
-              <div class="countries-flags">
-                <ul class="countries-flags__list">
-                  <li class="countries-flags__item">
-                    <img class="country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Шри-Ланки">
-                  </li>
-                  <li class="countries-flags__item">
-                    <img class="country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Таиланда">
-                  </li>
-                  <li class="countries-flags__item">
-                    <img class="country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Сейшельских Островов">
-                  </li>
-                </ul>
-              </div>
+              <ul class="card__countries-flags countries-flags">
+                <li class="countries-flags__item">
+                  <img class="countries-flags__img" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Шри-Ланки">
+                </li>
+                <li class="countries-flags__item">
+                  <img class="countries-flags__img" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Таиланда">
+                </li>
+                <li class="countries-flags__item">
+                  <img class="countries-flags__img" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Сейшельских Островов">
+                </li>
+              </ul>
 
-              <div class="transports">
-                <ul class="transports__list">
-                  <!-- transport 1 -->
-                  <li class="transports__item transport">
-                    <div class="transport__content">
-                      <span class="visually-hidden">Самолет</span>
-                      <svg class="transport__svg transport__svg--active" width="20" height="20" aria-hidden="true">
-                        <circle r="10" cx="10" cy="10" fill="tomato"></circle>
-                      </svg>
-                    </div>
-                  </li>
-                  <!-- transport 2 -->
-                  <li class="transports__item transport">
-                    <div class="transport__content">
-                      <span class="visually-hidden">Автобус</span>
-                      <svg class="transport__svg" width="20" height="20" aria-hidden="true">
-                        <circle r="10" cx="10" cy="10" fill="tomato"></circle>
-                      </svg>
-                    </div>
-                  </li>
-                  <!-- transport 3 -->
-                  <li class="transports__item transport">
-                    <div class="transport__content">
-                      <span class="visually-hidden">Велосипед</span>
-                      <svg class="transport__svg" width="20" height="20" aria-hidden="true">
-                        <circle r="10" cx="10" cy="10" fill="tomato"></circle>
-                      </svg>
-                    </div>
-                  </li>
-                  <!-- transport 4 -->
-                  <li class="transports__item transport">
-                    <div class="transport__content">
-                      <span class="visually-hidden">Бегом</span>
-                      <svg class="transport__svg" width="20" height="20" aria-hidden="true">
-                        <circle r="10" cx="10" cy="10" fill="tomato"></circle>
-                      </svg>
-                    </div>
-                  </li>
-                </ul>
-              </div>
+              <ul class="card__transports transports">
+                <!-- transport 1 -->
+                <li class="transports__item transport">
+                  <div class="transport__content">
+                    <span class="visually-hidden">Самолет</span>
+                    <svg class="transport__svg transport__svg--active" width="20" height="20" aria-hidden="true">
+                      <circle r="10" cx="10" cy="10" fill="tomato"></circle>
+                    </svg>
+                  </div>
+                </li>
+                <!-- transport 2 -->
+                <li class="transports__item transport">
+                  <div class="transport__content">
+                    <span class="visually-hidden">Автобус</span>
+                    <svg class="transport__svg" width="20" height="20" aria-hidden="true">
+                      <circle r="10" cx="10" cy="10" fill="tomato"></circle>
+                    </svg>
+                  </div>
+                </li>
+                <!-- transport 3 -->
+                <li class="transports__item transport">
+                  <div class="transport__content">
+                    <span class="visually-hidden">Велосипед</span>
+                    <svg class="transport__svg" width="20" height="20" aria-hidden="true">
+                      <circle r="10" cx="10" cy="10" fill="tomato"></circle>
+                    </svg>
+                  </div>
+                </li>
+                <!-- transport 4 -->
+                <li class="transports__item transport">
+                  <div class="transport__content">
+                    <span class="visually-hidden">Бегом</span>
+                    <svg class="transport__svg" width="20" height="20" aria-hidden="true">
+                      <circle r="10" cx="10" cy="10" fill="tomato"></circle>
+                    </svg>
+                  </div>
+                </li>
+              </ul>
             </div>
 
             <div class="card__picture">
               <img class="card__img" src="img/firsova-desktop@1x.jpg" width="270" height="270" alt="Таня Фирсова">
-              <div class="user-level">
+              <div class="card__user-level user-level">
                 <div class="user-level__content">
                   <span class="user-level__number">99</span>
                   <span class="user-level__text">level</span>
                 </div>
+                <svg class="user-level__progress">
+                  <circle class="progress-99" r="30" cx="31" cy="31"></circle>
+                </svg>
               </div>
             </div>
           </li>
+
           <!-- card 2 -->
           <li class="cards-list__item card card--users">
             <div class="card__content">
               <h3 class="card__title tertiary-title">Петя Демин</h3>
               <p class="card__tags">#бургер #бар #футбол #концерт #крафт</p>
 
-              <div class="countries-flags">
-                <ul class="countries-flags__list">
-                  <li class="countries-flags__item">
-                    <img class="country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Бельгии">
-                  </li>
-                  <li class="countries-flags__item">
-                    <img class="country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехии">
-                  </li>
-                </ul>
-              </div>
+              <ul class="card__countries-flags countries-flags">
+                <li class="countries-flags__item">
+                  <img class="countries-flags__img" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Бельгии">
+                </li>
+                <li class="countries-flags__item">
+                  <img class="countries-flags__img" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехии">
+                </li>
+              </ul>
 
-              <div class="transports">
-                <ul class="transports__list">
-                  <!-- transport 1 -->
-                  <li class="transports__item transport">
-                    <div class="transport__content">
-                      <span class="visually-hidden">Самолет</span>
-                      <svg class="transport__svg transport__svg--active" width="20" height="20" aria-hidden="true">
-                        <circle r="10" cx="10" cy="10" fill="tomato"></circle>
-                      </svg>
-                    </div>
-                  </li>
-                  <!-- transport 2 -->
-                  <li class="transports__item transport">
-                    <div class="transport__content">
-                      <span class="visually-hidden">Автобус</span>
-                      <svg class="transport__svg" width="20" height="20" aria-hidden="true">
-                        <circle r="10" cx="10" cy="10" fill="tomato"></circle>
-                      </svg>
-                    </div>
-                  </li>
-                  <!-- transport 3 -->
-                  <li class="transports__item transport">
-                    <div class="transport__content">
-                      <span class="visually-hidden">Велосипед</span>
-                      <svg class="transport__svg" width="20" height="20" aria-hidden="true">
-                        <circle r="10" cx="10" cy="10" fill="tomato"></circle>
-                      </svg>
-                    </div>
-                  </li>
-                  <!-- transport 4 -->
-                  <li class="transports__item transport">
-                    <div class="transport__content">
-                      <span class="visually-hidden">Бегом</span>
-                      <svg class="transport__svg" width="20" height="20" aria-hidden="true">
-                        <circle r="10" cx="10" cy="10" fill="tomato"></circle>
-                      </svg>
-                    </div>
-                  </li>
-                </ul>
-              </div>
+              <ul class="card__transports transports">
+                <!-- transport 1 -->
+                <li class="transports__item transport">
+                  <div class="transport__content">
+                    <span class="visually-hidden">Самолет</span>
+                    <svg class="transport__svg transport__svg--active" width="20" height="20" aria-hidden="true">
+                      <circle r="10" cx="10" cy="10" fill="tomato"></circle>
+                    </svg>
+                  </div>
+                </li>
+                <!-- transport 2 -->
+                <li class="transports__item transport">
+                  <div class="transport__content">
+                    <span class="visually-hidden">Автобус</span>
+                    <svg class="transport__svg" width="20" height="20" aria-hidden="true">
+                      <circle r="10" cx="10" cy="10" fill="tomato"></circle>
+                    </svg>
+                  </div>
+                </li>
+                <!-- transport 3 -->
+                <li class="transports__item transport">
+                  <div class="transport__content">
+                    <span class="visually-hidden">Велосипед</span>
+                    <svg class="transport__svg" width="20" height="20" aria-hidden="true">
+                      <circle r="10" cx="10" cy="10" fill="tomato"></circle>
+                    </svg>
+                  </div>
+                </li>
+                <!-- transport 4 -->
+                <li class="transports__item transport">
+                  <div class="transport__content">
+                    <span class="visually-hidden">Бегом</span>
+                    <svg class="transport__svg" width="20" height="20" aria-hidden="true">
+                      <circle r="10" cx="10" cy="10" fill="tomato"></circle>
+                    </svg>
+                  </div>
+                </li>
+              </ul>
             </div>
 
             <div class="card__picture">
               <img class="card__img" src="img/demin-desktop@1x.jpg" width="270" height="270" alt="Петя Демин">
-              <div class="user-level">
+              <div class="card__user-level user-level">
                 <div class="user-level__content">
-                  <span class="user-level__number">99</span>
+                  <span class="user-level__number">80</span>
                   <span class="user-level__text">level</span>
                 </div>
+                <svg class="user-level__progress">
+                  <circle class="progress-80" r="30" cx="31" cy="31"></circle>
+                </svg>
               </div>
             </div>
           </li>
         </ul>
 
-        <a class="button button--icon" href="catalog.html">Показать всех</a>
+        <a class="users__button button button--icon" href="catalog.html">Показать всех</a>
       </section>
 
-      <section class="tariffs container container--bg-light container--rounded">
+      <section class="tariffs container container--bg-light container--rounded container--rounded--light">
         <h2 class="visually-hidden">Наши тарифы</h2>
 
         <p class="secondary-title tariffs__title">
@@ -393,10 +421,17 @@
           </li>
         </ol>
 
-        <a class="tariffs__link link" href="tariffs.html">Показать тарифы для бизнеса</a>
+        <a class="tariffs__link link" href="tariffs.html">
+          <span class="link__icon " aria-hidden="true">
+            <svg class="link__svg" width="10" height="10">
+              <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
+            </svg>
+          </span>
+          <span class="link__text">Показать тарифы для бизнеса</span>
+        </a>
       </section>
 
-      <section class="contacts container container--bg-dark container--rounded">
+      <section class="contacts container container--bg-dark container--rounded container--rounded--accent">
         <h2 class="visually-hidden">Контакты</h2>
         <p class="contacts__secondary-title secondary-title">Заинтересовались?</p>
         <p class="contacts__text text">Зарегистрируйтесь,  это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a class="contacts__link link" href="login.html">авторизуйтесь.</a></p>
@@ -405,7 +440,7 @@
           <label class="visually-hidden" for="user-email">Введите ваш e-mail</label>
           <input class="contacts-form__input" type="email" name="user-email" id="user-email" placeholder="E-mail" required>
           <button class="contacts-form__button button button--icon" type="submit">
-            <span class="visually-hidden">Регистация</span>
+            <span class="button__text">Регистация</span>
           </button>
         </form>
 
@@ -434,10 +469,9 @@
         </ul>
       </section>
 
-      <section class="route">
-        <div class="container container--rounded">
-          <h2 class="visually-hidden">Проложить маршрут</h2>
-
+      <section class="route container container--rounded">
+        <h2 class="visually-hidden">Проложить маршрут</h2>
+        <div class="route__wrapper">
           <p class="route__link link">
             <span class="link__icon link__icon--main-color" aria-hidden="true">
               <svg class="link__svg" width="10" height="10">
@@ -446,7 +480,6 @@
             </span>
             <span class="link__text">ул. Большая Конюшенная, 19/8</span>
           </p>
-
           <a class="route__button button button--icon" href="https://yandex.ru/maps/-/CGTFY2JW">Проложить маршрут</a>
         </div>
       </section>
@@ -506,37 +539,37 @@
           <span class="visually-hidden">HtmlAcademy</span>
         </a>
       </div>
-
-      <section class="modal modal--tariffs tariffs tariffs--business">
-        <h3 class="secondary-title tariffs__title">Бизнес-тарифы</h3>
-        <ul class="tariffs__list tariffs-list">
-          <li class="tariffs-list__item">
-            <p class="tariffs-list__item-content">
-              <span class="tariffs-list__text">Реклама у блоггера</span>
-              <span class="tariffs-list__price">300&thinsp;000 руб./пост</span>
-            </p>
-          </li>
-          <li class="tariffs-list__item">
-            <p class="tariffs-list__item-content">
-              <span class="tariffs-list__text">Накрутка подписчиков</span>
-              <span class="tariffs-list__price">от 1 руб./шт.</span>
-            </p>
-          </li>
-          <li class="tariffs-list__item">
-            <p class="tariffs-list__item-content">
-              <span class="tariffs-list__text">Лайки от ботов</span>
-              <span class="tariffs-list__price">от 20 коп./лайк</span>
-            </p>
-          </li>
-          <li class="tariffs-list__item">
-            <p class="tariffs-list__item-content">
-              <span class="tariffs-list__text">Ваш продакт-плейсмент</span>
-              <span class="tariffs-list__price">Индивидуально</span>
-            </p>
-          </li>
-        </ul>
-        <button class="button modal__button tariffs__button">Закрыть окно</button>
-      </section>
     </footer>
+
+    <section class="modal modal--tariffs tariffs tariffs--business">
+      <h3 class="secondary-title tariffs__title">Бизнес-тарифы</h3>
+      <ul class="tariffs__list tariffs-list">
+        <li class="tariffs-list__item">
+          <p class="tariffs-list__item-content">
+            <span class="tariffs-list__text">Реклама у блоггера</span>
+            <span class="tariffs-list__price">300&thinsp;000 руб./пост</span>
+          </p>
+        </li>
+        <li class="tariffs-list__item">
+          <p class="tariffs-list__item-content">
+            <span class="tariffs-list__text">Накрутка подписчиков</span>
+            <span class="tariffs-list__price">от 1 руб./шт.</span>
+          </p>
+        </li>
+        <li class="tariffs-list__item">
+          <p class="tariffs-list__item-content">
+            <span class="tariffs-list__text">Лайки от ботов</span>
+            <span class="tariffs-list__price">от 20 коп./лайк</span>
+          </p>
+        </li>
+        <li class="tariffs-list__item">
+          <p class="tariffs-list__item-content">
+            <span class="tariffs-list__text">Ваш продакт-плейсмент</span>
+            <span class="tariffs-list__price">Индивидуально</span>
+          </p>
+        </li>
+      </ul>
+      <button class="button modal__button tariffs__button">Закрыть окно</button>
+    </section>
   </body>
 </html>

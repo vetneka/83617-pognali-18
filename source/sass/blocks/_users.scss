@@ -4,3 +4,63 @@
   background: url("../img/smolov-back-desktop@1x.png") no-repeat right 25px top 35px / 143px, url("../img/rogovaya-back-mobile@1x.png") no-repeat left -10px top 300px / 61px 71px;
   background-color: $main-color-darker-30;
 }
+
+.users__wrapper {
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-bottom: 50px;
+}
+
+.users__cards-list {
+  margin-bottom: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .users {
+    &.container {
+      padding-left: 74px;
+      padding-right: 74px;
+    }
+  }
+
+  .users__wrapper {
+    max-width: 70%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .users__cards-list {
+    margin-bottom: 70px;
+  }
+
+  .users__button {
+    width: 100%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .users {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &.container {
+      padding-left: 130px;
+      padding-right: 130px;
+    }
+  }
+
+  .users__wrapper {
+    max-width: 450px;
+  }
+
+  .users__cards-list {
+    width: 630px;
+  }
+
+  .users__button {
+    width: initial;
+    margin-top: -137px;
+  }
+}

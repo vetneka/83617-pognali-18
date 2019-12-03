@@ -1,3 +1,16 @@
 .main-logo {
   display: block;
+  width: 100px;
+}
+
+@media (min-width: $tablet-width) {
+  .main-logo {
+    width: 164px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-logo {
+    width: 200px;
+  }
 }

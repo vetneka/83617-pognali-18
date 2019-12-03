@@ -1,17 +1,109 @@
 .card {
+  display: flex;
+  flex-flow: column-reverse nowrap;
+  border-radius: $base-border-radius;
+  overflow: hidden;
+
+  &--direction {
+    position: relative;
+    border-top-right-radius: $base-border-radius;
+    border-top-left-radius: $base-border-radius;
+
+    .card__content {
+      position: relative;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      z-index: 1;
+    }
+
+    .card__title {
+      order: 1;
+      overflow: auto;
+    }
+
+    .card__description {
+      width: 100%;
+      order: 3;
+    }
+
+    .card__travelers-counter {
+      order: 2;
+    }
+
+    .card__countries-flags {
+      width: 100%;
+      margin-top: -38px;
+      margin-bottom: 14px;
+      order: 0;
+    }
+
+    &:last-child {
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 81px;
+        background-image: linear-gradient(to top, $main-color, transparent);
+        z-index: 2;
+      }
+    }
+  }
+
   &--users {
     .card__content {
-      border-top-right-radius: initial;
-      border-top-left-radius: initial;
+      position: relative;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: flex-start;
+      align-items: center;
+      z-index: 1;
+    }
+
+    .card__title {
+      text-align: center;
+    }
+
+    .card__countries-flags {
+      justify-content: center;
+      width: 100%;
+      margin-top: -38px;
+      margin-bottom: 14px;
+      order: -1;
+    }
+
+    .card__transports {
+      margin-top: auto;
+    }
+  }
+
+  /* &--users {
+    .card__content {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card__title {
+      order: 0;
+    }
+
+    .card__tags {
+      max-width: 70%;
+    }
+
+    .countries-flags__list {
+      justify-content: center;
     }
 
     .card__img {
       border-top-right-radius: initial;
       border-top-left-radius: initial;
     }
-  }
+  } */
 
-  &--catalog {
+  /* &--catalog {
     .card__content {
       font-size: $base-font-size * 0.9375;
       line-height: $base-line-height * 0.818;
@@ -28,51 +120,104 @@
     .countries-flags__list {
       flex-direction: column;
     }
-  }
+  } */
 }
 
 .card__content {
-  background-color: $white;
-  line-height: $base-line-height / 1.125;
-  color: rgba($main-color-text, 0.3);
+  padding: 23px 23px 20px;
   font-weight: 500;
-  border-radius: $base-border-radius;
+  color: rgba($main-color-text, 0.3);
+  background-color: $white;
+  flex-grow: 1;
 }
 
-/* .card__title {
-
-}
-
-.card__info {
-
-}
-
-.card__description {
-
-}
-*/
-.card__link {
-  text-decoration: none;
-  color: inherit;
+.card__picture {
+  position: relative;
+  width: 100%;
 }
 
 .card__img {
-  border-top-right-radius: $base-border-radius;
-  border-top-left-radius: $base-border-radius;
+  width: inherit;
+  height: inherit;
+}
+
+.card__title {
+  margin-bottom: 10px;
+}
+
+.card__description {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.card__travelers-counter-svg {
+  width: 11px;
+  height: 11px;
+  margin-right: 1px;
+  background-color: navy;
 }
 
 .card__tags {
-  color: rgba($main-color-text, 1);
-  font-weight: 400;
-}
-/* .card__likes-counter {
-
+  margin: 0;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
-.card__subtitle {
-
+.card__user-level {
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
 
-.card__field {
+@media (min-width: $tablet-width) {
+  .card {
+    &--direction {
+      flex-direction: row;
 
-} */
+      .card__content {
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-grow: 1;
+      }
+
+      .card__picture {
+        width: 186px;
+        height: 140px;
+      }
+
+      .card__img {
+        object-fit: cover;
+      }
+
+      .card__countries-flags {
+        position: absolute;
+        top: 11px;
+        right: -35px;
+        width: initial;
+        margin-top: 0;
+      }
+
+      .card__travelers-counter {
+        order: 3;
+      }
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .card {
+    &--direction {
+      &:last-child {
+        &::after {
+          display: block;
+        }
+      }
+    }
+  }
+}

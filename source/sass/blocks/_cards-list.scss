@@ -9,3 +9,18 @@
     margin-bottom: 0;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .cards-list {
+    &--users {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+
+      .cards-list__item {
+        width: 285px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
