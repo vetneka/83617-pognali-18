@@ -1,4 +1,6 @@
 .link {
+  position: relative;
+
   font-size: $base-font-size;
   line-height: $base-line-height;
   font-weight: 600;
@@ -7,16 +9,30 @@
   text-decoration: none;
   text-transform: uppercase;
 
-  &--plus {
-    position: relative;
+  &--icon--left {
     padding-left: 30px;
 
+    &::before,
+    &::after {
+      left: 0;
+    }
+  }
+
+  &--icon--right {
+    padding-right: 30px;
+
+    &::before,
+    &::after {
+      right: 0;
+    }
+  }
+
+  &--icon--plus {
     &::before,
     &::after {
       content: "";
       position: absolute;
       top: 50%;
-      left: 0;
       transform: translateY(-50%);
 
       width: 18px;
@@ -26,6 +42,45 @@
 
     &::before {
       transform: translateY(-50%) rotate(90deg);
+    }
+  }
+
+  &--icon--dotted {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      box-shadow:
+        -10px 0 0 0 currentColor,
+        -20px 0 0 0 currentColor;
+      background-color: currentColor;
+    }
+  }
+
+  &--icon--cross {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
+      width: 18px;
+      height: 2px;
+      background-color: currentColor;
+    }
+
+    &::before {
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translateY(-50%) rotate(-45deg);
     }
   }
 }

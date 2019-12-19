@@ -2,6 +2,7 @@
   position: relative;
   width: 61px;
   height: 61px;
+  text-align: center;
 
   &--large {
     width: 100px;
@@ -51,6 +52,22 @@
         $percen: 99;
         stroke-dasharray: (333 * $percen / 100) 340;
       }
+    }
+  }
+
+  &--only-number {
+    .user-level__content {
+      background-color: $white;
+    }
+
+    .user-level__number {
+      border-bottom: 0;
+      font-size: $base-font-size * 1.5;
+      color: $main-color-darker-30;
+    }
+
+    .user-level__text {
+      display: none;
     }
   }
 }

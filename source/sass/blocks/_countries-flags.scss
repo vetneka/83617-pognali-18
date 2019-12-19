@@ -7,11 +7,10 @@
 }
 
 .countries-flags__item {
-  width: 35px;
-  height: 24px;
-  border-radius: $small-base-border-radius;
+  /* width: 35px;
+  height: 24px; */
+  /* overflow: hidden; */
   margin-right: 20px;
-  overflow: hidden;
 
   &:last-child {
     margin-right: 0;
@@ -19,8 +18,9 @@
 }
 
 .countries-flags__img {
-  width: inherit;
-  height: inherit;
+  width: 35px;
+  height: 24px;
+  border-radius: $small-base-border-radius;
 }
 
 .countries-flags__text {
@@ -28,9 +28,17 @@
   font-weight: 500;
 }
 
+@media (max-width: $only-mobile-width) {
+  .countries-flags__img {
+    &--small {
+      width: 26px;
+      height: 18px;
+    }
+  }
+}
 
 @media (min-width: $tablet-width) {
-  .countries-flags__item {
+  .countries-flags__img {
     &--medium {
       width: 70px;
       height: 47px;

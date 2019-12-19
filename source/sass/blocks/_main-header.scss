@@ -6,6 +6,12 @@
   padding-top: 30px;
   padding-bottom: 35px;
   z-index: 1;
+
+  &--inner-page {
+    .main-header__user-nav {
+      display: none;
+    }
+  }
 }
 
 .main-header__main-logo {
@@ -49,6 +55,14 @@
 }
 
 @media (min-width: $tablet-width) {
+  .main-header {
+    &--inner-page {
+      .main-header__user-nav {
+        display: flex;
+      }
+    }
+  }
+
   .main-header__wrapper {
     display: flex;
     flex-flow: row nowrap;
