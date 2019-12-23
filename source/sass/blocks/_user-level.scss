@@ -28,7 +28,7 @@
       color: $main-color-darker-30;
     }
 
-    circle {
+    .user-level__progress-circle {
       fill: transparent;
       stroke-width: 3;
       stroke: $main-color-accent-darker-30;
@@ -149,30 +149,30 @@
   width: 62px;
   height: 62px;
   transform: rotate(-90deg);
+}
 
-  circle {
-    fill: transparent;
-    stroke-width: 3;
-    stroke: $main-color-accent-darker-30;
+.user-level__progress-circle {
+  fill: transparent;
+  stroke-width: 3;
+  stroke: $main-color-accent-darker-30;
 
-    &.progress-25 {
-      $percen: 25;
-      stroke-dasharray: (189 * $percen / 100) 187;
-    }
+  &.progress-25 {
+    $percen: 25;
+    stroke-dasharray: (189 * $percen / 100) 187;
+  }
 
-    &.progress-50 {
-      $percen: 50;
-      stroke-dasharray: (189 * $percen / 100) 187;
-    }
+  &.progress-50 {
+    $percen: 50;
+    stroke-dasharray: (189 * $percen / 100) 187;
+  }
 
-    &.progress-80 {
-      $percen: 80;
-      stroke-dasharray: (189 * $percen / 100) 187;
-    }
+  &.progress-80 {
+    $percen: 80;
+    stroke-dasharray: (189 * $percen / 100) 187;
+  }
 
-    &.progress-99 {
-      $percen: 99;
-      stroke-dasharray: (189 * $percen / 100) 187;
-    }
+  &.progress-99 {
+    $percen: 99;
+    stroke-dasharray: (189 * $percen / 100) 187;
   }
 }

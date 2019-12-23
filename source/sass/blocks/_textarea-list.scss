@@ -7,6 +7,8 @@
   margin-bottom: 20px;
 
   &:not(:last-child) {
+
+    /* Vertical line */
     &::before {
       content: "";
       position: absolute;
@@ -28,6 +30,7 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  align-items: center;
   margin-left: 20px;
   margin-bottom: 10px;
 
@@ -44,6 +47,7 @@
     left: 0;
   }
 
+  /* Circle marker*/
   &::before {
     left: -21px;
     width: 6px;
@@ -52,6 +56,7 @@
     background-color: $main-color-darker-30;
   }
 
+  /* Short horizontal line */
   &::after {
     left: -32px;
     width: 15px;
@@ -91,4 +96,53 @@
   border: 1px solid #cbced9;
   border-radius: 4px;
   resize: vertical;
+}
+
+@media (min-width: $tablet-width) {
+  .textarea-list__item {
+    padding-right: 20px;
+
+    &:not(:last-child) {
+
+      /* Vertical line */
+      &::before {
+        top: 24px;
+        left: initial;
+        right: 0;
+      }
+    }
+  }
+
+  .textarea-list__title {
+    margin-left: 0;
+
+    /* Circle marker*/
+    &::before {
+      right: -26px;
+      left: initial;
+      width: 15px;
+      height: 15px;
+    }
+
+    /* Short horizontal line */
+    &::after {
+      display: none;
+    }
+  }
+
+  .textarea-list__img {
+    width: 70px;
+    height: 47px;
+  }
+
+  .textarea-list__textarea {
+    min-height: 142px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .textarea-list__img {
+    position: relative;
+    right: -105px;
+  }
 }

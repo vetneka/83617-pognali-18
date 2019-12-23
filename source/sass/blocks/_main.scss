@@ -3,6 +3,12 @@
     background-color: $main-color-lighter-10;
     padding-bottom: 45px;
   }
+
+  &--form {
+    .main__head-content {
+      margin-right: 500px;
+    }
+  }
 }
 
 .main__head {

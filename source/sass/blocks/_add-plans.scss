@@ -1,4 +1,5 @@
 .add-plans {
+  @include brs-top(30px, $main-color-darker-10, $main-color-darker-20);
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: $main-color-darker-20;
@@ -26,5 +27,11 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .add-plans {
+    @include brs-top(60px, $main-color-darker-10, $main-color-darker-20);
   }
 }

@@ -1,5 +1,4 @@
 .main-form {
-  padding-top: 20px;
   padding-bottom: 20px;
   background-color: $main-color;
 
@@ -7,9 +6,6 @@
     color: $main-color-darker-30;
   }
 }
-
-/* .main-form__user-profile {
-} */
 
 .main-form__button {
   margin-top: 20px;
@@ -23,17 +19,9 @@
   margin-bottom: 20px;
   border: 1px solid rgba($main-color-darker-30, 0.15);
   border-radius: $base-border-radius;
-
-  &--user-profile {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    border: 0;
-  }
 }
 
-.main-form__legend {
+/* .main-form__legend {
   position: absolute;
   top: -10px;
   left: 50%;
@@ -45,11 +33,12 @@
   text-align: center;
   color: $main-color-darker-30;
   background-color: $main-color;
-}
+} */
 
 .main-form__textarea {
+  display: block;
   width: 100%;
-  padding: 0 20px;
+  padding: 25px 33px 24px 24px;
   border: 0;
   background-color: transparent;
   resize: none;

@@ -1,4 +1,6 @@
 .user-plans {
+  @include brs-top(30px, $main-color, $main-color-darker-10);
+
   padding-top: 20px;
   padding-bottom: 40px;
   background-color: $main-color-darker-10;
@@ -20,6 +22,8 @@
   }
 }
 
-.user-plans__link {
-  color: rgba($black, 0.3);
+@media (min-width: $desktop-width) {
+  .user-plans {
+    @include brs-top(60px, $main-color, $main-color-darker-10);
+  }
 }

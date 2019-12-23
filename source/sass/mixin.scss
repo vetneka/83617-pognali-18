@@ -3,3 +3,104 @@
   padding: 0;
   list-style: none;
 }
+
+/* @mixin container-brs {
+  &--rounded {
+    position: relative;
+    border-bottom-left-radius: $large-border-radius;
+    border-bottom-right-radius: $large-border-radius;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 30px;
+      height: 30px;
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+
+    &--dark {
+      &::before {
+        background-image: radial-gradient(circle at 100% 0, rgba(204, 0, 0, 0) 30px, $main-color 31px);
+      }
+
+      &::after {
+        background-image: radial-gradient(circle at 0 0, rgba(204, 0, 0, 0) 30px, $main-color 31px);
+      }
+    }
+
+    &--light {
+      &::before {
+        background-image: radial-gradient(circle at 100% 0, rgba(204, 0, 0, 0) 30px, $main-color-darker-30 31px);
+      }
+
+      &::after {
+        background-image: radial-gradient(circle at 0 0, rgba(204, 0, 0, 0) 30px, $main-color-darker-30 31px);
+      }
+    }
+  }
+} */
+
+@mixin brs-bottom ($radius, $firstColor, $secondColor) {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: $radius;
+    height: $radius;
+  }
+
+  &::before {
+    left: 0;
+    background-image: radial-gradient(circle at 100% 0, $secondColor $radius, $firstColor ($radius + 1));
+  }
+
+  &::after {
+    right: 0;
+    background-image: radial-gradient(circle at 0 0, $secondColor $radius, $firstColor ($radius + 1));
+  }
+}
+
+@mixin brs-top ($radius, $firstColor, $secondColor) {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: $radius;
+    height: $radius;
+  }
+
+  &::before {
+    left: 0;
+    background-image: radial-gradient(circle at 100% 100%, $secondColor $radius, $firstColor ($radius + 1));
+  }
+
+  &::after {
+    right: 0;
+    background-image: radial-gradient(circle at 0 100%, $secondColor $radius, $firstColor ($radius + 1));
+  }
+}
+
+@mixin bg-dark {
+  background-color: $main-color-darker-30;
+  color: $white;
+}
+
+@mixin bg-light {
+  background-color: $main-color;
+  color: $main-color-text;
+}

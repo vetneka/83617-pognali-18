@@ -1,4 +1,4 @@
-.button {
+/* .button {
   width: 100%;
   display: inline-block;
   vertical-align: top;
@@ -25,6 +25,17 @@
   &--icon {
     position: relative;
     padding-right: 100px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 24px;
+      transform: translateY(-50%);
+      border-style: solid;
+      border-width: 7px 0 7px 10px;
+      border-color: transparent transparent transparent currentColor;
+    }
 
     &::after {
       content: "";
@@ -92,4 +103,47 @@
   .button {
     width: auto;
   }
+}
+ */
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 20px;
+  border: 0;
+
+  font-size: $base-font-size * 1.125;
+  line-height: $base-line-height * 1.363;
+  font-weight: 600;
+  color: $main-color-darker-30;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  background-color: transparent;
+
+  &--color {
+    &-accent {
+      background-color: $main-color-accent;
+    }
+
+    &-white {
+      background-color: $white;
+    }
+
+    &-blue {
+      background-color: $main-color-darker-20;
+    }
+  }
+
+  &--round {
+    &-base {
+      border-radius: 25px;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+
 }

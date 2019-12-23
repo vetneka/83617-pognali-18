@@ -1,15 +1,13 @@
 .container {
-  //max-width: $desktop-width;
-  //min-width: $mobile-width;
   margin-left: auto;
   margin-right: auto;
   padding-left: 25px;
   padding-right: 25px;
 
-  &--rounded {
+  /* &--rounded {
     position: relative;
-    /* border-bottom-left-radius: $large-border-radius;
-    border-bottom-right-radius: $large-border-radius; */
+    border-bottom-left-radius: $large-border-radius;
+    border-bottom-right-radius: $large-border-radius;
 
     &::before,
     &::after {
@@ -47,9 +45,9 @@
         background-image: radial-gradient(circle at 0 0, rgba(204, 0, 0, 0) 30px, $main-color-darker-30 31px);
       }
     }
-  }
+  } */
 
-  &--bg-dark {
+  /* &--bg-dark {
     background-color: $main-color-darker-30;
     color: $white;
   }
@@ -57,14 +55,18 @@
   &--bg-light {
     background-color: $main-color;
     color: $main-color-text;
-  }
+  } */
 }
 
 @media (min-width: $tablet-width) {
   .container {
-    //min-width: $tablet-width;
     padding-left: 40px;
     padding-right: 40px;
+
+    &--inner {
+      padding-left: 35px;
+      padding-right: 35px;
+    }
   }
 }
 
@@ -73,5 +75,10 @@
     max-width: $desktop-width;
     padding-left: 60px;
     padding-right: 60px;
+
+    &--inner {
+      padding-left: 72px;
+      padding-right: 0;
+    }
   }
 }
