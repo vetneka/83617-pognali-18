@@ -115,7 +115,7 @@
   border: 0;
 
   font-size: $base-font-size * 1.125;
-  line-height: $base-line-height * 1.363;
+  line-height: 1;
   font-weight: 600;
   color: $main-color-darker-30;
   text-decoration: none;
@@ -141,9 +141,30 @@
     &-base {
       border-radius: 25px;
     }
+
+    &-small {
+      border-radius: 20px;
+    }
+  }
+
+  &--size {
+    &-large {
+      justify-content: space-between;
+      min-width: 274px;
+      padding: 33px 34px 32px;
+
+      font-size: $base-font-size * 1.125;
+      text-transform: initial;
+    }
   }
 }
 
 @media (min-width: $tablet-width) {
-
+  .button {
+    &--size {
+      &-large {
+        font-size: $base-font-size * 1.5;
+      }
+    }
+  }
 }

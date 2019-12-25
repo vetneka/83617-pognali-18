@@ -104,3 +104,8 @@
   background-color: $main-color;
   color: $main-color-text;
 }
+
+@mixin bg-accent {
+  background-color: $main-color-accent;
+  color: $main-color-text;
+}

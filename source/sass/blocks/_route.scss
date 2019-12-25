@@ -1,9 +1,10 @@
 .route {
   padding-top: 35px;
   padding-bottom: 35px;
-  background-color: $main-color-accent;
-  border-bottom-left-radius: $large-border-radius;
-  border-bottom-right-radius: $large-border-radius;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+
+  @include bg-accent;
 }
 
 .route__link {
@@ -21,9 +22,14 @@
 }
 
 .route__button {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  width: 100%;
+  padding: 20px 20px;
   border: 3px solid $main-color-darker-30;
+  border-radius: 10px;
+
+  .button__text {
+    margin-right: 20px;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -32,8 +38,8 @@
     padding-bottom: 80px;
 
     &.container {
-      padding-left: 74px;
-      padding-right: 74px;
+      padding-left: 70px;
+      padding-right: 70px;
     }
   }
 
@@ -44,10 +50,6 @@
     .link__text {
       max-width: 100%;
     }
-  }
-
-  .route__button {
-    width: 100%;
   }
 }
 
@@ -62,7 +64,7 @@
     }
   }
 
-  .route__wrapper {
+  .route__inner {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;

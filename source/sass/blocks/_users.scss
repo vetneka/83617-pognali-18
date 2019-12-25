@@ -2,13 +2,28 @@
   padding-top: 60px;
   padding-bottom: 30px;
   background: url("../img/smolov-back-desktop@1x.png") no-repeat right 25px top 35px / 143px, url("../img/rogovaya-back-mobile@1x.png") no-repeat left -10px top 300px / 61px 71px;
-  background-color: $main-color-darker-30;
+
+  @include bg-dark;
+  @include brs-bottom (30px, $main-color, $main-color-darker-30);
 }
 
-.users__wrapper {
+.users__inner {
   padding-left: 25px;
   padding-right: 25px;
   margin-bottom: 50px;
+}
+
+.users__secondary-title {
+  margin-bottom: 20px;
+}
+
+.users__text {
+  margin: 0;
+  margin-bottom: 15px;
+
+  &--bold {
+    font-weight: 600;
+  }
 }
 
 .users__cards-list {
@@ -18,15 +33,23 @@
 @media (min-width: $tablet-width) {
   .users {
     &.container {
-      padding-left: 74px;
-      padding-right: 74px;
+      padding-left: 70px;
+      padding-right: 70px;
     }
   }
 
-  .users__wrapper {
-    max-width: 70%;
+  .users__inner {
+    max-width: 60%;
     padding-left: 0;
     padding-right: 0;
+
+    font-size: $base-font-size * 1.75;
+  }
+
+  .users__text {
+    &--bold {
+      font-size: $base-font-size * 1.3125;
+    }
   }
 
   .users__cards-list {
@@ -51,8 +74,8 @@
     }
   }
 
-  .users__wrapper {
-    max-width: 450px;
+  .users__inner {
+    width: 450px;
   }
 
   .users__cards-list {
@@ -61,6 +84,6 @@
 
   .users__button {
     width: initial;
-    margin-top: -137px;
+    margin-top: -157px;
   }
 }

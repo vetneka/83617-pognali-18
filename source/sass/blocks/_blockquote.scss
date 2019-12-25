@@ -3,47 +3,36 @@
   padding-top: 40px;
   padding-bottom: 30px;
   background-color: $main-color-darker-30;
+}
 
-  .container {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
+.blockquote__inner {
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .blockquote__list {
   margin: 0;
 }
 
-.blockquote__text {
+.blockquote__main {
+  padding-right: 50px;
   margin: 0;
   margin-bottom: 20px;
+  font-weight: 300;
 }
 
-.blockquote__author-name cite {
-  font-style: normal;
+.blockquote__footer {
+  padding-right: 50px;
+  margin: 0;
+  font-weight: 600;
+
+  cite {
+    font-style: normal;
+  }
 }
 
 .blockquote__author-position {
   margin-left: 0;
-}
-
-@media (min-width: $tablet-width) {
-  .blockquote {
-    background-color: transparent;
-
-    .container {
-      padding-left: 74px;
-      padding-right: 74px;
-    }
-  }
-
-  .blockquote__text {
-    max-width: 45%;
-  }
-
-  .blockquote__list {
-    max-width: 45%;
-  }
 }
 
 @media (min-width: $tablet-width) {
@@ -56,11 +45,25 @@
     }
   }
 
-  .blockquote__text {
-    max-width: 100%;
+  .blockquote__inner {
+    padding-left: 35px;
+    padding-right: 35px;
   }
 
-  .blockquote__list {
-    max-width: 100%;
+  .blockquote__main {
+    padding-right: 0;
+    font-size: $base-font-size * 1.75;
+  }
+
+  .blockquote__footer {
+    padding-right: 0;
+    font-size: $base-font-size * 1.3125;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .blockquote__inner {
+    padding-left: 70px;
+    padding-right: 0;
   }
 }

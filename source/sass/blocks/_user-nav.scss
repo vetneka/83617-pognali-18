@@ -1,9 +1,19 @@
 .user-nav {
   @include reset-list;
+
+  display: flex;
+  flex-flow: row-reverse wrap;
+  align-items: center;
+
+  .button {
+    width: 100%;
+    padding: 12px 29px 8px;
+    font-size: 17px;
+  }
 }
 
 .user-nav__item {
   &:first-child {
-    margin-bottom: 50px;
+    flex-grow: 1;
   }
 }

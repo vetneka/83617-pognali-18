@@ -3,10 +3,6 @@
   text-align: center;
 }
 
-/* .site-nav__item {
-
-} */
-
 .site-nav__link {
   font-family: $base-font-family;
   font-size: $base-font-size * 1.875;
@@ -29,6 +25,10 @@
 @media (min-width: $tablet-width) {
   .site-nav {
     text-align: left;
+  }
+
+  .site-nav__link {
+    font-size: $base-font-size * 3.75;
   }
 }
 

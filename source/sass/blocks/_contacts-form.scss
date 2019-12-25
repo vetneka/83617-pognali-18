@@ -5,7 +5,7 @@
 
 .contacts-form__input {
   flex-grow: 1;
-  padding: 20px 25px;
+  padding: 20px 75px 20px 25px;
   border-radius: $base-border-radius;
   border: none;
   font-size: $base-font-size * 1.125;
@@ -13,10 +13,8 @@
   color: rgba($main-color-text, 0.3);
 }
 
-.contacts-form__button {
-  position: absolute;
-  right: 0;
-  width: 59px;
-  height: 100%;
-  padding-right: 0;
+@media (min-width: $tablet-width) {
+  .contacts-form__input {
+    padding: 31px 100px 31px 25px;
+  }
 }

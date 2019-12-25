@@ -1,12 +1,19 @@
 .direction {
   padding-top: 65px;
   padding-bottom: 30px;
+
+  @include bg-light;
+  @include brs-bottom (30px, $main-color-darker-30, $main-color);
 }
 
-.direction__wrapper {
+.direction__inner {
   padding-left: 25px;
   padding-right: 25px;
   margin-bottom: 50px;
+}
+
+.direction__secondary-title {
+  margin-bottom: 20px;
 }
 
 .direction__cards-list {
@@ -16,14 +23,19 @@
 @media (min-width: $tablet-width) {
   .direction {
     &.container {
-      padding-right: 74px;
-      padding-left: 74px;
+      padding-left: 70px;
+      padding-right: 70px;
     }
   }
 
-  .direction__wrapper {
-    max-width: 45%;
-    padding: 0;
+  .direction__inner {
+    width: 60%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .direction__text {
+    font-size: $base-font-size * 1.75;
   }
 
   .direction__cards-list {
@@ -48,16 +60,15 @@
     }
   }
 
-  .direction__wrapper {
-    max-width: 450px;
-    margin-bottom: 90px;
+  .direction__inner {
+    width: 450px;
     padding: 0;
     padding-right: 100px;
+    margin-bottom: 90px;
   }
 
   .direction__cards-list {
-    flex-grow: 1;
-    max-width: 560px;
+    width: 560px;
     order: -1;
   }
 
