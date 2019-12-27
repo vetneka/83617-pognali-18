@@ -1,20 +1,38 @@
 .add-plans {
-  @include brs-top(30px, $main-color-darker-10, $main-color-darker-20);
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: $main-color-darker-20;
+
+  @include brs-top(30px, $main-color-darker-10, $main-color-darker-20);
 }
 
 .add-plans__secondary-title {
   position: relative;
-  margin-bottom: 20px;
-  padding-right: 65px;
 
-  .marker-list {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 20px;
+
+  .add-plan__marker-list {
+    display: flex;
+    flex-flow: row wrap;
+    margin-right: 5px;
+  }
+
+  .add-plan__marker-item {
+    margin-bottom: 0;
+    padding-left: 20px;
+
+    &:last-child {
+      padding-left: 0;
+    }
+  }
+
+  span {
+    display: none;
   }
 }
 
@@ -33,5 +51,18 @@
 @media (min-width: $desktop-width) {
   .add-plans {
     @include brs-top(60px, $main-color-darker-10, $main-color-darker-20);
+
+    &.container {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+  }
+
+  .add-plans__secondary-title {
+    margin-left: 60px;
+
+    .add-plan__marker-list {
+      display: none;
+    }
   }
 }

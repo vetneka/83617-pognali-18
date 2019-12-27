@@ -1,9 +1,9 @@
 .user-plans {
-  @include brs-top(30px, $main-color, $main-color-darker-10);
-
   padding-top: 20px;
   padding-bottom: 40px;
   background-color: $main-color-darker-10;
+
+  @include brs-top(30px, $main-color, $main-color-darker-10);
 
   .secondary-title {
     margin-bottom: 20px;

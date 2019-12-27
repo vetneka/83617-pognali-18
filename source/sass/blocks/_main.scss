@@ -16,7 +16,10 @@
   flex-flow: row wrap;
   align-items: flex-end;
   min-height: 143px;
-  background-color: $main-color-darker-30;
+  padding-top: 80px;
+
+  @include bg-dark;
+  @include brs-bottom (30px, $main-color, $main-color-darker-30);
 }
 
 .main__head-content {

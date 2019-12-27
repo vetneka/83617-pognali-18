@@ -46,6 +46,7 @@
     padding-bottom: 40px;
     font-size: $base-font-size * 1.5;
 
+    /* Horizontal line */
     &::after {
       content: "";
       position: absolute;
@@ -83,6 +84,7 @@
     padding-bottom: 0;
     margin-bottom: 0;
 
+    /* Horizontal line */
     &::after {
       display: none;
     }

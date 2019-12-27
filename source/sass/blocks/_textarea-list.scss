@@ -8,7 +8,7 @@
 
   &:not(:last-child) {
 
-    /* Vertical line */
+    // Vertical line
     &::before {
       content: "";
       position: absolute;
@@ -71,6 +71,7 @@
   overflow: hidden;
   white-space: nowrap;
 
+  // Hidding
   &::after {
     content: "";
     position: absolute;
@@ -83,7 +84,7 @@
   }
 }
 
-.textarea-list__img {
+.textarea-list__title-img {
   width: 35px;
   height: 24px;
   border-radius: 4px;
@@ -103,7 +104,6 @@
     padding-right: 20px;
 
     &:not(:last-child) {
-
       /* Vertical line */
       &::before {
         top: 24px;
@@ -130,7 +130,7 @@
     }
   }
 
-  .textarea-list__img {
+  .textarea-list__title-img {
     width: 70px;
     height: 47px;
   }
@@ -141,7 +141,11 @@
 }
 
 @media (min-width: $desktop-width) {
-  .textarea-list__img {
+  .textarea-list {
+    padding-right: 125px;
+  }
+
+  .textarea-list__title-img {
     position: relative;
     right: -105px;
   }

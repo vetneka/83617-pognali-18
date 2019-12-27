@@ -1,0 +1,100 @@
+.stepper-input {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  width: 100%;
+}
+
+.stepper-input__label {
+  margin-bottom: 10px;
+
+  text-transform: uppercase;
+  letter-spacing: 0.001em;
+  font-weight: 500;
+}
+
+.stepper-input__short-text {
+  margin-left: auto;
+
+  text-transform: uppercase;
+  letter-spacing: 0.001em;
+  font-weight: 500;
+  opacity: 0.3;
+}
+
+.stepper-input__content {
+  display: flex;
+  flex-flow: row nowrap;
+
+  width: 100%;
+  border: 1px solid rgba($main-color-darker-30, 0.3);
+  border-radius: $base-border-radius;
+  overflow: hidden;
+}
+
+.stepper-input__button {
+  position: relative;
+  margin: 0;
+  padding: 21px;
+  border: 0;
+  background-color: transparent;
+
+  /* Plus, minus */
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 14px;
+    height: 2px;
+    background-color: rgba($main-color-darker-30, 0.2);
+  }
+
+  &--less {
+    &::after {
+      display: none;
+    }
+  }
+
+  &--more {
+    &::after {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+  }
+}
+
+.stepper-input__input {
+  flex-grow: 1;
+
+  input {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    text-align: center;
+    border: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .stepper-input {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .stepper-input__label {
+    min-width: 160px;
+    margin-bottom: 0;
+  }
+
+  .stepper-input__short-text {
+    order: 1;
+  }
+
+  .stepper-input__content {
+    width: initial;
+  }
+}

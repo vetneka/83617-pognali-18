@@ -8,13 +8,37 @@
   padding-bottom: 30px;
 }
 
+.user-profile__group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  padding: 20px 0;
+  margin: 0;
+  margin-bottom: 15px;
+  border: 1px solid rgba($main-color-darker-30, 0.15);
+  border-radius: $base-border-radius;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--tags {
+    order: 4;
+  }
+
+  &--transports {
+    order: 5;
+  }
+}
+
 .user-profile__legend {
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%);
   padding-left: 15px;
   padding-right: 15px;
+  margin-top: -30px;
+  margin-bottom: 10px;
+
   text-transform: uppercase;
   font-weight: 600;
   text-align: center;
@@ -43,22 +67,14 @@
   }
 }
 
-.user-profile__tags {
-  position: relative;
+.user-profile__textarea {
+  display: block;
   width: 100%;
-  margin-bottom: 15px;
-  border: 1px solid rgba($main-color-darker-30, 0.15);
-  border-radius: $base-border-radius;
-  order: 4;
-}
-
-.user-profile__transports {
-  position: relative;
-  width: 100%;
-  padding: 25px 33px 24px 24px;
-  border: 1px solid rgba($main-color-darker-30, 0.15);
-  border-radius: $base-border-radius;
-  order: 5;
+  padding: 0 33px 0 24px;
+  border: 0;
+  background-color: transparent;
+  text-align: left;
+  resize: none;
 }
 
 @media (min-width: $tablet-width) {
@@ -66,9 +82,22 @@
     font-size: $base-font-size * 1.25;
   }
 
+  .user-profile__group {
+    flex-direction: column-reverse;
+
+    &--tags {
+      order: 5;
+    }
+
+    &--transports {
+      width: 50%;
+      order: 2;
+    }
+  }
+
   .user-profile__legend {
-    top: initial;
-    bottom: -15px;
+    margin-top: 10px;
+    margin-bottom: -35px;
   }
 
   .user-profile__user-level {
@@ -88,21 +117,31 @@
       border-radius: 10px;
     }
   }
-
-  .user-profile__tags {
-    order: 5;
-  }
-
-  .user-profile__transports {
-    width: 50%;
-    order: 2;
-  }
 }
 
 @media (min-width: $desktop-width) {
   .user-profile {
     padding-top: 70px;
     align-items: center;
+  }
+
+  .user-profile__group {
+    &--tags {
+      width: 730px;
+      margin-bottom: 0;
+      order: 4;
+
+      .user-profile__legend {
+        align-self: flex-start;
+        margin-left: 20px;
+      }
+    }
+
+    &--transports {
+      width: 384px;
+      align-self: stretch;
+      order: 5;
+    }
   }
 
   .user-profile__user-level {
@@ -140,21 +179,5 @@
     .button__text-item {
       display: none;
     }
-  }
-
-  .user-profile__tags {
-    width: 730px;
-    margin-bottom: 0;
-    order: 4;
-
-    .user-profile__legend {
-      left: 60px;
-    }
-  }
-
-  .user-profile__transports {
-    width: 384px;
-    align-self: stretch;
-    order: 5;
   }
 }

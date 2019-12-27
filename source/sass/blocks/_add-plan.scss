@@ -4,7 +4,7 @@
   border-radius: $base-border-radius;
   color: $main-color-darker-30;
 
-  .form-label--checkbox {
+  .custom-checkbox__label {
     padding-left: 40px;
 
     &::before {
@@ -20,10 +20,10 @@
 }
 
 .add-plan__title {
-  font-size: $base-font-size * 1.25;
-  font-weight: 600;
   margin: 0;
   margin-bottom: 20px;
+  font-size: $base-font-size * 1.25;
+  font-weight: 600;
 }
 
 .add-plan__title-item {
@@ -50,6 +50,7 @@
   padding-left: 25px;
   margin-bottom: 10px;
 
+  /* Custom marker*/
   &::before {
     content: "";
     position: absolute;
@@ -78,86 +79,7 @@
 }
 
 .add-plan__group {
-  display: flex;
-  flex-flow: row wrap;
   margin-bottom: 20px;
-
-  &--datepicker {
-    display: block;
-  }
-}
-
-.add-plan__label {
-  margin-bottom: 10px;
-
-  text-transform: uppercase;
-  letter-spacing: 0.001em;
-  font-weight: 500;
-}
-
-.add-plan__short-text {
-  margin-left: auto;
-  text-transform: uppercase;
-  letter-spacing: 0.001em;
-  font-weight: 500;
-  opacity: 0.3;
-}
-
-.add-plan__counter {
-  display: flex;
-  flex-flow: row nowrap;
-  width: 100%;
-  border: 1px solid rgba($main-color-darker-30, 0.3);
-  border-radius: $base-border-radius;
-  overflow: hidden;
-}
-
-.add-plan__counter-button {
-  position: relative;
-  margin: 0;
-  padding: 21px;
-  border: 0;
-  background-color: transparent;
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 14px;
-    height: 2px;
-    background-color: rgba($main-color-darker-30, 0.2);
-  }
-
-  &--less {
-    &::after {
-      display: none;
-    }
-  }
-
-  &--more {
-    &::after {
-      transform: translate(-50%, -50%) rotate(90deg);
-    }
-  }
-}
-
-.add-plan__input {
-  width: 100%;
-  padding: 10px 20px;
-  text-align: center;
-  border: 0;
-}
-
-.add-plan__custom-select {
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.add-plan__textarea-list {
-  width: 100%;
 }
 
 .add-plan__buttons {
@@ -182,13 +104,6 @@
     display: flex;
     flex-flow: column wrap;
     padding: 44px;
-  }
-
-  .add-plan__head {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    order: 1;
   }
 
   .add-plan__group {
@@ -247,22 +162,18 @@
   }
 
   .add-plan__button {
-    text-transform: initial;
     margin-bottom: 0;
-    margin-right: 10px;
+    text-transform: initial;
 
     .button__icon {
       display: inline;
     }
 
     &:nth-child(1) {
+      justify-content: space-between;
       min-height: 81px;
       min-width: 285px;
       padding: 0 34px;
-
-      .button__text {
-        margin-right: 10px;
-      }
     }
 
     &:nth-child(2) {
@@ -278,6 +189,16 @@
 }
 
 @media (min-width: $desktop-width) {
+  .add-plan {
+    padding: 80px 160px 105px;
+  }
+
+  .add-plan__head {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
   .add-plan__title-item {
     display: inline;
   }
@@ -297,7 +218,6 @@
   }
 
   .add-plan__middle {
-    display: flex;
     flex-flow: row wrap;
     padding-top: 20px;
     border-top: 1px solid rgba($black, 0.05);
@@ -310,34 +230,19 @@
     &--companion,
     &--days {
       width: 50%;
-      align-items: center;
-
-      .add-plan__label {
-        min-width: 190px;
-        margin-right: 32px;
-        margin-bottom: 0;
-      }
-
-      .add-plan__short-text {
-        margin-left: 32px;
-        order: 1;
-      }
     }
 
     &--checkbox {
       display: flex;
-      flex-flow: row wrap;
+      flex-flow: row nowrap;
       align-items: center;
       width: 228px;
       margin-left: auto;
     }
 
     &--country {
-      position: relative;
       padding-top: 20px;
-      padding-bottom: 20px;
       border-top: 1px solid rgba(0, 0, 0, 0.05);
-      order: 2;
 
       /* Vertical line */
       &::after {
@@ -346,13 +251,7 @@
     }
   }
 
-  .add-plan__counter {
-    width: 181px;
-  }
-
   .add-plan__textarea-list {
-    &.textarea-list {
-      padding-right: 225px;
-    }
+    width: 900px;
   }
 }
