@@ -5,14 +5,24 @@
 }
 
 .companions-filter__secondary-title {
-  color: $main-color-darker-30;
   max-width: 50%;
   margin-bottom: 20px;
+  color: $main-color-darker-30;
 }
 
 @media (min-width: $tablet-width) {
+  .companions-filter {
+    padding: 30px 35px 38px;
+  }
+
+  .companions-filter__secondary-title {
+    max-width: 100%;
+    font-size: $base-font-size * 1.875;
+  }
 }
 
-@media (min-width: $desktop-width) {
-
+@media (min-width: $tablet-width) {
+  .companions-filter {
+    padding: 45px;
+  }
 }

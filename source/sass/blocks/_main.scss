@@ -62,7 +62,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .main__wrapper {
+  .main__inner {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;

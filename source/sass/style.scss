@@ -15,7 +15,6 @@
 @import "blocks/tertiary-title";
 @import "blocks/link";
 @import "blocks/button";
-@import "blocks/text";
 @import "blocks/social";
 @import "blocks/site-nav";
 @import "blocks/user-nav";
@@ -37,43 +36,33 @@
 @import "blocks/contacts-form";
 @import "blocks/contacts";
 @import "blocks/continents-list";
-@import "blocks/copyright";
 @import "blocks/countries-list";
 @import "blocks/countries-filter";
-@import "blocks/countries-flags-list";
 @import "blocks/countries-flags";
-@import "blocks/country-flag";
 @import "blocks/direction";
-@import "blocks/filter";
-@import "blocks/form-fieldset";
-@import "blocks/form-input";
-@import "blocks/form-list";
 @import "blocks/letters-list";
 @import "blocks/likes-counter";
 @import "blocks/main-form";
 @import "blocks/map";
 @import "blocks/modal";
-@import "blocks/range-counter";
-@import "blocks/range-slider";
-@import "blocks/range";
 @import "blocks/route";
 @import "blocks/transport";
 @import "blocks/transports";
-@import "blocks/travelers-counter";
 
-/* Form elements */
+/* Form blocks */
 @import "blocks/custom-checkbox";
 @import "blocks/custom-select";
 @import "blocks/stepper-input";
 @import "blocks/datepicker";
 @import "blocks/textarea-list";
+@import "blocks/range";
 
+/* Heading blocks*/
 @import "blocks/user-picture";
 @import "blocks/user-plan";
 @import "blocks/user-plans";
 @import "blocks/user-profile";
 @import "blocks/users";
-
 @import "blocks/card";
 
 /* layout */

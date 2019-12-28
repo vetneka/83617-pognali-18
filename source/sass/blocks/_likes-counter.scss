@@ -7,6 +7,12 @@
   font-weight: 600;
   background-color: transparent;
   border: 0;
+
+  &--pressed {
+    circle {
+      fill: navy;
+    }
+  }
 }
 
 .likes-counter__icon {
@@ -27,12 +33,6 @@
   width: 13px;
   height: 11px;
   transform: translate(-50%, -50%);
-
-  &--active {
-    circle {
-      fill: yellowgreen;
-    }
-  }
 }
 
 @media (min-width: $tablet-width) {

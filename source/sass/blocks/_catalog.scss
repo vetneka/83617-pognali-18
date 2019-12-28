@@ -13,3 +13,11 @@
   text-align: center;
   font-size: $base-font-size * 1.0625;
 }
+
+@media (min-width: $tablet-width) {
+  .catalog__cards-list {
+    .cards-list__item {
+      margin-bottom: 40px;
+    }
+  }
+}

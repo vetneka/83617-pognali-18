@@ -4,17 +4,21 @@
   background-color: $main-color-darker-20;
 
   @include brs-top(30px, $main-color-darker-10, $main-color-darker-20);
+
+  &.container {
+    padding-left: 75px;
+    padding-right: 75px;
+  }
 }
 
-.add-plans__secondary-title {
-  position: relative;
-
+.add-plans__top {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
 
   margin-bottom: 20px;
+  padding-right: 20px;
 
   .add-plan__marker-list {
     display: flex;
@@ -58,11 +62,13 @@
     }
   }
 
-  .add-plans__secondary-title {
-    margin-left: 60px;
-
+  .add-plans__top {
     .add-plan__marker-list {
       display: none;
     }
+  }
+
+  .add-plans__secondary-title {
+    margin-left: 60px;
   }
 }
