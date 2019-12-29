@@ -4,11 +4,6 @@
   background-color: $main-color-darker-20;
 
   @include brs-top(30px, $main-color-darker-10, $main-color-darker-20);
-
-  &.container {
-    padding-left: 75px;
-    padding-right: 75px;
-  }
 }
 
 .add-plans__top {
@@ -49,6 +44,15 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .add-plans {
+    &.container {
+      padding-left: 75px;
+      padding-right: 75px;
+    }
   }
 }
 

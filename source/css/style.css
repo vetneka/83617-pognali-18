@@ -1526,9 +1526,6 @@ img {
   .add-plans::after {
     right: 0;
     background-image: radial-gradient(circle at 0 100%, #e9eaed 30px, #efeff1 31px); }
-  .add-plans.container {
-    padding-left: 75px;
-    padding-right: 75px; }
 
 .add-plans__top {
   display: -webkit-box;
@@ -1572,6 +1569,11 @@ img {
   margin-bottom: 10px; }
   .add-plans__item:last-child {
     margin-bottom: 0; }
+
+@media (min-width: 760px) {
+  .add-plans.container {
+    padding-left: 75px;
+    padding-right: 75px; } }
 
 @media (min-width: 1440px) {
   .add-plans {
