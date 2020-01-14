@@ -3,12 +3,6 @@
     background-color: $main-color-lighter-10;
     padding-bottom: 45px;
   }
-
-  &--form {
-    .main__head-content {
-      margin-right: 500px;
-    }
-  }
 }
 
 .main__head {
@@ -19,7 +13,7 @@
   padding-top: 80px;
 
   @include bg-dark;
-  @include brs-bottom (30px, $main-color, $main-color-darker-30);
+  @include brs-bottom (20px, $main-color, $main-color-darker-30);
 }
 
 .main__head-content {
@@ -52,8 +46,19 @@
 }
 
 @media (min-width: $tablet-width) {
+  .main {
+    &--form {
+      .main__head-content {
+        //margin-right: 500px;
+        padding-left: 34px;
+      }
+    }
+  }
+
   .main__head {
     min-height: 351px;
+
+    @include brs-bottom (60px, $main-color, $main-color-darker-30);
   }
 
   .main__head-backward-page {
@@ -62,6 +67,15 @@
 }
 
 @media (min-width: $desktop-width) {
+  .main {
+    &--form {
+      .main__head-content {
+        max-width: 65%;
+        padding-left: 65px;
+      }
+    }
+  }
+
   .main__inner {
     display: flex;
     flex-flow: row wrap;

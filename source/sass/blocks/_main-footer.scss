@@ -1,7 +1,10 @@
 .main-footer {
+  position: relative;
   border-top-left-radius: $large-border-radius;
   border-top-right-radius: $large-border-radius;
   background-color: $white;
+
+  z-index: 1;
 }
 
 .main-footer__inner {

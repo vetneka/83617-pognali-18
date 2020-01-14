@@ -1,14 +1,9 @@
 .add-plans {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 31px;
+  padding-bottom: 70px;
   background-color: $main-color-darker-20;
 
   @include brs-top(30px, $main-color-darker-10, $main-color-darker-20);
-
-  &.container {
-    padding-left: 75px;
-    padding-right: 75px;
-  }
 }
 
 .add-plans__top {
@@ -17,8 +12,8 @@
   justify-content: space-between;
   align-items: center;
 
-  margin-bottom: 20px;
   padding-right: 20px;
+  margin-bottom: 29px;
 
   .add-plan__marker-list {
     display: flex;
@@ -52,8 +47,50 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .add-plans {
+    padding-top: 53px;
+    padding-bottom: 103px;
+
+    &.container {
+      padding-left: 75px;
+      padding-right: 75px;
+    }
+  }
+
+  .add-plans__top {
+    margin-bottom: 56px;
+
+    .add-plan__marker-list {
+      margin-right: -14px;
+    }
+
+    .add-plan__marker-item {
+      padding-left: 33px;
+    }
+  }
+
+  .add-plans__item {
+    margin-bottom: 40px;
+
+    &--country {
+      .add-plan__head {
+        margin-bottom: 10px;
+      }
+    }
+
+    &--entertainments {
+      .add-plan__head {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
 @media (min-width: $desktop-width) {
   .add-plans {
+    padding-bottom: 113px;
+
     @include brs-top(60px, $main-color-darker-10, $main-color-darker-20);
 
     &.container {
@@ -69,6 +106,22 @@
   }
 
   .add-plans__secondary-title {
-    margin-left: 60px;
+    margin-left: 70px;
+  }
+
+  .add-plans__item {
+    margin-bottom: 45px;
+
+    &--country {
+      .add-plan__head {
+        margin-bottom: 42px;
+      }
+    }
+
+    &--entertainments {
+      .add-plan__head {
+        margin-bottom: 104px;
+      }
+    }
   }
 }

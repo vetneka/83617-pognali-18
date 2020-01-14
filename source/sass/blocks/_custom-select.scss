@@ -4,14 +4,14 @@
   flex-flow: row nowrap;
   justify-content: space-between;
 
-  padding-bottom: 20px;
+  padding-bottom: 22px;
 
   // Small arrow
   &::before {
     content: "";
     position: absolute;
-    bottom: 5px;
-    right: 52px;
+    bottom: 6px;
+    right: 50px;
     width: 5px;
     height: 10px;
     background: url("../img/small-arrow.svg") no-repeat center;
@@ -23,8 +23,8 @@
   &::after {
     content: "";
     position: absolute;
-    top: 18px;
-    right: 51px;
+    top: 17px;
+    right: 49px;
     width: 8px;
     height: 8px;
     border: 1px solid #cbced9;
@@ -48,7 +48,7 @@
 
     .custom-select__item {
       &--text {
-        width: calc(100% - 54px);
+        width: calc(100% - 53px);
       }
 
       &--img {
@@ -177,6 +177,7 @@
 
 @media (min-width: $tablet-width) {
   .custom-select {
+    padding-bottom: 15px;
     align-items: center;
 
     // Small arrow
@@ -186,8 +187,8 @@
 
     // Small circle
     &::after {
-      top: 16px;
-      right: 125px;
+      top: 26px;
+      right: 128px;
       width: 15px;
       height: 15px;
     }
@@ -195,7 +196,7 @@
     &--selected {
       .custom-select__item {
         &--text {
-          width: calc(100% - 165px);
+          width: calc(100% - 162px);
         }
       }
     }
@@ -203,7 +204,14 @@
 
   .custom-select__item {
     &--text {
-      width: calc(100% - 165px);
+      width: calc(100% - 162px);
+      padding: 23px 55px 18px 24px;
+
+      &::before {
+        right: 25px;
+        width: 20px;
+        height: 10px;
+      }
 
       // Hidding
       &::after {
@@ -215,9 +223,14 @@
       width: 70px;
       height: 47px;
       margin-left: auto;
-      margin-right: 15px;
+      margin-right: 18px;
       border: 0;
     }
+  }
+
+  .custom-select__text {
+    font-size: $base-font-size * 1.25;
+    letter-spacing: 0.09em;
   }
 
   .custom-select__img {
@@ -235,7 +248,8 @@
     // Cross
     &::before,
     &::after {
-      height: 17px;
+      width: 2px;
+      height: 25px;
     }
   }
 }

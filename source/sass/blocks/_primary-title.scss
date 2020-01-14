@@ -10,12 +10,12 @@
 
   &--underline {
     position: relative;
-    padding-bottom: 10px;
+    padding-bottom: 11px;
 
     &::after {
       content: "";
       position: absolute;
-      bottom: 0;
+      bottom: -2px;
       left: 0;
       right: 0;
 
@@ -31,9 +31,10 @@
     font-size: $base-font-size * 3.75;
 
     &--underline {
-      padding-bottom: 60px;
+      padding-bottom: 68px;
 
       &::after {
+        bottom: -4px;
         height: 8px;
         border-radius: 4px;
       }

@@ -1,12 +1,12 @@
 .user-plans {
-  padding-top: 20px;
-  padding-bottom: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   background-color: $main-color-darker-10;
 
   @include brs-top(30px, $main-color, $main-color-darker-10);
 
   .secondary-title {
-    margin-bottom: 20px;
+    margin-bottom: 29px;
   }
 }
 
@@ -22,8 +22,39 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .user-plans {
+    padding-top: 58px;
+    padding-bottom: 76px;
+
+    &.container {
+      padding-left: 75px;
+      padding-right: 75px;
+    }
+
+    .secondary-title {
+      margin-bottom: 47px;
+    }
+  }
+}
+
 @media (min-width: $desktop-width) {
   .user-plans {
+    padding-bottom: 64px;
+
     @include brs-top(60px, $main-color, $main-color-darker-10);
+
+    &.container {
+      padding-left: 123px;
+      padding-right: 60px;
+    }
+
+    .secondary-title {
+      margin-left: 10px;
+    }
+  }
+
+  .user-plans__item {
+    margin-bottom: 18px;
   }
 }

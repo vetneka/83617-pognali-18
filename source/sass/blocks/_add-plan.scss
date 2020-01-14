@@ -1,28 +1,40 @@
 .add-plan {
-  padding: 20px;
+  padding: 24px 25px 22px;
   background-color: $white;
   border-radius: $base-border-radius;
   color: $main-color-darker-30;
 
+  &:not(:first-child) {
+    padding-bottom: 5px;
+  }
+
   .custom-checkbox__label {
     padding-left: 40px;
 
+    // Square
     &::before {
       width: 26px;
       height: 26px;
       border: 1px solid #cbced9;
     }
 
+    // Tick
     &::after {
       left: 9px;
     }
   }
 }
 
+.add-plan__head {
+  margin-bottom: 18px;
+}
+
 .add-plan__title {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+
   font-size: $base-font-size * 1.25;
+  line-height: 1;
   font-weight: 600;
 }
 
@@ -32,7 +44,7 @@
 
 .add-plan__text {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .add-plan__marker-list {
@@ -79,7 +91,44 @@
 }
 
 .add-plan__group {
-  margin-bottom: 20px;
+  margin-bottom: 17px;
+
+  &--days {
+    margin-bottom: 23px;
+  }
+
+  &--checkbox {
+    margin-bottom: 22px;
+
+    .custom-checkbox__label {
+      letter-spacing: -0.03em;
+
+      // Square
+      &::before {
+        width: 26px;
+        height: 26px;
+        transform: translateY(-54%);
+      }
+
+      // Tick
+      &::after {
+        transform: translateY(-67%);
+      }
+    }
+  }
+
+  &--datepicker {
+    margin-bottom: 21px;
+  }
+
+  &--country {
+    margin-top: 21px;
+    margin-bottom: 5px;
+  }
+
+  &--textarea {
+    margin-top: 20px;
+  }
 }
 
 .add-plan__buttons {
@@ -88,13 +137,15 @@
 }
 
 .add-plan__button {
-  margin-bottom: 10px;
+  width: calc(100% + 10px);
+  margin-left: -5px;
+  margin-bottom: 7px;
 
   .button__icon {
     display: none;
   }
 
-  &:nth-child(2) {
+  &:last-child {
     margin-bottom: 0;
   }
 }
@@ -103,7 +154,38 @@
   .add-plan {
     display: flex;
     flex-flow: column wrap;
-    padding: 44px;
+    padding: 48px 44px 55px;
+    border-radius: 30px;
+
+    &:not(:first-child) {
+      padding-bottom: 53px;
+    }
+
+    &:nth-child(2) {
+      margin-bottom: 51px;
+    }
+
+    .custom-checkbox__label {
+      padding-left: 59px;
+
+      font-size: $base-font-size * 1.375;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+
+      // Square
+      &::before {
+        width: 36px;
+        height: 36px;
+      }
+
+      // Tick
+      &::after {
+        width: 13px;
+        height: 13px;
+        left: 12px;
+      }
+    }
   }
 
   .add-plan__group {
@@ -111,28 +193,35 @@
     border-top: 1px solid rgba($black, 0.05);
 
     &--companion {
+      margin-bottom: 29px;
       order: 2;
     }
 
     &--checkbox {
       padding-top: 0;
+      margin-bottom: 29px;
       border-top: 0;
       order: 3;
     }
 
     &--days {
+      margin-bottom: 59px;
       order: 4;
     }
 
     &--datepicker {
       padding-top: 0;
+      margin-bottom: 45px;
       border-top: 0;
       order: 5;
     }
 
     &--country {
       position: relative;
+      padding-top: 41px;
       padding-bottom: 20px;
+      margin-top: 11px;
+      margin-bottom: 15px;
       order: 2;
 
       /* Vertical line */
@@ -140,7 +229,7 @@
         content: "";
         position: absolute;
         top: 0;
-        right: 132px;
+        right: 135px;
         width: 1px;
         height: 100%;
         background-image: linear-gradient(to bottom, rgba($black, 0.05) 93%, transparent 100%);
@@ -148,12 +237,25 @@
     }
 
     &--textarea {
+      padding-top: 31px;
+      margin-top: 11px;
+      margin-bottom: 40px;
       order: 2;
     }
   }
 
+  .add-plan__head {
+    margin-bottom: 27px;
+  }
+
+  .add-plan__title {
+    margin-bottom: 36px;
+    font-size: $base-font-size * 2.25;
+  }
+
   .add-plan__text {
     font-size: $base-font-size * 1.25;
+    line-height: 1.2;
   }
 
   .add-plan__buttons {
@@ -162,7 +264,12 @@
   }
 
   .add-plan__button {
+    width: auto;
+    margin-left: 0;
     margin-bottom: 0;
+    border-radius: 20px;
+
+    font-size: $base-font-size * 1.5;
     text-transform: initial;
 
     .button__icon {
@@ -182,7 +289,7 @@
       margin-left: auto;
 
       .button__text {
-        margin-left: 10px;
+        margin-left: 21px;
       }
     }
   }
@@ -190,13 +297,24 @@
 
 @media (min-width: $desktop-width) {
   .add-plan {
-    padding: 80px 160px 105px;
+    padding: 100px 160px 105px;
+    border-radius: 60px;
+
+    &:not(:first-child) {
+      padding-bottom: 104px;
+    }
+
+    &:nth-child(2) {
+      margin-bottom: 46px;
+    }
   }
 
   .add-plan__head {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+
+    margin-bottom: 43px;
   }
 
   .add-plan__title-item {
@@ -207,6 +325,12 @@
     display: block;
   }
 
+  .add-plan__marker-item {
+    padding-left: 43px;
+    margin-bottom: 17px;
+    letter-spacing: 0.1em;
+  }
+
   .add-plan__head-item {
     &:nth-child(1) {
       width: 760px;
@@ -214,12 +338,14 @@
 
     &:nth-child(2) {
       width: 228px;
+      margin-top: 7px;
     }
   }
 
   .add-plan__middle {
     flex-flow: row wrap;
-    padding-top: 20px;
+    padding-top: 30px;
+    margin-bottom: 14px;
     border-top: 1px solid rgba($black, 0.05);
   }
 
@@ -229,25 +355,36 @@
 
     &--companion,
     &--days {
-      width: 50%;
+      width: 48%;
+      margin-bottom: 16px;
     }
 
     &--checkbox {
       display: flex;
       flex-flow: row nowrap;
       align-items: center;
-      width: 228px;
+      width: 247px;
       margin-left: auto;
+      margin-top: 16px;
+    }
+
+    &--datepicker {
+      margin-bottom: 55px;
     }
 
     &--country {
-      padding-top: 20px;
+      padding-top: 62px;
+      margin-bottom: 19px;
       border-top: 1px solid rgba(0, 0, 0, 0.05);
 
       /* Vertical line */
       &::after {
         right: 221px;
       }
+    }
+
+    &--textarea {
+      margin-bottom: 50px;
     }
   }
 

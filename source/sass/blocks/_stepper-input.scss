@@ -8,10 +8,10 @@
 }
 
 .stepper-input__label {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 
   text-transform: uppercase;
-  letter-spacing: 0.001em;
+  letter-spacing: 0.09em;
   font-weight: 500;
 }
 
@@ -30,7 +30,7 @@
 
   width: 100%;
   border: 1px solid rgba($main-color-darker-30, 0.3);
-  border-radius: $base-border-radius;
+  border-radius: 4px;
   overflow: hidden;
 }
 
@@ -79,6 +79,49 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .stepper-input {
+    font-size: $base-font-size * 1.25;
+    letter-spacing: 0.1em;
+  }
+
+  .stepper-input__label {
+    margin-bottom: 19px;
+  }
+
+  .stepper-input__short-text {
+    letter-spacing: inherit;
+  }
+
+  .stepper-input__input {
+    input {
+      padding: 24px 20px 22px;
+    }
+  }
+
+  .stepper-input__button {
+    padding: 32px;
+
+    /* Plus, minus */
+    &::before,
+    &::after {
+      width: 20px;
+    }
+
+    &--less {
+      &::after {
+        display: none;
+      }
+    }
+
+    &--more {
+      &::after {
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
+    }
+  }
+}
+
 @media (min-width: $desktop-width) {
   .stepper-input {
     justify-content: space-between;
@@ -86,8 +129,9 @@
   }
 
   .stepper-input__label {
-    min-width: 160px;
+    min-width: 180px;
     margin-bottom: 0;
+    margin-right: 40px;
   }
 
   .stepper-input__short-text {
@@ -95,6 +139,7 @@
   }
 
   .stepper-input__content {
-    width: initial;
+    width: auto;
+    max-width: 180px;
   }
 }
