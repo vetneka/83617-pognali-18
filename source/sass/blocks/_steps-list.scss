@@ -10,7 +10,7 @@
   flex-flow: row wrap;
   justify-content: space-between;
 
-  padding: 22px 25px 32px;
+  padding: 22px 22px 32px 24px;
   border-top-left-radius: $base-border-radius;
   border-top-right-radius: $base-border-radius;
 
@@ -67,18 +67,23 @@
   .steps-list__item {
     flex-direction: column;
     width: 50%;
-    padding-bottom: 22px;
+    padding: 33px 57px 23px 33px;
+
+    border-top-left-radius: 21px;
+    border-top-right-radius: 21px;
+
+    font-size: $base-font-size * 1.5;
 
     &:nth-child(n) {
       margin-top: 0;
     }
 
     &:nth-child(even) {
-      margin-left: -15px;
+      margin-left: -35px;
     }
 
-    &:nth-child(odd) {
-      width: calc(50% + 15px);
+    &:nth-child(2n-1) {
+      width: calc(50% + 35px);
     }
 
     &:nth-child(n+3) {
@@ -87,17 +92,23 @@
     }
 
     &:nth-last-child(2) {
-      border-bottom-left-radius: $base-border-radius;
+      border-bottom-left-radius: 21px;
     }
 
     &:last-child {
       flex-grow: 1;
+      border-bottom-left-radius: 21px;
+      border-bottom-right-radius: 21px;
+    }
+
+    &::after {
+      font-size: $base-font-size * 1.6875;
     }
   }
 
   .steps-list__text {
-    max-width: 50%;
-    margin-bottom: 5px;
+    max-width: 65%;
+    margin-bottom: 9px;
   }
 }
 
@@ -105,30 +116,34 @@
   .steps-list__item {
     flex-direction: row;
     justify-content: space-between;
-    width: 26%;
-
-    &:not(:nth-child(4n+1)) {
-      margin-left: -15px;
-    }
-
-    &:nth-child(even),
-    &:nth-child(odd) {
-      width: calc(26% + 15px);
-      padding-right: 45px;
-    }
 
     &:nth-child(n) {
-      border-top-left-radius: $base-border-radius;
-      border-bottom-left-radius: $base-border-radius;
+      width: calc(26% + 45px);
+      padding-right: 75px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    &:nth-child(4n+1) {
+      width: calc(23.8% + 45px);
     }
 
     &:nth-child(4n) {
-      width: 22%;
+      width: 23.8%;
       padding-right: 25px;
     }
 
+    &:not(:nth-child(4n+1)) {
+      margin-left: -45px;
+    }
+
+    &:nth-child(n) {
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+
     &:nth-child(4) {
-      border-top-right-radius: $base-border-radius;
+      border-top-right-radius: 20px;
     }
 
     &:nth-child(n+5) {
@@ -138,5 +153,10 @@
     &:last-child {
       flex-grow: 0;
     }
+  }
+
+  .steps-list__text {
+    max-width: 75%;
+    margin-bottom: 0;
   }
 }

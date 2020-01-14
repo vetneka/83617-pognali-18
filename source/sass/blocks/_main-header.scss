@@ -1,8 +1,9 @@
 .main-header {
   position: absolute;
   width: 100%;
-  padding-top: 30px;
+  padding-top: 27px;
   padding-bottom: 35px;
+
   z-index: 1;
 
   &--inner-page {
@@ -53,6 +54,9 @@
 
 @media (min-width: $tablet-width) {
   .main-header {
+    padding-top: 41px;
+    padding-bottom: 40px;
+
     &--inner-page {
       .main-header__user-nav {
         display: flex;
@@ -89,6 +93,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .main-header {
+    padding-top: 52px;
+  }
+
   .main-header__inner {
     justify-content: flex-start;
   }

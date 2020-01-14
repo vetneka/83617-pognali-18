@@ -1,0 +1,26 @@
+.copyright {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 10px;
+  border-top: 1px solid rgba($black, 0.05);
+}
+
+.copyright__icon {
+  margin-left: 10px;
+}
+
+@media (min-width: $tablet-width) {
+  .copyright {
+    width: auto;
+    padding-top: 0;
+    border-top: 0;
+    font-size: $base-font-size * 1.25;
+  }
+
+  .copyright__text {
+    margin-right: 22px;
+  }
+}

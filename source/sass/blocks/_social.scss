@@ -6,3 +6,12 @@
   justify-content: center;
   align-items: flex-start;
 }
+
+@media (min-width: $tablet-width) {
+  .social {
+    .link__icon {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}

@@ -1,5 +1,5 @@
 .route {
-  padding-top: 35px;
+  padding-top: 32px;
   padding-bottom: 35px;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
@@ -10,7 +10,7 @@
 .route__link {
   display: flex;
   align-items: center;
-  margin: 0 0 20px 0;
+  margin: 0 0 31px 0;
 
   .link__icon {
     flex-shrink: 0;
@@ -35,28 +35,42 @@
 @media (min-width: $tablet-width) {
   .route {
     padding-top: 47px;
-    padding-bottom: 80px;
+    padding-bottom: 84px;
+
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
 
     &.container {
-      padding-left: 70px;
-      padding-right: 70px;
+      padding-left: 75px;
+      padding-right: 75px;
     }
   }
 
   .route__link {
-    margin-bottom: 40px;
+    margin-bottom: 42px;
     font-size: $base-font-size * 1.75;
+
+    .link__icon {
+      width: 68px;
+      height: 68px;
+    }
 
     .link__text {
       max-width: 100%;
+      margin-left: 25px;
     }
+  }
+
+  .route__button {
+    padding: 27px 33px 24px;
+    border-radius: 20px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .route {
     padding-top: 55px;
-    padding-bottom: 46px;
+    padding-bottom: 57px;
 
     &.container {
       padding-left: 130px;
@@ -69,13 +83,26 @@
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+
+    padding-left: 154px;
   }
 
   .route__link {
     margin-bottom: 0;
+
+    .link__icon {
+      width: 88px;
+      height: 88px;
+    }
+
+    .link__text {
+      margin-left: 31px;
+    }
   }
 
   .route__button {
     width: auto;
+    padding-left: 36px;
+    padding-right: 36px;
   }
 }

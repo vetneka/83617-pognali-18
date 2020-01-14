@@ -140,10 +140,11 @@
 .user-level__content {
   display: flex;
   flex-flow: column wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: inherit;
   height: inherit;
+  padding: 5px;
 
   font-size: $base-font-size * 0.875;
   line-height: 1;
@@ -155,12 +156,15 @@
 }
 
 .user-level__number {
+  margin-top: 21px;
   font-size: $base-font-size * 1.5;
+  line-height: 1px;
   font-weight: 600;
 }
 
 .user-level__text {
-  padding-top: 4px;
+  margin-top: 9px;
+  padding-top: 2px;
   border-top: 1px solid #cbced9;
 }
 

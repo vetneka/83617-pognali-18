@@ -1,7 +1,7 @@
 .blockquote {
   margin: 0;
-  padding-top: 40px;
-  padding-bottom: 30px;
+  padding-top: 46px;
+  padding-bottom: 31px;
   background-color: $main-color-darker-30;
 }
 
@@ -17,7 +17,7 @@
 .blockquote__main {
   padding-right: 50px;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   font-weight: 300;
 }
 
@@ -46,24 +46,19 @@
   }
 
   .blockquote__inner {
-    padding-left: 35px;
-    padding-right: 35px;
+    padding-left: 33px;
+    padding-right: 10px;
   }
 
   .blockquote__main {
     padding-right: 0;
+    margin-bottom: 43px;
     font-size: $base-font-size * 1.75;
+    line-height: 1.15;
   }
 
   .blockquote__footer {
     padding-right: 0;
     font-size: $base-font-size * 1.3125;
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .blockquote__inner {
-    padding-left: 70px;
-    padding-right: 0;
   }
 }

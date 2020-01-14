@@ -17,5 +17,11 @@
 
 .page__main-footer {
   flex-shrink: 0;
-  margin-top: -30px;
+  margin-top: -40px;
+}
+
+@media (min-width: $tablet-width) {
+  .page__main-footer {
+    margin-top: -60px;
+  }
 }

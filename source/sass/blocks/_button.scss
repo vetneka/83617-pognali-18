@@ -151,7 +151,7 @@
     &-large {
       justify-content: space-between;
       min-width: 274px;
-      padding: 33px 34px 32px;
+      padding: 22px 27px 21px 23px;
 
       font-size: $base-font-size * 1.125;
       text-transform: initial;
@@ -163,6 +163,8 @@
   .button {
     &--size {
       &-large {
+        padding: 30px 37px 27px 32px;
+
         font-size: $base-font-size * 1.5;
       }
     }

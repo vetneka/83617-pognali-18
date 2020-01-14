@@ -1,7 +1,7 @@
 .map {
   position: relative;
   width: 100%;
-  height: 310px;
+  height: 350px;
   margin-top: -40px;
   z-index: -1;
 
@@ -14,12 +14,13 @@
 
 @media (min-width: $tablet-width) {
   .map {
-    height: 540px;
+    height: 582px;
+    margin-top: -60px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .map {
-    height: 400px;
+    height: 517px;
   }
 }

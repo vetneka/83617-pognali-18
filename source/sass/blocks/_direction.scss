@@ -1,5 +1,5 @@
 .direction {
-  padding-top: 65px;
+  padding-top: 72px;
   padding-bottom: 30px;
 
   @include bg-light;
@@ -9,7 +9,7 @@
 .direction__inner {
   padding-left: 25px;
   padding-right: 25px;
-  margin-bottom: 50px;
+  margin-bottom: 58px;
 }
 
 .direction__secondary-title {
@@ -17,11 +17,20 @@
 }
 
 .direction__cards-list {
-  margin-bottom: 10px;
+  margin-bottom: 24px;
 }
 
 @media (min-width: $tablet-width) {
   .direction {
+    padding-bottom: 80px;
+
+    background-image: url("../img/flags-back@1x.png");
+    background-repeat: no-repeat;
+    background-position: right 40px top 79px;
+    background-size: 289px auto;
+
+    @include brs-bottom (60px, $main-color-darker-30, $main-color);
+
     &.container {
       padding-left: 70px;
       padding-right: 70px;
@@ -29,21 +38,29 @@
   }
 
   .direction__inner {
-    width: 60%;
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 4px;
+    padding-right: 280px;
+    margin-bottom: 103px;
+  }
+
+  .direction__secondary-title {
+    margin-bottom: 55px;
   }
 
   .direction__text {
     font-size: $base-font-size * 1.75;
+    line-height: 1.24;
   }
 
   .direction__cards-list {
+    padding-left: 5px;
+    padding-right: 5px;
     margin-bottom: 47px;
   }
 
   .direction__button {
-    width: 100%;
+    width: calc(100% - 10px);
+    margin-left: 5px;
   }
 }
 
@@ -54,6 +71,11 @@
     justify-content: space-between;
     align-items: flex-start;
 
+    padding-top: 162px;
+    padding-bottom: 101px;
+
+    background-position: right 60px top 89px;
+
     &.container {
       padding-right: 130px;
       padding-left: 130px;
@@ -63,18 +85,19 @@
   .direction__inner {
     width: 450px;
     padding: 0;
+    padding-top: 5px;
     padding-right: 100px;
     margin-bottom: 90px;
   }
 
   .direction__cards-list {
-    width: 560px;
+    width: 565px;
     order: -1;
   }
 
   .direction__button {
     width: initial;
-    margin-left: 730px;
-    margin-top: -110px;
+    margin-left: 733px;
+    margin-top: -119px;
   }
 }
