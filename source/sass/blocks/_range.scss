@@ -1,7 +1,7 @@
 .range__counter {
   position: relative;
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   border-radius: 5px;
   border: 1px solid #cbced9;
   overflow: hidden;
@@ -96,3 +96,20 @@
     right: 0;
   }
 }
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+  .range__line {
+    height: 3px;
+  }
+
+  .range__button {
+    width: 14px;
+    height: 14px;
+  }
+
+  .range__input {
+    font-size: $base-font-size * 1.25;
+  }
+}
+
+

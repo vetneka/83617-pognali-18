@@ -21,8 +21,8 @@
   justify-content: center;
   align-items: center;
   width: 43px;
-  height: 42px;
-  padding: 10px;
+  height: 40px;
+  padding: 13px 10px 10px;
   background-color: $white;
 
   font-size: $base-font-size / 0.875;
@@ -61,6 +61,7 @@
     width: 45px;
     height: 70px;
     margin-right: 31px;
+    margin-bottom: 13px;
     padding: 0;
     background-color: transparent;
 
@@ -73,13 +74,17 @@
 
 @media (min-width: $desktop-width) {
   .letters-list__letter {
-    width: 255px;
-    padding-bottom: 50px;
+    width: 250px;
+    padding-bottom: 46px;
     vertical-align: top;
+
+    &:last-child {
+      width: auto;
+    }
   }
 
   .letters-list__link {
-    margin-bottom: 20px;
+    margin-bottom: 27px;
     margin-left: -5px;
   }
 

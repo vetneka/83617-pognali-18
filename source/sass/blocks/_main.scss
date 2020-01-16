@@ -13,7 +13,7 @@
   padding-top: 80px;
 
   @include bg-dark;
-  @include brs-bottom (20px, $main-color, $main-color-darker-30);
+  @include brs-bottom (20px, $main-color-darker-10, $main-color-darker-30);
 }
 
 .main__head-content {
@@ -37,43 +37,47 @@
 .main__head-backward-page-icon {
   width: 32px;
   height: 16px;
-  margin-left: 29px;
+  margin-left: 24px;
   background-color: tomato;
 }
 
 .main__companions-filter {
-  margin-bottom: 30px;
+  margin-bottom: 27px;
+}
+
+.main__pagination {
+  margin-bottom: 39px;
 }
 
 @media (min-width: $tablet-width) {
-  .main {
-    &--form {
-      .main__head-content {
-        //margin-right: 500px;
-        padding-left: 34px;
-      }
-    }
-  }
-
   .main__head {
     min-height: 351px;
 
-    @include brs-bottom (60px, $main-color, $main-color-darker-30);
+    @include brs-bottom (60px, $main-color-darker-10, $main-color-darker-30);
+  }
+
+  .main__head-content {
+    padding-left: 34px;
+    padding-right: 34px;
   }
 
   .main__head-backward-page {
     display: inline;
   }
+
+  .main__companions-filter {
+    margin-bottom: 40px;
+  }
+
+  .main__pagination {
+    margin-bottom: 77px;
+  }
 }
 
 @media (min-width: $desktop-width) {
-  .main {
-    &--form {
-      .main__head-content {
-        max-width: 65%;
-        padding-left: 65px;
-      }
-    }
+  .main__head-content {
+    padding-left: 65px;
+    padding-right: 65px;
   }
 
   .main__inner {
@@ -94,5 +98,6 @@
 
   .main__pagination {
     width: 950px;
+    margin-bottom: 90px;
   }
 }

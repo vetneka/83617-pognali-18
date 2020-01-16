@@ -5,6 +5,7 @@
   display: flex;
   flex-flow: row wrap;
 
+  // Center vertical line
   &::before {
     content: "";
     position: absolute;
@@ -28,6 +29,7 @@
     min-height: 50px;
     background-color: $white;
 
+    // Arrow
     &::before {
       content: "";
       position: absolute;
@@ -40,9 +42,10 @@
     }
 
     &:nth-last-child(2) {
-      border-top-left-radius: $large-border-radius;
-      border-bottom-left-radius: $large-border-radius;
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
 
+      // Arrow
       &::before {
         transform: translate(-50%, -50%) rotate(180deg);
       }
@@ -78,10 +81,23 @@
 
     &--arrow {
       width: auto;
-      background-color: none;
+      background-color: transparent;
+
+      &:last-child {
+        margin-left: 18px;
+      }
 
       &:nth-last-child(2) {
         margin-left: auto;
+      }
+
+      // Arrow
+      &::before {
+        border-width: 10px 0 10px 10px;
+      }
+
+      .pagination__link {
+        width: 25px;
       }
     }
 
@@ -104,5 +120,11 @@
     text-decoration: none;
     text-align: center;
     //vertical-align: middle;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .pagination {
+    padding-right: 37px;
   }
 }

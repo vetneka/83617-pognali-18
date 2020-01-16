@@ -1,14 +1,10 @@
 .companions-form__fieldset {
   margin: 0;
-  margin-bottom: 10px;
   padding: 0;
   border: none;
 
   &--open {
-    margin-bottom: 20px;
-
     .companions-form__legend {
-      margin-bottom: 15px;
 
       // Dropdown arrow
       &::after {
@@ -23,7 +19,8 @@
   position: relative;
   display: block;
   width: 100%;
-  padding-top: 15px;
+  padding-top: 10px;
+  padding-bottom: 7px;
   text-transform: uppercase;
   color: $main-color-darker-30;
   font-weight: 600;
@@ -33,7 +30,7 @@
   &::after {
     content: "";
     position: absolute;
-    top: 67%;
+    top: 50%;
     right: 0;
     width: 0;
     height: 0;
@@ -46,10 +43,13 @@
 
 .companions-form__list {
   @include reset-list;
+
+  margin-top: 3px;
+  margin-bottom: 15px;
 }
 
 .companions-form__item {
-  margin-bottom: 10px;
+  margin-bottom: 9px;
 
   &:last-child {
     margin-bottom: 0;
@@ -58,14 +58,17 @@
 
 .companions-form__transports {
   justify-content: flex-start;
-}
-
-.companions-form__range {
+  margin-top: 5px;
   margin-bottom: 20px;
 }
 
+.companions-form__range {
+  margin-bottom: 22px;
+}
+
 .companions-form__button {
-  width: 100%;
+  width: calc(100% + 10px);
+  margin-left: -5px;
 }
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
@@ -74,14 +77,30 @@
   }
 
   .companions-form__fieldset {
+    margin-bottom: 6px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
     &:first-of-type {
-      padding-top: 30px;
+      padding-top: 23px;
       border-top: 1px solid rgba(0, 0, 0, 0.05);
     }
 
     &:last-of-type {
-      padding-bottom: 30px;
+      padding-bottom: 36px;
       border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    &--transports {
+      padding-top: 8px;
+      margin-bottom: 11px;
+    }
+
+    &--range {
+      padding-top: 3px;
+      padding-right: 3px;
     }
   }
 
@@ -98,7 +117,7 @@
 
   .companions-form__legend {
     width: auto;
-    min-width: 120px;
+    min-width: 127px;
     border: 0;
 
     // Dropdown arrow
@@ -111,12 +130,23 @@
     display: flex;
     flex-flow: row wrap;
     align-items: center;
+
+    margin-top: 12px;
+    margin-bottom: 5px;
   }
 
   .companions-form__item {
     min-width: 31%;
-    margin-right: 10px;
+    margin-right: 17px;
     margin-bottom: 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .companions-form__transports {
+    margin: 0;
   }
 
   .companions-form__range {
@@ -126,8 +156,8 @@
     margin-bottom: 0;
 
     .range__counter {
-      min-width: 150px;
-      margin-left: 66px;
+      min-width: 149px;
+      margin-left: 61px;
       margin-bottom: 0;
       order: 1;
     }
@@ -138,14 +168,50 @@
   }
 
   .companions-form__button {
-    width: 100%;
-    margin-top: 30px;
+    width: calc(100% - 5px);
+    min-height: 50px;
+    margin-top: 31px;
+    margin-left: 0;
     background-color: $white;
+    font-size: 20px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .companions-form {
     font-size: $base-font-size * 1.25;
+  }
+
+  .companions-form__fieldset {
+    &--transports {
+      padding-top: 8px;
+      margin-bottom: 11px;
+    }
+
+    &--range {
+      margin-bottom: 40px;
+
+      .companions-form__legend {
+        padding-bottom: 17px;
+      }
+
+      .range__input {
+        padding-top: 12px;
+        padding-bottom: 9px;
+        font-size: $base-font-size * 1.25;
+      }
+
+      .range__counter {
+        margin-bottom: 32px;
+      }
+    }
+  }
+
+  .companions-form__button {
+    width: calc(100% + 5px);
+    padding-bottom: 13px;
+    padding-top: 17px;
+    margin-left: 0;
+    font-size: 20px;
   }
 }
