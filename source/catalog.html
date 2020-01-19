@@ -31,7 +31,9 @@
 
             <ul class="user-nav main-nav__user-nav">
               <li class="user-nav__item">
-                <a class="button button--color-accent button--round-base" href="login.html">Авторизация</a>
+                <a class="button button--color-accent button--round-base" href="login.html">
+                  <span class="button__text">Авторизация</span>
+                </a>
               </li>
 
               <li class="user-nav__item">
@@ -100,7 +102,9 @@
 
           <ul class="user-nav main-header__user-nav">
             <li class="user-nav__item">
-              <a class="button button--color-accent button--round-base" href="login.html">Авторизация</a>
+              <a class="button button--color-accent button--round-base" href="login.html">
+                <span class="button__text">Авторизация</span>
+              </a>
             </li>
 
             <li class="user-nav__item">
@@ -176,7 +180,7 @@
             </ul>
 
             <div class="countries-filter__letters-list">
-              <table class="letters-list">
+              <table class="letters-list letters-list--default">
                 <tr class="letters-list__row">
                   <td class="letters-list__letter letters-list__letter--selected">
                     <a class="letters-list__link" href="countries.html#A">А</a>
@@ -901,27 +905,35 @@
             <form class="companions-form" action="https://echo.htmlacademy.ru" method="GET">
               <div class="companions-form__fieldset companions-form__fieldset--open">
                 <div class="companions-form__fieldset-inner">
-                  <span class="companions-form__legend">Хобби</span>
+                  <button class="button companions-form__legend" type="button">
+                    <span class="button__text">Хобби</span>
+                  </button>
 
                   <ul class="companions-form__list">
                     <li class="companions-form__item">
                       <div class="custom-checkbox custom-checkbox--normal">
-                        <input class="custom-checkbox__input" id="gym" value="Спортзал" type="checkbox" checked>
-                        <label class="custom-checkbox__label" for="gym">Спортзал</label>
+                        <input class="custom-checkbox__input" id="gym" name="Спортзал" type="checkbox" checked>
+                        <label class="custom-checkbox__label" for="gym">
+                          <span class="custom-checkbox__label-text">Спортзал</span>
+                        </label>
                       </div>
                     </li>
 
                     <li class="companions-form__item">
                       <div class="custom-checkbox custom-checkbox--normal">
-                        <input class="custom-checkbox__input" id="hookah" value="Кальян" type="checkbox">
-                        <label class="custom-checkbox__label" for="hookah">Кальян</label>
+                        <input class="custom-checkbox__input" id="hookah" name="Кальян" type="checkbox">
+                        <label class="custom-checkbox__label" for="hookah">
+                          <span class="custom-checkbox__label-text">Кальян</span>
+                        </label>
                       </div>
                     </li>
 
                     <li class="companions-form__item">
                       <div class="custom-checkbox custom-checkbox--normal">
-                        <input class="custom-checkbox__input" id="sofa" value="Диван" type="checkbox">
-                        <label class="custom-checkbox__label" for="sofa">Диван</label>
+                        <input class="custom-checkbox__input" id="sofa" name="Диван" type="checkbox">
+                        <label class="custom-checkbox__label" for="sofa">
+                          <span class="custom-checkbox__label-text">Диван</span>
+                        </label>
                       </div>
                     </li>
                   </ul>
@@ -930,27 +942,35 @@
 
               <div class="companions-form__fieldset companions-form__fieldset--open">
                 <div class="companions-form__fieldset-inner">
-                  <span class="companions-form__legend">Музыка</span>
+                  <button class="button companions-form__legend" type="button">
+                    <span class="button__text">Музыка</span>
+                  </button>
 
                   <ul class="companions-form__list">
                     <li class="companions-form__item">
                       <div class="custom-checkbox custom-checkbox--normal">
-                        <input class="custom-checkbox__input" id="hard-rock" value="Тяжелый рок" type="checkbox" checked>
-                        <label class="custom-checkbox__label" for="hard-rock">Тяжелый рок</label>
+                        <input class="custom-checkbox__input" id="hard-rock" name="Тяжелый рок" type="checkbox" checked>
+                        <label class="custom-checkbox__label" for="hard-rock">
+                          <span class="custom-checkbox__label-text">Тяжелый рок</span>
+                        </label>
                       </div>
                     </li>
 
                     <li class="companions-form__item">
                       <div class="custom-checkbox custom-checkbox--normal">
-                        <input class="custom-checkbox__input" id="russian-rap" value="Русский рэп" type="checkbox">
-                        <label class="custom-checkbox__label" for="russian-rap">Русский рэп</label>
+                        <input class="custom-checkbox__input" id="russian-rap" name="Русский рэп" type="checkbox">
+                        <label class="custom-checkbox__label" for="russian-rap">
+                          <span class="custom-checkbox__label-text">Русский рэп</span>
+                        </label>
                       </div>
                     </li>
 
                     <li class="companions-form__item">
                       <div class="custom-checkbox custom-checkbox--normal">
-                        <input class="custom-checkbox__input" id="eurodance" value="Евроденс" type="checkbox">
-                        <label class="custom-checkbox__label" for="eurodance">Евроденс</label>
+                        <input class="custom-checkbox__input" id="eurodance" name="Евроденс" type="checkbox">
+                        <label class="custom-checkbox__label" for="eurodance">
+                          <span class="custom-checkbox__label-text">Евроденс</span>
+                        </label>
                       </div>
                     </li>
                   </ul>
@@ -959,27 +979,35 @@
 
               <div class="companions-form__fieldset companions-form__fieldset--open">
                 <div class="companions-form__fieldset-inner">
-                  <span class="companions-form__legend">Еда</span>
+                  <button class="button companions-form__legend" type="button">
+                    <span class="button__text">Еда</span>
+                  </button>
 
                   <ul class="companions-form__list">
                     <li class="companions-form__item">
                       <div class="custom-checkbox custom-checkbox--normal">
-                        <input class="custom-checkbox__input" id="meat-eater" value="Мясоед" type="checkbox" checked>
-                        <label class="custom-checkbox__label" for="meat-eater">Мясоед</label>
+                        <input class="custom-checkbox__input" id="meat-eater" name="Мясоед" type="checkbox" checked>
+                        <label class="custom-checkbox__label" for="meat-eater">
+                          <span class="custom-checkbox__label-text">Мясоед</span>
+                        </label>
                       </div>
                     </li>
 
                     <li class="companions-form__item">
                       <div class="custom-checkbox custom-checkbox--normal">
-                        <input class="custom-checkbox__input" id="proper-diet" value="Сидит на ПП" type="checkbox">
-                        <label class="custom-checkbox__label" for="proper-diet">Сидит на ПП</label>
+                        <input class="custom-checkbox__input" id="proper-diet" name="Сидит на ПП" type="checkbox">
+                        <label class="custom-checkbox__label" for="proper-diet">
+                          <span class="custom-checkbox__label-text">Сидит на ПП</span>
+                        </label>
                       </div>
                     </li>
 
                     <li class="companions-form__item">
                       <div class="custom-checkbox custom-checkbox--normal">
-                        <input class="custom-checkbox__input" id="vegan" value="Веган-сыроед" type="checkbox">
-                        <label class="custom-checkbox__label" for="vegan">Веган-сыроед</label>
+                        <input class="custom-checkbox__input" id="vegan" name="Веган-сыроед" type="checkbox">
+                        <label class="custom-checkbox__label" for="vegan">
+                          <span class="custom-checkbox__label-text">Веган-сыроед</span>
+                        </label>
                       </div>
                     </li>
                   </ul>
@@ -988,16 +1016,18 @@
 
               <div class="companions-form__fieldset companions-form__fieldset--transports companions-form__fieldset--open">
                 <div class="companions-form__fieldset-inner">
-                  <span class="companions-form__legend">Транспорт</span>
+                  <button class="button companions-form__legend" type="button">
+                    <span class="button__text">Транспорт</span>
+                  </button>
 
                   <ul class="transports companions-form__transports">
                     <!-- transport 1 -->
-                    <li class="transports__item">
+                    <li class="transport transports__item tooltip" data-name="Авиаперелет">
                       <div class="custom-checkbox custom-checkbox--icon">
-                        <input class="visually-hidden" name="plane" id="plane" type="checkbox" value="Самолет" checked>
+                        <input class="visually-hidden" id="plane" type="checkbox" name="Авиаперелет" checked>
 
                         <label class="custom-checkbox__label" for="plane">
-                          <span class="visually-hidden">Самолет</span>
+                          <span class="visually-hidden">Авиаперелет</span>
 
                           <svg class="custom-checkbox__svg" width="20" height="20" aria-hidden="true">
                             <circle r="10" cx="10" cy="10"></circle>
@@ -1007,12 +1037,12 @@
                     </li>
 
                     <!-- transport 2 -->
-                    <li class="transports__item">
+                    <li class="transport transports__item tooltip" data-name="Автотранспорт">
                       <div class="custom-checkbox custom-checkbox--icon">
-                        <input class="visually-hidden" id="bus" type="checkbox" value="Автобус" checked>
+                        <input class="visually-hidden" id="bus" type="checkbox" name="Автотранспорт" checked>
 
                         <label class="custom-checkbox__label" for="bus">
-                          <span class="visually-hidden">Автобус</span>
+                          <span class="visually-hidden">Автотранспорт</span>
 
                           <svg class="custom-checkbox__svg" width="20" height="20" aria-hidden="true">
                             <circle r="10" cx="10" cy="10"></circle>
@@ -1022,9 +1052,9 @@
                     </li>
 
                     <!-- transport 3 -->
-                    <li class="transports__item">
+                    <li class="transport transports__item tooltip" data-name="Велосипед">
                       <div class="custom-checkbox custom-checkbox--icon">
-                        <input class="visually-hidden" id="bicycle" type="checkbox" value="Велосипед">
+                        <input class="visually-hidden" id="bicycle" type="checkbox" name="Велосипед">
 
                         <label class="custom-checkbox__label" for="bicycle">
                           <span class="visually-hidden">Велосипед</span>
@@ -1037,12 +1067,12 @@
                     </li>
 
                     <!-- transport 4 -->
-                    <li class="transports__item">
+                    <li class="transport transports__item tooltip" data-name="Пешком">
                       <div class="custom-checkbox custom-checkbox--icon">
-                        <input class="visually-hidden" id="running" type="checkbox" value="Бегом" checked>
+                        <input class="visually-hidden" id="running" type="checkbox" name="Пешком" checked>
 
                         <label class="custom-checkbox__label" for="running">
-                          <span class="visually-hidden">Бегом</span>
+                          <span class="visually-hidden">Пешком</span>
 
                           <svg class="custom-checkbox__svg" width="20" height="20" aria-hidden="true">
                             <circle r="10" cx="10" cy="10"></circle>
@@ -1056,7 +1086,9 @@
 
               <div class="companions-form__fieldset companions-form__fieldset--range companions-form__fieldset--open">
                 <div class="companions-form__fieldset-inner">
-                  <span class="companions-form__legend">Левел</span>
+                  <button class="button companions-form__legend" type="button">
+                    <span class="button__text">Левел</span>
+                  </button>
 
                   <div class="range companions-form__range">
                     <div class="range__counter">
@@ -1088,7 +1120,9 @@
                 </div>
               </div>
 
-              <button class="button button--round-base button--color-white companions-form__button" type="submit">Показать</button>
+              <button class="button button--round-base button--color-white companions-form__button" type="submit">
+                <span class="button__text">Показать</span>
+              </button>
             </form>
           </section>
 
@@ -1118,16 +1152,24 @@
                   </p>
 
                   <ul class="countries-flags">
-                    <li class="countries-flags__item">
-                      <img class="countries-flags__img countries-flags__img--small" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Шри-Ланки">
+                    <li class="countries-flags__item" >
+                      <div class="countries-flags__img countries-flags__img--small tooltip " data-name="Шри-Ланка">
+                        <img src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Шри-Ланки">
+                      </div>
                       <span class="countries-flags__text">Шри-Ланка</span>
                     </li>
+
                     <li class="countries-flags__item">
-                      <img class="countries-flags__img countries-flags__img--small" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Таиланда">
+                      <div class="countries-flags__img countries-flags__img--small tooltip "  data-name="Таиланд">
+                        <img src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Таиланда">
+                      </div>
                       <span class="countries-flags__text">Таиланд</span>
                     </li>
+
                     <li class="countries-flags__item">
-                      <img class="countries-flags__img countries-flags__img--small" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Сейшельских Островов">
+                      <div class="countries-flags__img countries-flags__img--small tooltip "  data-name="Сейшельские острова">
+                        <img src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Сейшельских Островов">
+                      </div>
                       <span class="countries-flags__text">Сейшелы</span>
                     </li>
                   </ul>
@@ -1141,25 +1183,27 @@
 
                     <ul class="transports">
                       <!-- transport 1 -->
-                      <li class="transports__item transport">
+                      <li class="transport transports__item tooltip" data-name="Авиаперелет">
                         <div class="transport__content">
-                          <span class="visually-hidden">Самолет</span>
+                          <span class="visually-hidden">Авиаперелет</span>
                           <svg class="transport__svg transport__svg--active" width="20" height="20" aria-hidden="true">
                             <circle r="10" cx="10" cy="10" fill="tomato"></circle>
                           </svg>
                         </div>
                       </li>
+
                       <!-- transport 2 -->
-                      <li class="transports__item transport">
+                      <li class="transport transports__item tooltip" data-name="Автотранспорт">
                         <div class="transport__content">
-                          <span class="visually-hidden">Автобус</span>
+                          <span class="visually-hidden">Автотранспорт</span>
                           <svg class="transport__svg" width="20" height="20" aria-hidden="true">
                             <circle r="10" cx="10" cy="10" fill="tomato"></circle>
                           </svg>
                         </div>
                       </li>
+
                       <!-- transport 3 -->
-                      <li class="transports__item transport">
+                      <li class="transport transports__item tooltip" data-name="Велосипед">
                         <div class="transport__content">
                           <span class="visually-hidden">Велосипед</span>
                           <svg class="transport__svg" width="20" height="20" aria-hidden="true">
@@ -1167,10 +1211,11 @@
                           </svg>
                         </div>
                       </li>
+
                       <!-- transport 4 -->
-                      <li class="transports__item transport">
+                      <li class="transport transports__item tooltip" data-name="Пешком">
                         <div class="transport__content">
-                          <span class="visually-hidden">Бегом</span>
+                          <span class="visually-hidden">Пешком</span>
                           <svg class="transport__svg" width="20" height="20" aria-hidden="true">
                             <circle r="10" cx="10" cy="10" fill="tomato"></circle>
                           </svg>
@@ -1198,7 +1243,7 @@
                 </div>
 
                 <div class="catalog-item__wrapper catalog-item__wrapper--bottom">
-                  <button class="likes-counter likes-counter--pressed catalog-item__likes-counter">
+                  <button class="likes-counter catalog-item__likes-counter">
                     <span class="likes-counter__icon">
                       <svg class="likes-counter__svg" width="20" height="20" aria-hidden="true">
                         <circle r="10" cx="10" cy="10" fill="tomato"></circle>
@@ -1208,7 +1253,9 @@
                     <span class="likes-counter__number">1,5 M</span>
                   </button>
 
-                  <a class="button button--round-base button--color-accent catalog-item__button" href="feedback.html">Позвать!</a>
+                  <a class="button button--round-base button--color-accent catalog-item__button" href="feedback.html">
+                    <span class="button__text">Позвать!</span>
+                  </a>
                 </div>
               </li>
 
@@ -1235,11 +1282,17 @@
 
                   <ul class="countries-flags">
                     <li class="countries-flags__item">
-                      <img class="countries-flags__img countries-flags__img--small" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Бельгии">
+                      <div class="countries-flags__img countries-flags__img--small tooltip "  data-name="Бельгия">
+                        <img src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Бельгии">
+                      </div>
                       <span class="countries-flags__text">Бельгия</span>
                     </li>
+
                     <li class="countries-flags__item">
-                      <img class="countries-flags__img countries-flags__img--small" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Чехии">
+
+                      <div class="countries-flags__img countries-flags__img--small tooltip "  data-name="Чехия">
+                        <img src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Чехии">
+                      </div>
                       <span class="countries-flags__text">Чехия</span>
                     </li>
                   </ul>
@@ -1253,25 +1306,25 @@
 
                     <ul class="transports">
                       <!-- transport 1 -->
-                      <li class="transports__item transport">
+                      <li class="transport transports__item tooltip" data-name="Авиаперелет">
                         <div class="transport__content">
-                          <span class="visually-hidden">Самолет</span>
+                          <span class="visually-hidden">Авиаперелет</span>
                           <svg class="transport__svg transport__svg--active" width="20" height="20" aria-hidden="true">
                             <circle r="10" cx="10" cy="10" fill="tomato"></circle>
                           </svg>
                         </div>
                       </li>
                       <!-- transport 2 -->
-                      <li class="transports__item transport">
+                      <li class="transport transports__item tooltip" data-name="Автотранспорт">
                         <div class="transport__content">
-                          <span class="visually-hidden">Автобус</span>
+                          <span class="visually-hidden">Автотранспорт</span>
                           <svg class="transport__svg transport__svg--active" width="20" height="20" aria-hidden="true">
                             <circle r="10" cx="10" cy="10" fill="tomato"></circle>
                           </svg>
                         </div>
                       </li>
                       <!-- transport 3 -->
-                      <li class="transports__item transport">
+                      <li class="transport transports__item tooltip" data-name="Велосипед">
                         <div class="transport__content">
                           <span class="visually-hidden">Велосипед</span>
                           <svg class="transport__svg" width="20" height="20" aria-hidden="true">
@@ -1280,9 +1333,9 @@
                         </div>
                       </li>
                       <!-- transport 4 -->
-                      <li class="transports__item transport">
+                      <li class="transport transports__item tooltip" data-name="Пешком">
                         <div class="transport__content">
-                          <span class="visually-hidden">Бегом</span>
+                          <span class="visually-hidden">Пешком</span>
                           <svg class="transport__svg transport__svg--active" width="20" height="20" aria-hidden="true">
                             <circle r="10" cx="10" cy="10" fill="tomato"></circle>
                           </svg>
@@ -1320,7 +1373,9 @@
                     <span class="likes-counter__number">150</span>
                   </button>
 
-                  <a class="button button--round-base button--color-accent catalog-item__button" href="feedback.html">Позвать!</a>
+                  <a class="button button--round-base button--color-accent catalog-item__button" href="feedback.html">
+                    <span class="button__text">Позвать!</span>
+                  </a>
                 </div>
               </li>
 
@@ -1347,15 +1402,23 @@
 
                   <ul class="countries-flags">
                     <li class="countries-flags__item">
-                      <img class="countries-flags__img countries-flags__img--small" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг США">
+                      <div class="countries-flags__img countries-flags__img--small tooltip"  data-name="США">
+                        <img src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг США">
+                      </div>
                       <span class="countries-flags__text">США</span>
                     </li>
+
                     <li class="countries-flags__item">
-                      <img class="countries-flags__img countries-flags__img--small" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Австралии">
+                      <div class="countries-flags__img countries-flags__img--small tooltip"  data-name="США">
+                        <img src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Австралии">
+                      </div>
                       <span class="countries-flags__text">Австралия</span>
                     </li>
+
                     <li class="countries-flags__item">
-                      <img class="countries-flags__img countries-flags__img--small" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Доминики">
+                      <div class="countries-flags__img countries-flags__img--small tooltip"  data-name="Доминика">
+                        <img src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Доминики">
+                      </div>
                       <span class="countries-flags__text">Доминика</span>
                     </li>
                   </ul>
@@ -1369,25 +1432,25 @@
 
                     <ul class="transports">
                       <!-- transport 1 -->
-                      <li class="transports__item transport">
+                      <li class="transport transports__item tooltip" data-name="Авиаперелет">
                         <div class="transport__content">
-                          <span class="visually-hidden">Самолет</span>
+                          <span class="visually-hidden">Авиаперелет</span>
                           <svg class="transport__svg transport__svg--active" width="20" height="20" aria-hidden="true">
                             <circle r="10" cx="10" cy="10" fill="tomato"></circle>
                           </svg>
                         </div>
                       </li>
                       <!-- transport 2 -->
-                      <li class="transports__item transport">
+                      <li class="transport transports__item tooltip" data-name="Автотранспорт">
                         <div class="transport__content">
-                          <span class="visually-hidden">Автобус</span>
+                          <span class="visually-hidden">Автотранспорт</span>
                           <svg class="transport__svg" width="20" height="20" aria-hidden="true">
                             <circle r="10" cx="10" cy="10" fill="tomato"></circle>
                           </svg>
                         </div>
                       </li>
                       <!-- transport 3 -->
-                      <li class="transports__item transport">
+                      <li class="transport transports__item tooltip" data-name="Велосипед">
                         <div class="transport__content">
                           <span class="visually-hidden">Велосипед</span>
                           <svg class="transport__svg transport__svg--active" width="20" height="20" aria-hidden="true">
@@ -1396,9 +1459,9 @@
                         </div>
                       </li>
                       <!-- transport 4 -->
-                      <li class="transports__item transport">
+                      <li class="transport transports__item tooltip" data-name="Пешком">
                         <div class="transport__content">
-                          <span class="visually-hidden">Бегом</span>
+                          <span class="visually-hidden">Пешком</span>
                           <svg class="transport__svg" width="20" height="20" aria-hidden="true">
                             <circle r="10" cx="10" cy="10" fill="tomato"></circle>
                           </svg>
@@ -1436,7 +1499,9 @@
                     <span class="likes-counter__number">1700</span>
                   </button>
 
-                  <a class="button button--round-base button--color-accent catalog-item__button" href="feedback.html">Позвать!</a>
+                  <a class="button button--round-base button--color-accent catalog-item__button" href="feedback.html">
+                    <span class="button__text">Позвать!</span>
+                  </a>
                 </div>
               </li>
 
@@ -1462,12 +1527,17 @@
                   </p>
 
                   <ul class="countries-flags">
-                    <li class="countries-flags__item">
-                      <img class="countries-flags__img countries-flags__img--small" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Великобритании">
+                    <li class="countries-flags__item" >
+                      <div class="countries-flags__img countries-flags__img--small tooltip"  data-name="Великобритания">
+                        <img src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Великобритании">
+                      </div>
                       <span class="countries-flags__text">Великобритания</span>
                     </li>
+
                     <li class="countries-flags__item">
-                      <img class="countries-flags__img countries-flags__img--small" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Германии">
+                      <div class="countries-flags__img countries-flags__img--small tooltip"  data-name="Германия">
+                        <img src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Германии">
+                      </div>
                       <span class="countries-flags__text">Германия</span>
                     </li>
                   </ul>
@@ -1481,25 +1551,25 @@
 
                     <ul class="transports">
                       <!-- transport 1 -->
-                      <li class="transports__item transport">
+                      <li class="transport transports__item tooltip" data-name="Авиаперелет">
                         <div class="transport__content">
-                          <span class="visually-hidden">Самолет</span>
+                          <span class="visually-hidden">Авиаперелет</span>
                           <svg class="transport__svg transport__svg--active" width="20" height="20" aria-hidden="true">
                             <circle r="10" cx="10" cy="10" fill="tomato"></circle>
                           </svg>
                         </div>
                       </li>
                       <!-- transport 2 -->
-                      <li class="transports__item transport">
+                      <li class="transport transports__item tooltip" data-name="Автотранспорт">
                         <div class="transport__content">
-                          <span class="visually-hidden">Автобус</span>
+                          <span class="visually-hidden">Автотранспорт</span>
                           <svg class="transport__svg transport__svg--active" width="20" height="20" aria-hidden="true">
                             <circle r="10" cx="10" cy="10" fill="tomato"></circle>
                           </svg>
                         </div>
                       </li>
                       <!-- transport 3 -->
-                      <li class="transports__item transport">
+                      <li class="transport transports__item tooltip" data-name="Велосипед">
                         <div class="transport__content">
                           <span class="visually-hidden">Велосипед</span>
                           <svg class="transport__svg" width="20" height="20" aria-hidden="true">
@@ -1508,9 +1578,9 @@
                         </div>
                       </li>
                       <!-- transport 4 -->
-                      <li class="transports__item transport">
+                      <li class="transport transports__item tooltip" data-name="Пешком">
                         <div class="transport__content">
-                          <span class="visually-hidden">Бегом</span>
+                          <span class="visually-hidden">Пешком</span>
                           <svg class="transport__svg" width="20" height="20" aria-hidden="true">
                             <circle r="10" cx="10" cy="10" fill="tomato"></circle>
                           </svg>
@@ -1548,12 +1618,20 @@
                     <span class="likes-counter__number">23</span>
                   </button>
 
-                  <a class="button button--round-base button--color-accent catalog-item__button" href="feedback.html">Позвать!</a>
+                  <a class="button button--round-base button--color-accent catalog-item__button" href="feedback.html">
+                    <span class="button__text">Позвать!</span>
+                  </a>
                 </div>
               </li>
             </ul>
 
-            <a class="catalog__button link link--icon--plus link--icon--left" href="catalog-all.html">Показать еще</a>
+            <a class="link link--icon--plus link--icon--left catalog__button" href="catalog-all.html">
+              <span class="link__text">Показать еще</span>
+            </a>
+
+            <a class="button button--no-bg button catalog__button" href="catalog-all.html">
+              <span class="button__text">Показать еще</span>
+            </a>
           </section>
 
           <ul class="pagination main__pagination">
@@ -1569,12 +1647,12 @@
             <li class="pagination__item">
               <a class="pagination__link" href="catalog-4.html">4</a>
             </li>
-            <li class="pagination__item pagination__item--arrow">
+            <li class="pagination__item pagination__item--arrow pagination__item--arrow-left">
               <a class="pagination__link" href="catalog-n-1.html">
                 <span class="visually-hidden">Показать предыдущую страницу</span>
               </a>
             </li>
-            <li class="pagination__item pagination__item--arrow">
+            <li class="pagination__item pagination__item--arrow pagination__item--arrow-right">
               <a class="pagination__link" href="catalog-n+1.html">
                 <span class="visually-hidden">Показать следующую страницу</span>
               </a>
@@ -1589,20 +1667,32 @@
             <img class="main-logo__img" src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип сервиса &laquo;Погнали&raquo;">
           </a>
 
-          <ul class="social main-footer__social">
+          <ul class="social social--theme-accent main-footer__social">
             <li class="social__item">
-              <a class="link" href="https://www.facebook.com/htmlacademy" target="blank" title="Наш Фейсбук">
-                <span class="link__icon link__icon--color-secondary" aria-hidden="true">
-                  <svg class="link__svg" width="10" height="10">
-                    <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
-                  </svg>
-                </span>
-
-                <span class="visually-hidden">Наша группа в Фейсбуке</span>
+              <a class="social__link" href="https://www.facebook.com/htmlacademy" target="blank" title="Наш Фейсбук">
+                <svg class="social__icon" width="10" height="10" aria-hidden="true">
+                  <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
+                </svg>
               </a>
             </li>
 
             <li class="social__item">
+              <a class="social__link" href="https://vk.com/htmlacademy" target="blank" title="Наш Вконтакте">
+                <svg class="social__icon" width="10" height="10" aria-hidden="true">
+                  <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
+                </svg>
+              </a>
+            </li>
+
+            <li class="social__item">
+              <a class="social__link" href="https://www.instagram.com/htmlacademy/" target="blank" title="Наш Инстаграм">
+                <svg class="social__icon" width="10" height="10" aria-hidden="true">
+                  <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
+                </svg>
+              </a>
+            </li>
+
+            <!-- <li class="social__item">
               <a class="link" href="https://vk.com/htmlacademy" target="_blank" title="Наш Вконтакте">
                 <span class="link__icon link__icon--color-secondary" aria-hidden="true">
                   <svg class="link__svg" width="10" height="10">
@@ -1624,20 +1714,21 @@
 
                 <span class="visually-hidden">Наша группа в Инстаграме</span>
               </a>
-            </li>
+            </li> -->
           </ul>
 
           <div class="copyright main-footer__copyright">
-            <span class="copyright__text">Разработано</span>
-
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+              <span class="copyright__text">
+                Разработано
+                <span class="visually-hidden">HtmlAcademy</span>
+              </span>
+
               <span class="copyright__icon" aria-hidden="true">
                 <svg class="copyright__svg" width="20" height="20">
                   <rect x="5" y="5" width="20" height="20" fill="tomato"></rect>
                 </svg>
               </span>
-
-              <span class="visually-hidden">HtmlAcademy</span>
             </a>
           </div>
         </div>

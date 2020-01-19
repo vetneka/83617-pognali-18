@@ -83,6 +83,24 @@
       transform: translateY(-50%) rotate(-45deg);
     }
   }
+
+  &[href^="mailto:"]:hover {
+    .link__icon {
+      background-color: #f26926;
+    }
+  }
+
+  &[href^="tel:"]:hover {
+    .link__icon {
+      background-color: #ff8d30;
+    }
+  }
+
+  &[href]:active {
+    .link__svg {
+      opacity: 0.3;
+    }
+  }
 }
 
 .link__icon {

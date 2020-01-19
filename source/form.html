@@ -31,7 +31,9 @@
 
               <ul class="user-nav main-nav__user-nav">
                 <li class="user-nav__item">
-                  <a class="button button--color-accent button--round-base" href="login.html">Авторизация</a>
+                  <a class="button button--color-accent button--round-base" href="login.html">
+                    <span class="button__text">Авторизация</span>
+                  </a>
                 </li>
 
                 <li class="user-nav__item">
@@ -100,7 +102,9 @@
 
             <ul class="user-nav main-header__user-nav">
               <li class="user-nav__item">
-                <a class="button button--color-accent button--round-base" href="login.html">Авторизация</a>
+                <a class="button button--color-accent button--round-base" href="login.html">
+                  <span class="button__text">Авторизация</span>
+                </a>
               </li>
 
               <li class="user-nav__item">
@@ -180,7 +184,7 @@
 
               <ul class="transports">
                 <!-- transport 1 -->
-                <li class="transports__item">
+                <li class="transport transports__item tooltip" data-name="Авиаперелет">
                   <div class="custom-checkbox custom-checkbox--icon">
                     <input class="visually-hidden" name="plane" id="plane" type="checkbox" value="Самолет" checked>
 
@@ -195,7 +199,7 @@
                 </li>
 
                 <!-- transport 2 -->
-                <li class="transports__item">
+                <li class="transport transports__item tooltip" data-name="Автотранспорт">
                   <div class="custom-checkbox custom-checkbox--icon">
                     <input class="visually-hidden" id="bus" type="checkbox" value="Автобус" checked>
 
@@ -210,7 +214,7 @@
                 </li>
 
                 <!-- transport 3 -->
-                <li class="transports__item">
+                <li class="transport transports__item tooltip" data-name="Велосипед">
                   <div class="custom-checkbox custom-checkbox--icon">
                     <input class="visually-hidden" id="bicycle" type="checkbox" value="Велосипед">
 
@@ -225,7 +229,7 @@
                 </li>
 
                 <!-- transport 4 -->
-                <li class="transports__item">
+                <li class="transport transports__item tooltip" data-name="Пешком">
                   <div class="custom-checkbox custom-checkbox--icon">
                     <input class="visually-hidden" id="running" type="checkbox" value="Бегом" checked>
 
@@ -324,7 +328,7 @@
 
                       <span class="stepper-input__short-text">чел.</span>
 
-                      <div class="stepper-input__content">
+                      <div class="stepper-input__content" tabindex="0">
                         <button class="stepper-input__button stepper-input__button--less" type="button">
                           <span class="visually-hidden">уменьшить</span>
                         </button>
@@ -346,7 +350,7 @@
 
                       <span class="stepper-input__short-text">дн.</span>
 
-                      <div class="stepper-input__content">
+                      <div class="stepper-input__content" tabindex="0">
                         <button class="stepper-input__button stepper-input__button--less" type="button">
                           <span class="visually-hidden">уменьшить</span>
                         </button>
@@ -364,7 +368,9 @@
 
                   <div class="custom-checkbox custom-checkbox--normal add-plan__group add-plan__group--checkbox">
                     <input class="custom-checkbox__input" id="with-children" type="checkbox" value="Можно с детьми" checked>
-                    <label class="custom-checkbox__label" for="with-children">Можно с детьми</label>
+                    <label class="custom-checkbox__label" for="with-children">
+                      <span class="custom-checkbox__label-text">Можно с детьми</span>
+                    </label>
                   </div>
                 </div>
 
@@ -487,11 +493,11 @@
 
                 <div class="add-plan__group add-plan__group--country">
                   <div class="custom-select custom-select--selected">
-                    <div class="custom-select__item custom-select__item--text">
+                    <div class="custom-select__item custom-select__item--text" tabindex="0">
                       <span class="custom-select__text">Босния и Герцеговина</span>
                     </div>
 
-                    <div class="custom-select__item custom-select__item--img">
+                    <div class="custom-select__item custom-select__item--img tooltip" data-name="Босния и Герцеговина">
                       <img class="custom-select__img country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Боснии и Герцеговины">
                     </div>
 
@@ -501,11 +507,11 @@
                   </div>
 
                   <div class="custom-select custom-select--selected">
-                    <div class="custom-select__item custom-select__item--text">
+                    <div class="custom-select__item custom-select__item--text" tabindex="0">
                       <span class="custom-select__text">Чехия</span>
                     </div>
 
-                    <div class="custom-select__item custom-select__item--img">
+                    <div class="custom-select__item custom-select__item--img tooltip" data-name="Чехия">
                       <img class="custom-select__img country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехии">
                     </div>
 
@@ -514,8 +520,8 @@
                     </button>
                   </div>
 
-                  <div class="custom-select">
-                    <div class="custom-select__item custom-select__item--text">
+                  <div class="custom-select custom-select--opened">
+                    <div class="custom-select__item custom-select__item--text" tabindex="0">
                       <span class="custom-select__text">Выберите страну</span>
                     </div>
 
@@ -523,10 +529,8 @@
                       <span class="visually-hidden">Удалить</span>
                     </button>
 
-                    <section class="countries-filter custom-select__dropdown" hidden>
-                      <h2 class="secondary-title secondary-title--icon--filter">Фильтрация по странам</h2>
-
-                      <table class="letters-list">
+                    <div class="custom-select__dropdown" hidden>
+                      <table class="letters-list letters-list--dropdown custom-select__letters-list">
                         <tr class="letters-list__row">
                           <td class="letters-list__letter letters-list__letter--selected">
                             <a class="letters-list__link" href="countries.html#A">А</a>
@@ -614,48 +618,48 @@
                         </tr>
                       </table>
 
-                      <ul class="countries-filter__list countries-filter__list--countries">
-                        <li class="countries-filter__item">
-                          <a class="countries-filter__link" href="/asian/afghanistan.html">Афганистан</a>
+                      <ul class="countries-list custom-select__countries-list">
+                        <li class="countries-list__item">
+                          <a class="countries-list__link" href="/asian/afghanistan.html">Афганистан</a>
                         </li>
 
-                        <li class="countries-filter__item">
-                          <a class="countries-filter__link" href="/europe/albania.html">Албания</a>
+                        <li class="countries-list__item">
+                          <a class="countries-list__link" href="/europe/albania.html">Албания</a>
                         </li>
 
-                        <li class="countries-filter__item">
-                          <a class="countries-filter__link" href="/asian/algeria.html">Алжир</a>
+                        <li class="countries-list__item">
+                          <a class="countries-list__link" href="/asian/algeria.html">Алжир</a>
                         </li>
 
-                        <li class="countries-filter__item">
-                          <a class="countries-filter__link" href="/europe/andorra.html">Андорра</a>
+                        <li class="countries-list__item">
+                          <a class="countries-list__link" href="/europe/andorra.html">Андорра</a>
                         </li>
 
-                        <li class="countries-filter__item">
-                          <a class="countries-filter__link" href="/america/argentina.html">Аргентина</a>
+                        <li class="countries-list__item">
+                          <a class="countries-list__link" href="/america/argentina.html">Аргентина</a>
                         </li>
 
-                        <li class="countries-filter__item">
-                          <a class="countries-filter__link" href="/asian/armenia.html">Армения</a>
+                        <li class="countries-list__item">
+                          <a class="countries-list__link" href="/asian/armenia.html">Армения</a>
                         </li>
 
-                        <li class="countries-filter__item">
-                          <a class="countries-filter__link" href="/oceania/australia.html">Австралия</a>
+                        <li class="countries-list__item">
+                          <a class="countries-list__link" href="/oceania/australia.html">Австралия</a>
                         </li>
 
-                        <li class="countries-filter__item">
-                          <a class="countries-filter__link" href="/europe/austria.html">Австрия</a>
+                        <li class="countries-list__item">
+                          <a class="countries-list__link" href="/europe/austria.html">Австрия</a>
                         </li>
 
-                        <li class="countries-filter__item">
-                          <a class="countries-filter__link" href="/asian/azerbaijan.html">Азербайджан</a>
+                        <li class="countries-list__item">
+                          <a class="countries-list__link" href="/asian/azerbaijan.html">Азербайджан</a>
                         </li>
                       </ul>
-                    </section>
+                    </div>
                   </div>
 
                   <div class="custom-select custom-select--add">
-                    <div class="custom-select__item custom-select__item--text">
+                    <div class="custom-select__item custom-select__item--text" tabindex="0">
                       <span class="custom-select__text">Добавить страну</span>
                     </div>
                   </div>
@@ -669,7 +673,7 @@
                     </svg>
                   </a>
 
-                  <a class="button add-plan__button" href="#add-plan-step-1">
+                  <a class="button button--no-bg add-plan__button" href="#add-plan-step-1">
                     <svg class="button__icon" width="10" height="14">
                       <rect x="0" y="0" width="10" height="14" fill="tomato"></rect>
                     </svg>
@@ -703,10 +707,12 @@
 
                 <div class="add-plan__group add-plan__group--textarea">
                   <ul class="textarea-list add-plan__textarea-list">
-                    <li class="textarea-list__item">
+                    <li class="textarea-list__item textarea-list__item--error">
                       <label class="textarea-list__title" for="user-entertainment-1">
                         <span class="textarea-list__title-item">Босния и Герцеговина</span>
-                        <img class="country-flag textarea-list__title-img" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Боснии и Герцеговины">
+                        <div class="country-flag textarea-list__title-img tooltip" data-name="Босния и Герцеговина">
+                          <img src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Боснии и Герцеговины">
+                        </div>
                       </label>
                       <textarea class="textarea-list__textarea" name="user-entertainment-1" id="user-entertainment-1" placeholder="План действий"></textarea>
                     </li>
@@ -714,7 +720,9 @@
                     <li class="textarea-list__item">
                       <label class="textarea-list__title" for="user-entertainment-2">
                         <span class="textarea-list__title-item">Чехия</span>
-                        <img class="country-flag textarea-list__title-img" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехии">
+                        <div class="country-flag textarea-list__title-img tooltip" data-name="Чехия">
+                          <img src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехии">
+                        </div>
                       </label>
                       <textarea class="textarea-list__textarea" name="user-entertainment-2" id="user-entertainment-2">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
                     </li>
@@ -729,7 +737,7 @@
                     </svg>
                   </button>
 
-                  <a class="button add-plan__button" href="#add-plan-step-2">
+                  <a class="button button--no-bg add-plan__button" href="#add-plan-step-2">
                     <svg class="button__icon" width="10" height="14">
                       <rect x="0" y="0" width="10" height="14" fill="tomato"></rect>
                     </svg>
@@ -748,20 +756,32 @@
             <img class="main-logo__img" src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип сервиса &laquo;Погнали&raquo;">
           </a>
 
-          <ul class="social main-footer__social">
+          <ul class="social social--theme-accent main-footer__social">
             <li class="social__item">
-              <a class="link" href="https://www.facebook.com/htmlacademy" target="blank" title="Наш Фейсбук">
-                <span class="link__icon link__icon--color-secondary" aria-hidden="true">
-                  <svg class="link__svg" width="10" height="10">
-                    <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
-                  </svg>
-                </span>
-
-                <span class="visually-hidden">Наша группа в Фейсбуке</span>
+              <a class="social__link" href="https://www.facebook.com/htmlacademy" target="blank" title="Наш Фейсбук">
+                <svg class="social__icon" width="10" height="10" aria-hidden="true">
+                  <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
+                </svg>
               </a>
             </li>
 
             <li class="social__item">
+              <a class="social__link" href="https://vk.com/htmlacademy" target="blank" title="Наш Вконтакте">
+                <svg class="social__icon" width="10" height="10" aria-hidden="true">
+                  <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
+                </svg>
+              </a>
+            </li>
+
+            <li class="social__item">
+              <a class="social__link" href="https://www.instagram.com/htmlacademy/" target="blank" title="Наш Инстаграм">
+                <svg class="social__icon" width="10" height="10" aria-hidden="true">
+                  <circle r="5" cx="5" cy="5" fill="deepskyblue"></circle>
+                </svg>
+              </a>
+            </li>
+
+            <!-- <li class="social__item">
               <a class="link" href="https://vk.com/htmlacademy" target="_blank" title="Наш Вконтакте">
                 <span class="link__icon link__icon--color-secondary" aria-hidden="true">
                   <svg class="link__svg" width="10" height="10">
@@ -783,20 +803,21 @@
 
                 <span class="visually-hidden">Наша группа в Инстаграме</span>
               </a>
-            </li>
+            </li> -->
           </ul>
 
           <div class="copyright main-footer__copyright">
-            <span class="copyright__text">Разработано</span>
-
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+              <span class="copyright__text">
+                Разработано
+                <span class="visually-hidden">HtmlAcademy</span>
+              </span>
+
               <span class="copyright__icon" aria-hidden="true">
                 <svg class="copyright__svg" width="20" height="20">
                   <rect x="5" y="5" width="20" height="20" fill="tomato"></rect>
                 </svg>
               </span>
-
-              <span class="visually-hidden">HtmlAcademy</span>
             </a>
           </div>
         </div>

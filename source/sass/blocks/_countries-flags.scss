@@ -7,9 +7,9 @@
 }
 
 .countries-flags__item {
-  /* width: 35px;
-  height: 24px; */
-  /* overflow: hidden; */
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
   margin-right: 20px;
 
   &:last-child {
@@ -18,9 +18,16 @@
 }
 
 .countries-flags__img {
+  position: relative;
   width: 35px;
   height: 24px;
   border-radius: $small-base-border-radius;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+  }
 }
 
 .countries-flags__text {

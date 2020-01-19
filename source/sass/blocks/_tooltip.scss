@@ -1,49 +1,49 @@
-.transport {
-  position: relative;
-
-  /* &:hover {
+.tooltip {
+  &:hover {
     // Tooltip rectangle
     &::before {
       content: attr(data-name);
       position: absolute;
-      top: calc(100% + 11px);
+      top: calc(100% + 15px);
       left: 50%;
       transform: translateX(-50%);
+
       padding: 10px 20px;
       border-radius: 4px;
       background-color: #101d41;
+
+      font-size: $base-font-size;
+      font-weight: 400;
       color: #ffffff;
+      text-align: center;
+
+      z-index: 10;
     }
 
     // Tooltip triangle
     &::after {
       content: "";
       position: absolute;
-      top: 35px;
+      top: calc(100% + 5px);
       left: 50%;
       transform: translateX(-50%);
+
       width: 0;
       height: 0;
       border-style: solid;
       border-width: 0 10px 10px 10px;
       border-color: transparent transparent #101d41 transparent;
+
+      z-index: 10;
     }
-  } */
+  }
 }
 
-.transport__content {
-  position: relative;
-  display: block;
-  width: 33px;
-  height: 33px;
-  border-radius: 50%;
-  background-color: $white;
-}
-
-.transport__svg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  fill: navy;
+@media (min-width: $tablet-width) {
+  .tooltip {
+    // Tooltip rectangle
+    &::before {
+      font-size: $base-font-size * 1.25;
+    }
+  }
 }

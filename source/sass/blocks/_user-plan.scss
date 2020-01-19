@@ -27,7 +27,16 @@
 }
 
 .user-plan__link {
-  color: rgba($black, 0.3);
+  color: $black;
+  opacity: 0.3;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 @media (min-width: $tablet-width) {

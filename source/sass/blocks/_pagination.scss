@@ -29,39 +29,66 @@
     min-height: 50px;
     background-color: $white;
 
-    // Arrow
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      border-style: solid;
-      border-width: 7px 0 7px 10px;
-      border-color: transparent transparent transparent currentColor;
-    }
-
-    &:nth-last-child(2) {
-      border-top-left-radius: 30px;
-      border-bottom-left-radius: 30px;
-
+    .pagination__link {
       // Arrow
       &::before {
-        transform: translate(-50%, -50%) rotate(180deg);
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-style: solid;
+        border-width: 7px 0 7px 10px;
+        border-color: transparent transparent transparent currentColor;
+      }
+
+      &:hover {
+        // Arrow
+        &::before {
+          opacity: 0.7;
+        }
+      }
+
+      &:active {
+        // Arrow
+        &::before {
+          opacity: 0.3;
+        }
       }
     }
 
-    &:last-child {
+    &-right {
       border-top-right-radius: $large-border-radius;
       border-bottom-right-radius: $large-border-radius;
+    }
+
+    &-left {
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
+
+      .pagination__link {
+        // Arrow
+        &::before {
+          transform: translate(-50%, -50%) rotate(180deg);
+        }
+      }
     }
   }
 }
 
 .pagination__link {
+  position: relative;
   display: block;
   width: 100%;
   height: 100%;
+
+  &:hover[href] {
+    opacity: 0.6;
+  }
+
+  &:active[href] {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -71,6 +98,7 @@
     background-color: $white;
     border-radius: $medium-border-radius;
 
+    // Center vertical line
     &::before {
       display: none;
     }
@@ -83,21 +111,21 @@
       width: auto;
       background-color: transparent;
 
-      &:last-child {
+      &-right {
         margin-left: 18px;
       }
 
-      &:nth-last-child(2) {
+      &-left {
         margin-left: auto;
-      }
-
-      // Arrow
-      &::before {
-        border-width: 10px 0 10px 10px;
       }
 
       .pagination__link {
         width: 25px;
+
+        // Arrow
+        &::before {
+          border-width: 10px 0 10px 10px;
+        }
       }
     }
 
@@ -119,7 +147,6 @@
     color: $main-color-darker-30;
     text-decoration: none;
     text-align: center;
-    //vertical-align: middle;
   }
 }
 

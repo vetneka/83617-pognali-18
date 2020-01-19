@@ -75,6 +75,14 @@
   .link__text {
     margin-left: 0;
   }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .tariffs__button {

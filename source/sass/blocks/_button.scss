@@ -123,17 +123,78 @@
 
   background-color: transparent;
 
+  cursor: pointer;
+
+  &:hover {
+    .button__text,
+    .button__icon {
+      opacity: 0.7;
+    }
+  }
+
+  &:active {
+    .button__text,
+    .button__icon {
+      opacity: 0.3;
+    }
+  }
+
   &--color {
     &-accent {
-      background-color: $main-color-accent;
+      background-color: #ffd74b;
+
+      &:hover {
+        background-color: #ffbd30;
+
+        .button__text,
+        .button__icon {
+          opacity: 1;
+        }
+      }
+
+      &:active {
+        .button__text,
+        .button__icon {
+          opacity: 0.3;
+        }
+      }
     }
 
     &-white {
       background-color: $white;
+
+      &:hover {
+        box-shadow: 0 2px 10px 0 rgba($black, 0.08);
+      }
+
+      &:active {
+        background-color: #f3c72b;
+
+        .button__text,
+        .button__icon {
+          opacity: 0.3;
+        }
+      }
     }
 
     &-blue {
-      background-color: $main-color-darker-20;
+      background-color: $main-color-darker-10;
+
+      &:hover {
+        background-color: $main-color-darker-20;
+
+        .button__text,
+        .button__icon {
+          opacity: 1;
+        }
+      }
+
+      &:active {
+        .button__text,
+        .button__icon {
+          opacity: 0.3;
+        }
+      }
     }
   }
 
@@ -157,6 +218,18 @@
       text-transform: initial;
     }
   }
+
+  /* &--no-bg {
+    &:hover {
+      background-color: transparent;
+      opacity: 0.7;
+    }
+
+    &:active {
+      background-color: transparent;
+      opacity: 0.3;
+    }
+  } */
 }
 
 @media (min-width: $tablet-width) {

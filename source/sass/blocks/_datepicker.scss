@@ -29,6 +29,14 @@
     background-image: url("../img/month-arrow-right.svg");
     background-position: right center;
   }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 .datepicker__title {
@@ -76,7 +84,7 @@
   &:hover:not(&--disabled) {
     position: relative;
     color: $white;
-    background-color: $main-color-darker-30;
+    background-color: #1d2e5b;
     overflow: initial;
 
     &::before {

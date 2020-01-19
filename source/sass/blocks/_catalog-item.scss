@@ -4,6 +4,15 @@
   border-radius: 20px;
   background-color: $white;
   overflow: hidden;
+  transition: box-shadow 0.2s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 6px 21px 0 rgba($black, 0.08);
+
+    .catalog-item__img {
+      transform: scale(1.1);
+    }
+  }
 }
 
 .catalog-item__wrapper {
@@ -29,6 +38,7 @@
 
 .catalog-item__img {
   width: 100%;
+  transition: transform 0.3s ease-in-out;
 }
 
 .catalog-item__title {
@@ -49,7 +59,7 @@
   display: block;
   padding-right: 35px;
   text-decoration: none;
-  color: $main-color-text;
+  color: #1d2e5b;
 
   // Indicator online
   &::after {
@@ -68,6 +78,14 @@
     &::after {
       background-color: #81e31e;
     }
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 

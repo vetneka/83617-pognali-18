@@ -51,6 +51,14 @@
   .link__text {
     display: none;
   }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .countries-filter__continents-list {
@@ -75,9 +83,21 @@
 
 .countries-filter__button {
   width: 100%;
+  background-color: #d6daed;
 
   .button__text {
     margin-left: 12px;
+  }
+
+  &:hover {
+    background-color: #c8cee8;
+  }
+
+  &:active {
+    .button__text,
+    .button__icon {
+      opacity: 0.3;
+    }
   }
 }
 

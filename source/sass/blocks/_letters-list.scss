@@ -1,18 +1,47 @@
 .letters-list {
   border-collapse: collapse;
+
+  &--default {
+    .letters-list__letter {
+      &--selected {
+        .letters-list__link {
+          background-color: $main-color-darker-30;
+          color: $white;
+        }
+      }
+    }
+
+    .letters-list__countries-list {
+      display: none;
+    }
+  }
+
+  &--dropdown {
+    width: 100%;
+    text-align: center;
+
+    .letters-list__letter {
+      &--selected {
+        .letters-list__link {
+          background-color: #edeff6;
+          color: #1d2e5b;
+        }
+      }
+    }
+
+    .letters-list__link {
+      background-color: $white;
+      font-weight: 500;
+    }
+  }
 }
 
 .letters-list__letter {
   padding: 0;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: 1px solid #cbced9;
 
-
-  &:hover,
-  &--selected {
-    .letters-list__link {
-      background-color: $main-color-darker-30;
-      color: $white;
-    }
+  &:hover {
+    border-color: #959bb2;
   }
 }
 
@@ -20,7 +49,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 43px;
+  width: 100%;
   height: 40px;
   padding: 13px 10px 10px;
   background-color: $white;
@@ -31,64 +60,111 @@
   text-decoration: none;
   text-transform: uppercase;
 
-  overflow: auto;
-}
-
-.letters-list__countries-list {
-  display: none;
+  //overflow: auto;
 }
 
 @media (min-width: $tablet-width) {
-  .letters-list__letter {
-    border: 0;
+  .letters-list {
+    &--default {
+      .letters-list__letter {
+        border: 0;
 
-    &:hover,
-    &--selected {
+        &--selected {
+          .letters-list__link {
+            background-color: transparent;
+            color: $main-color-darker-30;
+          }
+        }
+
+        &:nth-child(5n) {
+          .letters-list__link {
+            margin-right: 0;
+          }
+        }
+
+        &:hover {
+          .letters-list__link {
+            color: rgba(23, 29, 54, 0.5);
+          }
+        }
+
+        &:active {
+          .letters-list__link {
+            color: rgba(23, 29, 54, 1);
+          }
+        }
+      }
+
       .letters-list__link {
+        width: 45px;
+        height: 70px;
+        margin-right: 31px;
+        margin-bottom: 13px;
+        padding: 0;
         background-color: transparent;
-        color: $main-color-darker-30;
+
+        font-size: $base-font-size * 3.75;
+        font-weight: 600;
+        color: rgba($main-color-darker-30, 0.2);
+        overflow: initial;
       }
     }
 
-    &:nth-child(5n) {
+    &--dropdown {
       .letters-list__link {
-        margin-right: 0;
+        height: 69px;
+        font-size: $base-font-size * 1.25;
+      }
+
+      .letters-list__letter {
+        &--selected {
+          .letters-list__link {
+            background-color: $main-color-darker-30;
+            color: $white;
+          }
+        }
       }
     }
-  }
-
-  .letters-list__link {
-    width: 45px;
-    height: 70px;
-    margin-right: 31px;
-    margin-bottom: 13px;
-    padding: 0;
-    background-color: transparent;
-
-    font-size: $base-font-size * 3.75;
-    font-weight: 600;
-    color: rgba($main-color-darker-30, 0.2);
-    overflow: initial;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .letters-list__letter {
-    width: 250px;
-    padding-bottom: 46px;
-    vertical-align: top;
+  .letters-list {
+    &--default {
+      .letters-list__letter {
+        width: 250px;
+        padding-bottom: 46px;
+        vertical-align: top;
 
-    &:last-child {
-      width: auto;
+        &:last-child {
+          width: auto;
+        }
+      }
+
+      .letters-list__link {
+        margin-bottom: 27px;
+        margin-left: -5px;
+      }
+
+      .letters-list__countries-list {
+        display: block;
+      }
     }
-  }
 
-  .letters-list__link {
-    margin-bottom: 27px;
-    margin-left: -5px;
-  }
+    &--dropdown {
+      border-collapse: separate;
+      border-spacing: 15px;
+      margin-left: -15px;
+      margin-top: -15px;
 
-  .letters-list__countries-list {
-    display: block;
+      .letters-list__link {
+        width: 59px;
+      }
+
+      .letters-list__letter {
+        border-radius: 10px;
+        overflow: hidden;
+      }
+    }
   }
 }

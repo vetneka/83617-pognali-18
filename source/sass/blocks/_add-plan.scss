@@ -22,6 +22,25 @@
     &::after {
       left: 9px;
     }
+
+    &:hover {
+      &::before {
+        border-color: #959bb2;
+      }
+    }
+  }
+
+  input[type="checkbox"]:disabled + .custom-checkbox__label {
+    cursor: default;
+  }
+
+  input[type="checkbox"]:disabled + .custom-checkbox__label::before {
+    background-color: #e2e5f1;
+    border-color: #e2e5f1;
+  }
+
+  input[type="checkbox"]:disabled + .custom-checkbox__label::after {
+    opacity: 0.3;
   }
 }
 
@@ -184,6 +203,7 @@
         width: 13px;
         height: 13px;
         left: 12px;
+        transform: translateY(0);
       }
     }
   }
@@ -230,7 +250,7 @@
         position: absolute;
         top: 0;
         right: 135px;
-        width: 1px;
+        width: 2px;
         height: 100%;
         background-image: linear-gradient(to bottom, rgba($black, 0.05) 93%, transparent 100%);
       }

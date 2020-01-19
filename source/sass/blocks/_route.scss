@@ -7,7 +7,7 @@
   @include bg-accent;
 }
 
-.route__link {
+/* .route__link {
   display: flex;
   align-items: center;
   margin: 0 0 31px 0;
@@ -19,7 +19,7 @@
   .link__text {
     max-width: 75%;
   }
-}
+} */
 
 .route__button {
   width: 100%;
@@ -29,6 +29,22 @@
 
   .button__text {
     margin-right: 20px;
+  }
+
+  &:hover {
+    background-color: #192144;
+    color: $white;
+
+    .button__icon {
+      fill: $white;
+    }
+  }
+
+  &:active {
+    .button__text,
+    .button__icon {
+      opacity: 0.3;
+    }
   }
 }
 

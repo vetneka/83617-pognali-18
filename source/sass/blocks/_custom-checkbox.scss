@@ -31,6 +31,38 @@
         background-repeat: no-repeat;
         background-position: center;
       }
+
+      &:hover {
+        .custom-checkbox__label-text {
+          opacity: 0.7;
+        }
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+    }
+
+    .custom-checkbox__label-text {
+      opacity: 1;
+      transition: all 0.2s ease-in-out;
+    }
+
+    input[type="checkbox"]:checked + .custom-checkbox__label::after {
+      display: block;
+    }
+
+    input[type="checkbox"]:hover + .custom-checkbox__label-text {
+      opacity: 0.7;
+    }
+
+    input[type="checkbox"]:focus + .custom-checkbox__label {
+      //outline: 1px dotted #212121;
+      outline: 5px auto -webkit-focus-ring-color;
+    }
+
+    input[type="checkbox"]:active + .custom-checkbox__label {
+      opacity: 0.3;
     }
   }
 
@@ -47,7 +79,8 @@
         box-shadow: 0 2px 5px 0 rgba($black, 0.08);
 
         .custom-checkbox__svg {
-          opacity: 0.7;
+          fill: #101e44;
+          opacity: 0.3;
         }
       }
     }
@@ -57,8 +90,45 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      fill: red;
-      opacity: 0.5;
+      fill: #1d2e5b;
+      opacity: 0.15;
+    }
+
+    input[type="checkbox"]:checked + .custom-checkbox__label {
+      &:hover {
+        box-shadow: none;
+        opacity: 1;
+      }
+
+      .custom-checkbox__svg {
+        fill: #101e44;
+        opacity: 1;
+      }
+    }
+
+    input[type="checkbox"]:disabled + .custom-checkbox__label {
+      background-color: #e2e5f1;
+      cursor: default;
+
+      &:hover {
+        box-shadow: none;
+      }
+
+      .custom-checkbox__svg {
+        fill: #101e44;
+        opacity: 0.1;
+      }
+    }
+
+    input[type="checkbox"]:checked:disabled + .custom-checkbox__label {
+      .custom-checkbox__svg {
+        opacity: 0.3;
+      }
+    }
+
+    input[type="checkbox"]:focus + .custom-checkbox__label {
+      //outline: 1px dotted #212121;
+      outline: 5px auto -webkit-focus-ring-color;
     }
   }
 }
@@ -79,22 +149,6 @@
 .custom-checkbox__label {
   position: relative;
   cursor: pointer;
-}
-
-// Tick checkbox
-input[type="checkbox"]:checked + .custom-checkbox__label::after {
-  display: block;
-}
-
-// Transport checkbox
-input[type="checkbox"]:checked + .custom-checkbox__label {
-  &:hover {
-    box-shadow: none;
-  }
-
-  .custom-checkbox__svg {
-    opacity: 1;
-  }
 }
 
 @media (min-width: $tablet-width) {

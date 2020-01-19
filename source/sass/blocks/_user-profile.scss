@@ -25,6 +25,7 @@
   }
 
   &--tags {
+    border: none;
     line-height: 1.7;
     order: 4;
   }
@@ -41,6 +42,7 @@
 }
 
 .user-profile__legend {
+  position: relative;
   padding-left: 15px;
   padding-right: 15px;
   margin-top: -30px;
@@ -80,10 +82,20 @@
   display: block;
   width: 100%;
   padding: 0 32px 0 24px;
-  border: 0;
+  border: 1px solid rgba($main-color-darker-30, 0.15);
+  border-radius: $base-border-radius;
   background-color: transparent;
   text-align: left;
   resize: none;
+  outline: none;
+
+  &:hover {
+    border-color: #aeb4cb;
+  }
+
+  &:focus {
+    border-color: #161c35;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -171,7 +183,7 @@
   }
 
   .user-profile__textarea {
-    padding: 35px 32px 10px 38px;
+    padding: 35px 32px 15px 38px;
   }
 }
 

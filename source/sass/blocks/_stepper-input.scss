@@ -29,9 +29,18 @@
   flex-flow: row nowrap;
 
   width: 100%;
-  border: 1px solid rgba($main-color-darker-30, 0.3);
+  border: 1px solid #cbced9;
   border-radius: 4px;
   overflow: hidden;
+  outline: none;
+
+  &:hover {
+    border-color: #959bb2;
+  }
+
+  &:focus {
+    border-color: #161c35;
+  }
 }
 
 .stepper-input__button {
@@ -40,6 +49,7 @@
   padding: 21px;
   border: 0;
   background-color: transparent;
+  outline: none;
 
   /* Plus, minus */
   &::before,
@@ -51,7 +61,7 @@
     transform: translate(-50%, -50%);
     width: 14px;
     height: 2px;
-    background-color: rgba($main-color-darker-30, 0.2);
+    background-color: #cccccc;
   }
 
   &--less {
@@ -63,6 +73,23 @@
   &--more {
     &::after {
       transform: translate(-50%, -50%) rotate(90deg);
+    }
+  }
+
+  &:hover,
+  &:focus {
+    /* Plus, minus */
+    &::before,
+    &::after {
+      background-color: #999999;
+    }
+  }
+
+  &:active {
+    /* Plus, minus */
+    &::before,
+    &::after {
+      background-color: #e5e5e5;
     }
   }
 }
@@ -141,5 +168,9 @@
   .stepper-input__content {
     width: auto;
     max-width: 180px;
+  }
+
+  .stepper-input__button {
+    padding: 32px 28px;
   }
 }

@@ -5,6 +5,7 @@
 .textarea-list__item {
   position: relative;
   margin-bottom: 17px;
+  vertical-align: top;
 
   &:not(:last-child) {
 
@@ -22,6 +23,26 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  &--error {
+    &::after {
+      content: "Это поле должно быть заполнено";
+      position: absolute;
+      bottom: 1px;
+      left: 1px;
+      width: calc(100% - 2px);
+      padding: 10px 20px;
+      background-color: #ffefef;
+      color: #ff0000;
+      font-weight: 400;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+
+    .textarea-list__textarea {
+      border-color: #f47e7e;
+    }
   }
 }
 
@@ -86,10 +107,16 @@
 }
 
 .textarea-list__title-img {
+  position: relative;
   width: 35px;
   height: 24px;
   margin-top: -4px;
   border-radius: 4px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .textarea-list__textarea {
@@ -100,6 +127,16 @@
   border-radius: 4px;
   resize: vertical;
   line-height: 1.4;
+  vertical-align: top;
+  outline: none;
+
+  &:hover {
+    border-color: #959bb2;
+  }
+
+  &:focus {
+    border-color: #161c35;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -115,6 +152,12 @@
         right: 2px;
         width: 3px;
         height: calc(100% + 37px);
+      }
+    }
+
+    &--error {
+      &::after {
+        width: calc(100% - 32px);
       }
     }
   }
@@ -169,6 +212,12 @@
       /* Vertical line */
       &::before {
         right: -1px;
+      }
+    }
+
+    &--error {
+      &::after {
+        width: calc(100% - 48px);
       }
     }
   }
