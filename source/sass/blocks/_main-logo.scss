@@ -1,7 +1,12 @@
 .main-logo {
   display: block;
   width: 100px;
+  height: auto;
   line-height: 0;
+}
+
+.main-logo__img {
+  width: 100%;
 }
 
 @media (min-width: $tablet-width) {

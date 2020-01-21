@@ -3,6 +3,10 @@
   padding-bottom: 40px;
   background: url("../img/about-mobile@1x.png") no-repeat center top 5px/292px auto;
 
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/about-mobile@2x.png")
+  }
+
   @include bg-dark;
   @include brs-bottom (30px, $main-color, $main-color-darker-30);
 }
@@ -76,6 +80,10 @@
       background-size: 376px auto;
       background-position: right 0 top 45px;
       z-index: -1;
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/about-tablet@2x.png")
+      }
     }
   }
 
@@ -133,6 +141,10 @@
       background-size: 630px auto;
       background-position: right 32px top 0;
       z-index: -1;
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/about-desktop@2x.png")
+      }
     }
   }
 

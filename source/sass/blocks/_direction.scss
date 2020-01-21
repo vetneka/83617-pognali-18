@@ -35,6 +35,10 @@
       padding-left: 70px;
       padding-right: 70px;
     }
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/flags-back@2x.png")
+    }
   }
 
   .direction__inner {

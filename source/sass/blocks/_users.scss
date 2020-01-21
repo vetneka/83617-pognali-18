@@ -13,6 +13,12 @@
     143px auto,
     61px 71px;
 
+  @media (min-resolution: $retina-dppx) {
+    background-image:
+      url("../img/smolov-back-desktop@2x.png"),
+      url("../img/rogovaya-back-mobile@2x.png");
+  }
+
   @include bg-dark;
   @include brs-bottom (30px, $main-color, $main-color-darker-30);
 }
@@ -54,6 +60,12 @@
     background-size:
       143px auto,
       285px auto;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image:
+        url("../img/smolov-back-desktop@2x.png"),
+        url("../img/rogovaya-back-desktop@2x.png");
+    }
 
     @include brs-bottom (60px, $main-color, $main-color-darker-30);
 
