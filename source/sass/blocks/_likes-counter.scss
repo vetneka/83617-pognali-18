@@ -7,8 +7,29 @@
   font-weight: 600;
   background-color: transparent;
   border: 0;
+  cursor: pointer;
+
+  &:hover {
+    .likes-counter__icon {
+      background-color: #e2e5f2;
+    }
+
+    .likes-counter__svg {
+      opacity: 0.5;
+    }
+  }
+
+  &:active {
+    .likes-counter__svg {
+      opacity: 0.1;
+    }
+  }
 
   &--pressed {
+    .likes-counter__icon {
+      background-color: #f9eaea;
+    }
+
     .likes-counter__svg {
       fill: #f02323;
       stroke: none;
@@ -18,24 +39,16 @@
       .likes-counter__icon {
         background-color: #f9d8d8;
       }
+
+      .likes-counter__svg {
+        opacity: 1;
+      }
     }
 
     &:active {
       .likes-counter__svg {
-        opacity: 0.1;
+        opacity: 0.3;
       }
-    }
-  }
-
-  &:hover {
-    .likes-counter__icon {
-      background-color: #e2e5f2;
-    }
-  }
-
-  &:active {
-    .likes-counter__svg {
-      opacity: 0.1;
     }
   }
 }
@@ -47,7 +60,7 @@
   height: 31px;
   margin-right: 10px;
   border-radius: 50%;
-  background-color: #f9eaea;
+  background-color: #edeff6;
   overflow: hidden;
 }
 
@@ -55,11 +68,11 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 13px;
-  height: 11px;
+  width: 14px;
+  height: 12px;
   transform: translate(-50%, -50%);
   fill: none;
-  stroke: rgba(#192144, 0.3);
+  stroke: #192144;
 }
 
 @media (min-width: $tablet-width) {

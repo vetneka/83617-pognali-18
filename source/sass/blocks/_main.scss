@@ -1,7 +1,13 @@
 .main {
   &--inner {
-    background-color: $main-color-lighter-10;
+    background-color: #edeff6;
     padding-bottom: 45px;
+  }
+
+  &--form {
+    .main__head {
+      @include brs-bottom (20px, #edeff6, $main-color-darker-30);
+    }
   }
 }
 
@@ -9,11 +15,16 @@
   display: flex;
   flex-flow: row wrap;
   align-items: flex-end;
-  min-height: 143px;
+  height: 143px;
   padding-top: 80px;
 
   @include bg-dark;
-  @include brs-bottom (20px, $main-color-darker-10, $main-color-darker-30);
+  @include brs-bottom (20px, #e2e5f2, $main-color-darker-30);
+
+  .container {
+    flex-grow: 1;
+    width: 100%;
+  }
 }
 
 .main__head-content {
@@ -46,7 +57,7 @@
   width: 32px;
   height: 16px;
   margin-left: 24px;
-  background-color: tomato;
+  fill: currentColor;
 }
 
 .main__companions-filter {
@@ -58,10 +69,18 @@
 }
 
 @media (min-width: $tablet-width) {
+  .main {
+    &--form {
+      .main__head {
+        @include brs-bottom (60px, #edeff6, $main-color-darker-30);
+      }
+    }
+  }
+  
   .main__head {
-    min-height: 351px;
+    height: 351px;
 
-    @include brs-bottom (60px, $main-color-darker-10, $main-color-darker-30);
+    @include brs-bottom (60px, #e2e5f2, $main-color-darker-30);
   }
 
   .main__head-content {
@@ -83,6 +102,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .main__head {
+    @include brs-bottom (60px, #edeff6, $main-color-darker-30);
+  }
+
   .main__head-content {
     padding-left: 65px;
     padding-right: 65px;

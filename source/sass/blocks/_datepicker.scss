@@ -79,13 +79,12 @@
   padding: 5px;
   border: 1px solid #cbced9;
   background-color: $main-color;
-  overflow: auto;
+  //overflow: auto;
 
   &:hover:not(&--disabled) {
     position: relative;
     color: $white;
     background-color: #1d2e5b;
-    overflow: initial;
 
     &::before {
       content: "";
@@ -93,7 +92,8 @@
       top: -1px;
       left: -1px;
       width: calc(100% + 1px);
-      height: calc(100% + 1px);
+      //height: calc(100% + 1px);
+      height: 31px;
       border: 2px solid #ff5c23;
       background-color: transparent;
     }
@@ -154,6 +154,12 @@
     height: 69px;
 
     font-size: $base-font-size * 1.25;
+
+    &:hover:not(&--disabled) {
+      &::before {
+        height: 69px;
+      }
+    }
   }
 }
 
@@ -175,6 +181,12 @@
     font-size: $base-font-size * 1.125;
     text-align: left;
     vertical-align: top;
+
+    &:hover:not(&--disabled) {
+      &::before {
+        height: 70px;
+      }
+    }
   }
 
   .datepicker__date-mounth {
@@ -184,7 +196,7 @@
 
   .datepicker__date-booking {
     display: block;
-    margin-top: 10px;
+    margin-top: 2px;
   }
 
   .datepicker__button {

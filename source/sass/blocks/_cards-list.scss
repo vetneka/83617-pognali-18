@@ -2,15 +2,15 @@
   @include reset-list;
 }
 
-.cards-list__item {
+/* .cards-list__item {
   margin-bottom: 10px;
 
   &:last-child {
     margin-bottom: 0;
   }
-}
+} */
 
-@media (min-width: $tablet-width) {
+/* @media (min-width: $tablet-width) {
   .cards-list {
     &--users {
       display: flex;
@@ -24,3 +24,4 @@
     }
   }
 }
+ */

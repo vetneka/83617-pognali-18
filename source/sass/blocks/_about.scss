@@ -103,6 +103,11 @@
 
   .about__button {
     display: inline-flex;
+    justify-content: space-between;
+
+    .button__icon {
+      margin-left: 0;
+    }
   }
 }
 

@@ -1,0 +1,174 @@
+.direction-item {
+  position: relative;
+  display: flex;
+  flex-flow: column-reverse wrap;
+  border-radius: $base-border-radius;
+
+  &:last-of-type {
+    // Fade out
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 81px;
+      background-image: linear-gradient(to top, $main-color, transparent);
+      z-index: 2;
+    }
+  }
+}
+
+.direction-item__picture {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow: hidden;
+}
+
+.direction-item__img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+
+.direction-item__content {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+  padding: 23px 23px 20px;
+  margin-top: -10px;
+  border-radius: 10px;
+
+  font-weight: 500;
+  color: rgba($main-color-text, 0.3);
+  background-color: $white;
+}
+
+.direction-item__title-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.direction-item__description {
+  width: 100%;
+  margin: 0;
+  order: 1;
+}
+
+.direction-item__countries-flags {
+  width: 100%;
+  margin-top: -35px;
+  margin-bottom: 13px;
+  order: -1;
+}
+
+.direction-item__travelers-counter {
+  display: inline-flex;
+}
+
+.direction-item__travelers-counter-svg {
+  width: 11px;
+  height: 11px;
+  margin-right: 1px;
+  opacity: 0.1;
+}
+
+.direction-item__travelers-counter-text {
+  margin-left: 5px;
+}
+
+@media (min-width: $tablet-width) {
+  .direction-item {
+    flex-direction: row;
+
+    &:last-child {
+      // Fade out
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  .direction-item__content {
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-grow: 1;
+
+    padding: 31px 60px 17px 31px;
+    margin-top: 0;
+    border-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .direction-item__picture {
+    width: 186px;
+    height: 140px;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  .direction-item__countries-flags {
+    position: absolute;
+    top: 16px;
+    right: -36px;
+    width: auto;
+    margin: 0;
+  }
+
+  .direction-item__title {
+    margin-bottom: 1px;
+
+    font-size: $base-font-size * 1.5;
+  }
+
+  .direction-item__description {
+    margin-top: 0;
+    margin-bottom: 13px;
+
+    font-size: $base-font-size * 1.25;
+
+    order: 0;
+  }
+
+  .direction-item__travelers-counter {
+    font-size: $base-font-size * 1.25;
+    line-height: 1;
+  }
+
+  .direction-item__travelers-counter-svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .direction-item__travelers-counter-text {
+    margin-left: 10px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .direction-item {
+    &:last-child {
+      // Fade out
+      &::after {
+        display: block;
+      }
+    }
+  }
+
+  .direction-item__content {
+    padding-top: 24px;
+    padding-left: 26px;
+  }
+
+  .direction-item__description {
+    margin-bottom: 16px;
+  }
+
+  .direction-item__countries-flags {
+    top: 21px;
+  }
+}

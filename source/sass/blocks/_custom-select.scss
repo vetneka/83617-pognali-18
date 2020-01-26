@@ -375,7 +375,7 @@
   .custom-select__dropdown {
     position: absolute;
     top: 68px;
-    display: flex;
+    left: 0;
     flex-flow: row nowrap;
     width: calc(100% + 45px);
     padding: 38px 24px 34px;

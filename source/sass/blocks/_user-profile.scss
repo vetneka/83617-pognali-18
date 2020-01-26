@@ -28,6 +28,11 @@
     border: none;
     line-height: 1.7;
     order: 4;
+
+    .user-profile__legend {
+      margin-top: 0;
+      margin-bottom: -14px;
+    }
   }
 
   &--transports {
@@ -45,14 +50,14 @@
   position: relative;
   padding-left: 15px;
   padding-right: 15px;
-  margin-top: -30px;
-  margin-bottom: 10px;
+  margin-top: -28px;
+  margin-bottom: 11px;
 
   text-transform: uppercase;
   font-weight: 600;
   text-align: center;
   color: $main-color-darker-30;
-  background-color: $main-color;
+  background-color: #edeff6;
   cursor: text;
 }
 
@@ -63,9 +68,19 @@
 }
 
 .user-profile__user-picture {
+  width: 100px;
+  height: 100px;
   margin-bottom: 19px;
   margin-right: 18px;
+  border-radius: 50%;
+  overflow: hidden;
   order: 2;
+}
+
+.user-profile__img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .user-profile__button {
@@ -81,7 +96,7 @@
 .user-profile__textarea {
   display: block;
   width: 100%;
-  padding: 0 32px 0 24px;
+  padding: 18px 32px 27px 24px;
   border: 1px solid rgba($main-color-darker-30, 0.15);
   border-radius: $base-border-radius;
   background-color: transparent;
@@ -118,7 +133,7 @@
       order: 5;
 
       .user-profile__legend {
-        margin-top: -13px;
+        margin-top: -18px;
         margin-bottom: -20px;
       }
     }
@@ -127,6 +142,7 @@
       width: 50%;
       padding-top: 23px;
       padding-bottom: 0;
+      margin-right: auto;
       order: 2;
 
       .user-profile__legend {
@@ -157,6 +173,7 @@
 
   .user-profile__user-level {
     margin-left: 0;
+    margin-right: auto;
     order: 1;
   }
 
@@ -164,7 +181,7 @@
     width: 94px;
     height: 94px;
     margin-right: 0;
-    border-radius: $base-border-radius;
+    border-radius: 10px;
     order: 3;
   }
 
@@ -177,7 +194,8 @@
     order: 4;
 
     .button {
-      min-height: 60px;
+      padding-top: 21px;
+      padding-bottom: 21px;
       border-radius: 10px;
     }
   }
@@ -211,9 +229,14 @@
       }
     }
 
+    &--tags {
+      margin-right: auto;
+    }
+
     &--transports {
       width: 384px;
       align-self: stretch;
+      margin-right: 0;
       order: 5;
 
       .transports__item {
@@ -240,7 +263,8 @@
     right: 155px;
     width: 190px;
     height: 190px;
-    border-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
   .user-profile__button {

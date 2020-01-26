@@ -79,7 +79,7 @@
         box-shadow: 0 2px 5px 0 rgba($black, 0.08);
 
         .custom-checkbox__svg {
-          fill: #101e44;
+          //fill: #101e44;
           opacity: 0.3;
         }
       }
@@ -90,14 +90,13 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      fill: #1d2e5b;
+      //fill: #1d2e5b;
       opacity: 0.15;
     }
 
     input[type="checkbox"]:checked + .custom-checkbox__label {
       &:hover {
-        box-shadow: none;
-        opacity: 1;
+        opacity: 0.7;
       }
 
       .custom-checkbox__svg {

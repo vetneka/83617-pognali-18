@@ -19,7 +19,33 @@
       .social__link {
         &:hover {
           background-color: #192144;
+
+          .social__icon {
+            fill: $white;
+          }
         }
+      }
+    }
+
+    &-light {
+      .social__link {
+        background: transparent;
+
+        &:hover {
+          .social__icon {
+            fill: #192144;
+          }
+        }
+
+        &:active {
+          .social__icon {
+            opacity: 0.6;
+          }
+        }
+      }
+
+      .social__icon {
+        fill: #cccccc;
       }
     }
   }
@@ -46,13 +72,44 @@
 }
 
 .social__icon {
-  fill: transparent;
-  stroke: $white;
+  fill: #161c35;
+
+  &--facebook {
+    width: 11px;
+    height: 21px;
+  }
+
+  &--vk {
+    width: 23px;
+    height: 12px;
+  }
+
+  &--instagram {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .social__link {
     width: 60px;
     height: 60px;
+  }
+
+  .social__icon {
+    &--facebook {
+      width: 14px;
+      height: 28px;
+    }
+
+    &--vk {
+      width: 31px;
+      height: 16px;
+    }
+
+    &--instagram {
+      width: 23px;
+      height: 23px;
+    }
   }
 }

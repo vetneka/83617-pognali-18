@@ -51,22 +51,26 @@
   .button__text {
     display: none;
   }
+
+  .button__icon {
+    margin-left: 0;
+  }
 }
 
 .contacts__user-nav {
   text-align: left;
 
-  .link {
-    color: $main-color-accent;
-  }
-
-  .link__icon {
-    background-color: #121836;
-  }
-
   .user-nav__item {
     flex-grow: 1;
     margin-bottom: 0;
+  }
+
+  .user-nav__text {
+    color: #ffd74b;
+  }
+
+  .user-nav__icon {
+    background-color: #121936;
   }
 }
 
@@ -77,7 +81,7 @@
 
     @include brs-bottom (60px, $main-color-accent, $main-color-darker-30);
 
-    &.container {
+    .container {
       padding-left: 75px;
       padding-right: 75px;
     }
@@ -135,7 +139,7 @@
     padding-top: 108px;
     padding-bottom: 102px;
 
-    &.container {
+    .container {
       padding-left: 130px;
       padding-right: 130px;
     }
@@ -190,12 +194,24 @@
       }
     }
 
-    .link__icon {
-      width: 88px;
-      height: 88px;
+    .user-nav__icon {
+      width: 90px;
+      height: 90px;
     }
 
-    .link__text {
+    .user-nav__svg {
+      &--phone {
+        width: 36px;
+        height: 36px;
+      }
+
+      &--mail {
+        width: 36px;
+        height: 26px;
+      }
+    }
+
+    .user-nav__text {
       margin-left: 22px;
     }
   }

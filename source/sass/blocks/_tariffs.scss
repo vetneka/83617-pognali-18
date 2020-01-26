@@ -5,7 +5,7 @@
 
   @include bg-light;
 
-  &.container {
+  .container {
     padding-left: 50px;
   }
 
@@ -14,7 +14,7 @@
   }
 
   &--business {
-    max-width: 270px;
+    width: calc(100% - 50px);
     margin: 0 auto;
     padding: 28px 0 0;
     border-radius: $base-border-radius;
@@ -39,6 +39,12 @@
 
     .tariffs-list__item-content {
       max-width: 100%;
+    }
+
+    .tariffs__button {
+      width: 100%;
+      padding-top: 20px;
+      padding-bottom: 20px;
     }
   }
 }
@@ -65,23 +71,19 @@
 }
 
 .tariffs__link {
-  display: inline-block;
-  text-transform: initial;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
 
-  .link__icon {
-    display: none;
-    width: 67px;
-    height: 67px;
-    background-color: darken($main-color, 5);
-    border-radius: 50%;
-  }
-
-  .link__text {
-    margin-left: 0;
-  }
+  text-decoration: none;
+  font-weight: 600;
+  color: #192144;
 
   &:hover {
-    opacity: 0.7;
+    .tariffs__link-svg,
+    .tariffs__link-text {
+      opacity: 0.7;
+    }
   }
 
   &:active {
@@ -89,11 +91,42 @@
   }
 }
 
-.tariffs__button {
+.tariffs__link-icon {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 67px;
+  height: 67px;
+  border-radius: 50%;
+  background-color: #e2e5f2;
+}
+
+.tariffs__link-svg {
+  width: 17px;
+  height: 21px;
+  fill: currentColor;
+}
+
+.tariffs__button {  
   text-transform: uppercase;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  background-color: $main-color-lighter-10;
+  background-color: #f3f4f8;
+
+  &:hover {
+    background-color: #edeff6;
+
+    .button__text {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    .button__text {
+      opacity: 0.3;
+    }
+  }
 }
 
 @media (max-width: $only-mobile-width) {
@@ -108,7 +141,7 @@
     padding-bottom: 63px;
     font-size: $base-font-size * 1.75;
 
-    &.container {
+    .container {
       padding-left: 40px;
       padding-right: 74px;
     }
@@ -137,7 +170,6 @@
       }
 
       .tariffs__button {
-        width: 100%;
         padding: 41px 41px 40px;
         text-transform: initial;
       }
@@ -152,6 +184,7 @@
 
   .tariffs__title-link {
     display: inline-block;
+    vertical-align: top;
     max-width: initial;
     margin-left: 35px;
   }
@@ -190,14 +223,15 @@
 
   .tariffs__link {
     font-size: $base-font-size * 1.25;
+    color: #132576;
+  }
+  
+  .tariffs__link-icon {
+    display: flex;
+  }
 
-    .link__icon {
-      display: inline-block;
-    }
-
-    .link__text {
-      margin-left: 16px;
-    }
+  .tariffs__link-text {
+    margin-left: 16px;
   }
 }
 
@@ -206,7 +240,7 @@
     padding-top: 88px;
     padding-bottom: 167px;
 
-    &.container {
+    .container {
       padding-left: 130px;
       padding-right: 60px;
     }

@@ -33,7 +33,7 @@
 
 @media (max-width: $only-mobile-width) {
   .promo {
-    &.container {
+    .container {
       padding-left: 0;
       padding-right: 0;
     }
@@ -63,7 +63,7 @@
   }
 
   .promo__title {
-    height: initial;
+    height: auto;
     padding: 0 130px;
     margin-bottom: 40px;
     font-size: $base-font-size * 3.75;
@@ -78,10 +78,6 @@
 
 @media (min-width: $desktop-width) {
   .promo {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-start;
-
     padding-top: 212px;
     padding-bottom: 122px;
 

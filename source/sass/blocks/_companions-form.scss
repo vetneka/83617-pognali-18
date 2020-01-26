@@ -85,6 +85,40 @@
   margin-left: -5px;
 }
 
+@media (max-width: $only-mobile-width), (min-width: $desktop-width) {
+  .companions-form {
+    &--no-js {
+      .companions-form__list,
+      .companions-form__range {
+        display: block;
+      }
+
+      .companions-form__transports {
+        display: flex;
+      }
+    }
+  }
+
+  .companions-form__fieldset {
+    &--opened {
+      .companions-form__list,
+      .companions-form__range {
+        display: block;
+      }
+
+      .companions-form__transports {
+        display: flex;
+      }
+    }
+  }
+
+  .companions-form__list,
+  .companions-form__transports,
+  .companions-form__range {
+    display: none;
+  }
+}
+
 @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
   .companions-form {
     font-size: $base-font-size * 1.25;

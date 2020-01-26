@@ -13,7 +13,7 @@
     &::before {
       content: "";
       position: absolute;
-      top: 13px;
+      top: 12px;
       left: -14px;
       width: 2px;
       height: calc(100% + 17px);
@@ -90,10 +90,11 @@
 .textarea-list__title-item {
   position: relative;
   width: 76%;
+  margin-right: auto;
   overflow: hidden;
   white-space: nowrap;
 
-  // Hidding
+  // Fade out
   &::after {
     content: "";
     position: absolute;
@@ -148,7 +149,7 @@
       /* Vertical line */
       &::before {
         top: 23px;
-        left: initial;
+        left: auto;
         right: 2px;
         width: 3px;
         height: calc(100% + 37px);
@@ -173,7 +174,7 @@
     &::before {
       top: calc(50% - 9px);
       right: -24px;
-      left: initial;
+      left: auto;
       width: 15px;
       height: 15px;
     }

@@ -1,9 +1,45 @@
 .countries-filter {
+  @include brs-bottom (30px, #edeff6, #e2e5f2);
+
+  position: absolute;
+  z-index: 5;
+
+  width: 100%;
   padding-top: 17px;
   padding-bottom: 30px;
-  background-color: $main-color-darker-10;
+  background-color: #e2e5f2;
 
-  @include brs-bottom (30px, $main-color, $main-color-darker-10);
+  &--no-js {
+    position: relative;
+
+    .countries-filter__button-outside,
+    .countries-filter__button-inside {
+      display: none;
+    }
+  }
+
+  &--close {
+    position: relative;
+
+    .countries-filter__continents-list,
+    .countries-filter__letters-list,
+    .countries-filter__countries-list,
+    .countries-filter__button-inside {
+      display: none;
+    }
+
+    .countries-filter__button-outside {
+      .button__inner {
+        &:first-child {
+          display: inline-flex;
+        }
+
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 .countries-filter__inner {
@@ -37,30 +73,6 @@
   }
 }
 
-.countries-filter__link {
-  width: 12px;
-  height: 12px;
-  margin-right: 4px;
-  margin-top: 3px;
-  font-size: inherit;
-
-  &--dotted {
-    display: none;
-  }
-
-  .link__text {
-    display: none;
-  }
-
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
-}
-
 .countries-filter__continents-list {
   width: 100%;
   padding-left: 25px;
@@ -81,23 +93,43 @@
   margin-bottom: 36px;
 }
 
-.countries-filter__button {
+.countries-filter__button-outside {
+  width: 17px;
+  height: 17px;
+  min-height: auto;
+  padding: 0;
+  margin-top: 2px;
+
+  .button__inner {
+    &:first-child {
+      display: none;
+    }
+
+    &:last-child {
+      display: inline-flex;
+    }
+  }
+
+  .button__text {
+    display: none;
+  }
+
+  .button__icon {
+    margin: auto;
+  }
+}
+
+.countries-filter__button-inside {
   width: 100%;
-  background-color: #d6daed;
+
+  .button__icon {
+    width: 12px;
+    height: 12px;
+    margin-left: 0;
+  }
 
   .button__text {
     margin-left: 12px;
-  }
-
-  &:hover {
-    background-color: #c8cee8;
-  }
-
-  &:active {
-    .button__text,
-    .button__icon {
-      opacity: 0.3;
-    }
   }
 }
 
@@ -106,6 +138,12 @@
     padding-top: 58px;
     padding-bottom: 73px;
     font-size: $base-font-size * 1.25;
+
+    &--close {
+      .countries-filter__continents-list {
+        display: flex;
+      }
+    }
   }
 
   .countries-filter__inner {
@@ -118,32 +156,6 @@
   .countries-filter__secondary-title {
     display: none;
     font-size: $base-font-size * 1.25;
-  }
-
-  .countries-filter__link {
-    width: 30%;
-    height: auto;
-    padding-left: 10px;
-    margin-top: 0;
-    margin-right: 0;
-
-    &.link {
-      &--icon {
-        &--cross {
-          &::before,
-          &::after {
-            top: calc(50% - 3px);
-            width: 26px;
-            height: 2px;
-          }
-        }
-      }
-    }
-
-    .link__text {
-      display: inline;
-      margin-left: 0;
-    }
   }
 
   .countries-filter__continents-list {
@@ -174,16 +186,51 @@
     padding-right: 0;
   }
 
-  .countries-filter__button {
+  .countries-filter__button-outside {
+    width: 30%;
+    height: auto;
+    margin-top: 0;
+    line-height: $base-line-height;
+
+    .button__inner {
+      justify-content: space-between;
+    }
+
+    .button__text {
+      display: block;
+    }
+
+    .button__icon {
+      width: 18px;
+      height: 18px;
+      margin: 0;
+    }
+  }
+
+  .countries-filter__button-inside {
     padding-top: 42px;
     padding-bottom: 39px;
+
     font-size: $base-font-size * 1.25;
+
+    .button__icon {
+      width: 18px;
+      height: 18px;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .countries-filter {
+    position: relative;
     padding-bottom: 149px;
+
+    background-color: #edeff6;
+
+    &::before,
+    &::after {
+      display: none;
+    }
   }
 
   .countries-filter__inner {
@@ -213,15 +260,6 @@
     width: auto;
     margin-bottom: 60px;
     order: -1;
-  }
-
-  .countries-filter__link {
-    width: auto;
-    margin-left: auto;
-
-    .link__text {
-      margin-right: 55px;
-    }
   }
 
   .countries-filter__letters-list {
