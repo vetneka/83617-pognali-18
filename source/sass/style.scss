@@ -8,7 +8,6 @@
 @import "blocks/visually-hidden";
 
 /* component */
-
 @import "blocks/tooltip";
 @import "blocks/user-level";
 @import "blocks/pagination";
@@ -33,7 +32,6 @@
 @import "blocks/cards-list";
 @import "blocks/catalog";
 @import "blocks/companions-filter";
-
 @import "blocks/contacts-form";
 @import "blocks/contacts";
 @import "blocks/continents-list";
@@ -43,7 +41,6 @@
 @import "blocks/direction";
 @import "blocks/direction-item";
 @import "blocks/letters-list";
-
 @import "blocks/main-form";
 @import "blocks/map";
 @import "blocks/modal";
@@ -51,31 +48,23 @@
 @import "blocks/transport";
 @import "blocks/transports";
 @import "blocks/copyright";
-
-/* Form blocks */
 @import "blocks/custom-checkbox";
 @import "blocks/custom-select";
 @import "blocks/stepper-input";
 @import "blocks/datepicker";
 @import "blocks/textarea-list";
 @import "blocks/range";
-
-/* Heading blocks*/
 @import "blocks/user-picture";
 @import "blocks/user-plan";
 @import "blocks/user-plans";
 @import "blocks/user-profile";
 @import "blocks/users";
-
-/* layout */
 @import "blocks/page";
 @import "blocks/main-header";
 @import "blocks/main-nav";
 @import "blocks/steps-list";
 @import "blocks/promo";
 @import "blocks/container";
-
 @import "blocks/add-plan";
 @import "blocks/add-plans";
-
 @import "blocks/companions-form";

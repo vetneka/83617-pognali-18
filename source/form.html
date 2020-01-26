@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Погнали: Направления</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <div class="page">
@@ -12,12 +12,14 @@
         <div class="container main-header__inner">
           <a class="main-logo main-header__main-logo" href="index.html">
             <picture>
-              <source media="(min-width: 1440px)"
-                srcset="img/logo-desktop-white@1x.png, img/logo-desktop-white@2x.png 2x">
-              <source media="(min-width: 768px)"
-                srcset="img/logo-tablet-white@1x.png, img/logo-tablet-white@2x.png 2x">
-              <img class="main-logo__img" width="100" height="19" alt="Логотип сервиса &laquo;Погнали&raquo;"
-                src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x">
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.webp, img/logo-desktop-white@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png, img/logo-desktop-white@2x.png 2x">
+
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.webp, img/logo-tablet-white@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png, img/logo-tablet-white@2x.png 2x">
+
+              <source srcset="img/logo-mobile-white@1x.png, img/logo-mobile-white@2x.png 2x" type="image/webp">
+              <img class="main-logo__img" width="100" height="19" alt="Логотип сервиса &laquo;Погнали&raquo;" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x">
             </picture>
           </a>
 
@@ -167,7 +169,10 @@
 
             <div class="user-picture user-profile__user-picture">
               <picture>
+                <source media="(min-width: 768px)" srcset="img/photo-account-tablet@1x.webp 1x, img/photo-account-tablet@2x.webp 2x" type="image/webp">
                 <source media="(min-width: 768px)" srcset="img/photo-account-tablet@1x.jpg 1x, img/photo-account-tablet@2x.jpg 2x">
+                
+                <source srcset="img/photo-account-mobile@1x.webp, img/photo-account-mobile@2x.webp 2x" type="image/webp">
                 <img class="user-profile__img" src="img/photo-account-mobile@1x.jpg" width="99" height="100" alt="Петя Демин" srcset="img/photo-account-mobile@2x.jpg 2x">
               </picture>
             </div>
@@ -720,9 +725,9 @@
                       <li class="textarea-list__item textarea-list__item--error">
                         <label class="textarea-list__title" for="user-entertainment-1">
                           <span class="textarea-list__title-item">Босния и Герцеговина</span>
-                          <div class="country-flag textarea-list__title-img tooltip" data-name="Босния и Герцеговина">
+                          <span class="country-flag textarea-list__title-img tooltip" data-name="Босния и Герцеговина">
                             <img src="img/flag-bosnia.svg" width="35" height="24" alt="Флаг Боснии и Герцеговины">
-                          </div>
+                          </span>
                         </label>
                         <textarea class="textarea-list__textarea" name="user-entertainment-1" id="user-entertainment-1" placeholder="План действий"></textarea>
                       </li>
@@ -730,9 +735,9 @@
                       <li class="textarea-list__item">
                         <label class="textarea-list__title" for="user-entertainment-2">
                           <span class="textarea-list__title-item">Чехия</span>
-                          <div class="country-flag textarea-list__title-img tooltip" data-name="Чехия">
+                          <span class="country-flag textarea-list__title-img tooltip" data-name="Чехия">
                             <img src="img/flag-czech.svg" width="35" height="24" alt="Флаг Чехии">
-                          </div>
+                          </span>
                         </label>
                         <textarea class="textarea-list__textarea" name="user-entertainment-2" id="user-entertainment-2">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
                       </li>
@@ -765,12 +770,14 @@
         <div class="main-footer__inner container">
           <a class="main-logo main-footer__main-logo" href="index.html">
             <picture>
-              <source media="(min-width: 1440px)"
-                srcset="img/logo-desktop-blue@1x.png, img/logo-desktop-blue@2x.png 2x">
-              <source media="(min-width: 768px)"
-                srcset="img/logo-tablet-blue@1x.png, img/logo-tablet-blue@2x.png 2x">
-              <img class="main-logo__img" width="100" height="19" alt="Логотип сервиса &laquo;Погнали&raquo;"
-                src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x">
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.webp, img/logo-desktop-blue@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png, img/logo-desktop-blue@2x.png 2x">
+
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp, img/logo-tablet-blue@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png, img/logo-tablet-blue@2x.png 2x">
+
+              <source srcset="img/logo-mobile-blue@1x.png, img/logo-mobile-blue@2x.png 2x" type="image/webp">
+              <img class="main-logo__img" width="100" height="19" alt="Логотип сервиса &laquo;Погнали&raquo;" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x">
             </picture>
           </a>
 
@@ -820,6 +827,6 @@
 
     <script src="js/picturefill.min.js"></script>
     <script src="js/svgforeverybody.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main.min.js"></script>
   </body>
 </html>
