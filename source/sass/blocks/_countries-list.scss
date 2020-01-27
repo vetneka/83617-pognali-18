@@ -2,11 +2,16 @@
   @include reset-list;
 }
 
-/*.countries-list__item {
-
-} */
-
 .countries-list__link {
   color: $main-color-text;
   text-decoration: none;
+}
+
+@media (min-width: $tablet-width) {
+  .countries-list__link {
+    font-size: $base-font-size * 1.25;
+    line-height: 1.5;
+    text-decoration: none;
+    color: $main-color-text;
+  }
 }

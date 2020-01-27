@@ -1,7 +1,22 @@
+.blockquote {
+  margin: 0;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  background-color: $main-color-darker-30;
+
+  .container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
 .blockquote__list {
   margin: 0;
+}
+
+.blockquote__text {
+  margin: 0;
   margin-bottom: 20px;
-  font-weight: 600;
 }
 
 .blockquote__author-name cite {
@@ -10,4 +25,42 @@
 
 .blockquote__author-position {
   margin-left: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .blockquote {
+    background-color: transparent;
+
+    .container {
+      padding-left: 74px;
+      padding-right: 74px;
+    }
+  }
+
+  .blockquote__text {
+    max-width: 45%;
+  }
+
+  .blockquote__list {
+    max-width: 45%;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .blockquote {
+    background-color: transparent;
+
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .blockquote__text {
+    max-width: 100%;
+  }
+
+  .blockquote__list {
+    max-width: 100%;
+  }
 }

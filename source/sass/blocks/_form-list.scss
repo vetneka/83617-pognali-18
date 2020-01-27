@@ -5,3 +5,16 @@
 .form-list__item {
   margin-bottom: 5px;
 }
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+  .form-list {
+    display: flex;
+  }
+
+  .form-list__item {
+    min-width: 35%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+}

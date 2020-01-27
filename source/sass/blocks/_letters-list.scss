@@ -2,10 +2,6 @@
   border-collapse: collapse;
 }
 
-/* .letters-list__row {
-
-} */
-
 .letters-list__letter {
   padding: 0;
   border: 1px solid rgba(0, 0, 0, 0.05);
@@ -36,4 +32,58 @@
   text-transform: uppercase;
 
   overflow: auto;
+}
+
+.letters-list__countries-list {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .letters-list__letter {
+    border: 0;
+
+    &:hover,
+    &--selected {
+      .letters-list__link {
+        background-color: transparent;
+        color: $main-color-darker-30;
+      }
+    }
+
+    &:nth-child(5n) {
+      .letters-list__link {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .letters-list__link {
+    width: 45px;
+    height: 70px;
+    margin-right: 31px;
+    padding: 0;
+    background-color: transparent;
+
+    font-size: $base-font-size * 3.75;
+    font-weight: 600;
+    color: rgba($main-color-darker-30, 0.2);
+    overflow: initial;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .letters-list__letter {
+    width: 255px;
+    padding-bottom: 50px;
+    vertical-align: top;
+  }
+
+  .letters-list__link {
+    margin-bottom: 20px;
+    margin-left: -5px;
+  }
+
+  .letters-list__countries-list {
+    display: block;
+  }
 }

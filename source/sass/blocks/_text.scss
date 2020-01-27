@@ -3,3 +3,13 @@
     font-weight: 600;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .text {
+    font-size: $base-font-size * 1.75;
+
+    &--bold {
+      font-size: $base-font-size * 1.3125;
+    }
+  }
+}

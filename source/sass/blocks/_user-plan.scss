@@ -22,3 +22,78 @@
 .user-plan__date {
   display: block;
 }
+
+.user-plan__link {
+  color: rgba($black, 0.3);
+}
+
+@media (min-width: $tablet-width) {
+  .user-plan {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: $base-font-size * 1.25;
+  }
+
+  .user-plan__title {
+    position: relative;
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 40px;
+    font-size: $base-font-size * 1.5;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -20px;
+      width: calc(100% + 40px);
+      height: 1px;
+      background-color: rgba($black, 0.05);
+    }
+  }
+
+  .user-plan__info {
+    display: flex;
+    flex-flow: row wrap;
+    width: 55%;
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
+
+  .user-plan__link {
+    margin-left: auto;
+    font-size: inherit;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .user-plan {
+    padding: 30px;
+  }
+
+  .user-plan__title {
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 50%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .user-plan__info {
+    justify-content: flex-start;
+    width: 30%;
+  }
+
+  .user-plan__companion-counter {
+    margin-right: 30px;
+  }
+}

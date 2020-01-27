@@ -1,18 +1,48 @@
-/* .likes-counter {
-
+.likes-counter {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  color: $main-color-darker-30;
+  font-size: $base-font-size * 0.875;
+  font-weight: 600;
+  background-color: transparent;
+  border: 0;
 }
 
 .likes-counter__icon {
-
+  position: relative;
+  display: block;
+  width: 31px;
+  height: 31px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: #f9eaea;
+  overflow: hidden;
 }
 
 .likes-counter__svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 13px;
+  height: 11px;
+  transform: translate(-50%, -50%);
 
   &--active {
-
+    circle {
+      fill: yellowgreen;
+    }
   }
 }
 
-.likes-counter__number {
+@media (min-width: $tablet-width) {
+  .likes-counter__icon {
+    width: 50px;
+    height: 50px;
+  }
 
-} */
+  .likes-counter__svg {
+    width: 20px;
+    height: 17px;
+  }
+}

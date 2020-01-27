@@ -2,14 +2,13 @@
   padding-top: 20px;
   padding-bottom: 30px;
   background-color: $main-color-darker-10;
-}
 
-.countries-filter__head {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 20px;
+  .container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 }
 
 .countries-filter__secondary-title {
@@ -19,19 +18,104 @@
   text-transform: uppercase;
 }
 
+.countries-filter__link {
+  width: 12px;
+  height: 12px;
+  margin-top: 4px;
+  font-size: inherit;
+
+  .link__text {
+    display: none;
+  }
+}
+
 .countries-filter__continents-list {
-  margin-bottom: 10px;
+  width: 100%;
+  margin-top: 30px;
+  margin-right: 25px;
+  margin-bottom: 50px;
+  margin-left: 25px;
 }
 
 .countries-filter__letters-list {
-  margin-bottom: 40px;
+  margin-bottom: 80px;
+  margin-left: 25px;
+  margin-right: 25px;
 }
 
 .countries-filter__countries-list {
+  width: 100%;
   margin-bottom: 10px;
+  margin-left: 25px;
+  margin-right: 25px;
 }
 
-/* .countries-filter__button {
-  position: relative;
-  padding-left: 20px;
-} */
+@media (min-width: $tablet-width) {
+  .countries-filter {
+    font-size: $base-font-size * 1.25;
+  }
+
+  .countries-filter__secondary-title {
+    display: none;
+    font-size: $base-font-size * 1.25;
+  }
+
+  .countries-filter__link {
+    width: calc(30% - 50px);
+    height: auto;
+    margin-top: 0;
+
+    .link__text {
+      display: inline;
+      margin-left: 0;
+    }
+  }
+
+  .countries-filter__continents-list {
+    display: flex;
+    flex-flow: row wrap;
+    width: calc(70% - 50px);
+    margin-top: 0;
+    font-weight: 600;
+    order: -1;
+
+    .continents-list__item {
+      margin-right: 20px;
+    }
+  }
+
+  .countries-filter__countries-list {
+    width: calc(30% - 50px);
+    margin-right: 0;
+  }
+
+  .countries-filter__button {
+    width: 100%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .countries-filter__secondary-title {
+    display: block;
+    margin-right: 20px;
+    order: -2;
+  }
+
+  .countries-filter__continents-list {
+    width: auto;
+    order: -1;
+  }
+
+  .countries-filter__link {
+    width: auto;
+    margin-left: auto;
+  }
+
+  .countries-filter__letters-list {
+    width: 100%;
+  }
+
+  .countries-filter__countries-list {
+    display: none;
+  }
+}

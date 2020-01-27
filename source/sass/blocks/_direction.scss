@@ -2,3 +2,68 @@
   padding-top: 65px;
   padding-bottom: 30px;
 }
+
+.direction__wrapper {
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-bottom: 50px;
+}
+
+.direction__cards-list {
+  margin-bottom: 10px;
+}
+
+@media (min-width: $tablet-width) {
+  .direction {
+    &.container {
+      padding-right: 74px;
+      padding-left: 74px;
+    }
+  }
+
+  .direction__wrapper {
+    max-width: 45%;
+    padding: 0;
+  }
+
+  .direction__cards-list {
+    margin-bottom: 47px;
+  }
+
+  .direction__button {
+    width: 100%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .direction {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &.container {
+      padding-right: 130px;
+      padding-left: 130px;
+    }
+  }
+
+  .direction__wrapper {
+    max-width: 450px;
+    margin-bottom: 90px;
+    padding: 0;
+    padding-right: 100px;
+  }
+
+  .direction__cards-list {
+    flex-grow: 1;
+    max-width: 560px;
+    order: -1;
+  }
+
+  .direction__button {
+    width: initial;
+    margin-left: 730px;
+    margin-top: -110px;
+  }
+}

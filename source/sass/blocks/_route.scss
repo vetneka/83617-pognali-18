@@ -1,18 +1,14 @@
 .route {
-  padding-top: 50px;
-  padding-bottom: 20px;
+  padding-top: 35px;
+  padding-bottom: 35px;
   background-color: $main-color-accent;
   border-bottom-left-radius: $large-border-radius;
   border-bottom-right-radius: $large-border-radius;
-
-  .container {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
 }
 
 .route__link {
   display: flex;
+  align-items: center;
   margin: 0 0 20px 0;
 
   .link__icon {
@@ -28,4 +24,56 @@
   padding-top: 20px;
   padding-bottom: 20px;
   border: 3px solid $main-color-darker-30;
+}
+
+@media (min-width: $tablet-width) {
+  .route {
+    padding-top: 47px;
+    padding-bottom: 80px;
+
+    &.container {
+      padding-left: 74px;
+      padding-right: 74px;
+    }
+  }
+
+  .route__link {
+    margin-bottom: 40px;
+    font-size: $base-font-size * 1.75;
+
+    .link__text {
+      max-width: 100%;
+    }
+  }
+
+  .route__button {
+    width: 100%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .route {
+    padding-top: 55px;
+    padding-bottom: 46px;
+
+    &.container {
+      padding-left: 130px;
+      padding-right: 130px;
+    }
+  }
+
+  .route__wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .route__link {
+    margin-bottom: 0;
+  }
+
+  .route__button {
+    width: auto;
+  }
 }

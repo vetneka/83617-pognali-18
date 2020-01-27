@@ -1,3 +1,9 @@
 .user-nav {
   @include reset-list;
 }
+
+.user-nav__item {
+  &:first-child {
+    margin-bottom: 50px;
+  }
+}

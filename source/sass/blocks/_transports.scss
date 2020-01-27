@@ -1,15 +1,7 @@
-/* .transports {
-
-} */
-
-.transports__list {
+.transports {
   @include reset-list;
 
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
 }
-
-/* .transports .transports__item {
-
-} */

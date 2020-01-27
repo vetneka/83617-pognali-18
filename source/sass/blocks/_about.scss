@@ -1,7 +1,53 @@
 .about {
-  padding-top: 25px;
-  padding-bottom: 80px;
+  padding-top: 40px;
+  padding-bottom: 62px;
   background: url("../img/about-mobile@1x.png") no-repeat center top / cover;
   background-color: $main-color-darker-30;
   color: $white;
+
+  &.container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+.about__button {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .about {
+    padding-top: 50px;
+    padding-bottom: 80px;
+    background-image: url("../img/about-tablet@1x.png");
+    background-size: contain;
+    background-position: right center;
+
+    &.container {
+      padding-left: 74px;
+      padding-right: 74px;
+    }
+  }
+
+  .about__wrapper {
+    width: 50%;
+  }
+
+  .about__button {
+    display: inline-block;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about {
+    padding-top: 100px;
+    padding-bottom: 160px;
+    background-image: url("../img/about-desktop@1x.png");
+    background-size: contain;
+
+    &.container {
+      padding-left: 130px;
+      padding-right: 130px;
+    }
+  }
 }
