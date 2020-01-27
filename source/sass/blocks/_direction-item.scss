@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   flex-flow: column-reverse wrap;
-  border-radius: $base-border-radius;
+  border-radius: 10px;
 
   &:last-of-type {
     // Fade out
@@ -13,7 +13,7 @@
       left: 0;
       right: 0;
       height: 81px;
-      background-image: linear-gradient(to top, $main-color, transparent);
+      background-image: linear-gradient(to top, $main-color-light, transparent);
       z-index: 2;
     }
   }

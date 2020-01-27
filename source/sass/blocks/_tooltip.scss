@@ -10,11 +10,11 @@
 
       padding: 10px 20px;
       border-radius: 4px;
-      background-color: #101d41;
+      background-color: $main-color-dark-50;
 
       font-size: $base-font-size;
       font-weight: 400;
-      color: #ffffff;
+      color: $white;
       text-align: center;
 
       z-index: 10;
@@ -32,7 +32,7 @@
       height: 0;
       border-style: solid;
       border-width: 0 10px 10px 10px;
-      border-color: transparent transparent #101d41 transparent;
+      border-color: transparent transparent $main-color-dark-50 transparent;
 
       z-index: 10;
     }

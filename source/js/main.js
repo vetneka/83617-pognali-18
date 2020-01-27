@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 var mainHeader = document.querySelector(".main-header");
 var mainLogo = document.querySelector(".main-logo");
@@ -23,6 +23,27 @@ hamburger.addEventListener("click", function () {
   mainHeader.classList.toggle("main-header--opened");
   mainLogo.classList.toggle("main-logo--opened");
   hamburger.classList.toggle("hamburger--opened");
+});
+
+window.addEventListener("scroll", function () {
+  var pageYOffset = window.pageYOffset;
+
+  if (pageYOffset) {
+    mainHeader.classList.add("main-header--scroll");
+    mainLogo.classList.add("main-logo--opened");
+    hamburger.classList.add("hamburger--scroll");
+
+  } else {
+    mainHeader.classList.remove("main-header--scroll");
+    mainLogo.classList.remove("main-logo--opened");
+    hamburger.classList.remove("hamburger--scroll");
+  }
+
+  /* if (pageYOffset === 0) {
+    hamburger.addEventListener("click", function () {
+      mainLogo.classList.toggle("main-logo--opened");
+    });
+  } */
 });
 
 if (countriesFilter || countriesFilterButtonOutside || countriesFilterButtonInside) {

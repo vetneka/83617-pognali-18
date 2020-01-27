@@ -1,9 +1,9 @@
 .user-plans {
   padding-top: 30px;
   padding-bottom: 30px;
-  background-color: #dfe3f0;
+  background-color: $main-color-light-50;
 
-  @include brs-top(30px, #edeff6, #dfe3f0);
+  @include brs-top(30px, $main-color-light, $main-color-light-50);
 
   .secondary-title {
     margin-bottom: 29px;
@@ -42,7 +42,7 @@
   .user-plans {
     padding-bottom: 64px;
 
-    @include brs-top(60px, #edeff6, #dfe3f0);
+    @include brs-top(60px, $main-color-light, $main-color-light-50);
 
     .container {
       padding-left: 123px;

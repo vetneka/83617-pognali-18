@@ -2,7 +2,6 @@
   position: relative;
   display: flex;
   margin-bottom: 18px;
-  //border-radius: 5px;
 
   overflow: hidden;
 
@@ -19,8 +18,8 @@
     transform: translate(-50%, -50%);
     width: 16px;
     height: 1px;
-    background-color: #cbced9;
-    box-shadow: 0 0 0 5px #ffffff;
+    background-color: $main-color-light-10;
+    box-shadow: 0 0 0 5px $white;
     z-index: 2;
   }
 }
@@ -48,7 +47,7 @@
 .range__input {
   width: 100%;
   padding: 10px 10px 10px 15px;
-  border: 1px solid #cbced9;
+  border: 1px solid $main-color-light-10;
 
   font-size: $base-font-size * 0.9375;
   font-weight: 500;
@@ -57,12 +56,12 @@
 
   &:hover {
     position: relative;
-    border-color: #959bb2;
+    border-color: $main-color-light-20;
   }
 
   &:focus {
     position: relative;
-    border-color: #161c35;
+    border-color: $main-color-dark-30;
   }
 }
 
@@ -81,13 +80,13 @@
   height: 2px;
 
   &--back {
-    background-color: rgba($main-color-darker-30, 0.2);
+    background-color: rgba($main-color-dark, 0.2);
   }
 
   &--front {
     left: 30%;
     width: 70%;
-    background-color: rgba($main-color-darker-30, 1);
+    background-color: rgba($main-color-dark, 1);
   }
 }
 
@@ -100,7 +99,7 @@
   padding: 0;
   margin: 0;
   border: 0;
-  background-color: $main-color-darker-30;
+  background-color: $main-color-dark;
   border-radius: 50%;
   outline: none;
   transition: transform 0.2s ease-in-out;
@@ -120,7 +119,7 @@
   }
 
   &:active {
-    box-shadow: 0 3px 7px 0 rgba(#1d2e5b, 0.35);
+    box-shadow: 0 3px 7px 0 rgba($main-color-dark-20, 0.35);
   }
 }
 

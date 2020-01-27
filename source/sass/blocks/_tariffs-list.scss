@@ -24,13 +24,13 @@
 
   &:nth-child(3n+1) {
     &::after {
-      background-color: $main-color-accent-darker-30;
+      background-color: $main-color-accent-60;
     }
   }
 
   &:nth-child(3n+2) {
     &::after {
-      background-color: $main-color-accent-darker-20;
+      background-color: $main-color-accent-10;
     }
   }
 

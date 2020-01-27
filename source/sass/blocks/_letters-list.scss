@@ -5,7 +5,7 @@
     .letters-list__letter {
       &--selected {
         .letters-list__link {
-          background-color: $main-color-darker-30;
+          background-color: $main-color-dark-20;
           color: $white;
         }
       }
@@ -23,8 +23,8 @@
     .letters-list__letter {
       &--selected {
         .letters-list__link {
-          background-color: #edeff6;
-          color: #1d2e5b;
+          background-color: $main-color-light;
+          color: $main-color-dark-20;
         }
       }
     }
@@ -38,10 +38,10 @@
 
 .letters-list__letter {
   padding: 0;
-  border: 1px solid #cbced9;
+  border: 1px solid $main-color-light-10;
 
   &:hover {
-    border-color: #959bb2;
+    border-color: $main-color-light-20;
   }
 }
 
@@ -56,11 +56,9 @@
 
   font-size: $base-font-size / 0.875;
   line-height: 1;
-  color: $main-color-darker-30;
+  color: $main-color-dark-20;
   text-decoration: none;
   text-transform: uppercase;
-
-  //overflow: auto;
 }
 
 @media (min-width: $tablet-width) {
@@ -72,7 +70,7 @@
         &--selected {
           .letters-list__link {
             background-color: transparent;
-            color: $main-color-darker-30;
+            color: $main-color-dark-20;
           }
         }
 
@@ -105,7 +103,7 @@
 
         font-size: $base-font-size * 3.75;
         font-weight: 600;
-        color: rgba($main-color-darker-30, 0.2);
+        color: rgba($main-color-dark-20, 0.2);
         overflow: initial;
       }
     }
@@ -119,7 +117,7 @@
       .letters-list__letter {
         &--selected {
           .letters-list__link {
-            background-color: $main-color-darker-30;
+            background-color: $main-color-dark-20;
             color: $white;
           }
         }

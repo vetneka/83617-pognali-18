@@ -1,5 +1,5 @@
 .user-level {
-  position: relative; // 45 60 94 100
+  position: relative;
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -79,7 +79,7 @@
       padding-left: 10px;
       padding-right: 10px;
       margin-top: 15px;
-      border-top: 2px solid #cbced9;
+      border-top: 2px solid $main-color-light-10;
       font-size: $base-font-size * 1.125;
     }
   }
@@ -154,7 +154,7 @@
   line-height: 1;
   font-weight: 400;
   text-align: center;
-  color: $main-color-darker-30;
+  color: $main-color-dark;
   border-radius: 50%;
   background-color: transparent;
 }
@@ -169,7 +169,7 @@
 .user-level__text {
   margin-top: 9px;
   padding-top: 2px;
-  border-top: 1px solid #cbced9;
+  border-top: 1px solid $main-color-light-10;
 }
 
 .user-level__progress {
@@ -184,7 +184,7 @@
 .user-level__progress-circle {
   fill: transparent;
   stroke-width: 3;
-  stroke: $main-color-accent-darker-30;
+  stroke: $main-color-accent-50;
 
   &.progress-25 {
     $percen: 25;

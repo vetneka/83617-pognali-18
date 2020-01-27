@@ -3,7 +3,7 @@
   padding-bottom: 30px;
 
   @include bg-light;
-  @include brs-bottom (30px, $main-color-darker-30, $main-color);
+  @include brs-bottom (30px, $main-color-dark, $main-color-light);
 }
 
 .direction__inner {
@@ -17,6 +17,8 @@
 }
 
 .direction__list {
+  @include reset-list;
+
   margin-bottom: 24px;
 }
 
@@ -45,7 +47,7 @@
     background-position: right 40px top 79px;
     background-size: 289px auto;
 
-    @include brs-bottom (60px, $main-color-darker-30, $main-color);
+    @include brs-bottom (60px, $main-color-dark, $main-color-light);
 
     .container {
       padding-left: 70px;
@@ -53,7 +55,7 @@
     }
 
     @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/flags-back@2x.png")
+      background-image: url("../img/flags-back@2x.png");
     }
   }
 
@@ -96,7 +98,7 @@
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: flex-start;
-      
+
       padding-right: 130px;
       padding-left: 130px;
     }

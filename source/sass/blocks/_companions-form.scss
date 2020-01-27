@@ -21,10 +21,10 @@
   width: 100%;
   padding: 10px 0 7px;
   text-transform: uppercase;
-  color: $main-color-darker-30;
+  color: $main-color-dark-20;
   font-size: inherit;
   font-weight: 600;
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba($black, 0.05);
   text-align: left;
 
   // Dropdown arrow
@@ -133,12 +133,12 @@
 
     &:first-of-type {
       padding-top: 23px;
-      border-top: 1px solid rgba(0, 0, 0, 0.05);
+      border-top: 1px solid rgba($black, 0.05);
     }
 
     &:last-of-type {
       padding-bottom: 36px;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      border-bottom: 1px solid rgba($black, 0.05);
     }
 
     &--transports {
@@ -185,7 +185,7 @@
 
   .companions-form__item {
     min-width: 31%;
-    margin-right: 17px;
+    margin-right: 13px;
     margin-bottom: 0;
 
     &:last-child {

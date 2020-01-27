@@ -1,8 +1,8 @@
 .add-plan {
   padding: 24px 25px 22px;
   background-color: $white;
-  border-radius: $base-border-radius;
-  color: $main-color-darker-30;
+  border-radius: 10px;
+  color: $main-color-dark-20;
 
   &:not(:first-child) {
     padding-bottom: 5px;
@@ -15,7 +15,7 @@
     &::before {
       width: 26px;
       height: 26px;
-      border: 1px solid #cbced9;
+      border: 1px solid $main-color-light-10;
     }
 
     // Tick
@@ -25,7 +25,7 @@
 
     &:hover {
       &::before {
-        border-color: #959bb2;
+        border-color: $main-color-light-20;
       }
     }
   }
@@ -35,8 +35,8 @@
   }
 
   input[type="checkbox"]:disabled + .custom-checkbox__label::before {
-    background-color: #e2e5f1;
-    border-color: #e2e5f1;
+    background-color: $main-color-light-30;
+    border-color: $main-color-light-30;
   }
 
   input[type="checkbox"]:disabled + .custom-checkbox__label::after {
@@ -64,43 +64,6 @@
 .add-plan__text {
   margin: 0;
   margin-bottom: 10px;
-}
-
-.add-plan__marker-list {
-  @include reset-list;
-  display: none;
-
-  font-size: $base-font-size * 1.25;
-  font-weight: 400;
-  text-transform: uppercase;
-  color: rgba($black, 0.6);
-}
-
-.add-plan__marker-item {
-  position: relative;
-  padding-left: 25px;
-  margin-bottom: 10px;
-
-  /* Custom marker*/
-  &::before {
-    content: "";
-    position: absolute;
-    top: 40%;
-    left: 0;
-    transform: translateY(-50%);
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background-color: currentColor;
-  }
-
-  &--current {
-    color: $main-color-darker-30;
-  }
-
-  &:last-child {
-    margin-bottom: 0;
-  }
 }
 
 .add-plan__middle {
@@ -341,16 +304,6 @@
     display: inline;
   }
 
-  .add-plan__marker-list {
-    display: block;
-  }
-
-  .add-plan__marker-item {
-    padding-left: 43px;
-    margin-bottom: 17px;
-    letter-spacing: 0.1em;
-  }
-
   .add-plan__head-item {
     &:nth-child(1) {
       width: 760px;
@@ -395,7 +348,7 @@
     &--country {
       padding-top: 62px;
       margin-bottom: 19px;
-      border-top: 1px solid rgba(0, 0, 0, 0.05);
+      border-top: 1px solid rgba($black, 0.05);
 
       /* Vertical line */
       &::after {

@@ -4,11 +4,11 @@
   background: url("../img/about-mobile@1x.png") no-repeat center top 5px/292px auto;
 
   @media (min-resolution: $retina-dppx) {
-    background-image: url("../img/about-mobile@2x.png")
+    background-image: url("../img/about-mobile@2x.png");
   }
 
   @include bg-dark;
-  @include brs-bottom (30px, $main-color, $main-color-darker-30);
+  @include brs-bottom (30px, $main-color-light, $main-color-dark);
 }
 
 .about__inner {
@@ -39,11 +39,11 @@
     padding-bottom: 88px;
 
     background-image: none;
-    background-color: $main-color-darker-40;
+    background-color: $main-color-dark;
 
     font-size: $base-font-size * 1.75;
 
-    @include brs-bottom (60px, $main-color, $main-color-darker-40);
+    @include brs-bottom (60px, $main-color-light, $main-color-dark);
   }
 
   .about__inner {
@@ -62,7 +62,7 @@
       left: 0;
       width: 100%;
       height: 212px;
-      background-color: $main-color-darker-30;
+      background-color: $main-color-dark-10;
       border-radius: 25px;
       z-index: -1;
     }
@@ -82,7 +82,7 @@
       z-index: -1;
 
       @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/about-tablet@2x.png")
+        background-image: url("../img/about-tablet@2x.png");
       }
     }
   }
@@ -128,7 +128,7 @@
       left: 0;
       width: 213px;
       height: 213px;
-      background-color: $main-color-darker-30;
+      background-color: $main-color-dark-10;
       border-radius: 25px;
       z-index: -1;
     }
@@ -148,7 +148,7 @@
       z-index: -1;
 
       @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/about-desktop@2x.png")
+        background-image: url("../img/about-desktop@2x.png");
       }
     }
   }

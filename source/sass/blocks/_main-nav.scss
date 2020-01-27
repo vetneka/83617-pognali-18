@@ -51,19 +51,7 @@
   .main-nav {
     position: relative;
     padding: 0;
-    padding-left: 105px;
     background-color: transparent;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-      width: 60px;
-      height: 2px;
-      background-color: $white;
-    }
   }
 
   .main-nav__site-nav {

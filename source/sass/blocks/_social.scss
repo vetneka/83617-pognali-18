@@ -10,7 +10,7 @@
     &-accent {
       .social__link {
         &:hover {
-          background-color: #ffbd30;
+          background-color: $main-color-accent-10;
         }
       }
     }
@@ -18,7 +18,7 @@
     &-dark {
       .social__link {
         &:hover {
-          background-color: #192144;
+          background-color: $main-color-dark;
 
           .social__icon {
             fill: $white;
@@ -33,7 +33,7 @@
 
         &:hover {
           .social__icon {
-            fill: #192144;
+            fill: $main-color-dark;
           }
         }
 
@@ -45,7 +45,7 @@
       }
 
       .social__icon {
-        fill: #cccccc;
+        fill: $main-color-light-100;
       }
     }
   }
@@ -61,7 +61,7 @@
   height: 45px;
   border-radius: 50%;
 
-  background-color: #ffd74b;
+  background-color: $main-color-accent;
 
 
   &:active {
@@ -72,7 +72,7 @@
 }
 
 .social__icon {
-  fill: #161c35;
+  fill: $main-color-dark-30;
 
   &--facebook {
     width: 11px;

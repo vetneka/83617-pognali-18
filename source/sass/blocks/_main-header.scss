@@ -4,7 +4,7 @@
   padding-top: 27px;
   padding-bottom: 35px;
 
-  z-index: 1;
+  z-index: 10;
 
   &--inner-page {
     padding-top: 19px;
@@ -12,6 +12,12 @@
     .main-header__user-nav {
       display: none;
     }
+  }
+
+  &--scroll {
+    position: fixed;
+    background-color: $white;
+    z-index: 50;
   }
 }
 
@@ -36,36 +42,13 @@
 }
 
 .main-header__user-nav {
-  position: absolute;
-  top: 457px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 270px;
-
-  .user-nav__icon {
-    width: 40px;
-    height: 40px;
-  }
+  display: none;
 }
 
 .main-header__hamburger {
   position: relative;
   margin-left: auto;
   z-index: 2;
-}
-
-@media (max-width: $only-mobile-width) {
-  .main-header {
-    &--opened {
-      .main-header__main-nav {
-        order: 1;
-      }
-
-      .main-header__user-nav {
-        display: none;
-      }
-    }
-  }
 }
 
 @media (max-width: $only-tablet-width) {
@@ -90,7 +73,17 @@
     }
 
     &--opened {
-      position: static;
+      position: fixed;
+      background-color: $white;
+      max-height: 100vh;
+      overflow-y: scroll;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        width: 0;
+        background: transparent;
+      }
 
       .main-header__main-nav {
         position: static;
@@ -101,6 +94,20 @@
       .main-header__user-nav {
         display: flex;
       }
+    }
+  }
+}
+
+@media (max-width: $only-mobile-width) {
+  .main-header {
+    &--opened {
+      .main-header__main-nav {
+        order: 1;
+      }
+    }
+
+    .main-header__user-nav {
+      display: none;
     }
   }
 }
@@ -118,10 +125,11 @@
   }
 
   .main-header__user-nav {
-    position: static;
+    display: flex;
+    /* position: static;
     top: auto;
     left: auto;
-    transform: none;
+    transform: none; */
     width: auto;
     order: 1;
 
@@ -148,6 +156,15 @@
 @media (min-width: $desktop-width) {
   .main-header {
     padding-top: 52px;
+    color: $white;
+
+    &--scroll {
+      color: $main-color-dark;
+
+      .site-nav__link {
+        color: $main-color-dark;
+      }
+    }
   }
 
   .main-header__inner {
@@ -185,7 +202,6 @@
         width: 18px;
         height: 14px;
       }
-
     }
   }
 

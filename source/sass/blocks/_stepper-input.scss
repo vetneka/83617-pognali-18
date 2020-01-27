@@ -29,17 +29,17 @@
   flex-flow: row nowrap;
 
   width: 100%;
-  border: 1px solid #cbced9;
+  border: 1px solid $main-color-light-10;
   border-radius: 4px;
   overflow: hidden;
   outline: none;
 
   &:hover {
-    border-color: #959bb2;
+    border-color: $main-color-light-20;
   }
 
   &:focus {
-    border-color: #161c35;
+    border-color: $main-color-dark-30;
   }
 }
 
@@ -61,7 +61,7 @@
     transform: translate(-50%, -50%);
     width: 14px;
     height: 2px;
-    background-color: #cccccc;
+    background-color: $main-color-light-100;
   }
 
   &--less {

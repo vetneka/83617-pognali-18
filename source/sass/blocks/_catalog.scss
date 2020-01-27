@@ -4,6 +4,8 @@
 }
 
 .catalog__list {
+  @include reset-list;
+
   margin-bottom: 22px;
   text-align: left;
 }

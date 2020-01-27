@@ -1,12 +1,12 @@
 .main {
   &--inner {
-    background-color: #edeff6;
+    background-color: $main-color-light;
     padding-bottom: 45px;
   }
 
   &--form {
     .main__head {
-      @include brs-bottom (20px, #edeff6, $main-color-darker-30);
+      @include brs-bottom (20px, $main-color-light, $main-color-dark);
     }
   }
 }
@@ -19,7 +19,7 @@
   padding-top: 80px;
 
   @include bg-dark;
-  @include brs-bottom (20px, #e2e5f2, $main-color-darker-30);
+  @include brs-bottom (20px, $main-color-light-80, $main-color-dark);
 
   .container {
     flex-grow: 1;
@@ -72,15 +72,15 @@
   .main {
     &--form {
       .main__head {
-        @include brs-bottom (60px, #edeff6, $main-color-darker-30);
+        @include brs-bottom (60px, $main-color-light, $main-color-dark);
       }
     }
   }
-  
+
   .main__head {
     height: 351px;
 
-    @include brs-bottom (60px, #e2e5f2, $main-color-darker-30);
+    @include brs-bottom (60px, $main-color-light-80, $main-color-dark);
   }
 
   .main__head-content {
@@ -103,7 +103,7 @@
 
 @media (min-width: $desktop-width) {
   .main__head {
-    @include brs-bottom (60px, #edeff6, $main-color-darker-30);
+    @include brs-bottom (60px, $main-color-light, $main-color-dark);
   }
 
   .main__head-content {

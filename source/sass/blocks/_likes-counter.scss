@@ -2,7 +2,7 @@
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  color: $main-color-darker-30;
+  color: $main-color-dark-30;
   font-size: $base-font-size * 0.875;
   font-weight: 600;
   background-color: transparent;
@@ -11,7 +11,7 @@
 
   &:hover {
     .likes-counter__icon {
-      background-color: #e2e5f2;
+      background-color: $main-color-light-80;
     }
 
     .likes-counter__svg {
@@ -60,7 +60,7 @@
   height: 31px;
   margin-right: 10px;
   border-radius: 50%;
-  background-color: #edeff6;
+  background-color: $main-color-light;
   overflow: hidden;
 }
 
@@ -72,7 +72,7 @@
   height: 12px;
   transform: translate(-50%, -50%);
   fill: none;
-  stroke: #192144;
+  stroke: $main-color-dark;
 }
 
 @media (min-width: $tablet-width) {

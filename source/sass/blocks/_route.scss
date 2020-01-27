@@ -18,7 +18,7 @@
 
   text-transform: uppercase;
   font-weight: 600;
-  color: #192144;
+  color: $main-color-dark;
 }
 
 .route__icon {
@@ -28,12 +28,12 @@
   flex-shrink: 0;
   width: 45px;
   height: 45px;
-  background-color: #121936;
+  background-color: $main-color-dark-40;
   border-radius: 50%;
 }
 
 .route__svg {
-  fill: #ffd74b;
+  fill: $main-color-accent;
 
   &--location {
     width: 14px;
@@ -50,7 +50,7 @@
   justify-content: space-between;
   width: 100%;
   padding: 20px 20px;
-  border: 3px solid $main-color-darker-30;
+  border: 3px solid $main-color-dark;
   border-radius: 10px;
 
   .button-icon {
@@ -62,7 +62,7 @@
   }
 
   &:hover {
-    background-color: #192144;
+    background-color: $main-color-dark;
     color: $white;
 
     .button__icon {
@@ -143,7 +143,7 @@
   .route__location {
     margin-bottom: 0;
   }
-  
+
   .route__icon {
     width: 90px;
     height: 90px;

@@ -17,8 +17,8 @@
   padding: 18px 0 27px;
   margin: 0;
   margin-bottom: 25px;
-  border: 1px solid rgba($main-color-darker-30, 0.15);
-  border-radius: $base-border-radius;
+  border: 1px solid rgba($main-color-dark, 0.15);
+  border-radius: 10px;
 
   &:last-child {
     margin-bottom: 0;
@@ -56,8 +56,8 @@
   text-transform: uppercase;
   font-weight: 600;
   text-align: center;
-  color: $main-color-darker-30;
-  background-color: #edeff6;
+  color: $main-color-dark;
+  background-color: $main-color-light;
   cursor: text;
 }
 
@@ -97,19 +97,19 @@
   display: block;
   width: 100%;
   padding: 18px 32px 27px 24px;
-  border: 1px solid rgba($main-color-darker-30, 0.15);
-  border-radius: $base-border-radius;
+  border: 1px solid rgba($main-color-dark, 0.15);
+  border-radius: 10px;
   background-color: transparent;
   text-align: left;
   resize: none;
   outline: none;
 
   &:hover {
-    border-color: #aeb4cb;
+    border-color: $main-color-light-140;
   }
 
   &:focus {
-    border-color: #161c35;
+    border-color: $main-color-dark-30;
   }
 }
 
@@ -221,16 +221,13 @@
     &--tags {
       width: 730px;
       margin-bottom: 0;
+      margin-right: auto;
       order: 4;
 
       .user-profile__legend {
         align-self: flex-start;
         margin-left: 20px;
       }
-    }
-
-    &--tags {
-      margin-right: auto;
     }
 
     &--transports {

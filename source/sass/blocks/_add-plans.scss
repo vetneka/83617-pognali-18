@@ -1,9 +1,9 @@
 .add-plans {
   padding-top: 31px;
   padding-bottom: 100px;
-  background-color: #d4d9eb;
+  background-color: $main-color-light-40;
 
-  @include brs-top(30px, #dfe3f0, #d4d9eb);
+  @include brs-top(30px, $main-color-light-50, $main-color-light-40);
 }
 
 .add-plans__top {
@@ -15,13 +15,13 @@
   padding-right: 20px;
   margin-bottom: 29px;
 
-  .add-plan__marker-list {
+  .add-plans__marker-list {
     display: flex;
     flex-flow: row wrap;
     margin-right: 5px;
   }
 
-  .add-plan__marker-item {
+  .add-plans__marker-item {
     margin-bottom: 0;
     padding-left: 20px;
 
@@ -47,6 +47,43 @@
   }
 }
 
+.add-plans__marker-list {
+  @include reset-list;
+  display: none;
+
+  font-size: $base-font-size * 1.25;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgba($black, 0.6);
+}
+
+.add-plans__marker-item {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+
+  /* Custom marker*/
+  &::before {
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: currentColor;
+  }
+
+  &--current {
+    color: $main-color-dark-20;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .add-plans {
     padding-top: 53px;
@@ -61,11 +98,11 @@
   .add-plans__top {
     margin-bottom: 56px;
 
-    .add-plan__marker-list {
+    .add-plans__marker-list {
       margin-right: -14px;
     }
 
-    .add-plan__marker-item {
+    .add-plans__marker-item {
       padding-left: 33px;
     }
   }
@@ -91,7 +128,7 @@
   .add-plans {
     padding-bottom: 113px;
 
-    @include brs-top(60px, #dfe3f0, #d4d9eb);
+    @include brs-top(60px, $main-color-light-50, $main-color-light-40);
 
     .container {
       padding-left: 60px;
@@ -100,7 +137,7 @@
   }
 
   .add-plans__top {
-    .add-plan__marker-list {
+    .add-plans__marker-list {
       display: none;
     }
   }
@@ -123,5 +160,15 @@
         margin-bottom: 104px;
       }
     }
+  }
+
+  .add-plans__marker-list {
+    display: block;
+  }
+
+  .add-plans__marker-item {
+    padding-left: 43px;
+    margin-bottom: 17px;
+    letter-spacing: 0.1em;
   }
 }

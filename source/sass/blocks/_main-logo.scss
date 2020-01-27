@@ -4,23 +4,10 @@
   height: 19px;
   line-height: 0;
 
-  /* &--no-js,
-  &--opened {
-    .main-logo__img {
-      content: url("../img/logo-mobile-blue@1x.png");
-    }
-
-    @media (min-resolution: $retina-dppx) {
-      .main-logo__img {
-        content: url("../img/logo-mobile-blue@2x.png");
-      }
-    }
-  } */
-
   &--no-js,
   &--opened {
     position: relative;
-    
+
     &::before {
       content: "";
       position: absolute;
@@ -29,6 +16,7 @@
       width: 100%;
       height: 100%;
       background-image: url("../img/logo-mobile-blue@1x.png");
+      background-size: contain;
       background-repeat: no-repeat;
     }
 
@@ -80,7 +68,7 @@
     &--no-js,
     &--opened {
       &::before {
-        background-image: url("../img/logo-desktop-white@1x.png");
+        background-image: url("../img/logo-desktop-blue@1x.png");
       }
 
       @media (min-resolution: $retina-dppx) {

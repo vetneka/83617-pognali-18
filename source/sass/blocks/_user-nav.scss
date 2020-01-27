@@ -25,7 +25,7 @@
 
   text-decoration: none;
   font-weight: 600;
-  color: #192144;
+  color: $main-color-dark;
 
   &--theme {
     &-accent {
@@ -33,11 +33,11 @@
         .user-nav__icon {
           &--color {
             &-accent-1 {
-              background-color: #f26926;
+              background-color: $main-color-accent-70;
             }
 
             &-accent-2 {
-              background-color: #ff8d30;
+              background-color: $main-color-accent-50;
             }
           }
         }
@@ -58,6 +58,10 @@
       &:active {
         opacity: 0.3;
       }
+
+      .user-nav__icon {
+        background-color: $main-color-dark;
+      }
     }
   }
 }
@@ -74,28 +78,27 @@
 
   &--color {
     &-accent-1 {
-      background-color: #ff8d30;
+      background-color: $main-color-accent-50;
     }
 
     &-accent-2 {
-      background-color: #ffbd30;
+      background-color: $main-color-accent-10;
     }
 
     &-dark {
-      background-color: #121936;
+      background-color: $main-color-dark-40;
     }
   }
 }
 
 .user-nav__svg {
-
   &--color {
     &-accent {
-      fill: #ffd74b;
+      fill: $main-color-accent;
     }
 
     &-dark {
-      fill: #161c35;
+      fill: $main-color-dark-30;
     }
   }
 

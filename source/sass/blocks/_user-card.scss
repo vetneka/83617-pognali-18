@@ -137,7 +137,7 @@
   display: block;
   padding-right: 35px;
   text-decoration: none;
-  color: #1d2e5b;
+  color: $main-color-dark-20;
 
   // Indicator online
   &::after {
@@ -260,7 +260,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .user-card {  
+  .user-card {
     border-radius: 20px;
 
     &--simplified {
@@ -286,14 +286,14 @@
         display: flex;
         flex-flow: row wrap;
         align-items: flex-start;
-    
+
         &--top {
           position: relative;
           width: 80%;
           padding-left: 222px;
           margin-bottom: 0;
         }
-    
+
         &--middle {
           display: flex;
           flex-flow: column wrap;
@@ -301,12 +301,12 @@
           width: 60px;
           margin-bottom: 14px;
           margin-left: auto;
-    
+
           .user-card__subtitle {
             display: none;
           }
         }
-    
+
         &--bottom {
           position: relative;
           left: 220px;
@@ -315,7 +315,7 @@
           margin-top: -68px;
         }
       }
-    
+
       .user-card__picture {
         position: absolute;
         top: 2px;
@@ -324,19 +324,19 @@
         height: 190px;
         border-radius: 20px;
       }
-    
+
       .user-card__title {
         width: auto;
         flex-grow: 0;
         margin-left: 0;
-    
+
         font-size: $base-font-size * 1.875;
       }
-    
+
       .user-card__title-link {
         text-decoration: none;
         color: $main-color-text;
-    
+
         // Indicator online
         &::after {
           content: "";
@@ -345,7 +345,7 @@
           height: 7px;
         }
       }
-    
+
       .user-card__tags {
         width: 100%;
         margin-top: 18px;
@@ -353,7 +353,7 @@
         margin-left: 4px;
         font-size: $base-font-size * 1.25;
       }
-    
+
       .user-card__subtitle {
         position: relative;
         margin: 0;
@@ -365,39 +365,39 @@
           width: calc(100% + 60px);
         }
       }
-    
+
       .user-card__countries-flags {
         width: 100%;
         padding: 0;
         margin-top: 2px;
         order: 1;
-    
+
         .user-card__subtitle {
           margin-bottom: 16px;
-    
+
           span {
             margin-left: 38px;
           }
         }
-    
+
         .countries-flags {
           flex-direction: row;
           font-size: $base-font-size * 1.25;
         }
-    
+
         .countries-flags__item {
           margin-right: 27px;
-    
+
           &:last-child {
             margin-right: 0;
           }
         }
-    
+
         .countries-flags__text {
           margin-left: 6px;
         }
       }
-    
+
       .user-card__transport {
         padding-left: 0;
         margin-bottom: 3px;
@@ -406,22 +406,22 @@
           flex-direction: column;
         }
       }
-    
+
       .user-card__user-level {
         margin-right: 0;
-    
+
         .user-level__text {
           display: block;
         }
       }
-    
+
       .user-card__likes-counter {
         position: static;
         padding: 0;
         font-size: $base-font-size * 1.25;
         order: 1;
       }
-    
+
       .user-card__button {
         padding: 17px 31px 13px;
         font-size: $base-font-size * 1.25;
@@ -450,14 +450,14 @@
         display: flex;
         flex-flow: row wrap;
         align-items: flex-start;
-    
+
         &--top {
           position: static;
           width: 53%;
           padding-left: 0;
           margin-bottom: 40px;
         }
-    
+
         &--middle {
           flex-direction: row;
           align-items: center;
@@ -465,12 +465,12 @@
           margin-left: 39px;
           flex-grow: 1;
           order: 1;
-    
+
           .user-card__subtitle {
             display: none;
           }
         }
-    
+
         &--bottom {
           position: static;
           width: 53%;
@@ -478,7 +478,7 @@
           margin-top: 4px;
         }
       }
-    
+
       .user-card__picture {
         top: 0;
         width: 287px;
@@ -486,56 +486,56 @@
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
       }
-    
+
       .user-card__img {
         height: 100%;
         object-fit: cover;
       }
-    
+
       .user-card__title-link {
         padding-right: 0;
         padding-left: 23px;
-    
+
         // Indicator online
         &::after {
           left: 0;
         }
       }
-    
+
       .user-card__tags {
         padding: 0 27px;
         margin-bottom: 0;
       }
-    
+
       .user-card__countries-flags {
         width: auto;
         margin-top: 0;
         margin-left: 42px;
         flex-grow: 1;
         order: 0;
-    
+
         .user-card__subtitle {
           display: none;
         }
-    
+
         .countries-flags {
           flex-direction: column;
         }
-    
+
         .countries-flags__item {
           margin-right: 0;
           margin-bottom: 11px;
-    
+
           &:last-child {
             margin-right: 0;
           }
         }
-    
+
         .countries-flags__text {
           margin-left: 14px;
         }
       }
-    
+
       .user-card__transport {
         width: 132px;
         margin-bottom: 0;
@@ -544,7 +544,7 @@
           flex-direction: row;
         }
       }
-    
+
       .user-card__button {
         flex-grow: 0;
       }

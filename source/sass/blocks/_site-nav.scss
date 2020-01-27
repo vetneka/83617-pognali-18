@@ -9,7 +9,7 @@
   line-height: $base-line-height / 1.1458;
   font-weight: 500;
   font-style: normal;
-  color: $main-color-darker-30;
+  color: $main-color-dark;
   text-transform: uppercase;
   text-decoration: none;
 
@@ -36,6 +36,18 @@
   .site-nav {
     position: relative;
     display: flex;
+    padding-left: 105px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 60px;
+      height: 2px;
+      background-color: currentColor;
+    }
   }
 
   .site-nav__item {

@@ -50,7 +50,7 @@
       &--text {
         width: calc(100% - 53px);
 
-        // Hidding
+        // Fade out
         &::after {
           content: "";
           position: absolute;
@@ -73,13 +73,13 @@
   &--add {
     // Small circle
     &::after {
-      background-color: $main-color;
+      background-color: $main-color-light;
     }
 
     .custom-select__item {
       &--text {
         border: 0;
-        background-color: $main-color;
+        background-color: $main-color-light;
 
         // Plus
         &::before {
@@ -95,7 +95,7 @@
       }
 
       &:hover {
-        background-color: #dfe3f0;
+        background-color: $main-color-light-50;
       }
 
       &:active {
@@ -111,8 +111,8 @@
 
     .custom-select__item {
       color: $white;
-      background-color: #1d2e5b;
-      border-color: #1d2e5b;
+      background-color: $main-color-dark-20;
+      border-color: $main-color-dark-20;
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
 
@@ -148,7 +148,7 @@
 
     &:hover {
       .custom-select__item {
-        border-color: #1d2e5b;
+        border-color: $main-color-dark-20;
       }
 
       .custom-select__dropdown {
@@ -166,7 +166,7 @@
 }
 
 .custom-select__item {
-  border: 1px solid #cbced9;
+  border: 1px solid $main-color-light-10;
   border-radius: 4px;
   outline: none;
 
@@ -281,7 +281,7 @@
 
 .custom-select__countries-list {
   padding: 57px 20px 20px;
-  border: 1px solid #cbced9;
+  border: 1px solid $main-color-light-10;
   border-top: 0;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -310,7 +310,7 @@
         &--text {
           width: calc(100% - 162px);
 
-          // Hidding
+          // Fade out
           &::after {
             display: none;
           }
@@ -388,7 +388,7 @@
       right: 207px;
       width: 1px;
       height: 100%;
-      background-color: #dee5fc;
+      background-color: $main-color-light-90;
     }
   }
 

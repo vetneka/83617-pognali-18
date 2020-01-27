@@ -11,8 +11,8 @@
   justify-content: space-between;
 
   padding: 22px 22px 32px 24px;
-  border-top-left-radius: $base-border-radius;
-  border-top-right-radius: $base-border-radius;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 
   font-size: $base-font-size * 1.125;
   line-height: 1;
@@ -21,15 +21,15 @@
   counter-increment: step;
 
   &:nth-child(4n+1) {
-    background-color: $main-color-accent-darker-30;
+    background-color: $main-color-accent-50;
   }
 
   &:nth-child(4n+2) {
-    background-color: $main-color-accent-darker-20;
+    background-color: $main-color-accent-60;
   }
 
   &:nth-child(4n+3) {
-    background-color: $main-color-accent-darker-10;
+    background-color: $main-color-accent-10;
   }
 
   &:nth-child(4n+4) {
@@ -42,8 +42,8 @@
 
   &:last-child {
     padding-bottom: 20px;
-    border-bottom-left-radius: $base-border-radius;
-    border-bottom-right-radius: $base-border-radius;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
 
   &::after {
@@ -55,7 +55,7 @@
   max-width: 70%;
   display: inline-block;
   vertical-align: top;
-  color: $main-color-darker-30;
+  color: $main-color-dark;
 }
 
 @media (min-width: $tablet-width) {
@@ -117,12 +117,12 @@
     flex-direction: row;
     justify-content: space-between;
 
-    &:nth-child(n) {
+    /* &:nth-child(n) {
       width: calc(26% + 45px);
       padding-right: 75px;
       padding-top: 30px;
       padding-bottom: 30px;
-    }
+    } */
 
     &:nth-child(4n+1) {
       width: calc(23.8% + 45px);
@@ -138,6 +138,10 @@
     }
 
     &:nth-child(n) {
+      width: calc(26% + 45px);
+      padding-right: 75px;
+      padding-top: 30px;
+      padding-bottom: 30px;
       border-top-left-radius: 20px;
       border-bottom-left-radius: 20px;
     }

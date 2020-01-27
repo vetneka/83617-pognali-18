@@ -4,7 +4,7 @@
   text-align: center;
 
   @include bg-dark;
-  @include brs-bottom (30px, $main-color-accent, $main-color-darker-30);
+  @include brs-bottom (30px, $main-color-accent, $main-color-dark);
 }
 
 .contacts__secondary-title {
@@ -25,7 +25,7 @@
   text-transform: lowercase;
   text-decoration: underline;
   font-weight: 300;
-  color: $main-color-accent;
+  color: $main-color-accent-40;
 
   &:hover {
     opacity: 0.7;
@@ -66,11 +66,11 @@
   }
 
   .user-nav__text {
-    color: #ffd74b;
+    color: $main-color-accent;
   }
 
   .user-nav__icon {
-    background-color: #121936;
+    background-color: $main-color-dark-40;
   }
 }
 
@@ -79,7 +79,7 @@
     padding-top: 76px;
     padding-bottom: 60px;
 
-    @include brs-bottom (60px, $main-color-accent, $main-color-darker-30);
+    @include brs-bottom (60px, $main-color-accent, $main-color-dark);
 
     .container {
       padding-left: 75px;

@@ -1,13 +1,13 @@
 .companions-filter {
   padding: 25px 25px 23px;
-  background-color: $main-color-accent;
-  border-radius: $medium-border-radius;
+  background-color: $main-color-accent-30;
+  border-radius: 25px;
 }
 
 .companions-filter__secondary-title {
   max-width: 50%;
   margin-bottom: 17px;
-  color: $main-color-darker-30;
+  color: $main-color-dark-20;
 }
 
 @media (min-width: $tablet-width) {
