@@ -231,10 +231,12 @@
   }
 
   .companions-form__fieldset {
-    /* &--transports {
-      padding-top: 0;
-      margin-bottom: 11px;
-    } */
+    &--opened {
+      .companions-form__list,
+      .companions-form__range {
+        margin-top: 14px;
+      }
+    }
 
     &--range {
       margin-bottom: 40px;
@@ -251,15 +253,6 @@
 
       .range__counter {
         margin-bottom: 32px;
-      }
-    }
-  }
-
-  .companions-form__fieldset {
-    &--opened {
-      .companions-form__list,
-      .companions-form__range {
-        margin-top: 14px;
       }
     }
   }
