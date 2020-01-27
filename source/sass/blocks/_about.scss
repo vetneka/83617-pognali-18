@@ -48,7 +48,7 @@
 
   .about__inner {
     position: relative;
-    padding-top: 39px;
+    padding-top: 37px;
     padding-left: 35px;
     padding-right: 352px;
 
@@ -78,7 +78,7 @@
       background-image: url("../img/about-tablet@1x.png");
       background-repeat: no-repeat;
       background-size: 376px auto;
-      background-position: right 0 top 45px;
+      background-position: right 0 top 47px;
       z-index: -1;
 
       @media (min-resolution: $retina-dppx) {
@@ -88,15 +88,15 @@
   }
 
   .about__secondary-title {
-    margin-bottom: 36px;
+    margin-bottom: 41px;
   }
 
   .about__text {
-    margin-bottom: 27px;
-    line-height: 1.24;
+    margin-bottom: 33px;
+    line-height: 1.2;
 
     &--bold {
-      margin-bottom: 49px;
+      margin-bottom: 52px;
       font-size: $base-font-size * 1.3125;
     }
   }
@@ -104,6 +104,8 @@
   .about__button {
     display: inline-flex;
     justify-content: space-between;
+    min-width: 274px;
+    padding-right: 36px;
 
     .button__icon {
       margin-left: 0;
@@ -158,7 +160,7 @@
   }
 
   .about__text {
-    margin-bottom: 32px;
+    margin-bottom: 38px;
 
     &--bold {
       padding-right: 160px;

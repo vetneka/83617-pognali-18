@@ -1,5 +1,5 @@
 .user-plans {
-  padding-top: 30px;
+  padding-top: 28px;
   padding-bottom: 30px;
   background-color: $main-color-light-50;
 
@@ -24,7 +24,7 @@
 
 @media (min-width: $tablet-width) {
   .user-plans {
-    padding-top: 58px;
+    padding-top: 54px;
     padding-bottom: 76px;
 
     .container {
@@ -33,7 +33,7 @@
     }
 
     .secondary-title {
-      margin-bottom: 47px;
+      margin-bottom: 49px;
     }
   }
 }

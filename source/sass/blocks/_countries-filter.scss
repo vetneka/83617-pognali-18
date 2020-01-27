@@ -6,7 +6,8 @@
 
   width: 100%;
   padding-top: 17px;
-  padding-bottom: 30px;
+  padding-bottom: 27px;
+  margin-bottom: 23px;
   background-color: $main-color-light-80;
 
   &--no-js {
@@ -20,6 +21,7 @@
 
   &--close {
     position: relative;
+    padding-bottom: 15px;
 
     .countries-filter__continents-list,
     .countries-filter__letters-list,
@@ -71,6 +73,10 @@
       background-image: url("../img/filter.svg");
     }
   }
+
+  span {
+    display: none;
+  }
 }
 
 .countries-filter__continents-list {
@@ -98,7 +104,7 @@
   height: 17px;
   min-height: auto;
   padding: 0;
-  margin-top: 2px;
+  margin-right: 5px;
 
   .button__inner {
     &:first-child {
@@ -136,10 +142,16 @@
 @media (min-width: $tablet-width) {
   .countries-filter {
     padding-top: 58px;
-    padding-bottom: 73px;
+    padding-bottom: 74px;
+    margin-bottom: 0;
     font-size: $base-font-size * 1.25;
 
+    @include brs-bottom (60px, $main-color-light, $main-color-light-80);
+
     &--close {
+      padding-bottom: 0;
+      margin-bottom: 44px;
+
       .countries-filter__continents-list {
         display: flex;
       }
@@ -187,9 +199,11 @@
   }
 
   .countries-filter__button-outside {
-    width: 30%;
+    width: 28%;
     height: auto;
     margin-top: 0;
+    margin-right: 0;
+    font-size: $base-font-size * 1.25;
     line-height: $base-line-height;
 
     .button__inner {
@@ -201,8 +215,8 @@
     }
 
     .button__icon {
-      width: 18px;
-      height: 18px;
+      width: 27px;
+      height: 15px;
       margin: 0;
     }
   }
@@ -223,7 +237,7 @@
 @media (min-width: $desktop-width) {
   .countries-filter {
     position: relative;
-    padding-bottom: 149px;
+    padding-bottom: 150px;
 
     background-color: $main-color-light;
 
@@ -231,12 +245,26 @@
     &::after {
       display: none;
     }
+
+    &--close {
+      position: relative;
+      padding-top: 108px;
+      padding-bottom: 0;
+      margin-top: -50px;
+
+      border-bottom-left-radius: 60px;
+      border-bottom-right-radius: 60px;
+
+      background-color: $main-color-light-80;
+
+      overflow: hidden;
+    }
   }
 
   .countries-filter__inner {
     &.container {
       padding-left: 80px;
-      padding-right: 125px;
+      padding-right: 80px;
     }
   }
 
@@ -254,11 +282,16 @@
         height: 17px;
       }
     }
+
+    span {
+      display: inline;
+    }
   }
 
   .countries-filter__continents-list {
     width: auto;
     margin-bottom: 60px;
+    margin-right: auto;
     order: -1;
   }
 
@@ -277,5 +310,16 @@
     width: calc(100% + 103px);
     margin-left: -20px;
     margin-right: -63px;
+  }
+
+  .countries-filter__button-outside {
+    width: 14%;
+    margin-right: 40px;
+  }
+
+  .countries-filter__button-inside {
+    width: calc(100% + 40px);
+    margin-right: -20px;
+    margin-left: -20px;
   }
 }

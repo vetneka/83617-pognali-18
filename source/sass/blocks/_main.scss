@@ -16,7 +16,7 @@
   flex-flow: row wrap;
   align-items: flex-end;
   height: 143px;
-  padding-top: 80px;
+  padding-top: 93px;
 
   @include bg-dark;
   @include brs-bottom (20px, $main-color-light-80, $main-color-dark);
@@ -97,14 +97,30 @@
   }
 
   .main__pagination {
-    margin-bottom: 77px;
+    margin-bottom: 68px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .main__head {
-    @include brs-bottom (60px, $main-color-light, $main-color-dark);
+  .main {
+    &--catalog {
+      .main__head {
+        position: relative;
+        border-bottom-left-radius: 60px;
+        border-bottom-right-radius: 60px;
+        z-index: 7;
+
+        &::before,
+        &::after {
+          display: none;
+        }
+      }
+    }
   }
+
+  /* .main__head {
+    @include brs-bottom (60px, $main-color-light, $main-color-dark);
+  } */
 
   .main__head-content {
     padding-left: 65px;
@@ -129,6 +145,6 @@
 
   .main__pagination {
     width: 950px;
-    margin-bottom: 90px;
+    margin-bottom: 82px;
   }
 }

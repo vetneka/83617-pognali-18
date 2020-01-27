@@ -1,13 +1,13 @@
 .main-header {
   position: absolute;
   width: 100%;
-  padding-top: 27px;
-  padding-bottom: 35px;
+  padding-top: 24px;
+  padding-bottom: 25px;
 
   z-index: 10;
 
   &--inner-page {
-    padding-top: 19px;
+    padding-top: 16px;
 
     .main-header__user-nav {
       display: none;
@@ -65,6 +65,7 @@
       .main-header__user-nav {
         display: flex;
         margin-left: auto;
+        order: 0;
       }
 
       .main-header__hamburger {
@@ -115,7 +116,7 @@
 @media (min-width: $tablet-width) {
   .main-header {
     padding-top: 41px;
-    padding-bottom: 40px;
+    padding-bottom: 41px;
 
     &--inner-page {
       .main-header__user-nav {
@@ -126,10 +127,6 @@
 
   .main-header__user-nav {
     display: flex;
-    /* position: static;
-    top: auto;
-    left: auto;
-    transform: none; */
     width: auto;
     order: 1;
 
@@ -149,16 +146,19 @@
   }
 
   .main-header__hamburger {
+    left: 12px;
     margin-right: auto;
   }
 }
 
 @media (min-width: $desktop-width) {
   .main-header {
-    padding-top: 52px;
+    padding-top: 50px;
     color: $white;
 
     &--scroll {
+      padding-top: 19px;
+      padding-bottom: 19px;
       color: $main-color-dark;
 
       .site-nav__link {

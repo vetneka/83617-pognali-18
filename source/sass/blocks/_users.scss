@@ -65,8 +65,9 @@
 
 @media (min-width: $tablet-width) {
   .users {
-    padding-top: 141px;
+    padding-top: 137px;
     padding-bottom: 88px;
+    z-index: -2;
 
     background-image:
       url("../img/smolov-back-desktop@1x.png"),
@@ -93,14 +94,27 @@
   }
 
   .users__inner {
+    position: relative;
     padding-left: 0;
     padding-right: 180px;
 
     font-size: $base-font-size * 1.75;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -57px;
+      left: -35px;
+      width: 213px;
+      height: 213px;
+      background-color: #141b3b;
+      border-radius: 20px;
+      z-index: -1;
+    }
   }
 
   .users__secondary-title {
-    margin-bottom: 54px;
+    margin-bottom: 57px;
   }
 
   .users__text {
@@ -153,6 +167,10 @@
   .users__inner {
     width: 480px;
     padding-right: 0;
+
+    &::before {
+      left: -67px;
+    }
   }
 
   .users__list {
@@ -161,6 +179,9 @@
   }
 
   .users__text {
+    margin-bottom: 38px;
+    line-height: 1.2;
+
     &--bold {
       padding-right: 50px;
     }

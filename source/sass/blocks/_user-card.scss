@@ -1,7 +1,7 @@
 .user-card {
   position: relative;
-  padding: 15px 18px 20px;
-  border-radius: 10px;
+  padding: 15px 18px 23px;
+  border-radius: 20px;
   background-color: $white;
   transition: box-shadow 0.2s ease-in-out;
 
@@ -18,6 +18,8 @@
     flex-flow: column wrap;
     align-items: center;
     padding-top: calc(100% - 10px);
+    padding-bottom: 12px;
+    border-radius: 10px;
     text-align: center;
     color: $main-color-text;
 
@@ -26,6 +28,10 @@
 
       &--top {
         width: 100%;
+      }
+
+      &--middle {
+        margin-bottom: 5px;
       }
     }
 
@@ -52,7 +58,7 @@
 
       // Indicator online
       &::after {
-        top: 10px;
+        top: calc(50% - 3px);
         left: 0;
         right: initial;
       }
@@ -103,6 +109,7 @@
   }
 
   &--middle {
+    padding-left: 8px;
     margin-bottom: 14px;
   }
 }
@@ -200,7 +207,7 @@
 
 .user-card__countries-flags {
   padding-left: 7px;
-  padding-bottom: 9px;
+  padding-bottom: 10px;
 
   .countries-flags {
     flex-direction: column;
@@ -216,12 +223,8 @@
   }
 
   .countries-flags__text {
-    margin-left: 9px;
+    margin-left: 13px;
   }
-}
-
-.user-card__transport {
-  padding-left: 8px;
 }
 
 .user-card__user-level {
@@ -265,13 +268,41 @@
 
     &--simplified {
       padding-top: 275px;
+      padding-bottom: 18px;
+
+      .user-card__wrapper {
+        &--top {
+          margin-bottom: 21px;
+        }
+      }
 
       .user-card__picture {
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
       }
 
+      .user-card__title {
+        font-size: $base-font-size * 1.5;
+      }
+
+      .user-card__title-link {
+        padding-right: 17px;
+
+        // Indicator online
+        &::after {
+          top: 12px;
+          left: -5px;
+          width: 8px;
+          height: 8px;
+        }
+      }
+
+      .user-card__countries-flags {
+        padding-bottom: 15px;
+      }
+
       .user-card__tags {
+        margin-top: 20px;
         font-size: $base-font-size * 1.25;
       }
     }
@@ -280,7 +311,7 @@
       display: flex;
       flex-flow: row wrap;
       align-items: flex-start;
-      padding: 33px 25px 18px 35px;
+      padding: 33px 35px 18px 35px;
 
       .user-card__wrapper {
         display: flex;
@@ -386,7 +417,7 @@
         }
 
         .countries-flags__item {
-          margin-right: 27px;
+          margin-right: 34px;
 
           &:last-child {
             margin-right: 0;

@@ -38,12 +38,6 @@ window.addEventListener("scroll", function () {
     mainLogo.classList.remove("main-logo--opened");
     hamburger.classList.remove("hamburger--scroll");
   }
-
-  /* if (pageYOffset === 0) {
-    hamburger.addEventListener("click", function () {
-      mainLogo.classList.toggle("main-logo--opened");
-    });
-  } */
 });
 
 if (countriesFilter || countriesFilterButtonOutside || countriesFilterButtonInside) {

@@ -25,13 +25,14 @@
 
 @media (min-width: $tablet-width) {
   .map {
-    height: 582px;
-    margin-top: -60px;
+    height: 600px;
+    margin-top: -84px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .map {
-    height: 517px;
+    height: 647px;
+    margin-top: -200px;
   }
 }

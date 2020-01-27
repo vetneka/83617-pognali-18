@@ -36,6 +36,10 @@
 
 @media (min-width: $tablet-width) {
   .page__main-footer {
-    margin-top: -100px;
+    margin-top: -54px;
+
+    &--inner {
+      margin-top: -98px
+    }
   }
 }

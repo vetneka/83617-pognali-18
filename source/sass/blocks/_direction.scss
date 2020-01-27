@@ -9,7 +9,7 @@
 .direction__inner {
   padding-left: 25px;
   padding-right: 25px;
-  margin-bottom: 58px;
+  margin-bottom: 60px;
 }
 
 .direction__secondary-title {
@@ -19,7 +19,7 @@
 .direction__list {
   @include reset-list;
 
-  margin-bottom: 24px;
+  margin-bottom: 26px;
 }
 
 .direction__list-item {
@@ -47,6 +47,8 @@
     background-position: right 40px top 79px;
     background-size: 289px auto;
 
+    z-index: 2;
+
     @include brs-bottom (60px, $main-color-dark, $main-color-light);
 
     .container {
@@ -60,9 +62,22 @@
   }
 
   .direction__inner {
+    position: relative;
     padding-left: 4px;
     padding-right: 280px;
     margin-bottom: 103px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: calc(100% + 64px);
+      left: -30px;
+      width: 141px;
+      height: 141px;
+      background-color: $main-color-light-80;
+      border-radius: 20px;
+      z-index: -1;
+    }
   }
 
   .direction__secondary-title {
@@ -110,6 +125,11 @@
     padding-top: 5px;
     padding-right: 100px;
     margin-bottom: 90px;
+
+    &::before {
+      top: -73px;
+      left: -800px;
+    }
   }
 
   .direction__list {

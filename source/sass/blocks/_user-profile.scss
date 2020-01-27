@@ -14,9 +14,9 @@
   align-items: center;
 
   width: 100%;
-  padding: 18px 0 27px;
+  padding: 20px 0 27px;
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
   border: 1px solid rgba($main-color-dark, 0.15);
   border-radius: 10px;
 
@@ -25,6 +25,7 @@
   }
 
   &--tags {
+    padding-bottom: 0;
     border: none;
     line-height: 1.7;
     order: 4;
@@ -85,7 +86,6 @@
 
 .user-profile__button {
   width: 100%;
-  margin-bottom: 33px;
   order: 3;
 
   .button {
@@ -96,7 +96,7 @@
 .user-profile__textarea {
   display: block;
   width: 100%;
-  padding: 18px 32px 27px 24px;
+  padding: 24px 32px 27px 24px;
   border: 1px solid rgba($main-color-dark, 0.15);
   border-radius: 10px;
   background-color: transparent;
@@ -116,6 +116,7 @@
 @media (min-width: $tablet-width) {
   .user-profile {
     padding-top: 64px;
+    padding-bottom: 40px;
 
     font-size: $base-font-size * 1.25;
 
@@ -201,7 +202,7 @@
   }
 
   .user-profile__textarea {
-    padding: 35px 32px 15px 38px;
+    padding: 35px 32px 12px 38px;
   }
 }
 
@@ -273,6 +274,8 @@
 
     .button {
       min-height: 48px;
+      padding-top: 15px;
+      padding-bottom: 15px;
       border-top-right-radius: 0;
       border-top-left-radius: 0;
     }

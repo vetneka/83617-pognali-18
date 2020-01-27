@@ -19,7 +19,7 @@
   position: relative;
   display: block;
   width: 100%;
-  padding: 10px 0 7px;
+  padding: 12px 0 11px;
   text-transform: uppercase;
   color: $main-color-dark-20;
   font-size: inherit;
@@ -63,7 +63,7 @@
 }
 
 .companions-form__item {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 
   &:last-child {
     margin-bottom: 0;
@@ -185,7 +185,7 @@
 
   .companions-form__item {
     min-width: 31%;
-    margin-right: 13px;
+    margin-right: 17px;
     margin-bottom: 0;
 
     &:last-child {
@@ -231,10 +231,10 @@
   }
 
   .companions-form__fieldset {
-    &--transports {
-      padding-top: 8px;
+    /* &--transports {
+      padding-top: 0;
       margin-bottom: 11px;
-    }
+    } */
 
     &--range {
       margin-bottom: 40px;
@@ -253,6 +253,19 @@
         margin-bottom: 32px;
       }
     }
+  }
+
+  .companions-form__fieldset {
+    &--opened {
+      .companions-form__list,
+      .companions-form__range {
+        margin-top: 14px;
+      }
+    }
+  }
+
+  .companions-form__item {
+    margin-bottom: 12px;
   }
 
   .companions-form__button {
