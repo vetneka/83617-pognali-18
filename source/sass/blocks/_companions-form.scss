@@ -188,8 +188,13 @@
     margin-right: 17px;
     margin-bottom: 0;
 
+    &:nth-child(3n),
     &:last-child {
       margin-right: 0;
+    }
+
+    &:nth-child(n+4) {
+      margin-top: 10px;
     }
   }
 
