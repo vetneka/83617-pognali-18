@@ -1,17 +1,14 @@
-/* .datepicker {
-
-} */
-
 .datepicker__head {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-top: 1px solid #cbced9;
-  border-bottom: 1px solid #cbced9;
+
+  padding-top: 7px;
+  padding-bottom: 5px;
+  margin-bottom: 23px;
+  border-top: 1px solid $main-color-light-10;
+  border-bottom: 1px solid $main-color-light-10;
 }
 
 .datepicker__button {
@@ -32,6 +29,14 @@
     background-image: url("../img/month-arrow-right.svg");
     background-position: right center;
   }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 .datepicker__title {
@@ -41,10 +46,6 @@
   font-weight: 600;
   text-align: center;
 }
-
-/* .datepicker__main {
-
-} */
 
 .datepicker__dates {
   width: 100%;
@@ -68,23 +69,21 @@
   }
 
   &--weekend {
-    color: #ff5c23;
+    color: $main-color-secondary;
   }
 }
 
 .datepicker__date {
   width: 32px;
-  height: 32px;
+  height: 31px;
   padding: 5px;
-  border: 1px solid #cbced9;
-  background-color: $main-color;
-  overflow: auto;
+  border: 1px solid $main-color-light-10;
+  background-color: $main-color-light;
 
   &:hover:not(&--disabled) {
     position: relative;
     color: $white;
-    background-color: $main-color-darker-30;
-    overflow: initial;
+    background-color: $main-color-dark-20;
 
     &::before {
       content: "";
@@ -92,8 +91,8 @@
       top: -1px;
       left: -1px;
       width: calc(100% + 1px);
-      height: calc(100% + 1px);
-      border: 2px solid #ff5c23;
+      height: 31px;
+      border: 2px solid $main-color-secondary;
       background-color: transparent;
     }
   }
@@ -105,7 +104,7 @@
 
   &--selected {
     color: $white;
-    background-color: $main-color-darker-30;
+    background-color: $main-color-dark-50;
   }
 }
 
@@ -116,6 +115,30 @@
 }
 
 @media (min-width: $tablet-width) {
+  .datepicker__head {
+    padding-top: 25px;
+    padding-bottom: 23px;
+    margin-bottom: 37px;
+  }
+
+  .datepicker__title {
+    font-size: $base-font-size * 2.25;
+  }
+
+  .datepicker__button {
+    width: 40px;
+    height: 37px;
+    background-size: 20px 40px;
+
+    &--prev {
+      background-position: left 15px top;
+    }
+
+    &--next {
+      background-position: right 15px center;
+    }
+  }
+
   .datepicker__day-name {
     font-size: $base-font-size * 1.125;
 
@@ -126,19 +149,42 @@
 
   .datepicker__date {
     width: 77px;
-    height: 70px;
+    height: 69px;
 
     font-size: $base-font-size * 1.25;
+
+    &:hover:not(&--disabled) {
+      &::before {
+        height: 69px;
+      }
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
+  .datepicker__head {
+    margin-bottom: 17px;
+  }
+
+  .datepicker__day-name {
+    padding-left: 14px;
+    padding-bottom: 17px;
+    text-align: left;
+  }
+
   .datepicker__date {
-    padding: 10px;
+    height: 70px;
+    padding: 21px 17px 10px;
 
     font-size: $base-font-size * 1.125;
     text-align: left;
     vertical-align: top;
+
+    &:hover:not(&--disabled) {
+      &::before {
+        height: 70px;
+      }
+    }
   }
 
   .datepicker__date-mounth {
@@ -148,6 +194,16 @@
 
   .datepicker__date-booking {
     display: block;
-    margin-top: 10px;
+    margin-top: 2px;
+  }
+
+  .datepicker__button {
+    &--prev {
+      background-position: left top;
+    }
+
+    &--next {
+      background-position: right center;
+    }
   }
 }

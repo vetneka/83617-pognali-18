@@ -1,79 +1,168 @@
 .route {
-  padding-top: 35px;
+  position: relative;
+  padding-top: 32px;
   padding-bottom: 35px;
-  background-color: $main-color-accent;
-  border-bottom-left-radius: $large-border-radius;
-  border-bottom-right-radius: $large-border-radius;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+
+  z-index: 2;
+
+  @include bg-accent;
 }
 
-.route__link {
-  display: flex;
+.route__location {
+  display: inline-flex;
+  justify-content: flex-start;
   align-items: center;
-  margin: 0 0 20px 0;
+  margin: 0 0 32px 0;
 
-  .link__icon {
-    flex-shrink: 0;
-  }
+  text-transform: uppercase;
+  font-weight: 600;
+  color: $main-color-dark;
+}
 
-  .link__text {
-    max-width: 75%;
+.route__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 45px;
+  height: 45px;
+  background-color: $main-color-dark-40;
+  border-radius: 50%;
+}
+
+.route__svg {
+  fill: $main-color-accent;
+
+  &--location {
+    width: 14px;
+    height: 22px;
   }
+}
+
+.route__text {
+  max-width: 75%;
+  margin-left: 20px;
 }
 
 .route__button {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border: 3px solid $main-color-darker-30;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 20px 18px;
+  border: 3px solid $main-color-dark;
+  border-radius: 10px;
+
+  .button-icon {
+    margin-left: 0;
+  }
+
+  .button__text {
+    margin-right: 16px;
+  }
+
+  &:hover {
+    background-color: $main-color-dark;
+    color: $white;
+
+    .button__icon {
+      fill: $white;
+    }
+  }
+
+  &:active {
+    .button__text,
+    .button__icon {
+      opacity: 0.3;
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {
   .route {
     padding-top: 47px;
-    padding-bottom: 80px;
+    padding-bottom: 84px;
 
-    &.container {
-      padding-left: 74px;
-      padding-right: 74px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+
+    .container {
+      padding-left: 75px;
+      padding-right: 75px;
     }
   }
 
-  .route__link {
-    margin-bottom: 40px;
+  .route__location {
+    margin-bottom: 42px;
     font-size: $base-font-size * 1.75;
+  }
 
-    .link__text {
-      max-width: 100%;
+  .route__icon {
+    width: 68px;
+    height: 68px;
+  }
+
+  .route__svg {
+    &--location {
+      width: 21px;
+      height: 32px;
     }
+  }
+
+  .route__text {
+    max-width: 100%;
+    margin-left: 25px;
   }
 
   .route__button {
-    width: 100%;
+    padding: 27px 33px 24px;
+    border-radius: 20px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .route {
     padding-top: 55px;
-    padding-bottom: 46px;
+    padding-bottom: 57px;
 
-    &.container {
+    .container {
       padding-left: 130px;
       padding-right: 130px;
     }
   }
 
-  .route__wrapper {
+  .route__inner {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+
+    padding-left: 154px;
   }
 
-  .route__link {
+  .route__location {
     margin-bottom: 0;
+  }
+
+  .route__icon {
+    width: 90px;
+    height: 90px;
+  }
+
+  .route__svg {
+    &--location {
+      width: 28px;
+      height: 43px;
+    }
+  }
+
+  .route__text {
+    margin-left: 31px;
   }
 
   .route__button {
     width: auto;
+    padding-left: 36px;
+    padding-right: 36px;
   }
 }

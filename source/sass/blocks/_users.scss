@@ -1,36 +1,142 @@
 .users {
-  padding-top: 60px;
+  padding-top: 73px;
   padding-bottom: 30px;
-  background: url("../img/smolov-back-desktop@1x.png") no-repeat right 25px top 35px / 143px, url("../img/rogovaya-back-mobile@1x.png") no-repeat left -10px top 300px / 61px 71px;
-  background-color: $main-color-darker-30;
+
+  background-image:
+    url("../img/smolov-back-desktop@1x.png"),
+    url("../img/rogovaya-back-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position:
+    right 25px top 40px,
+    left top 311px;
+  background-size:
+    143px auto,
+    61px 71px;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image:
+      url("../img/smolov-back-desktop@2x.png"),
+      url("../img/rogovaya-back-mobile@2x.png");
+  }
+
+  @include bg-dark;
+  @include brs-bottom (30px, $main-color-light, $main-color-dark);
 }
 
-.users__wrapper {
+.users__inner {
   padding-left: 25px;
   padding-right: 25px;
-  margin-bottom: 50px;
+  margin-bottom: 56px;
 }
 
-.users__cards-list {
+.users__secondary-title {
   margin-bottom: 20px;
+}
+
+.users__text {
+  margin: 0;
+  margin-bottom: 20px;
+
+  &--bold {
+    font-weight: 600;
+  }
+}
+
+.users__list {
+  @include reset-list;
+  margin-bottom: 20px;
+}
+
+.users__list-item {
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.users__button {
+  justify-content: space-between;
+
+  .button-icon {
+    margin-left: 0;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .users {
-    &.container {
-      padding-left: 74px;
-      padding-right: 74px;
+    padding-top: 137px;
+    padding-bottom: 88px;
+    z-index: -2;
+
+    background-image:
+      url("../img/smolov-back-desktop@1x.png"),
+      url("../img/rogovaya-back-desktop@1x.png");
+    background-position:
+      left 40px top 426px,
+      right 75px top 80px;
+    background-size:
+      143px auto,
+      285px auto;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image:
+        url("../img/smolov-back-desktop@2x.png"),
+        url("../img/rogovaya-back-desktop@2x.png");
+    }
+
+    @include brs-bottom (60px, $main-color-light, $main-color-dark);
+
+    .container {
+      padding-left: 75px;
+      padding-right: 75px;
     }
   }
 
-  .users__wrapper {
-    max-width: 70%;
+  .users__inner {
+    position: relative;
     padding-left: 0;
-    padding-right: 0;
+    padding-right: 180px;
+
+    font-size: $base-font-size * 1.75;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -57px;
+      left: -35px;
+      width: 213px;
+      height: 213px;
+      background-color: #141b3b;
+      border-radius: 20px;
+      z-index: -1;
+    }
   }
 
-  .users__cards-list {
-    margin-bottom: 70px;
+  .users__secondary-title {
+    margin-bottom: 57px;
+  }
+
+  .users__text {
+    margin-bottom: 38px;
+    line-height: 1.24;
+
+    &--bold {
+      font-size: $base-font-size * 1.3125;
+    }
+  }
+
+  .users__list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    margin-bottom: 80px;
+
+    .users__list-item {
+      width: 285px;
+      margin-bottom: 0;
+    }
   }
 
   .users__button {
@@ -40,27 +146,50 @@
 
 @media (min-width: $desktop-width) {
   .users {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
+    padding-top: 129px;
+    padding-bottom: 53px;
 
-    &.container {
+    background-position:
+      left 42% top 133px,
+      left 17% top 385px;
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+
       padding-left: 130px;
-      padding-right: 130px;
+      padding-right: 60px;
     }
   }
 
-  .users__wrapper {
-    max-width: 450px;
+  .users__inner {
+    width: 480px;
+    padding-right: 0;
+
+    &::before {
+      left: -67px;
+    }
   }
 
-  .users__cards-list {
+  .users__list {
     width: 630px;
+    padding-top: 5px;
+  }
+
+  .users__text {
+    margin-bottom: 38px;
+    line-height: 1.2;
+
+    &--bold {
+      padding-right: 50px;
+    }
   }
 
   .users__button {
-    width: initial;
-    margin-top: -137px;
+    width: auto;
+    min-width: 281px;
+    margin-top: -162px;
   }
 }

@@ -1,58 +1,90 @@
 .contacts {
-  padding-top: 50px;
+  padding-top: 72px;
   padding-bottom: 30px;
   text-align: center;
+
+  @include bg-dark;
+  @include brs-bottom (30px, $main-color-accent, $main-color-dark);
 }
 
 .contacts__secondary-title {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .contacts__text {
   padding-left: 30px;
   padding-right: 30px;
-  margin: 0 0 20px 0;
+  margin: 0 0 32px 0;
+
+  &--margin-bottom {
+    margin-bottom: 15px;
+  }
 }
 
 .contacts__link {
-  color: $main-color-accent;
   text-transform: lowercase;
   text-decoration: underline;
   font-weight: 300;
+  color: $main-color-accent-40;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .contacts__contacts-form {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.contacts__button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 60px;
+  border-radius: 10px;
 
   .button__text {
     display: none;
+  }
+
+  .button__icon {
+    margin-left: 0;
   }
 }
 
 .contacts__user-nav {
   text-align: left;
 
-  .link {
+  .user-nav__item {
+    flex-grow: 1;
+    margin-bottom: 0;
+  }
+
+  .user-nav__text {
+    margin-left: 16px;
     color: $main-color-accent;
   }
 
-  .link__icon {
-    background-color: #121836;
-  }
-
-  .user-nav__item {
-    margin-bottom: 0;
+  .user-nav__icon {
+    background-color: $main-color-dark-40;
   }
 }
 
 @media (min-width: $tablet-width) {
   .contacts {
-    padding-top: 65px;
+    padding-top: 76px;
     padding-bottom: 60px;
 
-    &.container {
-      padding-left: 74px;
-      padding-right: 74px;
+    @include brs-bottom (60px, $main-color-accent, $main-color-dark);
+
+    .container {
+      padding-left: 75px;
+      padding-right: 75px;
     }
 
     .link {
@@ -65,21 +97,50 @@
   }
 
   .contacts__secondary-title {
-    margin-bottom: 50px;
+    margin-bottom: 53px;
   }
 
   .contacts__text {
-    margin-bottom: 30px;
     padding: 0;
+    margin-bottom: 59px;
+
+    font-size: $base-font-size * 1.75;
+
+    &--margin-bottom {
+      margin-bottom: 38px;
+    }
+  }
+
+  .contacts__contacts-form {
+    margin-bottom: 56px;
+  }
+
+  .contacts__button {
+    width: 82px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .contacts__user-nav {
+    .link__icon {
+      width: 68px;
+      height: 68px;
+    }
+
+    .link__text {
+      margin-left: 22px;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .contacts {
-    padding-top: 65px;
-    padding-bottom: 60px;
+    padding-top: 103px;
+    padding-bottom: 102px;
 
-    &.container {
+    .container {
       padding-left: 130px;
       padding-right: 130px;
     }
@@ -89,28 +150,70 @@
     max-width: 60%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 60px;
+    margin-bottom: 53px;
+
+    &--margin-bottom {
+      padding-right: 20px;
+      margin-bottom: 43px;
+    }
   }
 
   .contacts__contacts-form {
-    margin-bottom: 55px;
+    margin-bottom: 66px;
+  }
 
-    .button {
-      width: auto;
-      padding-right: 100px;
-    }
+  .contacts__button {
+    width: auto;
+
+    padding-left: 35px;
+    padding-right: 41px;
+
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 
     .button__text {
       display: block;
+      margin-right: 105px;
+      text-transform: none;
+      font-size: 24px;
     }
   }
 
   .contacts__user-nav {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
-    max-width: 60%;
-    margin-left: auto;
-    margin-right: auto;
+    justify-content: center;
+    max-width: initial;
+
+    .user-nav__item {
+      flex-grow: 0;
+
+      margin-right: 114px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .user-nav__icon {
+      width: 90px;
+      height: 90px;
+    }
+
+    .user-nav__svg {
+      &--phone {
+        width: 36px;
+        height: 36px;
+      }
+
+      &--mail {
+        width: 36px;
+        height: 26px;
+      }
+    }
+
+    .user-nav__text {
+      margin-left: 28px;
+    }
   }
 }

@@ -7,33 +7,11 @@
   line-height: 1;
   font-weight: 600;
   font-style: normal;
-  color: $main-color-accent-darker-30;
-
-  &--icon {
-    padding-left: 28px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-      width: 15px;
-      height: 10px;
-      background-repeat: no-repeat;
-      background-position: center top;
-    }
-
-    &--filter {
-      &::before {
-        background-image: url("../img/filter.svg");
-      }
-    }
-  }
+  color: $main-color-accent-50;
 }
 
-/* @media (min-width: $tablet-width) {
+@media (min-width: $tablet-width) {
   .secondary-title {
     font-size: $base-font-size * 2.8125;
   }
-} */
+}

@@ -4,24 +4,45 @@
 
 .textarea-list__item {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  vertical-align: top;
 
   &:not(:last-child) {
 
-    /* Vertical line */
+    // Vertical line
     &::before {
       content: "";
       position: absolute;
-      top: 13px;
-      left: -12px;
+      top: 12px;
+      left: -14px;
       width: 2px;
-      height: calc(100% + 21px);
-      background-color: $main-color-darker-30;
+      height: calc(100% + 25px);
+      background-color: $main-color-dark;
     }
   }
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  &--error {
+    &::after {
+      content: "Это поле должно быть заполнено";
+      position: absolute;
+      bottom: 1px;
+      left: 1px;
+      width: calc(100% - 2px);
+      padding: 10px 20px;
+      background-color: $main-color-light-130;
+      color: $red;
+      font-weight: 400;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+
+    .textarea-list__textarea {
+      border-color: #f47e7e;
+    }
   }
 }
 
@@ -31,46 +52,49 @@
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  margin-left: 20px;
+  margin-left: 11px;
   margin-bottom: 10px;
 
-  color: $main-color-darker-30;
+  color: $main-color-dark;
   font-size: $base-font-size * 1.25;
+  letter-spacing: -0.05em;
   font-weight: 500;
 
   &::before,
   &::after {
     content: "";
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     left: 0;
   }
 
   /* Circle marker*/
   &::before {
-    left: -21px;
+    top: calc(50% - 5px);
+    left: -14px;
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background-color: $main-color-darker-30;
+    background-color: $main-color-dark;
   }
 
   /* Short horizontal line */
   &::after {
-    left: -32px;
+    top: calc(50% - 3px);
+    left: -25px;
     width: 15px;
     height: 2px;
-    background-color: $main-color-darker-30;
+    background-color: $main-color-dark;
   }
 }
 
 .textarea-list__title-item {
   position: relative;
   width: 76%;
+  margin-right: auto;
   overflow: hidden;
   white-space: nowrap;
 
+  // Fade out
   &::after {
     content: "";
     position: absolute;
@@ -83,43 +107,74 @@
   }
 }
 
-.textarea-list__img {
+.textarea-list__title-img {
+  position: relative;
   width: 35px;
   height: 24px;
+  margin-top: -4px;
   border-radius: 4px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .textarea-list__textarea {
   width: 100%;
   min-height: 220px;
-  padding: 15px;
-  border: 1px solid #cbced9;
+  padding: 11px 14px 15px;
+  border: 1px solid $main-color-light-10;
   border-radius: 4px;
   resize: vertical;
+  line-height: 1.4;
+  vertical-align: top;
+  outline: none;
+
+  &:hover {
+    border-color: $main-color-light-20;
+  }
+
+  &:focus {
+    border-color: $main-color-dark-30;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .textarea-list__item {
     padding-right: 20px;
+    margin-bottom: 45px;
 
     &:not(:last-child) {
-
       /* Vertical line */
       &::before {
-        top: 24px;
-        left: initial;
-        right: 0;
+        top: 23px;
+        left: auto;
+        right: 2px;
+        width: 3px;
+        height: calc(100% + 37px);
+      }
+    }
+
+    &--error {
+      &::after {
+        width: calc(100% - 32px);
       }
     }
   }
 
   .textarea-list__title {
     margin-left: 0;
+    margin-bottom: 28px;
+
+    font-size: $base-font-size * 2;
+    letter-spacing: -0.02em;
 
     /* Circle marker*/
     &::before {
-      right: -26px;
-      left: initial;
+      top: calc(50% - 9px);
+      right: -24px;
+      left: auto;
       width: 15px;
       height: 15px;
     }
@@ -130,19 +185,59 @@
     }
   }
 
-  .textarea-list__img {
+  .textarea-list__title-img {
     width: 70px;
     height: 47px;
+    margin-right: 11px;
+    border-radius: 6px;
   }
 
   .textarea-list__textarea {
+    width: calc(100% - 10px);
     min-height: 142px;
+    padding: 15px 17px 15px;
+    font-size: $base-font-size * 1.25;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .textarea-list__img {
+  .textarea-list {
+    padding-right: 125px;
+  }
+
+  .textarea-list__item {
+    padding-right: 20px;
+    margin-bottom: 50px;
+
+    &:not(:last-child) {
+      /* Vertical line */
+      &::before {
+        right: -1px;
+        height: calc(100% + 50px);
+      }
+    }
+
+    &--error {
+      &::after {
+        width: calc(100% - 48px);
+      }
+    }
+  }
+
+  .textarea-list__title {
+    /* Circle marker*/
+    &::before {
+      right: -26px;
+    }
+  }
+
+  .textarea-list__title-img {
     position: relative;
-    right: -105px;
+    right: -140px;
+  }
+
+  .textarea-list__textarea {
+    width: calc(100% - 25px);
+    padding: 22px 22px 20px;
   }
 }

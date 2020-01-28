@@ -1,15 +1,15 @@
 .link {
   position: relative;
 
-  font-size: $base-font-size;
+  font-size: inherit;
   line-height: $base-line-height;
   font-weight: 600;
   font-style: normal;
-  color: $main-color-darker-30;
+  color: $main-color-dark;
   text-decoration: none;
   text-transform: uppercase;
 
-  &--icon--left {
+  /* &--icon--left {
     padding-left: 30px;
 
     &::before,
@@ -83,6 +83,24 @@
       transform: translateY(-50%) rotate(-45deg);
     }
   }
+
+  &[href^="mailto:"]:hover {
+    .link__icon {
+      background-color: #f26926;
+    }
+  }
+
+  &[href^="tel:"]:hover {
+    .link__icon {
+      background-color: #ff8d30;
+    }
+  }
+
+  &[href]:active {
+    .link__svg {
+      opacity: 0.3;
+    }
+  } */
 }
 
 .link__icon {
@@ -94,15 +112,15 @@
   border-radius: 50%;
 
   &--main-color {
-    background-color: $main-color-darker-30;
+    background-color: $main-color-dark;
   }
 
   &--color-secondary {
-    background-color: $main-color-accent-darker-10;
+    background-color: $main-color-accent-10;
   }
 
   &--color-tertiary {
-    background-color: $main-color-accent-darker-30;
+    background-color: $main-color-accent-50;
   }
 }
 

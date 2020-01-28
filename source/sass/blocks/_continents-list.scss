@@ -7,14 +7,13 @@
 
   &--current {
     .continents-list__link {
-      color: $main-color-darker-30;
       opacity: 1;
     }
   }
 }
 
 .continents-list__link {
-  color: $main-color-darker-30;
+  color: $main-color-dark;
   font-weight: 600;
   text-decoration: none;
   text-transform: uppercase;

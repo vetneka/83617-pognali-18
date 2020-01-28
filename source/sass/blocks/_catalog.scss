@@ -1,15 +1,70 @@
 .catalog {
-  /* padding-top: 30px; */
-  padding-bottom: 26px;
+  padding-bottom: 16px;
   text-align: center;
 }
 
-.catalog__cards-list {
-  margin-bottom: 20px;
+.catalog__list {
+  @include reset-list;
+
+  margin-bottom: 12px;
   text-align: left;
+}
+
+.catalog__list-item {
+  margin-bottom: 10px;
 }
 
 .catalog__button {
   text-align: center;
   font-size: $base-font-size * 1.0625;
+
+  .button__icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 15px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .catalog {
+    padding-bottom: 47px;
+  }
+
+  .catalog__list {
+    margin-bottom: 40px;
+  }
+
+  .catalog__list-item {
+    margin-bottom: 40px;
+  }
+
+  .catalog__button {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: $base-font-size * 1.25;
+
+    .button__icon {
+      width: 27px;
+      height: 27px;
+      margin-right: 23px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog {
+    padding-bottom: 67px;
+  }
+
+  .catalog__list {
+    margin-bottom: 62px;
+  }
+
+  .catalog__list-item {
+    margin-bottom: 30px;
+  }
+
+  .catalog__button {
+    margin-left: -75px;
+  }
 }

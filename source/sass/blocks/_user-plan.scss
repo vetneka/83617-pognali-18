@@ -1,19 +1,22 @@
 .user-plan {
-  padding: 20px;
+  padding: 20px 24px 19px;
   background-color: $white;
-  border-radius: $base-border-radius;
-  color: $main-color-darker-30;
+  border-radius: 10px;
+  color: $main-color-dark;
+  overflow: hidden;
 }
 
 .user-plan__title {
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 18px;
   font-weight: 600;
 }
 
 .user-plan__info {
   margin: 0;
   margin-bottom: 20px;
+
+  line-height: 1;
   font-weight: 500;
   text-transform: uppercase;
 }
@@ -24,7 +27,16 @@
 }
 
 .user-plan__link {
-  color: rgba($black, 0.3);
+  color: $black;
+  opacity: 0.3;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -33,6 +45,7 @@
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: center;
+    padding: 37px 29px 12px 36px;
     font-size: $base-font-size * 1.25;
   }
 
@@ -43,37 +56,50 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding-bottom: 40px;
+    padding-bottom: 29px;
+    margin-bottom: 15px;
     font-size: $base-font-size * 1.5;
 
+    /* Horizontal line */
     &::after {
       content: "";
       position: absolute;
       bottom: 0;
-      left: -20px;
-      width: calc(100% + 40px);
+      left: -50px;
+      width: calc(100% + 100px);
       height: 1px;
       background-color: rgba($black, 0.05);
     }
   }
 
+  .user-plan__title-number {
+    font-size: $base-font-size * 1.375;
+  }
+
   .user-plan__info {
     display: flex;
     flex-flow: row wrap;
-    width: 55%;
-    justify-content: space-between;
+    width: 70%;
+    justify-content: flex-start;
     margin-bottom: 0;
+    letter-spacing: 0.07em;
+
+    span {
+      min-width: 48%;
+      padding-right: 20px;
+    }
   }
 
   .user-plan__link {
     margin-left: auto;
     font-size: inherit;
+    letter-spacing: 0.1em;
   }
 }
 
 @media (min-width: $desktop-width) {
   .user-plan {
-    padding: 30px;
+    padding: 33px 37px 30px 43px;
   }
 
   .user-plan__title {
@@ -83,14 +109,25 @@
     padding-bottom: 0;
     margin-bottom: 0;
 
+    /* Horizontal line */
     &::after {
       display: none;
     }
   }
 
+  .user-plan__title-number {
+    min-width: 53px;
+    padding-right: 10px;
+  }
+
   .user-plan__info {
     justify-content: flex-start;
-    width: 30%;
+    width: 35%;
+
+    span {
+      min-width: 35%;
+      padding-right: 0;
+    }
   }
 
   .user-plan__companion-counter {

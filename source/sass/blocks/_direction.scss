@@ -1,69 +1,145 @@
 .direction {
-  padding-top: 65px;
+  padding-top: 72px;
   padding-bottom: 30px;
+
+  @include bg-light;
+  @include brs-bottom (30px, $main-color-dark, $main-color-light);
 }
 
-.direction__wrapper {
+.direction__inner {
   padding-left: 25px;
   padding-right: 25px;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 
-.direction__cards-list {
+.direction__secondary-title {
+  margin-bottom: 20px;
+}
+
+.direction__list {
+  @include reset-list;
+
+  margin-bottom: 26px;
+}
+
+.direction__list-item {
   margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.direction__button {
+  justify-content: space-between;
+
+  .button__icon {
+    margin-left: 0;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .direction {
-    &.container {
-      padding-right: 74px;
-      padding-left: 74px;
+    padding-bottom: 80px;
+
+    background-image: url("../img/flags-back@1x.png");
+    background-repeat: no-repeat;
+    background-position: right 40px top 79px;
+    background-size: 289px auto;
+
+    z-index: 2;
+
+    @include brs-bottom (60px, $main-color-dark, $main-color-light);
+
+    .container {
+      padding-left: 70px;
+      padding-right: 70px;
+    }
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/flags-back@2x.png");
     }
   }
 
-  .direction__wrapper {
-    max-width: 45%;
-    padding: 0;
+  .direction__inner {
+    position: relative;
+    padding-left: 4px;
+    padding-right: 280px;
+    margin-bottom: 103px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: calc(100% + 64px);
+      left: -30px;
+      width: 141px;
+      height: 141px;
+      background-color: $main-color-light-80;
+      border-radius: 20px;
+      z-index: -1;
+    }
   }
 
-  .direction__cards-list {
+  .direction__secondary-title {
+    margin-bottom: 55px;
+  }
+
+  .direction__text {
+    font-size: $base-font-size * 1.75;
+    line-height: 1.24;
+  }
+
+  .direction__list {
+    padding-left: 5px;
+    padding-right: 5px;
     margin-bottom: 47px;
   }
 
   .direction__button {
-    width: 100%;
+    width: calc(100% - 10px);
+    margin-left: 5px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .direction {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
+    padding-top: 162px;
+    padding-bottom: 101px;
 
-    &.container {
+    background-position: right 60px top 89px;
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+
       padding-right: 130px;
       padding-left: 130px;
     }
   }
 
-  .direction__wrapper {
-    max-width: 450px;
-    margin-bottom: 90px;
+  .direction__inner {
+    width: 450px;
     padding: 0;
+    padding-top: 5px;
     padding-right: 100px;
+    margin-bottom: 90px;
+
+    &::before {
+      top: -73px;
+      left: -800px;
+    }
   }
 
-  .direction__cards-list {
-    flex-grow: 1;
-    max-width: 560px;
+  .direction__list {
+    width: 565px;
     order: -1;
   }
 
   .direction__button {
     width: initial;
-    margin-left: 730px;
-    margin-top: -110px;
+    margin-left: 733px;
+    margin-top: -119px;
   }
 }

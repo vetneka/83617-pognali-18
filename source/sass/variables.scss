@@ -1,6 +1,7 @@
 /* Viewport */
 $mobile-width: 320px;
 $only-mobile-width: 759px;
+$only-tablet-width: 1439px;
 $tablet-width: 760px;
 $desktop-width: 1440px;
 
@@ -10,34 +11,47 @@ $base-line-height: 1.375; /* 22px */
 $base-font-family: "BloggerSans", "Arial", sans-serif;
 $base-font-weight: 300;
 
-
 /* Color */
-$base-hue: 227;
-$base-saturation: 4%;
-$base-lightness: 96%;
-$base-alfa: 1;
+$main-color-dark: #192144;
+$main-color-dark-10: #141b3b;
+$main-color-dark-20: #1d2e5b;
+$main-color-dark-30: #161c35;
+$main-color-dark-40: #121936;
+$main-color-dark-50: #101d41;
+$main-color-dark-60: #132576;
 
-$main-color-lighter-10: hsl($base-hue + 1, $base-saturation + 24, $base-lightness); /* #f3f4f8 */
-$main-color: hsl($base-hue, $base-saturation, $base-lightness); /* #edeff6 */
-$main-color-darker-10: hsl($base-hue + 2, $base-saturation + 3, $base-lightness - 2); /* #dfe2f0 */
-$main-color-darker-20: hsl($base-hue - 2, $base-saturation + 6, $base-lightness - 4); /* #d3d9eb */
-$main-color-darker-30: hsl($base-hue + 1, $base-saturation + 37, $base-lightness - 81); /* #161c35 */ /* hsl(228, 41%, 15%); */
-$main-color-darker-40: hsl($base-hue + 2, $base-saturation + 44, $base-lightness - 78); /* #192144 */ /* hsl(229, 46%, 18%); */
+$main-color-light: #edeff6;
+$main-color-light-10: #cbced9;
+$main-color-light-20: #959bb2;
+$main-color-light-30: #e2e5f1;
+$main-color-light-40: #d4d9eb;
+$main-color-light-50: #dfe3f0;
+$main-color-light-60: #d6daed;
+$main-color-light-70: #c8cee8;
+$main-color-light-80: #e2e5f2;
+$main-color-light-90: #dee5fc;
+$main-color-light-100: #cccccc;
+$main-color-light-110: #cbcbcb;
+$main-color-light-120: #f3f4f8;
+$main-color-light-130: #ffefef;
+$main-color-light-140: #aeb4cb;
 
-$main-color-accent: hsl($base-hue - 181, $base-saturation + 96, $base-lightness - 31); /* #ffd64b */
-$main-color-accent-darker-10: hsl($base-hue - 186, $base-saturation + 96, $base-lightness - 37); /* #ffbd30 */
-$main-color-accent-darker-20: hsl($base-hue - 193, $base-saturation + 96, $base-lightness - 37); /* #ffa530 */
-$main-color-accent-darker-30: hsl($base-hue - 200, $base-saturation + 96, $base-lightness - 37); /* #ff8d30 */
+$main-color-accent: #ffd74b;
+$main-color-accent-10: #ffbd30;
+$main-color-accent-20: #f3c72b;
+$main-color-accent-30: #ffd54d;
+$main-color-accent-40: #ffd64b;
+$main-color-accent-50: #ff8d30;
+$main-color-accent-60: #ffa530;
+$main-color-accent-70: #f26926;
 
-$main-color-text: hsl(0, 0, $base-lightness - 69); /* #444444 */
+$main-color-secondary: #ff5c23;
+
+$main-color-text: #444444;
 
 $white: #ffffff;
 $black: #000000;
-$grey-light: #cbcbcb;
-
+$red: #ff0000;
 
 /* Other */
-$base-border-radius: 10px;
-$small-base-border-radius: $base-border-radius * 0.4;
-$medium-border-radius: $base-border-radius * 2.5;
-$large-border-radius: $base-border-radius * 4;
+$retina-dppx: 1.5dppx;

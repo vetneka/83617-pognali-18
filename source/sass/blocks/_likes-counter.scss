@@ -2,11 +2,55 @@
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  color: $main-color-darker-30;
+  color: $main-color-dark-30;
   font-size: $base-font-size * 0.875;
   font-weight: 600;
   background-color: transparent;
   border: 0;
+  cursor: pointer;
+
+  &:hover {
+    .likes-counter__icon {
+      background-color: $main-color-light-80;
+    }
+
+    .likes-counter__svg {
+      opacity: 0.5;
+    }
+  }
+
+  &:active {
+    .likes-counter__svg {
+      opacity: 0.1;
+    }
+  }
+
+  &--pressed {
+    .likes-counter__icon {
+      background-color: #f9eaea;
+    }
+
+    .likes-counter__svg {
+      fill: #f02323;
+      stroke: none;
+    }
+
+    &:hover {
+      .likes-counter__icon {
+        background-color: #f9d8d8;
+      }
+
+      .likes-counter__svg {
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      .likes-counter__svg {
+        opacity: 0.3;
+      }
+    }
+  }
 }
 
 .likes-counter__icon {
@@ -16,7 +60,7 @@
   height: 31px;
   margin-right: 10px;
   border-radius: 50%;
-  background-color: #f9eaea;
+  background-color: $main-color-light;
   overflow: hidden;
 }
 
@@ -24,15 +68,11 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 13px;
-  height: 11px;
+  width: 14px;
+  height: 12px;
   transform: translate(-50%, -50%);
-
-  &--active {
-    circle {
-      fill: yellowgreen;
-    }
-  }
+  fill: none;
+  stroke: $main-color-dark;
 }
 
 @media (min-width: $tablet-width) {

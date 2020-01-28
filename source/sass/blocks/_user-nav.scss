@@ -1,9 +1,147 @@
 .user-nav {
   @include reset-list;
+
+  display: flex;
+  flex-flow: row-reverse wrap;
+  align-items: center;
 }
 
 .user-nav__item {
   &:first-child {
-    margin-bottom: 50px;
+    flex-grow: 1;
+  }
+}
+
+.user-nav__button {
+  width: 100%;
+  padding: 12px 29px 8px;
+  font-size: 17px;
+}
+
+.user-nav__link {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+  color: $main-color-dark;
+
+  &--theme {
+    &-accent {
+      &:hover {
+        .user-nav__icon {
+          &--color {
+            &-accent-1 {
+              background-color: $main-color-accent-70;
+            }
+
+            &-accent-2 {
+              background-color: $main-color-accent-50;
+            }
+          }
+        }
+      }
+
+      &:active {
+        .user-nav__svg {
+          opacity: 0.3;
+        }
+      }
+    }
+
+    &-dark {
+      &:hover {
+        opacity: 0.7;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+
+      .user-nav__icon {
+        background-color: $main-color-dark;
+      }
+    }
+  }
+}
+
+.user-nav__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+
+  &--color {
+    &-accent-1 {
+      background-color: $main-color-accent-50;
+    }
+
+    &-accent-2 {
+      background-color: $main-color-accent-10;
+    }
+
+    &-dark {
+      background-color: $main-color-dark-40;
+    }
+  }
+}
+
+.user-nav__svg {
+  &--color {
+    &-accent {
+      fill: $main-color-accent;
+    }
+
+    &-dark {
+      fill: $main-color-dark-30;
+    }
+  }
+
+  &--phone {
+    width: 18px;
+    height: 18px;
+  }
+
+  &--mail {
+    width: 18px;
+    height: 13px;
+  }
+
+  &--modern-mail {
+    width: 18px;
+    height: 14px;
+  }
+}
+
+.user-nav__text {
+  margin-left: 10px;
+}
+
+@media (min-width: $tablet-width) {
+  .user-nav__link {
+    font-size: $base-font-size * 1.75;
+  }
+
+  .user-nav__icon {
+    width: 68px;
+    height: 68px;
+  }
+
+  .user-nav__svg {
+    &--phone {
+      width: 27px;
+      height: 27px;
+    }
+
+    &--mail {
+      width: 27px;
+      height: 20px;
+    }
   }
 }

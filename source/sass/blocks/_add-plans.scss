@@ -1,20 +1,37 @@
 .add-plans {
-  @include brs-top(30px, $main-color-darker-10, $main-color-darker-20);
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: $main-color-darker-20;
+  padding-top: 31px;
+  padding-bottom: 75px;
+  background-color: $main-color-light-40;
+
+  @include brs-top(30px, $main-color-light-50, $main-color-light-40);
 }
 
-.add-plans__secondary-title {
-  position: relative;
-  margin-bottom: 20px;
-  padding-right: 65px;
+.add-plans__top {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
 
-  .marker-list {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
+  padding-right: 20px;
+  margin-bottom: 29px;
+
+  .add-plans__marker-list {
+    display: flex;
+    flex-flow: row wrap;
+    margin-right: 5px;
+  }
+
+  .add-plans__marker-item {
+    margin-bottom: 0;
+    padding-left: 20px;
+
+    &:last-child {
+      padding-left: 0;
+    }
+  }
+
+  span {
+    display: none;
   }
 }
 
@@ -30,8 +47,128 @@
   }
 }
 
+.add-plans__marker-list {
+  @include reset-list;
+  display: none;
+
+  font-size: $base-font-size * 1.25;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgba($black, 0.6);
+}
+
+.add-plans__marker-item {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+
+  /* Custom marker*/
+  &::before {
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: currentColor;
+  }
+
+  &--current {
+    color: $main-color-dark-20;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .add-plans {
+    padding-top: 53px;
+    padding-bottom: 115px;
+
+    .container {
+      padding-left: 75px;
+      padding-right: 75px;
+    }
+  }
+
+  .add-plans__top {
+    margin-bottom: 56px;
+
+    .add-plans__marker-list {
+      margin-right: -14px;
+    }
+
+    .add-plans__marker-item {
+      padding-left: 33px;
+    }
+  }
+
+  .add-plans__item {
+    margin-bottom: 40px;
+
+    &--country {
+      .add-plan__head {
+        margin-bottom: 10px;
+      }
+    }
+
+    &--entertainments {
+      .add-plan__head {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
 @media (min-width: $desktop-width) {
   .add-plans {
-    @include brs-top(60px, $main-color-darker-10, $main-color-darker-20);
+    padding-bottom: 127px;
+
+    @include brs-top(60px, $main-color-light-50, $main-color-light-40);
+
+    .container {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+  }
+
+  .add-plans__top {
+    .add-plans__marker-list {
+      display: none;
+    }
+  }
+
+  .add-plans__secondary-title {
+    margin-left: 70px;
+  }
+
+  .add-plans__item {
+    margin-bottom: 45px;
+
+    &--country {
+      .add-plan__head {
+        margin-bottom: 30px;
+      }
+    }
+
+    &--entertainments {
+      .add-plan__head {
+        margin-bottom: 104px;
+      }
+    }
+  }
+
+  .add-plans__marker-list {
+    display: block;
+  }
+
+  .add-plans__marker-item {
+    padding-left: 43px;
+    margin-bottom: 17px;
+    letter-spacing: 0.1em;
   }
 }

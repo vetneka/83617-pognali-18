@@ -1,13 +1,31 @@
 .about {
-  padding-top: 40px;
-  padding-bottom: 62px;
-  background: url("../img/about-mobile@1x.png") no-repeat center top / cover;
-  background-color: $main-color-darker-30;
-  color: $white;
+  padding-top: 38px;
+  padding-bottom: 40px;
+  background: url("../img/about-mobile@1x.png") no-repeat center top 5px/292px auto;
 
-  &.container {
-    padding-left: 50px;
-    padding-right: 50px;
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/about-mobile@2x.png");
+  }
+
+  @include bg-dark;
+  @include brs-bottom (30px, $main-color-light, $main-color-dark);
+}
+
+.about__inner {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.about__secondary-title {
+  margin-bottom: 19px;
+}
+
+.about__text {
+  margin: 0;
+  margin-bottom: 19px;
+
+  &--bold {
+    font-weight: 600;
   }
 }
 
@@ -17,37 +35,136 @@
 
 @media (min-width: $tablet-width) {
   .about {
-    padding-top: 50px;
-    padding-bottom: 80px;
-    background-image: url("../img/about-tablet@1x.png");
-    background-size: contain;
-    background-position: right center;
+    padding-top: 43px;
+    padding-bottom: 88px;
 
-    &.container {
-      padding-left: 74px;
-      padding-right: 74px;
+    background-image: none;
+    background-color: $main-color-dark;
+
+    font-size: $base-font-size * 1.75;
+
+    @include brs-bottom (60px, $main-color-light, $main-color-dark);
+  }
+
+  .about__inner {
+    position: relative;
+    padding-top: 37px;
+    padding-left: 35px;
+    padding-right: 352px;
+
+    z-index: 2;
+
+    /* Decorative rectangle */
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 212px;
+      background-color: $main-color-dark-10;
+      border-radius: 25px;
+      z-index: -1;
+    }
+
+    /* Bg-image */
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -32px;
+      width: 100%;
+      height: 100%;
+      background-image: url("../img/about-tablet@1x.png");
+      background-repeat: no-repeat;
+      background-size: 376px auto;
+      background-position: right 0 top 47px;
+      z-index: -1;
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/about-tablet@2x.png");
+      }
     }
   }
 
-  .about__wrapper {
-    width: 50%;
+  .about__secondary-title {
+    margin-bottom: 41px;
+  }
+
+  .about__text {
+    margin-bottom: 33px;
+    line-height: 1.2;
+
+    &--bold {
+      margin-bottom: 52px;
+      font-size: $base-font-size * 1.3125;
+    }
   }
 
   .about__button {
-    display: inline-block;
+    display: inline-flex;
+    justify-content: space-between;
+    min-width: 274px;
+    padding-right: 36px;
+
+    .button__icon {
+      margin-left: 0;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .about {
-    padding-top: 100px;
-    padding-bottom: 160px;
-    background-image: url("../img/about-desktop@1x.png");
-    background-size: contain;
+    padding-top: 85px;
+    padding-bottom: 0;
+  }
 
-    &.container {
-      padding-left: 130px;
-      padding-right: 130px;
+  .about__inner {
+    padding: 47px 622px 163px 70px;
+
+    /* Decorative square */
+    &::before {
+      content: "";
+      position: absolute;
+      top: -29px;
+      left: 0;
+      width: 213px;
+      height: 213px;
+      background-color: $main-color-dark-10;
+      border-radius: 25px;
+      z-index: -1;
+    }
+
+    /* Bg-image */
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -32px;
+      width: 100%;
+      height: 100%;
+      background-image: url("../img/about-desktop@1x.png");
+      background-repeat: no-repeat;
+      background-size: 630px auto;
+      background-position: right 32px top 0;
+      z-index: -1;
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/about-desktop@2x.png");
+      }
+    }
+  }
+
+  .about__secondary-title {
+    margin-bottom: 57px;
+  }
+
+  .about__text {
+    margin-bottom: 38px;
+
+    &--bold {
+      padding-right: 160px;
+      margin-bottom: 86px;
     }
   }
 }

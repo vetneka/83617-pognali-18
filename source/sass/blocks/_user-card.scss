@@ -1,0 +1,584 @@
+.user-card {
+  position: relative;
+  padding: 15px 18px 23px;
+  border-radius: 20px;
+  background-color: $white;
+  transition: box-shadow 0.2s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 6px 21px 0 rgba($black, 0.08);
+
+    .user-card__img {
+      transform: scale(1.1);
+    }
+  }
+
+  &--simplified {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    padding-top: calc(100% - 10px);
+    padding-bottom: 12px;
+    border-radius: 10px;
+    text-align: center;
+    color: $main-color-text;
+
+    .user-card__wrapper {
+      justify-content: center;
+
+      &--top {
+        width: 100%;
+      }
+
+      &--middle {
+        margin-bottom: 5px;
+      }
+    }
+
+    .user-card__picture {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      border-radius: 0;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      overflow: hidden;
+    }
+
+    .user-card__title {
+      margin-left: 0;
+    }
+
+    .user-card__title-link {
+      display: inline;
+      padding-left: 17px;
+      padding-right: 0;
+
+      // Indicator online
+      &::after {
+        top: calc(50% - 3px);
+        left: 0;
+        right: initial;
+      }
+    }
+
+    .user-card__countries-flags {
+      padding-left: 0;
+      order: -1;
+
+      .countries-flags {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .countries-flags__item {
+        margin-right: 20px;
+        margin-bottom: 0;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      .countries-flags__text {
+        display: none;
+      }
+    }
+
+    .user-card__user-level {
+      position: absolute;
+      top: 17px;
+      left: 17px;
+
+      .user-level__text {
+        display: block;
+      }
+    }
+  }
+}
+
+.user-card__wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+
+  &--top {
+    margin-bottom: 10px;
+  }
+
+  &--middle {
+    padding-left: 8px;
+    margin-bottom: 14px;
+  }
+}
+
+.user-card__picture {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.user-card__img {
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.user-card__title {
+  width: 50%;
+  margin-left: 16px;
+  flex-grow: 1;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @media (max-width: $only-mobile-width) {
+    max-height: 42px;
+  }
+}
+
+.user-card__title-link {
+  position: relative;
+  display: block;
+  padding-right: 35px;
+  text-decoration: none;
+  color: $main-color-dark-20;
+
+  // Indicator online
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: 4px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #f97676;
+  }
+
+  &--online {
+    // Indicator online
+    &::after {
+      background-color: #81e31e;
+    }
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.user-card__tags {
+  margin: 0;
+  margin-top: 14px;
+  margin-left: 7px;
+  line-height: 1.2;
+}
+
+.user-card__subtitle {
+  position: relative;
+  margin: 0;
+  margin-bottom: 12px;
+
+  // Horizontal line
+  &::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: -26px;
+    width: calc(100% + 42px);
+    height: 1px;
+    background-color: #d9d9d9;
+  }
+
+  span {
+    position: relative;
+    padding: 0 8px;
+    margin-left: -8px;
+    background-color: $white;
+  }
+}
+
+.user-card__countries-flags {
+  padding-left: 7px;
+  padding-bottom: 10px;
+
+  .countries-flags {
+    flex-direction: column;
+  }
+
+  .countries-flags__item {
+    margin: 0;
+    margin-bottom: 5px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .countries-flags__text {
+    margin-left: 13px;
+  }
+}
+
+.user-card__user-level {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex-grow: 1;
+
+  margin-left: auto;
+  margin-right: -4px;
+
+  text-align: right;
+
+  .user-card__subtitle {
+    margin-bottom: 6px;
+  }
+
+  .user-level {
+    margin-left: auto;
+    margin-right: 6px;
+  }
+
+  .user-level__text {
+    display: none;
+  }
+}
+
+.user-card__likes-counter {
+  position: absolute;
+  top: 54px;
+  left: 59px;
+}
+
+.user-card__button {
+  flex-grow: 1;
+}
+
+@media (min-width: $tablet-width) {
+  .user-card {
+    border-radius: 20px;
+
+    &--simplified {
+      padding-top: 275px;
+      padding-bottom: 18px;
+
+      .user-card__wrapper {
+        &--top {
+          margin-bottom: 21px;
+        }
+      }
+
+      .user-card__picture {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+      }
+
+      .user-card__title {
+        font-size: $base-font-size * 1.5;
+      }
+
+      .user-card__title-link {
+        padding-right: 17px;
+
+        // Indicator online
+        &::after {
+          top: 12px;
+          left: -5px;
+          width: 8px;
+          height: 8px;
+        }
+      }
+
+      .user-card__countries-flags {
+        padding-bottom: 15px;
+      }
+
+      .user-card__tags {
+        margin-top: 20px;
+        font-size: $base-font-size * 1.25;
+      }
+    }
+
+    &--catalog {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: flex-start;
+      padding: 33px 35px 18px 35px;
+
+      .user-card__wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+
+        &--top {
+          position: relative;
+          width: 80%;
+          padding-left: 222px;
+          margin-bottom: 0;
+        }
+
+        &--middle {
+          display: flex;
+          flex-flow: column wrap;
+          align-items: center;
+          width: 60px;
+          margin-bottom: 14px;
+          margin-left: auto;
+
+          .user-card__subtitle {
+            display: none;
+          }
+        }
+
+        &--bottom {
+          position: relative;
+          left: 220px;
+          display: flex;
+          flex-flow: row wrap;
+          margin-top: -68px;
+        }
+      }
+
+      .user-card__picture {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        width: 190px;
+        height: 190px;
+        border-radius: 20px;
+      }
+
+      .user-card__title {
+        width: auto;
+        flex-grow: 0;
+        margin-left: 0;
+
+        font-size: $base-font-size * 1.875;
+      }
+
+      .user-card__title-link {
+        text-decoration: none;
+        color: $main-color-text;
+
+        // Indicator online
+        &::after {
+          content: "";
+          top: 11px;
+          width: 7px;
+          height: 7px;
+        }
+      }
+
+      .user-card__tags {
+        width: 100%;
+        margin-top: 18px;
+        margin-bottom: 90px;
+        margin-left: 4px;
+        font-size: $base-font-size * 1.25;
+      }
+
+      .user-card__subtitle {
+        position: relative;
+        margin: 0;
+        margin-bottom: 12px;
+
+        // Horizontal line
+        &::before {
+          left: -35px;
+          width: calc(100% + 60px);
+        }
+      }
+
+      .user-card__countries-flags {
+        width: 100%;
+        padding: 0;
+        margin-top: 2px;
+        order: 1;
+
+        .user-card__subtitle {
+          margin-bottom: 16px;
+
+          span {
+            margin-left: 38px;
+          }
+        }
+
+        .countries-flags {
+          flex-direction: row;
+          font-size: $base-font-size * 1.25;
+        }
+
+        .countries-flags__item {
+          margin-right: 34px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+
+        .countries-flags__text {
+          margin-left: 6px;
+        }
+      }
+
+      .user-card__transport {
+        padding-left: 0;
+        margin-bottom: 3px;
+
+        .transports {
+          flex-direction: column;
+        }
+      }
+
+      .user-card__user-level {
+        margin-right: 0;
+
+        .user-level__text {
+          display: block;
+        }
+      }
+
+      .user-card__likes-counter {
+        position: static;
+        padding: 0;
+        font-size: $base-font-size * 1.25;
+        order: 1;
+      }
+
+      .user-card__button {
+        padding: 17px 31px 13px;
+        font-size: $base-font-size * 1.25;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .user-card {
+    &--catalog {
+      padding: 48px 44px 27px 320px;
+
+      // Vertical line
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50px;
+        right: 319px;
+        width: 1px;
+        height: calc(100% - 100px);
+        background-color: rgba($black, 0.1);
+      }
+
+      .user-card__wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+
+        &--top {
+          position: static;
+          width: 53%;
+          padding-left: 0;
+          margin-bottom: 40px;
+        }
+
+        &--middle {
+          flex-direction: row;
+          align-items: center;
+          width: auto;
+          margin-left: 39px;
+          flex-grow: 1;
+          order: 1;
+
+          .user-card__subtitle {
+            display: none;
+          }
+        }
+
+        &--bottom {
+          position: static;
+          width: 53%;
+          padding-left: 21px;
+          margin-top: 4px;
+        }
+      }
+
+      .user-card__picture {
+        top: 0;
+        width: 287px;
+        height: 100%;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      .user-card__img {
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .user-card__title-link {
+        padding-right: 0;
+        padding-left: 23px;
+
+        // Indicator online
+        &::after {
+          left: 0;
+        }
+      }
+
+      .user-card__tags {
+        padding: 0 27px;
+        margin-bottom: 0;
+      }
+
+      .user-card__countries-flags {
+        width: auto;
+        margin-top: 0;
+        margin-left: 42px;
+        flex-grow: 1;
+        order: 0;
+
+        .user-card__subtitle {
+          display: none;
+        }
+
+        .countries-flags {
+          flex-direction: column;
+        }
+
+        .countries-flags__item {
+          margin-right: 0;
+          margin-bottom: 11px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+
+        .countries-flags__text {
+          margin-left: 14px;
+        }
+      }
+
+      .user-card__transport {
+        width: 132px;
+        margin-bottom: 0;
+
+        .transports {
+          flex-direction: row;
+        }
+      }
+
+      .user-card__button {
+        flex-grow: 0;
+      }
+    }
+  }
+}

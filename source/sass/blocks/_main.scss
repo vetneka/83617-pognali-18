@@ -1,12 +1,12 @@
 .main {
   &--inner {
-    background-color: $main-color-lighter-10;
+    background-color: $main-color-light;
     padding-bottom: 45px;
   }
 
   &--form {
-    .main__head-content {
-      margin-right: 500px;
+    .main__head {
+      @include brs-bottom (20px, $main-color-light, $main-color-dark);
     }
   }
 }
@@ -15,8 +15,16 @@
   display: flex;
   flex-flow: row wrap;
   align-items: flex-end;
-  min-height: 143px;
-  background-color: $main-color-darker-30;
+  height: 143px;
+  padding-top: 93px;
+
+  @include bg-dark;
+  @include brs-bottom (20px, $main-color-light-80, $main-color-dark);
+
+  .container {
+    flex-grow: 1;
+    width: 100%;
+  }
 }
 
 .main__head-content {
@@ -35,31 +43,91 @@
   text-transform: uppercase;
   text-decoration: none;
   color: $white;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .main__head-backward-page-icon {
   width: 32px;
   height: 16px;
-  margin-left: 29px;
-  background-color: tomato;
+  margin-left: 24px;
+  fill: currentColor;
 }
 
 .main__companions-filter {
-  margin-bottom: 30px;
+  margin-bottom: 27px;
+}
+
+.main__pagination {
+  margin-bottom: 39px;
 }
 
 @media (min-width: $tablet-width) {
+  .main {
+    &--form {
+      .main__head {
+        @include brs-bottom (60px, $main-color-light, $main-color-dark);
+      }
+    }
+  }
+
   .main__head {
-    min-height: 351px;
+    height: 351px;
+
+    @include brs-bottom (60px, $main-color-light-80, $main-color-dark);
+  }
+
+  .main__head-content {
+    padding-left: 34px;
+    padding-right: 34px;
   }
 
   .main__head-backward-page {
     display: inline;
   }
+
+  .main__companions-filter {
+    margin-bottom: 40px;
+  }
+
+  .main__pagination {
+    margin-bottom: 68px;
+  }
 }
 
 @media (min-width: $desktop-width) {
-  .main__wrapper {
+  .main {
+    &--catalog {
+      .main__head {
+        position: relative;
+        border-bottom-left-radius: 60px;
+        border-bottom-right-radius: 60px;
+        z-index: 7;
+
+        &::before,
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  /* .main__head {
+    @include brs-bottom (60px, $main-color-light, $main-color-dark);
+  } */
+
+  .main__head-content {
+    padding-left: 65px;
+    padding-right: 65px;
+  }
+
+  .main__inner {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -77,5 +145,6 @@
 
   .main__pagination {
     width: 950px;
+    margin-bottom: 82px;
   }
 }

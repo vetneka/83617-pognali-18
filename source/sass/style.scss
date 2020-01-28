@@ -8,6 +8,7 @@
 @import "blocks/visually-hidden";
 
 /* component */
+@import "blocks/tooltip";
 @import "blocks/user-level";
 @import "blocks/pagination";
 @import "blocks/primary-title";
@@ -15,7 +16,6 @@
 @import "blocks/tertiary-title";
 @import "blocks/link";
 @import "blocks/button";
-@import "blocks/text";
 @import "blocks/social";
 @import "blocks/site-nav";
 @import "blocks/user-nav";
@@ -23,63 +23,46 @@
 @import "blocks/main";
 @import "blocks/main-footer";
 @import "blocks/about";
-@import "blocks/add-plan";
-@import "blocks/add-plans";
+@import "blocks/likes-counter";
+@import "blocks/user-card";
 @import "blocks/tariffs-list";
 @import "blocks/tariffs";
 @import "blocks/blockquote";
 @import "blocks/hamburger";
-//@import "blocks/card";
-@import "blocks/cards-list";
 @import "blocks/catalog";
 @import "blocks/companions-filter";
-@import "blocks/companions-form";
 @import "blocks/contacts-form";
 @import "blocks/contacts";
 @import "blocks/continents-list";
-@import "blocks/copyright";
 @import "blocks/countries-list";
 @import "blocks/countries-filter";
-@import "blocks/countries-flags-list";
 @import "blocks/countries-flags";
-@import "blocks/country-flag";
-@import "blocks/custom-select";
-@import "blocks/datepicker";
 @import "blocks/direction";
-@import "blocks/filter";
-@import "blocks/form-fieldset";
-@import "blocks/form-input";
-@import "blocks/form-label";
-@import "blocks/form-legend";
-@import "blocks/form-list";
-@import "blocks/input-customized";
+@import "blocks/direction-item";
 @import "blocks/letters-list";
-@import "blocks/likes-counter";
 @import "blocks/main-form";
 @import "blocks/map";
-@import "blocks/marker-list";
 @import "blocks/modal";
-@import "blocks/range-counter";
-@import "blocks/range-slider";
-@import "blocks/range";
 @import "blocks/route";
-@import "blocks/textarea-list";
 @import "blocks/transport";
 @import "blocks/transports";
-@import "blocks/travelers-counter";
-
-@import "blocks/user-picture";
+@import "blocks/copyright";
+@import "blocks/custom-checkbox";
+@import "blocks/custom-select";
+@import "blocks/stepper-input";
+@import "blocks/datepicker";
+@import "blocks/textarea-list";
+@import "blocks/range";
 @import "blocks/user-plan";
 @import "blocks/user-plans";
 @import "blocks/user-profile";
 @import "blocks/users";
-
-@import "blocks/card";
-
-/* layout */
 @import "blocks/page";
 @import "blocks/main-header";
 @import "blocks/main-nav";
 @import "blocks/steps-list";
 @import "blocks/promo";
 @import "blocks/container";
+@import "blocks/add-plan";
+@import "blocks/add-plans";
+@import "blocks/companions-form";

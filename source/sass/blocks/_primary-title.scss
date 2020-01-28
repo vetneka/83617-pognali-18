@@ -10,18 +10,20 @@
 
   &--underline {
     position: relative;
-    padding-bottom: 10px;
+    padding-bottom: 14px;
 
     &::after {
       content: "";
       position: absolute;
-      bottom: 0;
+      bottom: -2px;
       left: 0;
       right: 0;
 
       height: 5px;
       border-radius: 2.4px;
-      background-color: $main-color-accent-darker-30;
+      background-color: $main-color-accent-50;
+
+      z-index: 6;
     }
   }
 }
@@ -31,9 +33,10 @@
     font-size: $base-font-size * 3.75;
 
     &--underline {
-      padding-bottom: 60px;
+      padding-bottom: 71px;
 
       &::after {
+        bottom: -4px;
         height: 8px;
         border-radius: 4px;
       }

@@ -4,58 +4,10 @@
   padding-left: 25px;
   padding-right: 25px;
 
-  /* &--rounded {
-    position: relative;
-    border-bottom-left-radius: $large-border-radius;
-    border-bottom-right-radius: $large-border-radius;
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      width: 30px;
-      height: 30px;
-    }
-
-    &::before {
-      left: 0;
-    }
-
-    &::after {
-      right: 0;
-    }
-
-    &--dark {
-      &::before {
-        background-image: radial-gradient(circle at 100% 0, rgba(204, 0, 0, 0) 30px, $main-color 31px);
-      }
-
-      &::after {
-        background-image: radial-gradient(circle at 0 0, rgba(204, 0, 0, 0) 30px, $main-color 31px);
-      }
-    }
-
-    &--light {
-      &::before {
-        background-image: radial-gradient(circle at 100% 0, rgba(204, 0, 0, 0) 30px, $main-color-darker-30 31px);
-      }
-
-      &::after {
-        background-image: radial-gradient(circle at 0 0, rgba(204, 0, 0, 0) 30px, $main-color-darker-30 31px);
-      }
-    }
-  } */
-
-  /* &--bg-dark {
-    background-color: $main-color-darker-30;
-    color: $white;
+  &--inner {
+    padding-left: 50px;
+    padding-right: 50px;
   }
-
-  &--bg-light {
-    background-color: $main-color;
-    color: $main-color-text;
-  } */
 }
 
 @media (min-width: $tablet-width) {
@@ -77,7 +29,7 @@
     padding-right: 60px;
 
     &--inner {
-      padding-left: 72px;
+      padding-left: 70px;
       padding-right: 0;
     }
   }
