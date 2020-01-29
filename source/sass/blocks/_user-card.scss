@@ -100,6 +100,31 @@
       }
     }
   }
+
+  &--catalog {
+    padding-bottom: 63px;
+
+    .user-card__title {
+      width: 100%;
+      margin-left: 86px;
+    }
+
+    .user-card__actions {
+      margin-left: 43px;
+    }
+
+    .user-card__tags {
+      width: 100%;
+      order: 1;
+    }
+
+    .user-card__button {
+      position: absolute;
+      bottom: 22px;
+      left: 18px;
+      width: calc(100% - 36px);
+    }
+  }
 }
 
 .user-card__wrapper {
@@ -118,6 +143,7 @@
 }
 
 .user-card__picture {
+  position: absolute;
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -137,20 +163,9 @@
 
 @media (max-width: $only-mobile-width) {
   .user-card {
-    .user-card__title {
-      max-height: 42px;
-    }
-
-    .user-card__title-link {
-      max-height: inherit;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-    }
-
-    &--simplified {
-      .user-card__title-link {
-        display: inline-block;
+    &--catalog {
+      .user-card__title {
+        min-height: 42px;
       }
     }
   }
@@ -159,7 +174,7 @@
 .user-card__title-link {
   position: relative;
   display: block;
-  padding-right: 35px;
+  padding-right: 20px;
   text-decoration: none;
   color: $main-color-dark-20;
   overflow: hidden;
@@ -195,7 +210,7 @@
 
 .user-card__tags {
   margin: 0;
-  margin-top: 14px;
+  margin-top: 9px;
   margin-left: 7px;
   line-height: 1.2;
 }
@@ -269,16 +284,6 @@
   .user-level__text {
     display: none;
   }
-}
-
-.user-card__likes-counter {
-  position: absolute;
-  top: 54px;
-  left: 59px;
-}
-
-.user-card__button {
-  flex-grow: 1;
 }
 
 @media (min-width: $tablet-width) {
@@ -357,18 +362,9 @@
             display: none;
           }
         }
-
-        &--bottom {
-          position: relative;
-          left: 220px;
-          display: flex;
-          flex-flow: row wrap;
-          margin-top: -68px;
-        }
       }
 
       .user-card__picture {
-        position: absolute;
         top: 2px;
         left: 0;
         width: 190px;
@@ -400,9 +396,10 @@
       .user-card__tags {
         width: 100%;
         margin-top: 18px;
-        margin-bottom: 90px;
+        margin-bottom: 46px;
         margin-left: 4px;
         font-size: $base-font-size * 1.25;
+        order: 0;
       }
 
       .user-card__subtitle {
@@ -467,15 +464,22 @@
       }
 
       .user-card__likes-counter {
-        position: static;
+        flex-shrink: 0;
         padding: 0;
         font-size: $base-font-size * 1.25;
-        order: 1;
+      }
+
+      .user-card__actions {
+        display: flex;
+        align-items: center;
+        margin-left: 0;
       }
 
       .user-card__button {
+        position: static;
         padding: 17px 31px 13px;
         font-size: $base-font-size * 1.25;
+        order: -1;
       }
     }
   }
@@ -484,7 +488,7 @@
 @media (min-width: $desktop-width) {
   .user-card {
     &--catalog {
-      padding: 48px 44px 27px 320px;
+      padding: 48px 44px 7px 320px;
 
       // Vertical line
       &::after {
@@ -513,20 +517,8 @@
           flex-direction: row;
           align-items: center;
           width: auto;
-          margin-left: 39px;
-          flex-grow: 1;
-          order: 1;
-
-          .user-card__subtitle {
-            display: none;
-          }
-        }
-
-        &--bottom {
-          position: static;
-          width: 53%;
-          padding-left: 21px;
-          margin-top: 4px;
+          margin-left: auto;
+          margin-top: -94px;
         }
       }
 
@@ -555,12 +547,13 @@
 
       .user-card__tags {
         padding: 0 27px;
-        margin-bottom: 0;
+        margin-bottom: 44px;
       }
 
       .user-card__countries-flags {
         width: auto;
         margin-top: 0;
+        margin-bottom: 100px;
         margin-left: 42px;
         flex-grow: 1;
         order: 0;
@@ -589,6 +582,7 @@
 
       .user-card__transport {
         width: 132px;
+        margin-right: 40px;
         margin-bottom: 0;
 
         .transports {
@@ -596,8 +590,8 @@
         }
       }
 
-      .user-card__button {
-        flex-grow: 0;
+      .user-card__actions {
+        margin-left: 20px;
       }
     }
   }
